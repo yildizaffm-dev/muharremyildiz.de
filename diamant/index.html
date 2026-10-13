@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="Der Diamant im Sumpf – Die Essenz. Ein philosophischer Versuch über Wert, Gegenwart und Rückkehr.">
+<meta property="og:title" content="Der Diamant im Sumpf – Die Essenz">
+<meta property="og:description" content="Ein philosophischer Versuch über Wert, Gegenwart und Rückkehr.">
+<meta property="og:type" content="article">
+<title>Der Diamant im Sumpf – Die Essenz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&family=Inter:wght@400;500&display=swap">
+<style>/* Eine Buchseite, die sich bewegt: Papier mit feinem Muster, schwarze Schrift, eine Spalte – jedes Kapitel mit eigener Bühne */
+:root {
+  --paper: #F5F3EE;
+  --stage: #ECE6D8;
+  --lattice: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g fill='none' stroke='%23000000' stroke-opacity='0.17' stroke-width='0.8'><path d='M0 0H64M0 64H64M0 0V64M64 0V64'/><rect x='18' y='18' width='28' height='28'/><rect x='18' y='18' width='28' height='28' transform='rotate(45 32 32)'/><path d='M0 0L18 18M64 0L46 18M0 64L18 46M64 64L46 46'/><circle cx='32' cy='32' r='3'/></g></svg>");
+}
+html { background:var(--paper); }
+body { background:var(--paper); background-image:var(--lattice); background-size:56px 56px; color:#000000; margin:0; padding-block:0 48px; padding-inline:16px;
+  font-family:"Source Serif 4","Charter",Georgia,serif; font-size:17.5px; line-height:1.62; overflow-x:hidden; }
+/* das Muster bleibt im Hintergrund leise: eine Schicht Papier darüber */
+body::before { content:""; position:fixed; inset:0; background:rgba(245,243,238,.70); pointer-events:none; z-index:0; }
+.wrap { position:relative; z-index:1; max-width:640px; margin:0 auto; }
+
+/* Titel */
+.cover { position:relative; text-align:center; padding-block:64px 44px; border-bottom:1px solid #000; overflow:hidden; margin:0 -16px; }
+.cover canvas { position:absolute; inset:0; width:100%; height:100%; display:block; pointer-events:none; }
+.cover-inner { position:relative; z-index:1; padding-inline:16px; animation: rise 1.4s ease-out both; }
+.cover .author { font-family:"Inter","Helvetica Neue",Arial,sans-serif; font-size:12px; letter-spacing:.3em; text-transform:uppercase; margin:0 0 28px; color:#000; }
+.cover h1 { font-family:"Source Serif 4","Charter",Georgia,serif; font-weight:400; font-size:clamp(40px,9.5vw,60px); line-height:1.04; margin:0 0 18px; text-wrap:balance; color:#000; }
+.cover .sub { font-style:italic; font-size:19px; line-height:1.4; margin:0 auto 26px; max-width:30ch; color:#000; }
+.cover .hint { font-family:"Inter",Arial,sans-serif; font-size:12.5px; line-height:1.5; color:#000; margin:0 auto; max-width:34ch; opacity:.75; }
+
+/* Inhalt */
+.toc { padding-block:26px 10px; border-bottom:1px solid #000; }
+.toc p.t { font-family:"Inter",Arial,sans-serif; font-size:11px; letter-spacing:.3em; text-transform:uppercase; text-align:center; margin:0 0 14px; }
+.toc ol { list-style:none; padding:0; margin:0; columns:2; column-gap:24px; }
+.toc li { margin:0 0 6px; break-inside:avoid; }
+.toc a { color:#000; text-decoration:none; border-bottom:1px solid #000; }
+
+/* Text */
+h2 { font-family:"Source Serif 4","Charter",Georgia,serif; font-weight:400; font-style:italic; font-size:30px; text-align:center; margin:72px 0 22px; line-height:1.2; text-wrap:balance; scroll-margin-top:24px; }
+h2::after { content:""; display:block; width:0; height:1px; background:#000; margin:14px auto 0; transition:width 1.4s ease; }
+h2.in::after { width:56px; }
+p { margin:0; text-indent:1.4em; }
+h2 + p, .stage + p, .epigraph + p, .vers + p, .regel + p, .dua + p, .footnote p, .glossar p, .cover p, .toc p, .credits, .foot { text-indent:0; }
+.epigraph { text-align:center; font-style:italic; margin:0 auto 28px; max-width:34ch; }
+.epi-src { font-style:normal; font-variant:small-caps; letter-spacing:.08em; font-size:14px; display:block; margin-top:4px; }
+.vers { margin:24px 8px 24px 24px; padding-left:16px; border-left:1px solid #000; font-style:italic; font-size:16.5px; line-height:1.55; }
+.vers .src { display:block; font-style:normal; font-variant:small-caps; letter-spacing:.06em; font-size:13.5px; text-align:right; margin-top:6px; }
+.regel { margin:32px 0; padding:18px 20px; border:1px solid #000; font-weight:700; font-size:18px; line-height:1.5; background:#FFE08A; color:#000; }
+.dua { margin:40px 0; padding:18px 0; font-style:italic; border-top:1px solid #000; border-bottom:3px double #000; }
+.ek { display:block; font-family:"Inter",Arial,sans-serif; font-weight:500; font-size:11px; letter-spacing:.25em; text-transform:uppercase; margin-bottom:10px; font-style:normal; }
+.glossar p { margin:0 0 12px; padding-left:14px; border-left:2px solid transparent; font-size:16px; line-height:1.5; transition:border-color 1.2s ease; }
+.glossar p.in { border-left-color:#000; }
+.glossar i { font-style:italic; }
+sup { font-size:11px; line-height:0; }
+sup a { color:#000; text-decoration:none; }
+.footnote { font-size:14px; line-height:1.45; margin-top:8px; }
+.footnote ol { padding-left:1.6em; margin:0; } .footnote li { margin-bottom:6px; } .footnote p { display:inline; }
+em { font-style:italic; }
+.credits { font-family:"Inter",Arial,sans-serif; font-size:11.5px; line-height:1.5; color:#000; opacity:.7; margin-top:48px; text-align:center; }
+.foot { text-align:center; font-family:"Inter",Arial,sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; margin-top:18px; padding-top:20px; border-top:1px solid #000; }
+
+/* Bühnen: helles Muster statt dunkler Fläche */
+.stage { position:relative; height:min(58vh,520px); min-height:300px; margin:0 -16px 34px; overflow:hidden;
+  background:var(--stage); background-image:var(--lattice); background-size:56px 56px; border-top:1px solid rgba(0,0,0,.35); border-bottom:1px solid rgba(0,0,0,.35); }
+.stage::before { content:""; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 40%, rgba(255,255,255,.55), rgba(236,230,216,.55) 60%, rgba(0,0,0,.05) 100%); pointer-events:none; }
+.stage canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+.stage .bg { position:absolute; inset:-6%; width:112%; height:112%; object-fit:cover; display:block; animation:kb 48s ease-in-out infinite alternate; }
+.stage-photo::before { display:none; }
+.stage .veil { position:absolute; inset:0; background:rgba(8,9,12,.42); }
+.stage[data-scene="bedeckung"] .veil { background:rgba(40,36,30,.55); }
+.stage[data-scene="biene"] .veil { background:rgba(20,16,8,.35); }
+
+/* Bewegung */
+@keyframes kb { from { transform:scale(1) translate(0,0); } to { transform:scale(1.08) translate(-1.5%,1%); } }
+@keyframes rise { from { opacity:.15; transform:translateY(14px); } to { opacity:1; transform:none; } }
+main h2.in, main .vers.in, main .regel.in, main .dua.in { animation:rise .9s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .stage .bg, .cover-inner, main h2.in, main .vers.in, main .regel.in, main .dua.in { animation:none; } h2::after { transition:none; } }
+@media (max-width:480px) { .toc ol { columns:1; } .cover { padding-block:52px 36px; } body { font-size:17px; } .stage { height:min(52vh,440px); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="cover stage" data-scene="cover">
+  <canvas></canvas>
+  <div class="cover-inner">
+    <p class="author">Muharrem Yıldız</p>
+    <h1>Der Diamant<br>im Sumpf</h1>
+    <p class="sub">Die Essenz.<br>Ein philosophischer Versuch<br>über Wert, Gegenwart und Rückkehr</p>
+    <p class="hint">Zum Lesen auf dem Handy. Jedes Kapitel hat sein eigenes Bild, das sich bewegt – langsam weiterlesen.</p>
+  </div>
+</header>
+<nav class="toc"><p class="t">Elf Schritte</p><ol><li><a href="#i-die-ruecksetzung">I · Die Rücksetzung</a></li><li><a href="#ii-der-diamant">II · Der Diamant</a></li><li><a href="#iii-der-lichtort">III · Der Lichtort</a></li><li><a href="#iv-die-bedeckung">IV · Die Bedeckung</a></li><li><a href="#v-die-fassung">V · Die Fassung</a></li><li><a href="#vi-die-verkippung">VI · Die Verkippung</a></li><li><a href="#vii-die-widmung">VII · Die Widmung</a></li><li><a href="#viii-der-sog-und-das-herausgebrachtwerden">VIII · Der Sog und das Herausgebrachtwerden</a></li><li><a href="#ix-das-leichtgemachtsein">IX · Das Leichtgemachtsein</a></li><li><a href="#x-der-anker">X · Der Anker</a></li><li><a href="#xi-die-rueckkehr">XI · Die Rückkehr</a></li><li><a href="#die-begriffe">Die Begriffe</a></li></ol></nav>
+<main>
+<h2 id="i-die-ruecksetzung">I · Die Rücksetzung</h2>
+<figure class="stage" data-scene="rueck"><canvas></canvas></figure>
+
+<p class="epigraph">„Keine Abänderung gibt es für die Schöpfung Allahs.“<br><span class="epi-src">Sure 30, Vers 30</span></p>
+
+<p>Es gibt eine Stunde, in der das Haus keine Geräusche mehr macht und man die eigenen hört. In einer solchen Stunde kam mir ein Satz, in der Sprache, die vor allen anderen da war: <em>Ich will zurück auf meine Werkseinstellungen.</em></p>
+<p>Der Satz gehört den Geräten. Man drückt ihn, wenn nichts mehr geht, und er verspricht, dass alles wieder wird, wie es am Anfang war. Die Psychologie kennt dieses Versprechen gut; sie nennt es den <em>Neuanfangseffekt</em>: An Schwellen – Montag, Monatsanfang, Geburtstag – trauen sich Menschen ein neues Leben zu, weil die Schwelle das alte Ich hinter sich zu lassen scheint.<sup id="fnref:dai"><a class="footnote-ref" href="#fn:dai">1</a></sup> Der Effekt ist messbar, und er ist kurz. Denn wer den Satz auf sich selbst anwendet, muss ihn zuerst prüfen, und die Prüfung ergibt zwei Dinge. Erstens: Ein Gerät, das zurückgesetzt wird, verliert alles, was nach der Auslieferung dazukam. Ein Mensch kann das nicht; sein Gedächtnis ist nicht löschbar, nur überschreibbar, und was er wurde, bleibt Teil dessen, was er ist. Zweitens: Was übrig bleibt, hat nicht der Besitzer bestimmt, sondern der Hersteller. Die Frage ist also nicht, ob ich zurück will. Die Frage ist, wer mich hergestellt hat.</p>
+<p>Die Antwort brauchte zwei Wörter, und sie kamen so, wie man im Dunkeln die Klinke der eigenen Tür findet: die Fitra. Allah ʿazza wa-dschall.</p>
+<p>Damit war die <em>Rücksetzung</em> schon widerlegt, bevor sie begonnen hatte. Denn ich erinnere meine Werkseinstellungen nicht. Ich war nicht dabei, als sie gesetzt wurden; ich kenne das Gerät nur, wie es heute ist, mit allem, was seitdem draufkam. Was ich von der ersten Einstellung weiß, weiß ich aus dem Handbuch dessen, der sie gesetzt hat. Das ist weniger als Erinnerung und mehr: Eine Erinnerung kann trügen. Ein Handbuch nicht. Und das Handbuch sagt, dass die Einstellung nie überschrieben wurde. <em>Keine Abänderung gibt es für die Schöpfung Allahs.</em> Was nie überschrieben wurde, muss nicht zurückgesetzt werden. Es muss nur wieder erreicht werden.</p>
+<p>So wurde aus dem ersten Wort der Nacht das letzte: Nicht Rücksetzung. <em>Rückkehr.</em> Die Tradition hat dafür ein Wort, das genau dies bedeutet – Tawba, wörtlich: zurückkehren –, und der Weg dieses Versuchs führt von dem einen Wort zum anderen.</p>
+<h2 id="ii-der-diamant">II · Der Diamant</h2>
+<figure class="stage stage-photo" data-scene="diamant"><img class="bg" src="img/diamant.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>Was dann kam, war kein Nachdenken über Gefühle, sondern über einen Gegenstand. <em>Es ist ein Diamant, der im Sumpf liegt und nicht in der Gegenwart – nicht an dem Ort, wo er sein sollte, nicht in der Zeit und nicht in der Situation. An seinem Wert verliert er nichts.</em></p>
+<p>Dieser letzte Satz ist kein Trost. Er ist eine Festlegung, und auf ihr steht alles Weitere. Ich nenne sie die <em>Wertgegebenheit</em>: Der Wert des Diamanten ist nicht erworben, nicht verdient, nicht zugeschrieben. Er ist gegeben – und das heißt, er ist von einem Geber. Die Tradition nennt die Gabe Fitra, die Anlage, auf der jeder Mensch erschaffen ist, und ihr Ausleger as-Saʿdī versteht sie als die Liebe zur Wahrheit, die Allah ʿazza wa-dschall in jedes Herz gelegt hat; wer aus ihr heraustritt, tue es nur durch eine <em>hinzugekommene</em> Ursache.<sup id="fnref:fitra"><a class="footnote-ref" href="#fn:fitra">2</a></sup> Hinzugekommen: Das ist der Sumpf in einem Wort. Der Prophet ṣallallāhu ʿalaihi wa-sallam hat es in einem Bild gesagt, das der Diamant nur wiederholt: Jedes Neugeborene werde auf der Fitra geboren, wie das Tier ganz geboren werde – „siehst du an ihm ein abgeschnittenes Ohr?“<sup id="fnref:fitra-hadith"><a class="footnote-ref" href="#fn:fitra-hadith">3</a></sup> Das Ohr schneidet jemand anderes ab. Das Tier wird ganz geboren.</p>
+<p>Im Lichtvers deutet Saʿdī das Öl der Lampe – das Öl, das beinahe schon leuchtete, auch wenn das Feuer es nicht berührte – als die Fitra selbst: rein, bereit, fast von selbst Licht.<sup id="fnref:oel"><a class="footnote-ref" href="#fn:oel">4</a></sup> Mein Diamant und sein Öl sind eine Aussage in zwei Stoffen. Das Material ist von Anfang an leuchtfähig. Aber es leuchtet nicht aus sich. Es braucht die Berührung von außen.</p>
+<p>Die Philosophie hat für diesen Abstand seit zweitausend Jahren zwei Wörter: Möglichkeit und Wirklichkeit. Ein Samenkorn ist der Möglichkeit nach ein Baum, der Wirklichkeit nach ein Korn. Der Diamant im Sumpf ist Möglichkeit in Reinform – seine Fähigkeit, Licht zurückzuwerfen, ist vollständig vorhanden und zugleich null verwirklicht. Die Psychologie hat denselben Abstand mit zwei anderen Wörtern vermessen, und es lohnt sich, sie auseinanderzuhalten: <em>Selbstwert</em> ist die Frage, was ich bin; <em>Selbstwirksamkeit</em> ist die Frage, was ich bewirken kann.<sup id="fnref:bandura"><a class="footnote-ref" href="#fn:bandura">5</a></sup> Der Diamant im Sumpf hat den ersten ungeschmälert und die zweite bei null. Wer die beiden verwechselt, zieht aus der fehlenden Wirkung den Schluss, es fehle am Wert, und beginnt, den Diamanten zu bearbeiten. Das ist der erste Irrtum des Sumpfes, und die Forschung kennt ihn als <em>kontingenten Selbstwert</em>: Ein Wert, der an Leistung, Aussehen oder Anerkennung gehängt wird, schwankt mit jeder Bedingung und zwingt den, der ihn trägt, die Bedingungen zu bedienen, statt zu leben.<sup id="fnref:crocker"><a class="footnote-ref" href="#fn:crocker">6</a></sup> Carl Rogers hat das Gegenstück beschrieben, die <em>bedingungslose Wertschätzung</em>, und er zählte sie zu den Bedingungen jeder Heilung – nur dass sie bei ihm von einem anderen Menschen kommen muss, der sie geben kann oder nicht.<sup id="fnref:rogers"><a class="footnote-ref" href="#fn:rogers">7</a></sup> Die Wertgegebenheit ist bedingungslose Wertschätzung von dem, der nicht schwankt. Der gegebene Wert hat, wie Sure 91 sagt, eine Form, bevor er irgendetwas tut: Allah ʿazza wa-dschall schwört dort bei der Seele „und Dem, Der sie zurechtgeformt hat“.</p>
+<p>Aus der Wertgegebenheit folgt etwas, das ich die <em>Lichtschuld</em> nenne. Ein gegebener Wert ist ein geschuldeter: nicht geschuldet im Sinn der Rückzahlung, sondern im Sinn der Richtung. Wer etwas bekommen hat, das er nicht gemacht hat, hat eine Adresse, an die seine Wirkung geht. Aus dem Wert folgt Bedeutung, aus der Bedeutung Verantwortung, aus der Verantwortung Ausstrahlung, aus der Ausstrahlung Schönheit. Die Kette beginnt beim Geber, und sie endet bei ihm.</p>
+<h2 id="iii-der-lichtort">III · Der Lichtort</h2>
+<figure class="stage stage-photo" data-scene="lichtort"><img class="bg" src="img/lichtort.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>Ein Diamant wirkt, wenn Licht in ihn fällt, und Licht fällt nur dort, wo er steht. Die drei Koordinaten, mit denen ich seine Lage beschrieben hatte – Ort, Zeit, Situation –, beschreiben also nicht nur, wo er liegt. Sie beschreiben, wofür er gemacht ist. Die Gegenwart ist nicht ein Ort, an dem der Diamant zusätzlich etwas bekommt. Sie ist der <em>Lichtort</em>: der einzige Ort, an dem Möglichkeit zu Wirklichkeit wird.</p>
+<p>Die Psychologie hat den Lichtort unter einem nüchternen Namen gemessen: <em>Aufmerksamkeit</em>. Ein Mensch ist dort, wo seine Aufmerksamkeit ist, und zwei Forscher haben Tausende Menschen zu zufälligen Zeiten gefragt, wo sie gerade sind – fast die Hälfte der Zeit nicht bei dem, was sie taten, und in dieser Hälfte unglücklicher als in der anderen, gleichgültig, was sie taten.<sup id="fnref:killingsworth"><a class="footnote-ref" href="#fn:killingsworth">8</a></sup> Das Abschweifen ist kein Fehler des Geistes; es ist seine Ruhelage. Aber ein Diamant, dessen Licht anderswo ist, liegt im Dunkeln, obwohl die Sonne scheint.</p>
+<p>Heidegger hat den Menschen „geworfen“ genannt: in seine Welt und seine Zeit, ohne gefragt worden zu sein. Das Bild ist wahr, und ich habe es in jener Stunde selbst gebraucht – <em>so wurde der Diamant in den Raum geworfen, an einen Ort geworfen, in Zeit umhüllt.</em> Aber bei Heidegger gibt es keinen Werfer, und deshalb ist seine Grundstimmung die Angst. Mein Satz ging weiter: <em>geworfen, dort, wo das Licht einfällt.</em> Der Wurf hatte eine Richtung. Ich nenne das die <em>Gezieltheit</em>: Der Mensch ist nicht nur geworfen, er ist gezielt – an einen Ort, zu einer Zeit, in eine Situation, in der Licht auf ihn fallen kann. Wo Geworfenheit die Angst erzeugt, erzeugt Gezieltheit eine Frage: Wofür hat Allah ʿazza wa-dschall mich hierher gezielt?</p>
+<p>Die Frage hat eine Ordnung, und sie ist älter als jede Philosophie. <em>Man muss es, man sollte es, man könnte es.</em> Die Rechtslehre kennt fünf Stufen der Handlung, und sie sagen nicht, was im Allgemeinen gut ist, sondern was <em>jetzt</em> wertvoller ist. Ich nenne diese Kategorie das <em>Wertvollere</em>. Sie ist die ganze Ethik des Lichtorts in einem Wort: In jeder Situation ist etwas wertvoller, und keines hebt das andere auf. Die Verhaltenstherapie der letzten Jahrzehnte hat denselben Gedanken unter dem Namen <em>Werteklärung</em> wiederentdeckt – nicht Ziele, die man erreicht und abhakt, sondern Richtungen, in denen jede Stunde eine Entscheidung zulässt. Zur Gebetszeit ist das Gebet wertvoller – „Das Gebet ist den Gläubigen zu bestimmten Zeiten vorgeschrieben“ (Sure 4, Vers 103) –, nicht weil es dringender wäre, sondern weil es eine Zeit hat und das andere nicht. Im Notfall ist der Notfall wertvoller, weil ein Leben keinen Aufschub hat; der Prophet ṣallallāhu ʿalaihi wa-sallam selbst hat am Tag des Grabens das Gebet verschoben und nachgeholt.<sup id="fnref:graben"><a class="footnote-ref" href="#fn:graben">9</a></sup> So barmherzig ist der, der die Ordnung gemacht hat. Gegenwart ist keine Stimmung, die man herstellt. Sie ist die Antwort auf eine Frage, die sich in jeder Stunde beantworten lässt: Was ist jetzt wertvoller?</p>
+<h2 id="iv-die-bedeckung">IV · Die Bedeckung</h2>
+<figure class="stage stage-photo" data-scene="bedeckung"><img class="bg" src="img/bedeckung.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>Dann der Sumpf. Ich ging in drei Schritten an ihn heran, und mit jedem Schritt wurde er kleiner. <em>Der Sumpf ist die Entropie</em> – ein Naturgesetz, gegen das niemand etwas kann. <em>Näher begründet ist der Sumpf die Welt</em> – schon enger, aber immer noch alles. <em>Näher begründet ist der Sumpf nicht das, was dem Diamanten zugrunde liegt, sondern die Handlungen, die ihn nicht erreichbar, nicht ersichtlich machen.</em> Handlungen. Und Handlungen lassen sich, anders als Naturgesetze, ändern.</p>
+<p>Ich nenne den Sumpf deshalb nicht Verderbnis, sondern <em>Bedeckung</em>. Das Wort ist nicht meines; es steht im Koran, an der Stelle, die vom Gegenteil der Läuterung spricht:</p>
+<div class="vers">Wohl ergehen wird es ja jemandem, der sie läutert, und enttäuscht sein wird ja, wer sie verkümmern läßt.<span class="src">Sure 91, Verse 9–10</span></div>
+
+<p>Was die Übersetzung „verkümmern lassen“ nennt, erklärt Saʿdī als <em>bedecken</em>: Die Seele, die es nicht verdient, beschmutzt zu werden, wird mit Verhalten und Taten bedeckt, bis ihre Schönheit verhüllt ist.<sup id="fnref:dassa"><a class="footnote-ref" href="#fn:dassa">10</a></sup> Bedecken, nicht zerstören. Die Seele verliert nichts an ihrem Wert, wenn sie bedeckt wird; sie verliert ihre Sichtbarkeit. Und der Prophet ṣallallāhu ʿalaihi wa-sallam hat den Vorgang in der Sprache des Metalls beschrieben: Wenn der Diener einen Fehler begeht, wird in sein Herz ein schwarzer Punkt gesetzt; lässt er ab, bittet um Vergebung und kehrt um, wird sein Herz poliert; kehrt er zurück, wächst der Punkt, bis er das Herz überzieht.<sup id="fnref:rost"><a class="footnote-ref" href="#fn:rost">11</a></sup> Die Bedeckung ist kein Ereignis. Sie ist eine Ansammlung, Punkt für Punkt – und ihr Gegenmittel ist ebenso klein wie die Punkte.</p>
+<p>Die Psychologie der Gewohnheit beschreibt die Punkte mit ihrer eigenen Genauigkeit: Was oft genug am selben Ort auf denselben <em>Hinweisreiz</em> hin getan wurde, löst sich von der Absicht und läuft von allein – der Griff zum Telefon, der Gang zum Kühlschrank, das Aufschieben.<sup id="fnref:wood"><a class="footnote-ref" href="#fn:wood">12</a></sup> Eine Gewohnheit ist ein Punkt, der sich selbst setzt. Und das Aufschieben, das sich wie Faulheit anfühlt, ist in der Forschung etwas anderes: der Versuch, ein unangenehmes Gefühl jetzt loszuwerden, auf Kosten des Menschen, der man morgen ist.<sup id="fnref:sirois"><a class="footnote-ref" href="#fn:sirois">13</a></sup> Die Verhaltenstherapie nennt diese Bewegung <em>Erlebnisvermeidung</em> – das Ausweichen vor dem, was man innen spüren müsste, in das, was außen leichter ist –, und die Tradition hat einen älteren Namen dafür, der dasselbe meint und mehr: Ghafla, die Achtlosigkeit.</p>
+<p>Die Lehrer des Herzens haben die Schichten benannt, und das Benennen ist die erste Politur: der Hochmut, der sich für den Diamanten hält und den Sumpf für die anderen reserviert; der Neid, der auf fremde Diamanten starrt, bis er den eigenen nicht mehr sieht; das Handeln für Zuschauer; der Zorn, der den Boden aufwühlt; die Liebe zur Welt, die den Sumpf für den Boden hält; und die Achtlosigkeit – die dickste Schicht, weil sie sich nicht wie eine Schicht anfühlt, sondern wie das Leben.</p>
+<p>Die Bedeckung hat eine Eigenbewegung, und hier hilft die Wissenschaft, sie zu erkennen. Was die Psychologie <em>Rumination</em> nennt – das Kreisen um den eigenen Zustand und seine Ursachen – verschärft die gedrückte Stimmung, lähmt das Handeln und vertieft den Sumpf, in dem es stattfindet.<sup id="fnref:rumination"><a class="footnote-ref" href="#fn:rumination">14</a></sup> Im Sumpf über den Sumpf nachzudenken hält den Sumpf. Der Koran nennt dieselbe Eigenbewegung die Seele, die das Böse befiehlt, „außer daß mein Herr Sich erbarmt“ (Sure 12, Vers 53). Beide sagen dasselbe: Die Bedeckung lässt sich nicht durch Gegenkraft stoppen. Nur durch etwas, das von anderswo kommt.</p>
+<p>Und Sartre hat recht, auch hier: Nicht zu wählen ist auch eine Wahl. <em>Nichts sagen ist auch ein Weg, nicht handeln ist auch ein Weg.</em> Der Diamant, der liegen bleibt, hat entschieden. Das ist die härteste Seite der Bedeckung – und ihre Hoffnung. Denn was durch Unterlassen bedeckt wurde, wird durch Tun freigelegt. Und das Tun darf, wie sich zeigen wird, eine Handspanne klein sein.</p>
+<h2 id="v-die-fassung">V · Die Fassung</h2>
+<figure class="stage" data-scene="fassung"><canvas></canvas></figure>
+
+<p>Wer einen Diamanten kauft, kauft eine Fassung mit. Niemand käme auf die Idee, einen Diamanten ohne Fassung zu besitzen. Drei Fassungen standen in jener Stunde zur Wahl, und alle drei waren ehrenwert. Am Ring ist der Diamant Schmuck für einen Träger. Im Bohrkopf ist er Werkzeug für einen Besitzer. Im Tresor ist er Besitz, Sicherheit, Hab und Gut. In allen dreien ist er für jemanden da. <em>Keins davon entfaltet ihn aus sich heraus.</em></p>
+<p>Ich nenne diese Seinsweise das <em>Fürjemandsein</em>. Es ist nicht böse. Die ganze Welt besteht aus Fassungen, und niemand lebt außerhalb von ihnen. Aber das Fürjemandsein hat einen Preis, den die Psychologie gemessen hat: Über hundertachtundzwanzig Experimente hinweg senkte die erwartete Belohnung – Lob, Nutzen, Sicherheit – die innere Quelle des Handelns.<sup id="fnref:deci"><a class="footnote-ref" href="#fn:deci">15</a></sup> Die <em>Selbstbestimmungstheorie</em>, die aus diesen Experimenten hervorging, unterscheidet seither zwischen <em>extrinsischer</em> Motivation, die von der Fassung kommt, und <em>intrinsischer</em>, die aus dem Stein selbst kommt – und sie zeigt, dass die erste die zweite verdrängt, wenn man sie lange genug bezahlt. Wer für die Fassung leuchtet, verliert die Quelle. Die drei Fassungen haben in der Seelenkunde Namen, die älter sind als meine. Der Ring ist, was C. G. Jung die <em>Persona</em> nannte: die Maske, die so gut sitzt, dass man sie für das Gesicht hält. Der Bohrkopf ist Alfred Adlers <em>Kompensation</em>: das Nützlichsein, das nicht aus Fülle kommt, sondern aus dem Gefühl, sonst zu klein zu sein. Der Tresor ist Erich Fromms <em>Haben</em>: die Weise, alles – Dinge, Wissen, sogar den Glauben – als Besitz zu behandeln statt als Leben, das vollzogen wird.</p>
+<p>Gegen das Fürjemandsein steht das <em>Aussichheraussein</em>, und Kant hat es beschrieben, lange bevor ich das Wort hatte: Schön ist, was gefällt, ohne dass man einen Zweck dabei denkt – Zweckmäßigkeit ohne Zweck. Eine Blume ist nicht schön, weil sie zu etwas gut ist. Der Diamant, der aus sich heraus wirkt, ist für nichts da, und darin liegt seine Schönheit. Hier löst sich der Widerspruch, der in der Nacht offen blieb: Wie kann der Diamant für nichts da sein und zugleich einen größeren Zweck haben? Weil der größere Zweck nicht im Nutzen liegt, sondern im Gesehenwerden. Der Prophet ṣallallāhu ʿalaihi wa-sallam hat gesagt: „Allah ist schön und liebt die Schönheit.“<sup id="fnref:jamil"><a class="footnote-ref" href="#fn:jamil">16</a></sup> Und: „Allah schaut nicht auf eure Gestalten und euren Besitz, sondern auf eure Herzen und eure Taten.“<sup id="fnref:herzen"><a class="footnote-ref" href="#fn:herzen">17</a></sup> Nicht auf die Fassung. Auf den Diamanten.</p>
+<p>Die Tradition hat für die falsche Fassung ein Wort, Riyāʾ, Handeln, um gesehen zu werden, und eine Überlieferung, die ich nicht abmildern will: Die ersten drei, über die am Jüngsten Tag geurteilt wird, sind ein Kämpfer, ein Gelehrter, ein Großzügiger, und jedem wird gesagt: Du hast es getan, damit gesagt wird – ein Tapferer, ein Gelehrter, ein Großzügiger. Und es ist gesagt worden.<sup id="fnref:drei"><a class="footnote-ref" href="#fn:drei">18</a></sup> Die Taten waren gut. Die Fassung war falsch. Es gibt nur eine Fassung, die keine ist, und sie heißt: um des Wohlgefallens Allahs ʿazza wa-dschall willen – weil sie den Diamanten nicht für jemanden hält, sondern vor jemanden stellt. Die Verantwortung eines Diamanten ohne Fassung ist winzig und exakt: sauber sein, zum Licht gedreht sein. Nicht leuchten. Nicht Licht herstellen. Nicht Betrachter heranschaffen.</p>
+<h2 id="vi-die-verkippung">VI · Die Verkippung</h2>
+<figure class="stage" data-scene="verkippung"><canvas></canvas></figure>
+
+<p>Zwei Verben, und beide sind nötig. Ein Diamant, der gewaschen ist und verkippt liegt, lässt das Licht nach unten entweichen und wirkt dunkel, obwohl er makellos ist. Ein Diamant, der richtig liegt und verschmutzt ist, wirft nichts zurück. <em>Damit es sichtbar wird, muss er gewaschen und ausgerichtet sein.</em> Die Bedeckung ist das eine Problem. Die <em>Verkippung</em> ist das andere, und sie ist schwerer zu sehen, weil ein verkippter Diamant von oben dunkel wirkt und von unten leuchtet – sein Licht ist nicht weg, es tritt dort aus, wo kein Auge ist. Das ist, was Jung den <em>Schatten</em> nannte: kein Mangel an Licht, sondern Licht am falschen Ausgang – das Ungelebte, das nicht fehlt, sondern nur abgewandt liegt.</p>
+<p>Aus den zwei Verben entstand die Frage, an der die Denker gescheitert sind: Wer wäscht, und wer richtet aus? Die einen sagten, alles sei Zwang; die anderen, der Mensch erschaffe seine Taten selbst. Beide hundertprozentig, beide gescheitert. Die Psychologie hat denselben Streit in jedem einzelnen Menschen wiedergefunden und ihn <em>Kontrollüberzeugung</em> genannt: ob einer glaubt, dass sein Leben von ihm abhängt oder von dem, was ihm widerfährt.<sup id="fnref:rotter"><a class="footnote-ref" href="#fn:rotter">19</a></sup> Und sie hat gezeigt, was an den beiden Enden geschieht. Am einen Ende liegt die <em>erlernte Hilflosigkeit</em> – das Tier, das nach genug unausweichlichen Schlägen auch dann liegen bleibt, wenn die Tür offen steht<sup id="fnref:seligman"><a class="footnote-ref" href="#fn:seligman">20</a></sup> –, der Diamant, der sich für Schlamm hält. Am anderen Ende liegt die Allmacht, die alles selbst tragen will und darunter zerbricht – der Diamant, der selbst leuchten will. Meine Antwort war die einzige, die ich in jener Stunde hatte, und sie hat sich als die älteste herausgestellt: <em>weder noch zu hundert Prozent.</em> Die Theologen der Tradition, aus der ich komme, haben es so gelehrt: ein echter, eigener Wille, der wählt – und ein anderer, der die Tat erschafft.</p>
+<p>Ibn al-Qayyim hat die Verteilung am Lichtvers abgelesen, und genauer habe ich sie nirgends gefunden:</p>
+<div class="vers">Allah ist das Licht der Himmel und der Erde. Das Gleichnis seines Lichtes ist das einer Nische, in der eine Lampe ist. Die Lampe ist in einem Glas. Das Glas ist, als wäre es ein funkelnder Stern. Ihr Brennstoff kommt von einem gesegneten Baum, einem Ölbaum, weder östlich noch westlich, dessen Öl beinahe schon Helligkeit verbreitete, auch wenn das Feuer es nicht berührte. Licht über Licht.<span class="src">Sure 24, Vers 35</span></div>
+
+<p>Dieses Licht, schreibt er, habe einen Wirkenden, einen Empfangenden, einen Ort, einen Träger und einen Stoff. Der Wirkende sei Allah ʿazza wa-dschall, der die Lichter ausgießt; der Empfangende der Diener; der Ort sein Herz; der Stoff sein Wort und seine Tat; der <em>Träger</em> aber seine Entschlossenheit, sein Wille, sein Streben.<sup id="fnref:ibnqayyim"><a class="footnote-ref" href="#fn:ibnqayyim">21</a></sup> Damit ist die Verkippung erklärt: Der Träger hält die Lampe, und der Träger ist mein Wille. Ausgerichtet wird der Diamant von dem, der ihn hält; gehalten wird er von meinem Willen; das Licht aber macht ein anderer. Ich bewege den Träger. Mehr nicht. Das Licht kommt.</p>
+<p>Kierkegaard hat dasselbe von der Philosophie her gesagt, auf der ersten Seite seines wichtigsten Buches: Das Selbst ist ein Verhältnis, das sich zu sich selbst verhält – und es hat sich nicht selbst gesetzt. Deshalb kann es sich auf zwei Arten verfehlen: indem es verzweifelt <em>nicht</em> es selbst sein will – der Diamant, der sich für Schlamm hält – und indem es verzweifelt es selbst sein will, aus eigener Kraft, ohne den, der es gesetzt hat – der Diamant, der selbst leuchten will. Beides ist Verzweiflung, und Verzweiflung ist nichts anderes als Verkippung. Die Formel für den Zustand ohne Verzweiflung lautet bei ihm: dass das Selbst durchsichtig in der Macht gründet, die es gesetzt hat.<sup id="fnref:kierkegaard"><a class="footnote-ref" href="#fn:kierkegaard">22</a></sup> Durchsichtig – gewaschen. Gründend – ausgerichtet.</p>
+<p>Und wie klein darf die Bewegung des Trägers sein? Allah ʿazza wa-dschall sagt im Hadith Qudsī: „Nähert er sich Mir eine Handspanne, nähere Ich Mich ihm eine Elle. Nähert er sich Mir eine Elle, nähere Ich Mich ihm einen Klafter. Kommt er zu Mir gehend, komme Ich zu ihm laufend.“<sup id="fnref:qudsi"><a class="footnote-ref" href="#fn:qudsi">23</a></sup> Ich nenne diese Bewegung den <em>Handspannenschritt</em>. Er ist die kleinste Bewegung, die den Träger dreht – und er ist, wie sich zeigen wird, die einzige, die im Sog noch möglich ist.</p>
+<h2 id="vii-die-widmung">VII · Die Widmung</h2>
+<figure class="stage" data-scene="widmung"><canvas></canvas></figure>
+
+<p>Bevor der Sog kommt, muss ich sagen, was den Träger bewegt. Nicht das Licht; das Licht kommt von außen. Nicht der Sumpf; der zieht nach unten. Was den Träger bewegt, ist etwas, das in der ganzen Schöpfung nur an einer Stelle vorkommt.</p>
+<p>Der Koran sagt, dass alles, was in den Himmeln und auf der Erde ist, sich Ihm ergeben hat, „freiwillig oder widerwillig“ (Sure 3, Vers 83), und er erzählt, wie Allah ʿazza wa-dschall den Himmel und die Erde rief: „Kommt beide her, freiwillig oder widerwillig. Sie sagten: Wir kommen in Gehorsam“ (Sure 41, Vers 11). Der Himmel hat keine Wahl, und er hat trotzdem geantwortet. Die Sonne geht nicht freiwillig auf, die Biene fliegt nicht freiwillig, der Diamant bricht das Licht nicht freiwillig. Alles ist dem Licht zugewandt, weil es nicht anders kann. Nur ein Geschöpf kann anders – und genau deshalb ist nur bei ihm das Wort <em>freiwillig</em> mit Inhalt gefüllt. Nur der Mensch kann sich dem Licht zuwenden. Weil nur er sich abwenden kann.</p>
+<p>Ich nenne das die <em>Widmung</em>. Ein Buch trägt auf seiner ersten Seite eine Widmung: Für jemanden. Der Autor hat das Buch nicht für sich geschrieben, und er hat den, dem es gewidmet ist, nicht gemacht; aber die Widmung schreibt er selbst, aus freien Stücken, und sie ist das Einzige am Buch, das niemand von ihm verlangen kann. So der Mensch: Er hat seinen Wert nicht gemacht und nicht das Licht. Aber die Zuwendung – die Widmung des Diamanten an den, der ihn schuf – kann nur er selbst schreiben. Wofür er erschaffen ist, sagt der Koran in einem Satz:</p>
+<div class="vers">Und Ich habe die Ginn und die Menschen nur (dazu) erschaffen, damit sie Mir dienen. Ich will weder von ihnen irgendeine Versorgung, noch will Ich, daß sie Mir zu essen geben.<span class="src">Sure 51, Verse 56–57</span></div>
+
+<p>Saʿdī erklärt den Dienst, von dem hier die Rede ist, nicht als Verrichtung, sondern als Beziehung: Er umfasse die Erkenntnis Allahs, die Liebe zu Ihm, die Rückkehr zu Ihm, die Hinwendung zu Ihm und die Abkehr von allem anderen – und je mehr der Diener seinen Herrn erkenne, desto vollkommener sei sein Dienst. Erschaffen habe Er sie dafür, nicht aus einem Bedürfnis an ihnen.<sup id="fnref:saadi51"><a class="footnote-ref" href="#fn:saadi51">24</a></sup> Ibn al-Qayyim geht einen Schritt weiter und beantwortet die Frage, die jeder Widmung vorausgeht – wem nützt sie? Nicht aus Bedürfnis habe Er sie erschaffen und nicht, um an ihnen zu gewinnen, sondern aus Großzügigkeit und Güte: damit sie Ihm dienen und dabei selbst allen Gewinn davontragen, wie es heißt: „Wenn ihr Gutes tut, tut ihr Gutes für euch selbst“ (Sure 17, Vers 7).<sup id="fnref:ibnqayyim51"><a class="footnote-ref" href="#fn:ibnqayyim51">25</a></sup> Die Widmung ist also keine Abgabe. Sie ist das Einzige, was der Diamant hat, und sie kommt zu ihm zurück.</p>
+<p>Der Koranlehrer Nouman Ali Khan, dem ich diese Lesart verdanke, hat es in einem Vortrag in Dubai in einem Satz gesagt: Wir haben dem, der alles hat, nichts anzubieten – nicht einmal unsere Gebete; wir beten, weil wir uns mit Ihm im Einklang fühlen. Und er hat die Dienerschaft eine <em>ehrenvolle</em> genannt.<sup id="fnref:nak-dubai"><a class="footnote-ref" href="#fn:nak-dubai">26</a></sup> An anderer Stelle hat er den Punkt benannt, an dem die Widmung entschieden wird: Allah als Schöpfer anzunehmen sei leicht; die eigentliche Prüfung sei, Ihn als <em>Herrn</em> anzunehmen – und sich selbst als Diener. Mit einem Herrn verhandelt man nicht wie mit einem Arbeitgeber. Und doch bestehe diese Dienerschaft aus Treue, Dankbarkeit, Liebe, Freundschaft und Gedenken: „Gedenkt Meiner, so gedenke Ich eurer“ (Sure 2, Vers 152).<sup id="fnref:nak-master"><a class="footnote-ref" href="#fn:nak-master">27</a></sup> Ein Diener sei ein Diener die ganze Zeit; was zwischen den Gebeten geschehe, zeige den Zustand des Herzens.<sup id="fnref:nak-return"><a class="footnote-ref" href="#fn:nak-return">28</a></sup> Der Kern ist islamisch, und die Lösung ist es auch: nicht ein Mensch, der sich selbst befreit, sondern ein Diener, der sich seinem Herrn aus freien Stücken widmet – und darin alles andere los ist.</p>
+<p>Dass die Widmung frei sein muss, sagt der Koran ausdrücklich, und er sagt es an der Stelle, an der man es am wenigsten erwartet:</p>
+<div class="vers">Es gibt keinen Zwang im Glauben. (Der Weg der) Besonnenheit ist nunmehr klar unterschieden von (dem der) Verirrung. Wer also falsche Götter verleugnet, jedoch an Allah glaubt, der hält sich an der festesten Handhabe, bei der es kein Zerreißen gibt.<span class="src">Sure 2, Vers 256</span></div>
+
+<p>Saʿdī erklärt, warum: Zwang brauche es nur bei einer Sache, deren Zeichen verborgen und deren Wirkungen dunkel sind, oder bei einer, die der Seele zutiefst zuwider ist. Dieser Weg aber sei dem Verstand klar geworden; wer die rechte Einsicht bekommen habe, wähle ihn beim ersten Blick. Und wer gezwungen werde, dessen Glaube sei nicht gültig.<sup id="fnref:saadi256"><a class="footnote-ref" href="#fn:saadi256">29</a></sup> Das ist der ganze Grund, warum die Widmung nur aus freien Stücken geschrieben werden kann: Ein erzwungenes Licht wäre kein Licht. Die Psychologie hat das in ihrem eigenen Labor bestätigt. Sie nennt es <em>Reaktanz</em>: Wird einem Menschen die Freiheit genommen, etwas zu wählen, dann will er gerade das Gegenteil – nicht, weil es besser wäre, sondern weil es seines wäre.<sup id="fnref:brehm"><a class="footnote-ref" href="#fn:brehm">30</a></sup> Und die Selbstbestimmungstheorie hat über Jahrzehnte gezeigt, dass ein Handeln nur dann hält, wenn es <em>autonom</em> geworden ist: nicht von außen aufgedrückt, nicht nur aus schlechtem Gewissen übernommen, sondern so weit in die Person eingewandert, dass sie es als ihr eigenes erkennt.<sup id="fnref:ryan"><a class="footnote-ref" href="#fn:ryan">31</a></sup> Die drei Bedürfnisse, die diese Theorie als Bedingung jedes Gedeihens nennt – Autonomie, Kompetenz, Verbundenheit –, stehen in dem Vers in anderer Reihenfolge: Verbundenheit mit dem, der hört und weiß; Kompetenz, weil der Weg klar unterschieden ist; Autonomie, weil es keinen Zwang gibt.</p>
+<p>Die Philosophen haben die Freiheit groß gemacht und sind an ihr verzweifelt. Kant nannte sie Autonomie: dass der Mensch sich sein Gesetz selbst gibt. Sartre nannte ihn zur Freiheit verurteilt: dass er wählen muss, ohne dass ihm jemand sagt, wofür. Viktor Frankl, der mehr als beide von der Freiheit wusste, weil er sie dort gefunden hatte, wo es keine gab, sagte, Freiheit sei nur die eine Hälfte der Wahrheit; ohne Verantwortung verkomme sie zur bloßen Willkür<sup id="fnref:frankl"><a class="footnote-ref" href="#fn:frankl">32</a></sup> – und Verantwortung heißt, einer Frage zu antworten, die ein anderer stellt. Die Widmung ist Frankls zweite Hälfte. Der Mensch gibt sich sein Gesetz nicht selbst, und er wählt nicht ins Leere. Er greift eine Handhabe, die ein anderer hält, und dieser Griff – nur dieser – ist seiner. Das ist, was die Theologen mit <em>weder noch zu hundert Prozent</em> meinten: Die Handhabe ist gegeben. Das Greifen ist frei.</p>
+<h2 id="viii-der-sog-und-das-herausgebrachtwerden">VIII · Der Sog und das Herausgebrachtwerden</h2>
+<figure class="stage" data-scene="sog"><canvas></canvas></figure>
+
+<p>Die Frage war dann nicht mehr, wer der Diamant ist. Sie war: Wie kommt man aus dem Trudel, aus dem <em>Sog</em>, aus der unübersichtlichen Sicht im Sumpf heraus?</p>
+<p>Der Sog ist die Bedeckung in Bewegung: die Mechanik, die sich meldet und sagt, geh ihm nach – der Aufmerksamkeit, die an etwas klebt, das nicht wertvoller ist. Er hat keine Uhrzeit; er kommt in der stillen Stunde der Nacht so gut wie am hellen Vormittag vor einer Aufgabe. Und er hat ein Merkmal, das ihn verrät: Die Stimme, die sagt, du hast doch dies und das zu erledigen, ist leise und ohne Handlung. Ich kann. Nicht: Ich gehe.</p>
+<p>Die Antwort fand ich in der Physik, und sie ist keine Metapher. Wer im Moor oder im Treibsand strampelt, sinkt. Physiker haben Treibsand im Labor untersucht: Er verflüssigt sich unter Bewegung und packt dann fester; ein Mensch kann darin nicht vollständig versinken, weil der Körper weniger dicht ist als der Schlamm – er geht nur unter, wenn er sich wehrt.<sup id="fnref:khaldoun"><a class="footnote-ref" href="#fn:khaldoun">33</a></sup> Bewegung verflüssigt den Schlamm, Stillstand lässt ihn tragen. Die Psychologie kennt das Strampeln unter einem eigenen Namen – <em>ironische Prozesse</em>: Wer einen Gedanken mit Gewalt wegdrücken will, ruft ihn herbei, weil der Teil des Geistes, der den Erfolg prüft, den Gedanken dafür ständig suchen muss.<sup id="fnref:wegner"><a class="footnote-ref" href="#fn:wegner">34</a></sup> Der Kampf gegen den Sumpf ist Sumpf. <em>Wer sich von seinem Schöpfer entfernt, der strampelt.</em> Und daraus folgt der Satz, der ein Paradox ist und doch nur beschreibt: <em>Aus einem Sog kommt man heraus, weil man herausgebracht wird.</em> Nicht, weil man kämpft. Ich nenne das <em>Herausgebrachtwerden</em>: Die Rettung aus dem Sog ist ein Passiv mit einer einzigen aktiven Stelle, und die aktive Stelle ist der Handspannenschritt – die Widmung, auf ihre kleinste Bewegung gebracht.</p>
+<p>Der Koran nennt das Herausgebrachtwerden beim Namen, unmittelbar nach dem Vers von der festesten Handhabe:</p>
+<div class="vers">Allah ist der Schutzherr derjenigen, die glauben. Er bringt sie aus den Finsternissen heraus ins Licht.<span class="src">Sure 2, Vers 257</span></div>
+
+<p>Aus den Finsternissen des Unglaubens, der Sünden und der Unwissenheit, erklärt Saʿdī, ins Licht des Glaubens, des Gehorsams und des Wissens – weil sie Ihn zu ihrem Schutzherrn genommen und keinen anderen gesucht haben.<sup id="fnref:saadi257"><a class="footnote-ref" href="#fn:saadi257">35</a></sup> Die Reihenfolge im Vers ist die Reihenfolge der Rettung: erst der Schutzherr, dann das Heraus. Nicht der Gläubige bringt sich ins Licht. Er wird gebracht.</p>
+<p>Die Entwicklungspsychologie kennt diese Reihenfolge aus dem Anfang jedes Lebens. Ein Säugling kann sich nicht selbst beruhigen; er wird beruhigt – von einem anderen, der ihn hält, bis sein Körper gelernt hat, was Ruhe ist. Sie nennt das <em>Ko-Regulation</em>, und sie weiß, dass Selbstregulation nie etwas anderes war als verinnerlichte Ko-Regulation. Der Mensch, der im Sog sitzt, ist nicht zurückgefallen, wenn er gehalten werden muss. Er ist dort, wo jeder Mensch beginnt. Und die Wissenschaft des Handelns hat für dieses Passiv ein Verfahren gefunden, das sie <em>Verhaltensaktivierung</em> nennt, und es ist die Umkehr der Reihenfolge, auf die die meisten Menschen warten. Nicht erst wollen, dann tun – sondern tun, und der Zustand folgt nach. In sechsundzwanzig kontrollierten Studien war diese Umkehr gegen die Lähmung den Vergleichsbedingungen deutlich überlegen.<sup id="fnref:ekers"><a class="footnote-ref" href="#fn:ekers">36</a></sup> Wer wartet, bis er will, wartet im Sumpf.</p>
+<p>In jener Stunde hörte ich auf zu denken und tat, was ich nicht wollte. Ich stand auf und ging zum Wasser – und hier muss ich genau sein, weil an dieser Stelle der Aberglaube beginnt. Es war nicht das Wasser. Wasser allein wäre Zauber: ein Mittel, das wirkt, weil es nass ist. Es war die <em>Gebetswaschung</em> – eine Handlung, die vor mir unzählige Male vollzogen wurde, mit festen Gliedern und fester Reihenfolge: die Hände, der Mund, die Nase, das Gesicht, die Arme bis zum Ellbogen, der Kopf, die Ohren, die Füße. Sie führt den Körper durch eine Ordnung, die er nicht selbst erfunden hat, und sie endet nicht in sich, sondern vor dem Gebet. Das ist der Unterschied zwischen Zauber und Ritus: Der Zauber will etwas bewirken; der Ritus stellt vor jemanden. <em>Die Waschung, obwohl ich sie innerlich nicht wollte, wurde vollzogen.</em> Ein Gebet wurde gemacht, mit einem leichten Bewusstsein, vor dem Schöpfer zu stehen. Es wurde gesagt, dass man nichts ist und dass Er so ist, wie Er sich selbst bezeichnet. So komme ich zu Dir.</p>
+<p>Ich lasse diese Sätze im Passiv, weil sie so wahr sind: Ich war in diesen Minuten nicht der, der etwas tat. Ich war der, an dem etwas geschah. Der Träger war bewegt worden – eine Handspanne –, und das Licht kam, wie der Hadith es sagt, laufend. Danach war die Stimme mit der Liste leise. Da war keine Leere und kein Druck. <em>Es ist neutral.</em> Und ich lernte, dass Neutralität nach einem Sog nicht wenig ist, sondern das Meiste: Die Psychologie würde sagen, das Nervensystem war aus der Alarmlage zurück in seine Grundlage gekommen – nicht Freude, nicht Trauer, Regulation. Der Koran nennt diesen Zustand beim Namen und richtet an ihn den einzigen Anruf, der mehr zählt als alle Argumente: „O du Seele, die du Ruhe gefunden hast, kehre zu deinem Herrn zufrieden und mit Wohlgefallen zurück“ (Sure 89, Verse 27–28). Die drei Seelen des Korans – die befehlende, die sich tadelnde, die zur Ruhe gekommene – sind keine drei Menschen und keine Stufen, die man einmal besteigt. Man durchläuft sie in einer Stunde. Und dazwischen liegt keine Einsicht, sondern eine Handlung.</p>
+<p>Die fünf Schritte, die ich mir in dieser Stunde aufschrieb, erwiesen sich danach als die alte Reihenfolge in neuen Worten: Kontrolle abgeben – Tawakkul, was die Therapie <em>Akzeptanz</em> nennt und was mehr ist, weil es jemanden hat, dem man abgibt. Hoffnung sammeln – Radschāʾ. Klein bewegen – ʿAmal. Sehen, dass man nichts ist – ʿUbūdiyya. Und sich festhalten: „Und haltet alle fest am Seil Allahs“ (Sure 3, Vers 103). Ein Seil, und: alle. Niemand zieht sich allein aus dem Moor. Das Seil wird an beiden Enden gehalten, und sein anderes Ende sind Menschen und feste Zeiten – die fünf Gebete, ein Rhythmus, der nicht vom Einzelnen kommt und nicht verhandelt wird. Der Prophet ṣallallāhu ʿalaihi wa-sallam hat das Nicht-Strampeln als Gebot gesagt: „Die Religion ist Leichtigkeit, und niemand überspannt die Religion, ohne dass sie ihn besiegt. … Nehmt Hilfe am Morgen, am Nachmittag und mit etwas von der Nacht.“<sup id="fnref:yusr"><a class="footnote-ref" href="#fn:yusr">37</a></sup> Etwas von der Nacht. Nicht die ganze.</p>
+<h2 id="ix-das-leichtgemachtsein">IX · Das Leichtgemachtsein</h2>
+<figure class="stage stage-photo" data-scene="biene"><img class="bg" src="img/biene.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>Noch in derselben Stunde, wach und neutral, kam die Biene. Niemand hat ihr das Fliegen beigebracht. Sie verlässt den Stock, findet die Weide, findet den Weg zurück, und was aus ihr herauskommt, heilt – und sie weiß von alledem nichts.</p>
+<div class="vers">Und dein Herr hat der Biene eingegeben: Nimm dir in den Bergen Häuser, in den Bäumen und in dem, was sie an Spalieren errichten. Hierauf iß von allen Früchten, ziehe auf den Wegen deines Herrn dahin, die (dir) geebnet sind.<span class="src">Sure 16, Verse 68–69</span></div>
+
+<p>Das Wort, mit dem Allah ʿazza wa-dschall der Biene etwas eingibt, ist dasselbe Wort wie für die Offenbarung an die Propheten – ʿalaihimu s-salām. Die Biene hat Eingebung ohne Unterricht, und ihre Wege sind <em>geebnet</em>: Was sie tut, kostet sie keine Kraft, weil der Weg schon vor ihr da war. Daraus wurde der siebte Satz: <em>Wie ihr die Wege leicht gemacht wurden, suche ich, was mir leicht gemacht ist.</em> Die Tradition nennt es Shakila – „Sag: Jeder handelt nach seiner Weise“ (Sure 17, Vers 84) –, und der Prophet ṣallallāhu ʿalaihi wa-sallam hat es auf die Frage, wozu dann die Mühe sei, so gesagt: „Jedem wird leicht gemacht, wofür er erschaffen wurde.“<sup id="fnref:muyassar"><a class="footnote-ref" href="#fn:muyassar">38</a></sup></p>
+<p>Ich nenne das <em>Leichtgemachtsein</em>, und es ist das Gegenstück zur Gezieltheit: Wer gezielt ist, dem ist auch ein Weg geebnet, und der Weg ist nicht für alle derselbe. Jeder wird anders geworfen, und jedem wird anders leicht gemacht. Die Seelenkunde hat dafür drei Wörter, die einander ergänzen. Adler nannte die eigene, früh gebildete Weise, sich auf Ziele zuzubewegen, den <em>Lebensstil</em> – so persönlich wie die Handschrift, erkennbar, korrigierbar, aber nicht ersetzbar. Jung nannte den Weg zu ihr <em>Individuation</em> – kein Erfinden eines neuen Menschen, sondern das Freilegen des alten, mit allem, was er an Ungelebtem trägt. Und die Forschung der letzten Jahrzehnte hat den Zustand gemessen, in dem ein Mensch auf seinem geebneten Weg ist, und ihn <em>Flow</em> genannt: die Tätigkeit, die so gut zur Fähigkeit passt, dass die Zeit verschwindet und die Anstrengung nicht wie Anstrengung aussieht.<sup id="fnref:flow"><a class="footnote-ref" href="#fn:flow">39</a></sup> Die Biene im Flug. Nicht schleifen. Freilegen.</p>
+<p>Das Leichtgemachtsein ist kein Trost, sondern Berufung – und Berufung ist nicht gewählt, sondern gegeben. Der Koran sagt es in einem Vers, der meist als Erleichterung gelesen wird, und der eine ist:</p>
+<div class="vers">Allah erlegt keiner Seele mehr auf, als sie zu leisten vermag. Ihr kommt (nur) zu, was sie verdient hat, und angelastet wird ihr (nur), was sie verdient hat.<span class="src">Sure 2, Vers 286</span></div>
+
+<p>Aber der Vers hat eine zweite Seite, die ich im Umkehrschluss lese: Wem nichts auferlegt wird, was er nicht tragen kann, der wird nach dem gefragt werden, was er tragen konnte. Das Leichtgemachtsein ist das Maß der Verantwortung. Nicht das Große wird von mir verlangt – aber das, was mir leicht gemacht wurde, wird von mir verlangt, gerade weil es leicht gemacht wurde. Die Biene wird nicht gefragt, ob sie gesungen hat. Sie wird gefragt, ob sie geflogen ist.</p>
+<p>Das Leichtgemachtsein hat eine Folge für die Gebetswaschung, die ich erst spät sah. Für einen Menschen, dessen Nervensystem durch Stillstand nicht zur Ruhe kommt – und die Forschung zeigt, dass es solche Weisen gibt, etwas schwächer in der <em>Selbstregulation</em>, nicht ohne sie<sup id="fnref:robe"><a class="footnote-ref" href="#fn:robe">40</a></sup> –, ist Ruhe nicht Liegen, sondern Takt: Bewegung, Atem, Wiederholung. Kaltes Wasser im Gesicht senkt über einen Reflex die Herzfrequenz. Die Rezitation ist langsames Ausatmen auf Silben. Die Gebetsfolge ist Bewegung in Zyklen. Für einen solchen Menschen ist das Gebet nicht Hindernis, sondern genau die Form, in der Ruhe für ihn erreichbar ist – ein Takt, der vor vierzehn Jahrhunderten für Körper wie seinen geebnet wurde. Das ist das Leichtgemachtsein, von der Biologie bestätigt: Der geebnete Weg ist nicht das Stillsitzen. Es ist der Takt.</p>
+<p>Und das Maß des Suchens hat der Prophet ṣallallāhu ʿalaihi wa-sallam genannt, gefragt, welches Werk Allah ʿazza wa-dschall am liebsten sei: „Das beständigste, auch wenn es wenig ist.“<sup id="fnref:bestaendig"><a class="footnote-ref" href="#fn:bestaendig">41</a></sup> Die Shakila zu suchen heißt nicht, sich zu schleifen. Es heißt, zu entschleunigen – und das Richtige zu tun, nicht das Große.</p>
+<h2 id="x-der-anker">X · Der Anker</h2>
+<figure class="stage" data-scene="anker"><canvas></canvas></figure>
+
+<p>Eine Stunde ist keine Regel. Aus dem Bild musste ein Griff werden, und der Griff hat einen Namen: der <em>Anker</em>. Ein Anker hält nicht, weil er schwer ist. Er hält, weil er sich in den Grund setzt, bevor der Zug kommt.</p>
+<p>Der Koran hat den Griff vor mir benannt. Wer sich Allah ʿazza wa-dschall zuwendet, „der hält sich an der festesten Handhabe, bei der es kein Zerreißen gibt“ (Sure 2, Vers 256). Saʿdī erklärt die Handhabe als den geraden Glauben, dessen Grundlagen feststehen und dessen Pfeiler verwurzelt sind; wer sich an ihr festhalte, sei seiner Sache sicher, denn er halte sich an dem fest, was nicht reißt.<sup id="fnref2:saadi256"><a class="footnote-ref" href="#fn:saadi256">29</a></sup> Zwei Dinge stehen in dem Vers, und beide gehören zum Anker: Die Handhabe reißt nicht – das ist nicht mein Verdienst. Und <em>gehalten</em> wird sie von mir – das ist die Widmung, in einem Griff. Ein Anker, der nicht geworfen wird, hält kein Schiff.</p>
+<p>Der Zug ist der Sog, und der Sog hat keine Uhrzeit. Darum hängt sich die Regel nicht an eine Stunde, sondern an sein Merkmal: die Aufmerksamkeit, die klebt, die Stimme, die leise ist und ohne Handlung. Die Regel selbst ist ein Satz:</p>
+<div class="regel">Wenn der Sog kommt – wann auch immer –, dann die Gebetswaschung. Nicht immer. Aber immer dann, wenn kein Notfall vor mir steht. Auch wenn ich innerlich nicht will. Zuerst die Waschung, dann alles andere.</div>
+
+<p>Warum ein Satz dieser Form? Weil die Wissenschaft der Vorsätze gezeigt hat, dass Absichten fast nichts bewirken und <em>Wenn-dann-Pläne</em> viel: Sie koppeln die Handlung an einen Auslöser und nehmen der Entscheidung im Moment die Last.<sup id="fnref:gollwitzer"><a class="footnote-ref" href="#fn:gollwitzer">42</a></sup> Die Gewohnheitsforschung erklärt, warum das wirkt: Die Bedeckung läuft über Hinweisreize, die von allein auslösen – und ein Wenn-dann-Plan setzt an denselben Reiz eine andere Handlung, bis auch sie von allein läuft.<sup id="fnref2:wood"><a class="footnote-ref" href="#fn:wood">12</a></sup> Der Auslöser – der Sog – kommt zuverlässiger als jede Absicht. Die Regel macht aus dem Feind den Wecker. Der Handspannenschritt ist dabei nicht das Gebet und nicht einmal die ganze Waschung. Er ist: aufstehen, zum Wasser gehen, die rechte Hand. Ein Ortswechsel ist ein Winkelwechsel. Nicht denken. Gehen. Was danach kommt, richtet sich nach dem Wertvolleren der Stunde: zur Gebetszeit das Pflichtgebet; sonst zwei Gebetseinheiten und ein Bittgebet; und in den Zeiten, in denen die Rechtsgelehrten vom freiwilligen Gebet abraten, bleibt die Waschung und das Gedenken, und das Gebet wartet.<sup id="fnref:makruh"><a class="footnote-ref" href="#fn:makruh">43</a></sup> Der Anker ist nicht das Gebet. Der Anker ist die Gebetswaschung. Das Gebet ist, was sie möglich macht.</p>
+<p>Es gibt eine Stunde, in der der Anker mehr wiegt als sonst – die Stunde, in der dieser Versuch begann. Der Prophet ṣallallāhu ʿalaihi wa-sallam sagte: „Unser Herr, gesegnet und erhaben, steigt jede Nacht zum untersten Himmel herab, wenn das letzte Drittel der Nacht bleibt, und sagt: Wer ruft Mich, dass Ich ihm antworte? Wer bittet Mich, dass Ich ihm gebe? Wer bittet Mich um Vergebung, dass Ich ihm vergebe?“<sup id="fnref:drittel"><a class="footnote-ref" href="#fn:drittel">44</a></sup> In dieser Stunde ist die Zerstreuung das Angebot aus der einen Richtung; aus der anderen kommt eine Frage. Wer in dieser Stunde ohnehin wach ist, ist am Ort eines besonderen Angebots. Aber die Tradition setzt dem Vorrang sofort ein Maß, und das Maß ist wichtiger als der Vorrang: „Nehmt euch von den Werken, was ihr tragen könnt; denn Allah wird nicht müde, bis ihr müde werdet.“<sup id="fnref2:bestaendig"><a class="footnote-ref" href="#fn:bestaendig">41</a></sup> Wer schläft, versäumt nichts. Er wäscht.</p>
+<p>Die Regel gilt erst als die eigene, wenn sie eine Woche gehalten hat – nicht sieben Tage Gebet, sondern sieben Tage, an denen, wenn der Sog kam, die Waschung kam. Tage ohne Sog zählen als gelebt. Danach geschieht, was kein Vorsatz schafft und was die Psychologie den Übergang vom Verhalten ins <em>Selbstkonzept</em> nennt: Die Handlung wird Teil dessen, wer man ist. Nicht: Ich versuche, zum Wasser zu gehen. Sondern: Ich bin einer, der zum Wasser geht.</p>
+<h2 id="xi-die-rueckkehr">XI · Die Rückkehr</h2>
+<figure class="stage" data-scene="rueckkehr"><canvas></canvas></figure>
+
+<p>Ich wollte auf Werkseinstellungen zurück, und in derselben Stunde habe ich gemerkt, dass das Wort nicht stimmt. Ein Gerät, das zurückgesetzt wird, verliert, was dazukam. Ich habe nichts verloren. Ich habe einen Diamanten, der im Schlamm lag, und ich habe ihn nicht herausgezogen – ich habe aufgehört zu strampeln, bin ein paar Schritte zum Wasser gegangen und habe die Gebetswaschung vollzogen, obwohl ich nicht wollte. Dann kam das Licht, von außen, wie immer.</p>
+<p>Die Rückkehr hat einen Ton, und der Ton entscheidet, ob sie gelingt. Wer zurückkehrt und sich dabei verachtet, kehrt in den Sumpf zurück; die Rumination hat nur ihr Thema gewechselt. Die Psychologie hat den anderen Ton untersucht und ihn <em>Selbstmitgefühl</em> genannt: sich im Versagen so anzusehen, wie man einen Freund ansähe – und sie hat gefunden, dass gerade dieser Ton, nicht die Härte, Menschen wieder in Bewegung bringt.<sup id="fnref:neff"><a class="footnote-ref" href="#fn:neff">45</a></sup> Die Tradition hat dafür kein eigenes Wort gebraucht, weil der Ton schon in dem Wort Tawba liegt: Man kehrt zu jemandem zurück, der die Tür nicht geschlossen hat. Die Rückkehr ist keine Strafe, die man sich auferlegt. Sie ist der Weg zu dem, der laufend entgegenkommt.</p>
+<p>Das ist der ganze Weg dieses Versuchs, und er lässt sich in seinen eigenen Wörtern aufsagen. Die <em>Wertgegebenheit</em>: Der Wert ist gegeben und ändert sich nicht. Die <em>Lichtschuld</em>: Was gegeben ist, hat eine Adresse. Die <em>Gezieltheit</em>: Ich bin nicht nur geworfen, ich bin gezielt – an den <em>Lichtort</em>, wo das <em>Wertvollere</em> in jeder Stunde zu finden ist. Die <em>Bedeckung</em>: Der Sumpf ist nicht der Diamant, sondern Handlungen, Punkt für Punkt. Die <em>Fassung</em>: Das <em>Fürjemandsein</em> verliert die Quelle; das <em>Aussichheraussein</em> ist für nichts da und wird gerade deshalb gesehen. Die <em>Verkippung</em>: Der Träger ist mein Wille, das Licht macht ein anderer – weder noch zu hundert Prozent. Die <em>Widmung</em>: Alles ist dem Licht zugewandt, weil es nicht anders kann; nur der Mensch wendet sich zu, weil er sich abwenden könnte – und nur deshalb ist seine Zuwendung etwas wert. Der <em>Sog</em> und das <em>Herausgebrachtwerden</em>: Wer strampelt, sinkt; wer den <em>Handspannenschritt</em> tut, wird herausgebracht. Das <em>Leichtgemachtsein</em>: Der geebnete Weg ist nicht für alle derselbe, und für manche ist er Takt; er ist Berufung, und nach ihm wird gefragt. Der <em>Anker</em>: die Gebetswaschung, wann immer der Sog kommt – der Griff an die Handhabe, die nicht reißt. Und am Ende die <em>Rückkehr</em> – Tawba –, die kein Zurücksetzen ist, weil nichts überschrieben wurde.</p>
+<p>Ich habe dieses Bild danach allen vorgelegt, die etwas dazu zu sagen hatten – den Auslegern des Korans, der Lehre von der Seele, den Philosophen von Aristoteles bis Kierkegaard, den Wissenschaften vom Treibsand bis zur Gewohnheit –, und keine dieser Stimmen hat es widerlegt. Jede hat ihm eine Facette hinzugefügt. Wo sie einander widersprachen – beim Werfer, beim Adressaten, beim gegebenen und beim gespiegelten Wert, bei der Freiheit, die ins Leere wählt, und der Freiheit, die greift –, lag im Widerspruch die Erkenntnis. Das ganze Gespräch steht im Buch. Hier steht, was bleibt, wenn man es zuklappt.</p>
+<div class="dua"><span class="ek">Das Bittgebet der Stunde</span>Du bist, wie Du Dich selbst nennst – und ich bin nichts. Du bist der, der alles Gute gibt, so gib mir von allem Guten. Du bist der, der schützt, so schütze mich vor allem Schlechten. So komme ich zu Dir: Du weißt besser, Du kennst besser, und Dein Wort ist besser. Du bist der Vergebende, so vergib. Du bist der Rechtleitende, so leite recht. Und wenn ich nicht will – zu welcher Stunde auch immer –, lass meine Hände vor meinem Willen zum Wasser gehen.</div>
+
+<p>Fabrik zu. Nicht zurückgesetzt, sondern zurückgekehrt.</p>
+<h2 id="die-begriffe">Die Begriffe</h2>
+<div class="glossar">
+<p><b>Rücksetzung / Rückkehr</b> – Das Gerät wird zurückgesetzt und verliert, was dazukam; der Mensch kehrt zurück und verliert nichts, weil seine Einstellung nie überschrieben wurde. Rückkehr ist das deutsche Wort für Tawba. <i>Psychologisch:</i> Der Neuanfangseffekt verspricht die Rücksetzung und hält kurz; das Selbstmitgefühl ist der Ton, in dem Rückkehr gelingt.</p>
+<p><b>Wertgegebenheit</b> – Der Wert des Menschen ist gegeben, nicht erworben; er hat eine Form, bevor er wirkt. Fehlende Wirkung beweist keinen fehlenden Wert. <i>Psychologisch:</i> Selbstwert ist nicht Selbstwirksamkeit; der kontingente Selbstwert hängt den Wert an Bedingungen, die bedingungslose Wertschätzung löst ihn davon – hier von dem, der nicht schwankt.</p>
+<p><b>Lichtschuld</b> – Ein gegebener Wert ist ein geschuldeter: Er hat eine Adresse, an die seine Wirkung geht. Aus dem Wert folgt Bedeutung, Verantwortung, Ausstrahlung, Schönheit.</p>
+<p><b>Gezieltheit</b> – Gegen Heideggers Geworfenheit: Der Mensch ist nicht nur geworfen, sondern gezielt – dorthin, wo Licht auf ihn fallen kann. Grundstimmung nicht Angst, sondern Frage.</p>
+<p><b>Lichtort</b> – Die Gegenwart als der einzige Ort, an dem Möglichkeit zu Wirklichkeit wird: Zeit, Ort, Situation. <i>Psychologisch:</i> Aufmerksamkeit – ein Mensch ist dort, wo sie ist; das Abschweifen ist die Ruhelage des Geistes und macht unglücklich.</p>
+<p><b>Das Wertvollere</b> – Die Kategorie der Gegenwart: In jeder Situation ist etwas wertvoller, und keines hebt das andere auf. Zur Gebetszeit das Gebet, im Notfall der Notfall. <i>Psychologisch:</i> Werteklärung – Richtungen statt Ziele.</p>
+<p><b>Bedeckung</b> – Der Sumpf: nicht Verderbnis, sondern Handlungen und Unterlassungen, die den Diamanten unsichtbar machen, Punkt für Punkt. Ihr Gegenmittel ist so klein wie ihre Punkte. <i>Psychologisch:</i> Gewohnheit und Hinweisreiz, Erlebnisvermeidung, Aufschieben als Gefühlsregulation, Rumination als Eigenbewegung.</p>
+<p><b>Fürjemandsein / Aussichheraussein</b> – Die Fassung: Ring, Bohrkopf, Tresor machen den Diamanten für jemanden da und kosten die Quelle. Aus sich heraus ist er für nichts da – und wird gerade deshalb gesehen. <i>Psychologisch:</i> extrinsische gegen intrinsische Motivation; Persona (Jung), Kompensation (Adler), Haben (Fromm).</p>
+<p><b>Verkippung</b> – Der gewaschene Diamant, der falsch liegt: Sein Licht tritt dort aus, wo kein Auge ist. Kierkegaards Verzweiflung, Ibn al-Qayyims verschobener Träger. <i>Psychologisch:</i> der Schatten (Jung); die Kontrollüberzeugung mit ihren zwei Enden, erlernte Hilflosigkeit und Allmacht.</p>
+<p><b>Träger</b> – Nach Ibn al-Qayyim: Entschlossenheit, Wille, Streben. Das, was die Lampe hält und ausrichtet – mein Anteil, weder noch zu hundert Prozent.</p>
+<p><b>Widmung</b> – Alles in der Schöpfung ist dem Licht zugewandt, weil es nicht anders kann; nur der Mensch wendet sich zu, weil er sich abwenden könnte. Die Zuwendung ist das Einzige, das er selbst schreibt – aus freien Stücken, denn es gibt keinen Zwang im Glauben. Erschaffen, um zu dienen; und der Dienst ist Beziehung, nicht Abgabe, und kommt zu ihm zurück. <i>Psychologisch:</i> Autonomie, die Bedingung jeder haltbaren Motivation; Reaktanz als Beweis, dass Zwang das Gegenteil erzeugt. <i>Philosophisch:</i> Frankls zweite Hälfte der Freiheit – Verantwortung als Antwort auf eine Frage, die ein anderer stellt.</p>
+<p><b>Sog</b> – Die Bedeckung in Bewegung: Aufmerksamkeit, die klebt; eine Stimme, die leise ist und ohne Handlung. Ohne Uhrzeit.</p>
+<p><b>Strampeln / Herausgebrachtwerden</b> – Wer kämpft, sinkt; der Schlamm trägt, wenn man aufhört. Die Rettung ist ein Passiv mit einer einzigen aktiven Stelle – „Er bringt sie aus den Finsternissen heraus ins Licht“. <i>Psychologisch:</i> ironische Prozesse (der Kampf gegen den Gedanken ruft ihn herbei); Ko-Regulation (beruhigt werden, bevor man sich beruhigen kann); Verhaltensaktivierung (tun, dann wollen).</p>
+<p><b>Handspannenschritt</b> – Die kleinste Bewegung des Trägers, die im Sog noch möglich ist: aufstehen, zum Wasser gehen, die rechte Hand. Auf eine Handspanne kommt eine Elle entgegen. Die Widmung, auf ihre kleinste Bewegung gebracht.</p>
+<p><b>Gebetswaschung</b> – Nicht Wasser, sondern Ritus: feste Glieder, feste Reihenfolge, ein Ende vor jemandem. Der Zauber will bewirken; der Ritus stellt vor jemanden.</p>
+<p><b>Leichtgemachtsein</b> – Die Shakila: Jedem ist ein anderer Weg geebnet, und was mir leicht gemacht ist, ist das, wofür ich gemacht bin. Es ist Berufung, nicht Wahl – und sein Maß ist zugleich das Maß der Befragung: Niemandem wird auferlegt, was er nicht tragen kann; jeder wird nach dem gefragt, was er tragen konnte. Für manche ist der Weg Takt, nicht Stillstand. <i>Psychologisch:</i> Lebensstil (Adler), Individuation (Jung), Flow; Selbstregulation als Takt.</p>
+<p><b>Anker</b> – Die Regel, die sich an den Sog selbst hängt: Wenn er kommt, dann die Gebetswaschung – auch gegen den Willen. Sie macht aus dem Feind den Wecker. Der Griff an die festeste Handhabe, bei der es kein Zerreißen gibt. <i>Psychologisch:</i> Wenn-dann-Plan, Hinweisreiz, Gewohnheit – bis die Handlung ins Selbstkonzept übergeht.</p>
+</div>
+
+<h2 id="anmerkungen">Anmerkungen</h2>
+<div class="footnote">
+<ol>
+<li id="fn:dai">
+<p>Hengchen Dai, Katherine L. Milkman, Jason Riis: The Fresh Start Effect: Temporal Landmarks Motivate Aspirational Behavior. <em>Management Science</em> 60 (2014), 2563–2582.&#160;<a class="footnote-backref" href="#fnref:dai" title="Jump back to footnote 1 in the text"></a></p>
+</li>
+<li id="fn:fitra">
+<p>As-Saʿdī zu Sure 30, Verse 30–32 (türkische Ausgabe des <em>Taysīr al-Karīm ar-Raḥmān</em>; Übertragung des Autors).&#160;<a class="footnote-backref" href="#fnref:fitra" title="Jump back to footnote 2 in the text"></a></p>
+</li>
+<li id="fn:fitra-hadith">
+<p>Ṣaḥīḥ al-Buḫārī Nr. 1385; ebenso Ṣaḥīḥ Muslim und Sunan Abī Dāwūd Nr. 4714 (ṣaḥīḥ).&#160;<a class="footnote-backref" href="#fnref:fitra-hadith" title="Jump back to footnote 3 in the text"></a></p>
+</li>
+<li id="fn:oel">
+<p>As-Saʿdī zu Sure 24, Vers 35.&#160;<a class="footnote-backref" href="#fnref:oel" title="Jump back to footnote 4 in the text"></a></p>
+</li>
+<li id="fn:bandura">
+<p>Albert Bandura: Self-efficacy: Toward a unifying theory of behavioral change. <em>Psychological Review</em> 84 (1977), 191–215.&#160;<a class="footnote-backref" href="#fnref:bandura" title="Jump back to footnote 5 in the text"></a></p>
+</li>
+<li id="fn:crocker">
+<p>Jennifer Crocker, Connie T. Wolfe: Contingencies of self-worth. <em>Psychological Review</em> 108 (2001), 593–623.&#160;<a class="footnote-backref" href="#fnref:crocker" title="Jump back to footnote 6 in the text"></a></p>
+</li>
+<li id="fn:rogers">
+<p>Carl R. Rogers: The necessary and sufficient conditions of therapeutic personality change. <em>Journal of Consulting Psychology</em> 21 (1957), 95–103.&#160;<a class="footnote-backref" href="#fnref:rogers" title="Jump back to footnote 7 in the text"></a></p>
+</li>
+<li id="fn:killingsworth">
+<p>Matthew A. Killingsworth, Daniel T. Gilbert: A Wandering Mind Is an Unhappy Mind. <em>Science</em> 330 (2010), 932. Stichproben-Befragung von 2 250 Erwachsenen per App; Abschweifen in 46,9 Prozent der Messungen.&#160;<a class="footnote-backref" href="#fnref:killingsworth" title="Jump back to footnote 8 in the text"></a></p>
+</li>
+<li id="fn:graben">
+<p>Ṣaḥīḥ Muslim, Buch der Moscheen, Überlieferungen von ʿAlī und von ʿAbdallāh ibn Masʿūd zum Tag der Verbündeten.&#160;<a class="footnote-backref" href="#fnref:graben" title="Jump back to footnote 9 in the text"></a></p>
+</li>
+<li id="fn:dassa">
+<p>As-Saʿdī zu Sure 91, Verse 7–10; das Verb <em>dassāhā</em> gibt Bubenheim mit „verkümmern lässt“ wieder, die türkische Ausgabe Saʿdīs mit <em>örten</em>, bedecken.&#160;<a class="footnote-backref" href="#fnref:dassa" title="Jump back to footnote 10 in the text"></a></p>
+</li>
+<li id="fn:rost">
+<p>Sunan at-Tirmiḏī Nr. 3334 (at-Tirmiḏī: ḥasan ṣaḥīḥ; al-Albānī: ḥasan; Zubair ʿAlī Zaʾī: ḍaʿīf), zu Sure 83, Vers 14.&#160;<a class="footnote-backref" href="#fnref:rost" title="Jump back to footnote 11 in the text"></a></p>
+</li>
+<li id="fn:wood">
+<p>Wendy Wood, David T. Neal: A new look at habits and the habit–goal interface. <em>Psychological Review</em> 114 (2007), 843–863.&#160;<a class="footnote-backref" href="#fnref:wood" title="Jump back to footnote 12 in the text"></a><a class="footnote-backref" href="#fnref2:wood" title="Jump back to footnote 12 in the text"></a></p>
+</li>
+<li id="fn:sirois">
+<p>Fuschia Sirois, Timothy Pychyl: Procrastination and the priority of short-term mood regulation: Consequences for future self. <em>Social and Personality Psychology Compass</em> 7 (2013), 115–127.&#160;<a class="footnote-backref" href="#fnref:sirois" title="Jump back to footnote 13 in the text"></a></p>
+</li>
+<li id="fn:rumination">
+<p>Susan Nolen-Hoeksema, Blair E. Wisco, Sonja Lyubomirsky: Rethinking Rumination. <em>Perspectives on Psychological Science</em> 3 (2008), 400–424.&#160;<a class="footnote-backref" href="#fnref:rumination" title="Jump back to footnote 14 in the text"></a></p>
+</li>
+<li id="fn:deci">
+<p>Edward L. Deci, Richard Koestner, Richard M. Ryan: A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation. <em>Psychological Bulletin</em> 125 (1999), 627–668. 128 Experimente; kleine bis mittlere, stabile Effekte.&#160;<a class="footnote-backref" href="#fnref:deci" title="Jump back to footnote 15 in the text"></a></p>
+</li>
+<li id="fn:jamil">
+<p>Ṣaḥīḥ Muslim, Buch des Glaubens, Überlieferung von ʿAbdallāh ibn Masʿūd.&#160;<a class="footnote-backref" href="#fnref:jamil" title="Jump back to footnote 16 in the text"></a></p>
+</li>
+<li id="fn:herzen">
+<p>Ṣaḥīḥ Muslim, Buch der Tugend und der Verwandtschaftsbande, Überlieferung von Abū Huraira.&#160;<a class="footnote-backref" href="#fnref:herzen" title="Jump back to footnote 17 in the text"></a></p>
+</li>
+<li id="fn:drei">
+<p>Ṣaḥīḥ Muslim, Buch der Führung, Überlieferung von Abū Huraira; ebenso Sunan an-Nasāʾī Nr. 3137 (ṣaḥīḥ).&#160;<a class="footnote-backref" href="#fnref:drei" title="Jump back to footnote 18 in the text"></a></p>
+</li>
+<li id="fn:rotter">
+<p>Julian B. Rotter: Generalized expectancies for internal versus external control of reinforcement. <em>Psychological Monographs</em> 80 (1966), Nr. 609.&#160;<a class="footnote-backref" href="#fnref:rotter" title="Jump back to footnote 19 in the text"></a></p>
+</li>
+<li id="fn:seligman">
+<p>Steven F. Maier, Martin E. P. Seligman: Learned helplessness: Theory and evidence. <em>Journal of Experimental Psychology: General</em> 105 (1976), 3–46.&#160;<a class="footnote-backref" href="#fnref:seligman" title="Jump back to footnote 20 in the text"></a></p>
+</li>
+<li id="fn:ibnqayyim">
+<p>Ibn Qayyim al-Dschauziyya zu Sure 24, Vers 35: Wirkender (fāʿil), Empfangender (qābil), Ort (maḥall), Träger (ḥāmil), Stoff (mādda); dort auch das Gleichnis vom Herzen als Haus. Übertragung des Autors.&#160;<a class="footnote-backref" href="#fnref:ibnqayyim" title="Jump back to footnote 21 in the text"></a></p>
+</li>
+<li id="fn:kierkegaard">
+<p>Søren Kierkegaard: <em>Die Krankheit zum Tode.</em> Kopenhagen 1849, Erster Abschnitt, A; Übertragung nach der deutschen Ausgabe.&#160;<a class="footnote-backref" href="#fnref:kierkegaard" title="Jump back to footnote 22 in the text"></a></p>
+</li>
+<li id="fn:qudsi">
+<p>Ṣaḥīḥ al-Buḫārī Nr. 7405 (Hadith Qudsī).&#160;<a class="footnote-backref" href="#fnref:qudsi" title="Jump back to footnote 23 in the text"></a></p>
+</li>
+<li id="fn:saadi51">
+<p>As-Saʿdī zu Sure 51, Vers 56 (<em>Taysīr al-Karīm ar-Raḥmān</em>, arabische Ausgabe; Übertragung des Autors).&#160;<a class="footnote-backref" href="#fnref:saadi51" title="Jump back to footnote 24 in the text"></a></p>
+</li>
+<li id="fn:ibnqayyim51">
+<p>Ibn Qayyim al-Dschauziyya zu Sure 51, Vers 56 (gesammelter Tafsir aus seinen Werken; Übertragung des Autors).&#160;<a class="footnote-backref" href="#fnref:ibnqayyim51" title="Jump back to footnote 25 in the text"></a></p>
+</li>
+<li id="fn:nak-dubai">
+<p>Nouman Ali Khan, Vortrag in Dubai, wiedergegeben in: American Muslim scholar speaks in Dubai. <em>Gulf News</em> (gulfnews.com); dort die Wendungen „honourable slavery to God“ und „we have nothing to offer someone who has everything, not even our prayers. We pray because we feel at one with God“. Übertragung des Autors.&#160;<a class="footnote-backref" href="#fnref:nak-dubai" title="Jump back to footnote 26 in the text"></a></p>
+</li>
+<li id="fn:nak-master">
+<p>Nouman Ali Khan: <em>Master and Slaves</em> (Vortrag; Zusammenfassung bei AboutIslam.net). Der Vortrag bezieht sich auf Sure 2, Vers 152.&#160;<a class="footnote-backref" href="#fnref:nak-master" title="Jump back to footnote 27 in the text"></a></p>
+</li>
+<li id="fn:nak-return">
+<p>Nouman Ali Khan: <em>How to Come Back to Allah</em> (Kurzvortrag; Zusammenfassung bei AboutIslam.net): „A slave is a slave all the time.“ Übertragung des Autors.&#160;<a class="footnote-backref" href="#fnref:nak-return" title="Jump back to footnote 28 in the text"></a></p>
+</li>
+<li id="fn:saadi256">
+<p>As-Saʿdī zu Sure 2, Vers 256 (arabische Ausgabe; Übertragung des Autors). Saʿdī betont dort zugleich, dass der Vers nur von der Annahme des Glaubens handelt und nicht von anderen Rechtsfragen.&#160;<a class="footnote-backref" href="#fnref:saadi256" title="Jump back to footnote 29 in the text"></a><a class="footnote-backref" href="#fnref2:saadi256" title="Jump back to footnote 29 in the text"></a></p>
+</li>
+<li id="fn:brehm">
+<p>Jack W. Brehm: <em>A Theory of Psychological Reactance.</em> New York 1966.&#160;<a class="footnote-backref" href="#fnref:brehm" title="Jump back to footnote 30 in the text"></a></p>
+</li>
+<li id="fn:ryan">
+<p>Richard M. Ryan, Edward L. Deci: Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. <em>American Psychologist</em> 55 (2000), 68–78.&#160;<a class="footnote-backref" href="#fnref:ryan" title="Jump back to footnote 31 in the text"></a></p>
+</li>
+<li id="fn:frankl">
+<p>Viktor E. Frankl: <em>Man’s Search for Meaning.</em> Boston 1962, Teil II („Logotherapy in a Nutshell“): Freiheit sei nur die negative Seite des Ganzen, dessen positive Seite die Verantwortlichkeit ist; ohne sie drohe sie zur bloßen Willkür zu verkommen. Übertragung des Autors.&#160;<a class="footnote-backref" href="#fnref:frankl" title="Jump back to footnote 32 in the text"></a></p>
+</li>
+<li id="fn:khaldoun">
+<p>A. Khaldoun, E. Eiser, G. H. Wegdam, D. Bonn: Liquefaction of quicksand under stress. <em>Nature</em> 437 (2005), 635.&#160;<a class="footnote-backref" href="#fnref:khaldoun" title="Jump back to footnote 33 in the text"></a></p>
+</li>
+<li id="fn:wegner">
+<p>Daniel M. Wegner: Ironic processes of mental control. <em>Psychological Review</em> 101 (1994), 34–52.&#160;<a class="footnote-backref" href="#fnref:wegner" title="Jump back to footnote 34 in the text"></a></p>
+</li>
+<li id="fn:saadi257">
+<p>As-Saʿdī zu Sure 2, Vers 257 (arabische Ausgabe; Übertragung des Autors).&#160;<a class="footnote-backref" href="#fnref:saadi257" title="Jump back to footnote 35 in the text"></a></p>
+</li>
+<li id="fn:ekers">
+<p>David Ekers u. a.: Behavioural activation for depression; an update of meta-analysis. <em>PLoS One</em> 9 (2014), e100100. 26 Studien, 1 524 Teilnehmende.&#160;<a class="footnote-backref" href="#fnref:ekers" title="Jump back to footnote 36 in the text"></a></p>
+</li>
+<li id="fn:yusr">
+<p>Ṣaḥīḥ al-Buḫārī Nr. 39; Sunan an-Nasāʾī Nr. 5034 (ṣaḥīḥ).&#160;<a class="footnote-backref" href="#fnref:yusr" title="Jump back to footnote 37 in the text"></a></p>
+</li>
+<li id="fn:muyassar">
+<p>Ṣaḥīḥ al-Buḫārī Nr. 7551; Sunan Abī Dāwūd Nr. 4709 (ṣaḥīḥ).&#160;<a class="footnote-backref" href="#fnref:muyassar" title="Jump back to footnote 38 in the text"></a></p>
+</li>
+<li id="fn:flow">
+<p>Mihaly Csikszentmihalyi: <em>Flow: The Psychology of Optimal Experience.</em> New York 1990.&#160;<a class="footnote-backref" href="#fnref:flow" title="Jump back to footnote 39 in the text"></a></p>
+</li>
+<li id="fn:robe">
+<p>Andreea Robe u. a.: ADHD and task-related heart rate variability: A systematic review and meta-analysis. <em>Neuroscience &amp; Biobehavioral Reviews</em> 99 (2019), 11–22. Hedges’ g = 0,20 – ein kleiner Effekt.&#160;<a class="footnote-backref" href="#fnref:robe" title="Jump back to footnote 40 in the text"></a></p>
+</li>
+<li id="fn:bestaendig">
+<p>Ṣaḥīḥ al-Buḫārī Nr. 1151 und 6465; Ṣaḥīḥ Muslim, Buch des Reisegebets.&#160;<a class="footnote-backref" href="#fnref:bestaendig" title="Jump back to footnote 41 in the text"></a><a class="footnote-backref" href="#fnref2:bestaendig" title="Jump back to footnote 41 in the text"></a></p>
+</li>
+<li id="fn:gollwitzer">
+<p>Peter M. Gollwitzer, Paschal Sheeran: Implementation intentions and goal achievement: A meta-analysis. <em>Advances in Experimental Social Psychology</em> 38 (2006), 69–119. 94 Studien, d ≈ 0,65.&#160;<a class="footnote-backref" href="#fnref:gollwitzer" title="Jump back to footnote 42 in the text"></a></p>
+</li>
+<li id="fn:makruh">
+<p>Ṣaḥīḥ al-Buḫārī Nr. 586, Überlieferung von Abū Saʿīd al-Ḫudrī; die Rechtsschulen verstehen dies als Abraten vom freiwilligen Gebet in diesen Zeiten – Bittgebet und Gedenken sind nicht berührt.&#160;<a class="footnote-backref" href="#fnref:makruh" title="Jump back to footnote 43 in the text"></a></p>
+</li>
+<li id="fn:drittel">
+<p>Ṣaḥīḥ al-Buḫārī Nr. 1145; Sunan Abī Dāwūd Nr. 1315 (ṣaḥīḥ).&#160;<a class="footnote-backref" href="#fnref:drittel" title="Jump back to footnote 44 in the text"></a></p>
+</li>
+<li id="fn:neff">
+<p>Kristin D. Neff: Self-compassion: An alternative conceptualization of a healthy attitude toward oneself. <em>Self and Identity</em> 2 (2003), 85–101.&#160;<a class="footnote-backref" href="#fnref:neff" title="Jump back to footnote 45 in the text"></a></p>
+</li>
+</ol>
+</div>
+<h2 id="ueber-den-autor">Über den Autor</h2>
+<p>Muharrem Yıldız lebt mit seiner Familie in Frankfurt am Main. <em>Der Diamant im Sumpf. Zurück auf Werkseinstellungen: Fitra, Sog und das Anker-Gebet</em> ist sein erstes Buch. Es ist aus einer einzigen Frage entstanden: Was ist wertvoller – jetzt, hier, in dieser Situation?</p>
+</main>
+<p class="credits">Fotografien: Bas van den Eijkhof, Dominik Lückmann, Pascal Debrunner, Wolfgang Hasselmann – Unsplash, lizenzfrei. Zeichnungen und Bewegung: eigens für diesen Text.</p>
+<p class="foot">Fabrik zu · Nicht zurückgesetzt, sondern zurückgekehrt</p>
+</div>
+<script>(function () {
+  "use strict";
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Hilfen ---------- */
+  function diamondPath(ctx, cx, cy, s, rot) {
+    ctx.save(); ctx.translate(cx, cy); ctx.rotate(rot || 0);
+    ctx.beginPath();
+    ctx.moveTo(-s * 0.9, -s * 0.25); ctx.lineTo(-s * 0.5, -s * 0.6); ctx.lineTo(s * 0.5, -s * 0.6);
+    ctx.lineTo(s * 0.9, -s * 0.25); ctx.lineTo(0, s * 0.8); ctx.closePath();
+    ctx.restore();
+  }
+  function drawDiamond(ctx, cx, cy, s, rot, fill, stroke) {
+    diamondPath(ctx, cx, cy, s, rot);
+    ctx.fillStyle = fill; ctx.fill();
+    ctx.strokeStyle = stroke; ctx.lineWidth = 1.2; ctx.stroke();
+    ctx.save(); ctx.translate(cx, cy); ctx.rotate(rot || 0);
+    ctx.strokeStyle = stroke; ctx.globalAlpha = ctx.globalAlpha * 0.65; ctx.lineWidth = 0.9;
+    ctx.beginPath();
+    ctx.moveTo(-s * 0.9, -s * 0.25); ctx.lineTo(s * 0.9, -s * 0.25);
+    ctx.moveTo(-s * 0.5, -s * 0.6); ctx.lineTo(-s * 0.3, -s * 0.25); ctx.lineTo(0, s * 0.8);
+    ctx.moveTo(s * 0.5, -s * 0.6); ctx.lineTo(s * 0.3, -s * 0.25); ctx.lineTo(0, s * 0.8);
+    ctx.moveTo(0, -s * 0.6); ctx.lineTo(0, -s * 0.25);
+    ctx.stroke(); ctx.restore();
+  }
+  function label(ctx, text, x, y, color, italic) {
+    ctx.save();
+    ctx.font = (italic ? "italic 400 14px 'Source Serif 4', Georgia, serif" : "500 11px Inter, 'Helvetica Neue', Arial, sans-serif");
+    ctx.textAlign = "center"; ctx.textBaseline = "alphabetic"; ctx.fillStyle = color;
+    ctx.fillText(text, x, y); ctx.restore();
+  }
+
+  /* ---------- Szenen ---------- */
+  const S = {};
+
+  // Titel: Licht fällt von oben rechts, Staub steigt auf
+  S.cover = {
+    init(st) {
+      st.blobs = [
+        { x: .18, y: .25, r: .62, rgb: "255,208,110", a: .42, sx: .00011, sy: .00007, p: 0 },
+        { x: .84, y: .60, r: .55, rgb: "176,198,255", a: .34, sx: -.00009, sy: .00012, p: 2.1 },
+        { x: .50, y: .98, r: .70, rgb: "255,228,170", a: .36, sx: .00007, sy: -.00009, p: 4.2 }];
+      st.motes = Array.from({ length: 46 }, () => ({ x: Math.random(), y: Math.random(), r: Math.random() * 1.5 + .7, v: Math.random() * .00003 + .000012, o: Math.random() * 6.28 }));
+    },
+    draw(ctx, w, h, t, p, st, dt) {
+      ctx.clearRect(0, 0, w, h);
+      ctx.save(); ctx.translate(w * .80, -h * .12);
+      for (let i = 0; i < 3; i++) {
+        const ang = .50 + i * .11 + Math.sin(t * .00008 + i) * .035;
+        ctx.save(); ctx.rotate(ang);
+        const g = ctx.createLinearGradient(0, 0, 0, h * 1.9);
+        const k = .09 + .04 * Math.sin(t * .00025 + i * 1.7);
+        g.addColorStop(0, "rgba(226,186,104,0)"); g.addColorStop(.25, "rgba(226,186,104," + k + ")"); g.addColorStop(1, "rgba(226,186,104,0)");
+        ctx.fillStyle = g; const bw = w * (.045 + .02 * i); ctx.fillRect(-bw / 2, 0, bw, h * 1.9); ctx.restore();
+      }
+      ctx.restore();
+      for (const b of st.blobs) {
+        const x = (b.x + Math.sin(t * b.sx + b.p) * .09) * w, y = (b.y + Math.cos(t * b.sy + b.p) * .09) * h, r = b.r * Math.max(w, h);
+        const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+        g.addColorStop(0, "rgba(" + b.rgb + "," + b.a + ")"); g.addColorStop(.6, "rgba(" + b.rgb + "," + (b.a * .25) + ")"); g.addColorStop(1, "rgba(" + b.rgb + ",0)");
+        ctx.fillStyle = g; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
+      }
+      for (const m of st.motes) {
+        m.y -= m.v * dt; if (m.y < -.02) { m.y = 1.02; m.x = Math.random(); }
+        const a = .18 + .22 * (.5 + .5 * Math.sin(t * .0018 + m.o));
+        ctx.fillStyle = "rgba(214,164,70," + a + ")"; ctx.beginPath();
+        ctx.arc(m.x * w + Math.sin(t * .0004 + m.o) * 9, m.y * h, m.r, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+  };
+
+  // I · Rücksetzung: ein Gerät setzt zurück – und das Wort kehrt zurück
+  S.rueck = {
+    init(st) { st.from = "ZURÜCKSETZEN"; st.to = "ZURÜCKKEHREN"; st.chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZÜ·"; },
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const cyc = 9000, u = (t % cyc) / cyc, n = st.from.length; let txt = "";
+      for (let i = 0; i < n; i++) {
+        const li = i / n; let ch;
+        if (u < .3) ch = st.from[i];
+        else if (u < .62) { const q = (u - .3) / .32, thr = q * 1.25 - .15; if (li < thr - .12) ch = st.to[i]; else if (li < thr + .05) ch = st.chars[Math.floor(Math.random() * st.chars.length)]; else ch = st.from[i]; }
+        else ch = st.to[i];
+        txt += ch;
+      }
+      const fs = Math.min(w / 11.5, h / 4.2), alpha = u > .95 ? (1 - u) / .05 : 1;
+      ctx.save(); ctx.font = "500 " + fs + "px Inter, 'Helvetica Neue', Arial, sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      try { ctx.letterSpacing = "0.1em"; } catch (e) { }
+      ctx.fillStyle = "rgba(0,0,0," + alpha + ")"; ctx.fillText(txt, w / 2, h / 2 - fs * .2);
+      ctx.font = "400 " + (fs * .3) + "px Inter, Arial, sans-serif"; ctx.fillStyle = "rgba(0,0,0," + (.65 * alpha) + ")";
+      ctx.fillText(u < .62 ? "das Gerät verliert, was dazukam" : "der Mensch verliert nichts", w / 2, h / 2 + fs * .75);
+      ctx.restore();
+      const bw = Math.min(w * .5, 320), bx = (w - bw) / 2, by = h / 2 + fs * 1.15;
+      ctx.strokeStyle = "rgba(0,0,0,0.5)"; ctx.lineWidth = 1; ctx.strokeRect(bx, by, bw, 4);
+      const prog = u < .3 ? u / .3 : u < .62 ? 1 - (u - .3) / .32 : 0;
+      ctx.fillStyle = "rgba(226,186,104,0.9)"; ctx.fillRect(bx, by, bw * prog, 4);
+    }
+  };
+
+  // II · Der Diamant: Glanz, der über die Facetten wandert
+  S.diamant = {
+    init(st) { st.sp = []; },
+    draw(ctx, w, h, t, p, st, dt) {
+      ctx.clearRect(0, 0, w, h);
+      const dcx = w / 2, dcy = h * .5, ds = Math.min(w, h) * .3;
+      ctx.save(); const gl = ctx.createRadialGradient(dcx, dcy, 0, dcx, dcy, ds * 2.4); gl.addColorStop(0, "rgba(176,198,255,0.28)"); gl.addColorStop(1, "rgba(176,198,255,0)"); ctx.fillStyle = gl; ctx.fillRect(0, 0, w, h); ctx.restore();
+      drawDiamond(ctx, dcx, dcy, ds, 0, "rgba(255,255,255,0.18)", "rgba(255,255,255,0.95)");
+      const cyc = 5200, u = (t % cyc) / cyc, x = -w * .3 + u * (w * 1.6);
+      ctx.save(); ctx.globalCompositeOperation = "lighter"; ctx.translate(x, 0); ctx.rotate(-.35);
+      const g = ctx.createLinearGradient(-70, 0, 70, 0); g.addColorStop(0, "rgba(255,255,255,0)"); g.addColorStop(.5, "rgba(255,255,255,0.2)"); g.addColorStop(1, "rgba(255,255,255,0)");
+      ctx.fillStyle = g; ctx.fillRect(-90, -h, 180, h * 3); ctx.restore();
+      if (Math.random() < .07 && st.sp.length < 14) st.sp.push({ x: Math.random() * w, y: h * .2 + Math.random() * h * .65, r: 4 + Math.random() * 10, life: 0, max: 900 + Math.random() * 900 });
+      ctx.save(); ctx.globalCompositeOperation = "lighter";
+      for (const s of st.sp) {
+        s.life += dt; const k = s.life / s.max; if (k >= 1) { s.dead = true; continue; }
+        const a = k < .5 ? k * 2 : (1 - k) * 2;
+        ctx.strokeStyle = "rgba(255,255,255," + (.85 * a) + ")"; ctx.lineWidth = 1; ctx.beginPath();
+        ctx.moveTo(s.x - s.r, s.y); ctx.lineTo(s.x + s.r, s.y); ctx.moveTo(s.x, s.y - s.r); ctx.lineTo(s.x, s.y + s.r); ctx.stroke();
+        ctx.fillStyle = "rgba(255,255,255," + (.9 * a) + ")"; ctx.beginPath(); ctx.arc(s.x, s.y, 1.6, 0, Math.PI * 2); ctx.fill();
+      }
+      st.sp = st.sp.filter(s => !s.dead); ctx.restore();
+      label(ctx, "An seinem Wert verliert er nichts.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // III · Der Lichtort: der Strahl wandert, der Diamant leuchtet nur, wo er getroffen wird
+  S.lichtort = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const ang = Math.sin(t * .00035) * .55, ox = w / 2, oy = -h * .1, L = h * 1.4;
+      ctx.save(); ctx.translate(ox, oy); ctx.rotate(ang); ctx.globalCompositeOperation = "lighter";
+      const g = ctx.createLinearGradient(0, 0, 0, L); g.addColorStop(0, "rgba(255,236,190,0)"); g.addColorStop(.2, "rgba(255,236,190,0.30)"); g.addColorStop(1, "rgba(255,236,190,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.moveTo(-w * .03, 0); ctx.lineTo(w * .03, 0); ctx.lineTo(w * .17, L); ctx.lineTo(-w * .17, L); ctx.closePath(); ctx.fill(); ctx.restore();
+      const dx = w * .5, dy = h * .76, s = Math.min(w, h) * .075;
+      const bx = ox - Math.tan(ang) * (dy - oy), hit = Math.max(0, 1 - Math.abs(bx - dx) / (w * .13));
+      if (hit > 0) {
+        ctx.save(); ctx.globalCompositeOperation = "lighter"; const n = 12;
+        for (let i = 0; i < n; i++) {
+          const a = i / n * Math.PI * 2 + t * .0006, len = s * (2.5 + 3 * hit) * (.6 + .4 * Math.sin(t * .004 + i));
+          const g2 = ctx.createLinearGradient(dx, dy, dx + Math.cos(a) * len, dy + Math.sin(a) * len);
+          g2.addColorStop(0, "rgba(255,255,255," + (.75 * hit) + ")"); g2.addColorStop(1, "rgba(255,255,255,0)");
+          ctx.strokeStyle = g2; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(dx, dy); ctx.lineTo(dx + Math.cos(a) * len, dy + Math.sin(a) * len); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      drawDiamond(ctx, dx, dy, s, 0, "rgba(255,255,255," + (.15 + .8 * hit) + ")", "rgba(255,255,255,0.9)");
+      label(ctx, hit > .5 ? "Zeit · Ort · Situation – hier fällt das Licht ein" : "Der Diamant wirkt nur dort, wo er steht.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // IV · Die Bedeckung: Punkt für Punkt – und Punkt für Punkt poliert
+  S.bedeckung = {
+    init(st) { st.pts = []; st.last = 1; },
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const cx = w / 2, cy = h * .5, s = Math.min(w, h) * .27, cyc = 13000, u = (t % cyc) / cyc;
+      if (u < st.last) st.pts = []; st.last = u;
+      ctx.save(); const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, s * 2.2); g.addColorStop(0, "rgba(255,230,170,0.35)"); g.addColorStop(1, "rgba(255,230,170,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      drawDiamond(ctx, cx, cy, s, 0, "rgba(250,247,240,0.94)", "rgba(60,50,40,0.9)");
+      if (u < .55) {
+        const want = Math.floor(u / .55 * 260); let guard = 0;
+        while (st.pts.length < want && guard++ < 400) {
+          const x = cx + (Math.random() * 2 - 1) * s * .9, y = cy + (Math.random() * 1.4 - .6) * s;
+          diamondPath(ctx, cx, cy, s, 0); if (ctx.isPointInPath(x, y)) st.pts.push({ x, y, r: 2 + Math.random() * 3 }); else want--;
+        }
+      }
+      let px = -1; if (u > .62 && u < .95) { const q = (u - .62) / .33; px = cx - s * 1.2 + q * s * 2.4; }
+      for (const q of st.pts) {
+        if (px > 0 && Math.abs(q.x - px) < s * .22) q.dead = true;
+        ctx.fillStyle = "rgba(30,24,20,0.85)"; ctx.beginPath(); ctx.arc(q.x, q.y, q.r, 0, Math.PI * 2); ctx.fill();
+      }
+      st.pts = st.pts.filter(q => !q.dead);
+      if (px > 0) { ctx.save(); const g2 = ctx.createRadialGradient(px, cy, 0, px, cy, s * .55); g2.addColorStop(0, "rgba(255,255,255,0.75)"); g2.addColorStop(1, "rgba(255,255,255,0)"); ctx.fillStyle = g2; ctx.fillRect(px - s, cy - s * 1.2, 2 * s, 2.4 * s); ctx.restore(); }
+      label(ctx, u < .6 ? "Die Bedeckung: eine Ansammlung, Punkt für Punkt." : "Die Politur: ablassen, bitten, umkehren – Punkt für Punkt.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // V · Die Fassung: Ring, Bohrkopf, Tresor kreisen – der Diamant bleibt, wo das Licht ist
+  S.fassung = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const cx = w / 2, cy = h * .5, s = Math.min(w, h) * .13, R = Math.min(w, h) * .38, names = ["Ring", "Bohrkopf", "Tresor"];
+      ctx.strokeStyle = "rgba(0,0,0,0.9)"; ctx.lineWidth = 1.5;
+      for (let i = 0; i < 3; i++) {
+        const a = t * .00025 + i * Math.PI * 2 / 3, pulse = Math.max(0, Math.sin(t * .0012 + i * 2.1)), r = R * (1 - .22 * pulse);
+        const x = cx + Math.cos(a) * r * 1.15, y = cy + Math.sin(a) * r * .62;
+        ctx.save(); ctx.translate(x, y); ctx.strokeStyle = "rgba(0,0,0,0.9)"; ctx.fillStyle = "rgba(0,0,0,0.9)"; ctx.lineWidth = 1.5;
+        if (i === 0) { ctx.beginPath(); ctx.arc(0, 0, s * .55, 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.arc(0, 0, s * .38, 0, Math.PI * 2); ctx.stroke(); }
+        else if (i === 1) { ctx.beginPath(); ctx.moveTo(-s * .5, -s * .5); ctx.lineTo(s * .5, -s * .5); ctx.lineTo(0, s * .6); ctx.closePath(); ctx.stroke(); for (let k = -2; k <= 2; k++) { ctx.beginPath(); ctx.moveTo(k * s * .18, -s * .5); ctx.lineTo(k * s * .09, s * .05); ctx.stroke(); } }
+        else { ctx.strokeRect(-s * .55, -s * .5, s * 1.1, s); ctx.beginPath(); ctx.arc(0, 0, s * .22, 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(s * .2, -s * .1); ctx.stroke(); }
+        ctx.font = "500 11px Inter, Arial, sans-serif"; ctx.textAlign = "center"; ctx.fillText(names[i], 0, s * .95); ctx.restore();
+      }
+      ctx.save(); ctx.globalCompositeOperation = "multiply"; const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, s * 2.6); g.addColorStop(0, "rgba(255,215,130,0.6)"); g.addColorStop(1, "rgba(255,215,130,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      drawDiamond(ctx, cx, cy, s, 0, "rgba(255,255,255,0.97)", "rgba(0,0,0,0.9)");
+      label(ctx, "Keins davon entfaltet ihn aus sich heraus.", cx, h - 18, "#000", true);
+    }
+  };
+
+  // VI · Die Verkippung: beim Weiterlesen richtet sich der Diamant auf
+  S.verkippung = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const q = reduce ? 1 : Math.min(1, Math.max(0, (p - .18) / .55)), tilt = (1 - q) * .6;
+      const cx = w / 2, cy = h * .56, s = Math.min(w, h) * .17;
+      // der Strahl von oben rechts – auf hellem Grund als warme Verdichtung (multiply)
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const sx = w * .82, sy = -h * .1, g = ctx.createLinearGradient(sx, sy, cx, cy - s * .4);
+      g.addColorStop(0, "rgba(226,186,104,0)"); g.addColorStop(.3, "rgba(226,186,104,0.45)"); g.addColorStop(1, "rgba(226,186,104,0.75)");
+      ctx.strokeStyle = g; ctx.lineWidth = s * .5; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(cx, cy - s * .4); ctx.stroke(); ctx.restore();
+      if (tilt > .02) {
+        ctx.save(); ctx.globalCompositeOperation = "multiply"; const k = tilt / .6;
+        const g2 = ctx.createLinearGradient(cx, cy + s * .6, cx + s * 1.6, h * 1.3); g2.addColorStop(0, "rgba(200,120,70," + (.55 * k) + ")"); g2.addColorStop(1, "rgba(200,120,70,0)");
+        ctx.strokeStyle = g2; ctx.lineWidth = s * .35; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(cx, cy + s * .6); ctx.lineTo(cx + s * 1.6, h * 1.3); ctx.stroke(); ctx.restore();
+      }
+      if (q > .05) {
+        ctx.save(); ctx.globalCompositeOperation = "multiply"; const n = 14;
+        for (let i = 0; i < n; i++) {
+          const a = -Math.PI / 2 + (i / (n - 1) - .5) * 1.5, len = s * (1.5 + 3 * q) * (.7 + .3 * Math.sin(t * .003 + i));
+          const x2 = cx + Math.cos(a) * len, y2 = cy - s * .6 + Math.sin(a) * len;
+          const g3 = ctx.createLinearGradient(cx, cy - s * .6, x2, y2); g3.addColorStop(0, "rgba(214,164,70," + (.9 * q) + ")"); g3.addColorStop(1, "rgba(214,164,70,0)");
+          ctx.strokeStyle = g3; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, cy - s * .6); ctx.lineTo(x2, y2); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      drawDiamond(ctx, cx, cy, s, tilt, "rgba(255,255,255," + (.35 + .6 * q) + ")", "rgba(0,0,0,0.9)");
+      label(ctx, q < .5 ? "Verkippt: das Licht entweicht nach unten, wo kein Auge ist." : "Ausgerichtet: der Träger bewegt – das Licht kommt zurück.", cx, h - 18, "#000", true);
+      if (q < .9) label(ctx, "WEITERLESEN RICHTET IHN AUS", cx, 24, "rgba(0,0,0,0.55)", false);
+    }
+  };
+
+  // VII · Die Widmung: alles wird zum Licht gezogen – nur der Diamant wendet sich selbst zu
+  S.widmung = {
+    init(st) {
+      st.grains = Array.from({ length: 70 }, () => ({ x: Math.random() * 1.3 - .15, y: Math.random() * 1.3 - .15, v: .00004 + Math.random() * .00005, l: 6 + Math.random() * 8 }));
+      st.rot = 0; st.free = 0;
+    },
+    draw(ctx, w, h, t, p, st, dt) {
+      ctx.clearRect(0, 0, w, h);
+      const lx = w * .86, ly = h * .12, cx = w / 2, cy = h * .58, s = Math.min(w, h) * .16;
+      // die Lichtquelle: warm, oben rechts
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const g = ctx.createRadialGradient(lx, ly, 0, lx, ly, Math.max(w, h) * .55);
+      g.addColorStop(0, "rgba(226,186,104,0.75)"); g.addColorStop(.35, "rgba(226,186,104,0.25)"); g.addColorStop(1, "rgba(226,186,104,0)");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      // die Schöpfung: Körner, die alle gezogen werden – „freiwillig oder widerwillig“
+      ctx.save(); ctx.strokeStyle = "rgba(0,0,0,0.55)"; ctx.lineWidth = 1.1; ctx.lineCap = "round";
+      for (const q of st.grains) {
+        const dx = lx / w - q.x, dy = ly / h - q.y, d = Math.hypot(dx, dy) || 1;
+        q.x += dx / d * q.v * dt; q.y += dy / d * q.v * dt;
+        if (d < .05) { q.x = Math.random() < .5 ? -.1 : Math.random(); q.y = q.x < 0 ? Math.random() : 1.1; }
+        const px = q.x * w, py = q.y * h, ux = dx / d * q.l, uy = dy / d * q.l;
+        ctx.beginPath(); ctx.moveTo(px - ux, py - uy); ctx.lineTo(px, py); ctx.stroke();
+      }
+      ctx.restore();
+      // der Diamant: zuerst treibt er, dann richtet er sich – beim Weiterlesen – selbst aus
+      const want = reduce ? 1 : Math.min(1, Math.max(0, (p - .2) / .5));
+      st.free += (want - st.free) * Math.min(1, dt / 600);
+      const drift = Math.sin(t * .0007) * .9 + Math.sin(t * .0023) * .25;
+            const rot = drift * (1 - st.free);  // zugewandt heißt: aufrecht, zum Licht hin offen
+      if (st.free > .05) {
+        ctx.save(); ctx.globalCompositeOperation = "multiply"; const n = 10;
+        for (let i = 0; i < n; i++) {
+          const a = Math.atan2(ly - cy, lx - cx) + (i / (n - 1) - .5) * .9, len = s * (1 + 2.5 * st.free) * (.7 + .3 * Math.sin(t * .003 + i));
+          const x2 = cx + Math.cos(a) * len, y2 = cy + Math.sin(a) * len;
+          const g3 = ctx.createLinearGradient(cx, cy, x2, y2); g3.addColorStop(0, "rgba(214,164,70," + (.85 * st.free) + ")"); g3.addColorStop(1, "rgba(214,164,70,0)");
+          ctx.strokeStyle = g3; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x2, y2); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      drawDiamond(ctx, cx, cy, s, rot, "rgba(255,255,255," + (.4 + .55 * st.free) + ")", "rgba(0,0,0,0.9)");
+      label(ctx, st.free < .5 ? "Alles wird gezogen – freiwillig oder widerwillig." : "Nur der Mensch wendet sich zu. Weil er sich abwenden könnte.", cx, h - 18, "#000", true);
+      if (st.free < .9) label(ctx, "WEITERLESEN – ER WENDET SICH ZU", cx, 24, "rgba(0,0,0,0.55)", false);
+    }
+  };
+
+  // VII · Der Sog: strampeln, aufhören, die Gebetswaschung
+  S.sog = {
+    init(st) { st.rip = []; },
+    draw(ctx, w, h, t, p, st, dt) {
+      const cyc = 14000, u = (t % cyc) / cyc, wash = u < .6 ? 0 : Math.min(1, (u - .6) / .25);
+      ctx.clearRect(0, 0, w, h);
+      // der Boden: warmes Moor, das sich beim Waschen in klares Wasser wandelt (multiply, bleibt hell)
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const r = Math.round(205 + (185 - 205) * wash), g = Math.round(185 + (210 - 185) * wash), b = Math.round(150 + (230 - 150) * wash);
+      ctx.fillStyle = "rgba(" + r + "," + g + "," + b + ",0.75)"; ctx.fillRect(0, 0, w, h); ctx.restore();
+      const cx = w / 2, cy = h * .5, base = Math.min(w, h);
+      ctx.save(); ctx.translate(cx, cy); ctx.rotate(t * .0004);
+      for (let i = 1; i <= 9; i++) {
+        const rr = i * base * .055; ctx.beginPath();
+        for (let a = 0; a <= Math.PI * 2 + .01; a += .1) { const wob = 1 + .06 * Math.sin(a * 3 + i + t * .001); const x = Math.cos(a) * rr * wob * 1.6, y = Math.sin(a) * rr * wob * .7; if (a === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
+        ctx.strokeStyle = "rgba(70,50,30," + (.5 * (1 - wash)) + ")"; ctx.lineWidth = 2; ctx.stroke();
+      }
+      ctx.restore();
+      let fy, jit = 0;
+      if (u < .45) { fy = cy - h * .1 + (u / .45) * h * .22; jit = Math.sin(t * .03) * 6; }
+      else if (u < .6) { const q = (u - .45) / .15; fy = cy + h * .12 - q * h * .22; }
+      else fy = cy - h * .1;
+      ctx.fillStyle = "rgba(0,0,0,0.9)"; ctx.beginPath(); ctx.arc(cx + jit, fy, base * .03, 0, Math.PI * 2); ctx.fill();
+      if (wash > 0) {
+        if (Math.random() < .07) st.rip.push({ x: cx + (Math.random() - .5) * w * .6, y: cy + (Math.random() - .5) * h * .45, r: 0 });
+        for (const q of st.rip) { q.r += dt * .05; const a = Math.max(0, 1 - q.r / (base * .35)); ctx.strokeStyle = "rgba(30,90,150," + (.75 * a) + ")"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.ellipse(q.x, q.y, q.r * 1.6, q.r * .7, 0, 0, Math.PI * 2); ctx.stroke(); if (a <= 0) q.dead = true; }
+        st.rip = st.rip.filter(q => !q.dead);
+      } else st.rip = [];
+      label(ctx, u < .45 ? "Strampeln – der Schlamm packt." : (u < .6 ? "Aufhören – der Schlamm trägt." : "Die Gebetswaschung – herausgebracht, nicht herausgekämpft."), cx, h - 18, "#000", true);
+    }
+  };
+
+  // VIII · Das Leichtgemachtsein: Bienen auf geebneten Wegen
+  S.biene = {
+    init(st) { st.bees = Array.from({ length: 6 }, (_, i) => ({ ph: i * 1.1, f1: .00018 + i * .00002, f2: .00013 + i * .00003, ax: .38, ay: .3, trail: [] })); },
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      ctx.save(); ctx.setLineDash([2, 7]); ctx.strokeStyle = "rgba(255,225,150,0.5)"; ctx.lineWidth = 1;
+      for (let i = 0; i < 3; i++) { ctx.beginPath(); for (let x = 0; x <= w; x += 8) { const y = h * (.3 + .2 * i) + Math.sin(x / w * Math.PI * 2 + i) * h * .08; if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); } ctx.stroke(); }
+      ctx.restore();
+      for (const b of st.bees) {
+        const x = w / 2 + Math.cos(t * b.f1 + b.ph) * w * b.ax, y = h / 2 + Math.sin(t * b.f2 + b.ph * .7) * h * b.ay;
+        b.trail.push({ x, y }); if (b.trail.length > 40) b.trail.shift();
+        ctx.save(); ctx.globalCompositeOperation = "lighter";
+        for (let i = 1; i < b.trail.length; i++) { const a = i / b.trail.length; ctx.strokeStyle = "rgba(255,210,110," + (.4 * a) + ")"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(b.trail[i - 1].x, b.trail[i - 1].y); ctx.lineTo(b.trail[i].x, b.trail[i].y); ctx.stroke(); }
+        ctx.restore();
+        const n = b.trail.length, dx = n > 1 ? x - b.trail[n - 2].x : 1, dy = n > 1 ? y - b.trail[n - 2].y : 0, ang = Math.atan2(dy, dx);
+        ctx.save(); ctx.translate(x, y); ctx.rotate(ang);
+        const wf = Math.sin(t * .08 + b.ph) * .5 + .5;
+        ctx.fillStyle = "rgba(255,255,255," + (.35 + .4 * wf) + ")"; ctx.beginPath(); ctx.ellipse(-1, -5, 5, 3, -.5, 0, Math.PI * 2); ctx.fill(); ctx.beginPath(); ctx.ellipse(-1, 5, 5, 3, .5, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#f2c230"; ctx.beginPath(); ctx.ellipse(0, 0, 7, 4, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#1d1a14"; ctx.fillRect(-2, -4, 2, 8); ctx.fillRect(2, -3.5, 2, 7); ctx.restore();
+      }
+      label(ctx, "Ziehe auf den Wegen deines Herrn dahin, die dir geebnet sind.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // IX · Der Anker: er setzt sich in den Grund, bevor der Zug kommt
+  S.anker = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const g0 = ctx.createLinearGradient(0, 0, 0, h); g0.addColorStop(0, "rgba(200,220,238,0.55)"); g0.addColorStop(1, "rgba(150,185,215,0.75)"); ctx.fillStyle = g0; ctx.fillRect(0, 0, w, h); ctx.restore();
+      const cyc = 11000, u = (t % cyc) / cyc, set = u < .5 ? u / .5 : 1, calm = u < .5 ? 0 : Math.min(1, (u - .5) / .3), amp = h * .03 * (1 - .8 * calm);
+      for (let i = 0; i < 4; i++) {
+        ctx.beginPath(); for (let x = 0; x <= w; x += 6) { const y = h * .2 + i * 7 + Math.sin(x * .02 + t * .003 + i) * amp; if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
+        ctx.strokeStyle = "rgba(20,70,120," + (.6 - i * .11) + ")"; ctx.lineWidth = 1.2; ctx.stroke();
+      }
+      const cx = w / 2, topY = h * .05, botY = h * .7, y = topY + (botY - topY) * (1 - Math.pow(1 - set, 2)), sway = (1 - set) * Math.sin(t * .004) * .15, s = Math.min(w, h) * .09;
+      ctx.strokeStyle = "rgba(0,0,0,0.85)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, -5); ctx.quadraticCurveTo(cx + (1 - set) * 20, y / 2, cx + Math.sin(sway) * 10, y - s * .9); ctx.stroke();
+      ctx.save(); ctx.translate(cx, y); ctx.rotate(sway); ctx.strokeStyle = "rgba(0,0,0,0.9)"; ctx.lineWidth = 3; ctx.lineCap = "round";
+      ctx.beginPath(); ctx.arc(0, -s * .75, s * .18, 0, Math.PI * 2); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(0, -s * .55); ctx.lineTo(0, s * .7); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(-s * .45, -s * .25); ctx.lineTo(s * .45, -s * .25); ctx.stroke();
+      ctx.beginPath(); ctx.arc(0, s * .15, s * .6, Math.PI * .15, Math.PI * .85); ctx.stroke();
+      ctx.restore();
+      ctx.save(); ctx.globalCompositeOperation = "multiply"; ctx.fillStyle = "rgba(190,170,140,0.7)"; ctx.fillRect(0, h * .82, w, h * .18); ctx.restore();
+      label(ctx, set >= 1 ? "Gesetzt, bevor der Zug kommt: Wenn der Sog kommt, dann die Gebetswaschung." : "Ein Anker hält nicht, weil er schwer ist.", cx, h - 18, "#000", true);
+    }
+  };
+
+  // X · Die Rückkehr: Morgen, Licht über Licht
+  S.rueckkehr = {
+    init(st) { st.m = Array.from({ length: 30 }, () => ({ x: Math.random(), y: Math.random(), v: .00002 + Math.random() * .00003, o: Math.random() * 6 })); },
+    draw(ctx, w, h, t, p, st, dt) {
+      const cyc = 16000, u = (t % cyc) / cyc, dawn = Math.sin(u * Math.PI);
+      ctx.clearRect(0, 0, w, h);
+      // Morgen: ein heller Himmel, der sich von kühlem Blau in warmes Gold wandelt (multiply, bleibt hell)
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const g = ctx.createLinearGradient(0, 0, 0, h);
+      g.addColorStop(0, "rgba(" + Math.round(180 + 40 * dawn) + "," + Math.round(200 + 20 * dawn) + "," + Math.round(230 - 30 * dawn) + ",0.7)");
+      g.addColorStop(1, "rgba(" + Math.round(240) + "," + Math.round(200 + 20 * dawn) + "," + Math.round(140 + 40 * (1 - dawn)) + ",0.8)");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      const cx = w / 2, cy = h * .6, s = Math.min(w, h) * .14;
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      for (let i = 0; i < 2; i++) { const r = s * (2.2 + i * 1.3) * (1 + .06 * Math.sin(t * .0015 + i * 2)); const gg = ctx.createRadialGradient(cx, cy - s * .2, s * .3, cx, cy - s * .2, r); gg.addColorStop(0, "rgba(226,186,104," + (.25 + .35 * dawn) + ")"); gg.addColorStop(1, "rgba(226,186,104,0)"); ctx.fillStyle = gg; ctx.fillRect(0, 0, w, h); }
+      ctx.restore();
+      for (const m of st.m) { m.y -= m.v * dt; if (m.y < 0) { m.y = 1; m.x = Math.random(); } ctx.fillStyle = "rgba(160,110,30," + (.3 + .3 * Math.sin(t * .002 + m.o)) + ")"; ctx.beginPath(); ctx.arc(m.x * w, m.y * h, 1.3, 0, Math.PI * 2); ctx.fill(); }
+      drawDiamond(ctx, cx, cy, s, 0, "rgba(255,255,255,0.96)", "rgba(0,0,0,0.95)");
+      label(ctx, "Fabrik zu. Nicht zurückgesetzt, sondern zurückgekehrt.", cx, h - 18, "#000", true);
+    }
+  };
+
+  /* ---------- Antrieb ---------- */
+  const stages = Array.prototype.slice.call(document.querySelectorAll(".stage[data-scene]"));
+  const entries = stages.map(function (el) {
+    const c = el.querySelector("canvas");
+    return { el: el, c: c, ctx: c.getContext("2d"), scene: S[el.getAttribute("data-scene")], st: {}, active: false, w: 0, h: 0, dpr: 1, drawn: false };
+  }).filter(function (e) { return e.scene; });
+  entries.forEach(function (e) { if (e.scene.init) e.scene.init(e.st); });
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(function (list) {
+      list.forEach(function (x) { const e = entries.find(function (e) { return e.el === x.target; }); if (e) e.active = x.isIntersecting; });
+    }, { rootMargin: "25% 0px" });
+    entries.forEach(function (e) { io.observe(e.el); });
+  } else entries.forEach(function (e) { e.active = true; });
+
+  function size(e) {
+    const r = e.el.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 1.5), w = Math.round(r.width), h = Math.round(r.height);
+    if (w !== e.w || h !== e.h || dpr !== e.dpr) { e.w = w; e.h = h; e.dpr = dpr; e.c.width = Math.max(1, w * dpr); e.c.height = Math.max(1, h * dpr); e.c.style.width = w + "px"; e.c.style.height = h + "px"; }
+    e.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function progress(e) { const r = e.el.getBoundingClientRect(), vh = window.innerHeight || 800; return Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height))); }
+  let last = performance.now(), t = 0;
+  function frame(now) {
+    const dt = Math.min(50, now - last); last = now; t += dt;
+    for (const e of entries) {
+      if (e.drawn && !e.active) continue;
+      size(e); if (e.w < 2 || e.h < 2) continue;
+      e.ctx.clearRect(0, 0, e.w, e.h);
+      try { e.scene.draw(e.ctx, e.w, e.h, t, progress(e), e.st, dt); } catch (err) { }
+      e.drawn = true;
+    }
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  if (reduce) { t = 4000; frame(performance.now()); } else requestAnimationFrame(frame);
+  window.addEventListener("resize", function () { entries.forEach(function (e) { e.drawn = false; }); });
+
+  /* ---------- Text erwacht beim Hereinscrollen ---------- */
+  if ("IntersectionObserver" in window) {
+    const io2 = new IntersectionObserver(function (list) { list.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io2.unobserve(x.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll("main h2, main .vers, main .regel, main .dua, .glossar p").forEach(function (el) { io2.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

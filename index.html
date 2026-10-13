@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Muharrem Yıldız – Frankfurt am Main.">
+<title>Muharrem Yıldız</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=Inter:wght@400;500&display=swap">
+<style>
+:root { --paper:#F5F3EE; --lattice:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g fill='none' stroke='%23000000' stroke-opacity='0.17' stroke-width='0.8'><path d='M0 0H64M0 64H64M0 0V64M64 0V64'/><rect x='18' y='18' width='28' height='28'/><rect x='18' y='18' width='28' height='28' transform='rotate(45 32 32)'/><path d='M0 0L18 18M64 0L46 18M0 64L18 46M64 64L46 46'/><circle cx='32' cy='32' r='3'/></g></svg>"); }
+html, body { height:100%; }
+body { margin:0; background:var(--paper); background-image:var(--lattice); background-size:56px 56px; color:#000; font-family:"Source Serif 4","Charter",Georgia,serif; display:flex; align-items:center; justify-content:center; text-align:center; padding:24px 16px; box-sizing:border-box; overflow:hidden; }
+body::before { content:""; position:fixed; inset:0; background:rgba(245,243,238,.70); pointer-events:none; }
+canvas { position:fixed; inset:0; width:100%; height:100%; pointer-events:none; }
+.card { position:relative; max-width:520px; animation:rise 1.4s ease-out both; }
+.kicker { font-family:"Inter",Arial,sans-serif; font-size:12px; letter-spacing:.32em; text-transform:uppercase; margin:0 0 26px; }
+h1 { font-weight:400; font-size:clamp(40px,9vw,64px); line-height:1.04; margin:0 0 18px; }
+.line { font-style:italic; font-size:19px; line-height:1.45; margin:0 auto 34px; max-width:30ch; }
+.rule { width:56px; height:1px; background:#000; margin:0 auto 26px; }
+.small { font-family:"Inter",Arial,sans-serif; font-size:12.5px; letter-spacing:.08em; opacity:.75; margin:0; }
+@keyframes rise { from { opacity:.1; transform:translateY(14px); } to { opacity:1; transform:none; } }
+@media (prefers-reduced-motion: reduce) { .card { animation:none; } }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<main class="card">
+  <p class="kicker">Frankfurt am Main</p>
+  <h1>Muharrem Yıldız</h1>
+  <div class="rule"></div>
+  <p class="line">Was ist wertvoller – jetzt, hier, in dieser Situation?</p>
+  <p class="small">Diese Seite entsteht.</p>
+</main>
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var c = document.getElementById("c"), ctx = c.getContext("2d"), w=0,h=0,dpr=1;
+  var blobs=[{x:.18,y:.25,r:.62,rgb:"255,208,110",a:.42,sx:.00011,sy:.00007,p:0},{x:.84,y:.60,r:.55,rgb:"176,198,255",a:.34,sx:-.00009,sy:.00012,p:2.1},{x:.50,y:.98,r:.70,rgb:"255,228,170",a:.36,sx:.00007,sy:-.00009,p:4.2}];
+  var motes=[]; for(var i=0;i<46;i++) motes.push({x:Math.random(),y:Math.random(),r:Math.random()*1.5+.7,v:Math.random()*.00003+.000012,o:Math.random()*6.28});
+  function size(){ var W=window.innerWidth,H=window.innerHeight; dpr=Math.min(window.devicePixelRatio||1,1.5); if(W!==w||H!==h){ w=W;h=H;c.width=w*dpr;c.height=h*dpr; } ctx.setTransform(dpr,0,0,dpr,0,0); }
+  var last=performance.now(), t=0;
+  function frame(now){ var dt=Math.min(50,now-last); last=now; t+=dt; size(); ctx.clearRect(0,0,w,h);
+    ctx.save(); ctx.translate(w*.80,-h*.12);
+    for(var i=0;i<3;i++){ var ang=.50+i*.11+Math.sin(t*.00008+i)*.035; ctx.save(); ctx.rotate(ang); var g=ctx.createLinearGradient(0,0,0,h*1.9); var k=.09+.04*Math.sin(t*.00025+i*1.7); g.addColorStop(0,"rgba(226,186,104,0)"); g.addColorStop(.25,"rgba(226,186,104,"+k+")"); g.addColorStop(1,"rgba(226,186,104,0)"); ctx.fillStyle=g; var bw=w*(.045+.02*i); ctx.fillRect(-bw/2,0,bw,h*1.9); ctx.restore(); }
+    ctx.restore();
+    for(var j=0;j<blobs.length;j++){ var b=blobs[j]; var x=(b.x+Math.sin(t*b.sx+b.p)*.09)*w, y=(b.y+Math.cos(t*b.sy+b.p)*.09)*h, r=b.r*Math.max(w,h); var g2=ctx.createRadialGradient(x,y,0,x,y,r); g2.addColorStop(0,"rgba("+b.rgb+","+b.a+")"); g2.addColorStop(.6,"rgba("+b.rgb+","+(b.a*.25)+")"); g2.addColorStop(1,"rgba("+b.rgb+",0)"); ctx.fillStyle=g2; ctx.fillRect(x-r,y-r,2*r,2*r); }
+    for(var m=0;m<motes.length;m++){ var q=motes[m]; q.y-=q.v*dt; if(q.y<-.02){q.y=1.02;q.x=Math.random();} var a=.18+.22*(.5+.5*Math.sin(t*.0018+q.o)); ctx.fillStyle="rgba(214,164,70,"+a+")"; ctx.beginPath(); ctx.arc(q.x*w+Math.sin(t*.0004+q.o)*9,q.y*h,q.r,0,Math.PI*2); ctx.fill(); }
+    if(!reduce) requestAnimationFrame(frame); }
+  if(reduce){ t=4000; frame(performance.now()); } else requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
