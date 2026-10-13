@@ -9,8 +9,14 @@
 <meta property="og:description" content="Ein philosophischer Versuch über Wert, Gegenwart und Rückkehr.">
 <meta property="og:type" content="article">
 <title>Der Diamant im Sumpf – Die Essenz</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400&family=Inter:wght@400;500&display=swap">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:200 900;font-display:swap;src:url("../assets/fonts/source-serif-4-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:200 900;font-display:swap;src:url("../assets/fonts/source-serif-4-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Source Serif 4";font-style:italic;font-weight:200 900;font-display:swap;src:url("../assets/fonts/source-serif-4-latin-italic.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("../assets/fonts/inter-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("../assets/fonts/inter-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+</style>
 <style>/* Eine Buchseite, die sich bewegt: Papier mit feinem Muster, schwarze Schrift, eine Spalte – jedes Kapitel mit eigener Bühne */
 :root {
   --paper: #F5F3EE;
@@ -41,7 +47,7 @@ body::before { content:""; position:fixed; inset:0; background:rgba(245,243,238,
 .toc a { color:#000; text-decoration:none; border-bottom:1px solid #000; }
 
 /* Text */
-h2 { font-family:"Source Serif 4","Charter",Georgia,serif; font-weight:400; font-style:italic; font-size:30px; text-align:center; margin:72px 0 22px; line-height:1.2; text-wrap:balance; scroll-margin-top:24px; }
+h2 { font-family:"Source Serif 4","Charter",Georgia,serif; font-weight:400; font-style:italic; font-size:30px; text-align:center; margin:72px 0 22px; line-height:1.2; text-wrap:balance; scroll-margin-top:72px; }
 h2::after { content:""; display:block; width:0; height:1px; background:#000; margin:14px auto 0; transition:width 1.4s ease; }
 h2.in::after { width:56px; }
 p { margin:0; text-indent:1.4em; }
@@ -81,6 +87,49 @@ em { font-style:italic; }
 main h2.in, main .vers.in, main .regel.in, main .dua.in { animation:rise .9s ease-out both; }
 @media (prefers-reduced-motion: reduce) { .stage .bg, .cover-inner, main h2.in, main .vers.in, main .regel.in, main .dua.in { animation:none; } h2::after { transition:none; } }
 @media (max-width:480px) { .toc ol { columns:1; } .cover { padding-block:52px 36px; } body { font-size:17px; } .stage { height:min(52vh,440px); } }
+</style>
+<style>/* Lesemodus: Fortschritt, Leseleiste, Kapitelliste, Schriftgröße, Nacht */
+:root{--ink:#000;--chrome:rgba(245,243,238,.86);--line:rgba(0,0,0,.14);--gold:#C7A15A;--gold-deep:#765A26}
+html.r-size-2 body{font-size:19.5px;line-height:1.66} html.r-size-3 body{font-size:21.5px;line-height:1.7}
+html.r-size-2 .wrap,html.r-size-3 .wrap{max-width:700px}
+.rprog{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:left;transform:scaleX(0);background:var(--gold);z-index:60;pointer-events:none}
+.rbar{position:fixed;left:0;right:0;top:0;height:56px;display:flex;align-items:center;gap:12px;padding:0 14px;background:var(--chrome);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);z-index:50;font-family:"Inter",Arial,sans-serif;font-size:13px;transform:translateY(-100%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.rbar.on{transform:none}
+.rbar .t{font-family:"Source Serif 4",Georgia,serif;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.rbar .t small{display:block;font-family:"Inter",Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-top:2px}
+.rbar button{font:inherit;font-size:13px;background:none;border:1px solid var(--line);color:inherit;border-radius:999px;padding:7px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1}
+.rbar button:hover,.rbar button[aria-expanded="true"]{background:rgba(0,0,0,.06)}
+.rbar button:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+.rbar .aa{font-family:"Source Serif 4",Georgia,serif;font-size:14px}
+.rside{position:fixed;left:0;top:56px;bottom:0;width:min(86vw,320px);overflow:auto;background:var(--chrome);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:1px 0 0 var(--line);z-index:49;padding:22px 20px 40px;transform:translateX(-102%);transition:transform .4s cubic-bezier(.2,.7,.2,1);font-family:"Inter",Arial,sans-serif;font-size:14px}
+.rside.on{transform:none}
+.rside p.h{font-size:11px;letter-spacing:.3em;text-transform:uppercase;margin:0 0 12px;opacity:.6}
+.rside ol{list-style:none;padding:0;margin:0}
+.rside li{margin:0}
+.rside a{display:block;padding:9px 10px;border-left:2px solid transparent;text-decoration:none;color:inherit;line-height:1.35;border-radius:0 6px 6px 0}
+.rside a:hover{background:rgba(0,0,0,.05)} .rside a.cur{border-left-color:var(--gold);background:rgba(199,161,90,.12)}
+.rside .rt{display:block;font-size:11px;opacity:.55;margin-top:2px}
+.rcont{position:fixed;left:50%;bottom:18px;transform:translate(-50%,120%);background:#000;color:#F5F3EE;font-family:"Inter",Arial,sans-serif;font-size:13px;padding:11px 16px;border-radius:999px;z-index:55;display:flex;gap:14px;align-items:center;transition:transform .45s cubic-bezier(.2,.7,.2,1);max-width:92vw}
+.rcont.on{transform:translate(-50%,0)}
+.rcont button{font:inherit;background:#F5F3EE;color:#000;border:0;border-radius:999px;padding:6px 12px;cursor:pointer}
+.rcont .x{background:none;color:#F5F3EE;padding:6px 4px;opacity:.7}
+@media (min-width:1100px){
+  .rside{transform:none;box-shadow:none;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;width:260px;left:max(16px,calc(50% - 320px - 300px));top:96px;padding:0 10px}
+  .rside.hide-desk{display:none}
+  .rbar .kap{display:none}
+  body{font-size:19px;line-height:1.66} .wrap{max-width:680px}
+}
+/* Nacht */
+html.night{--chrome:rgba(28,26,22,.88);--line:rgba(255,255,255,.14)}
+html.night body{background:#1c1a16;color:#EFE9DC} html.night{background:#1c1a16}
+html.night body::before{background:rgba(28,26,22,.78)}
+html.night .cover h1,html.night .cover .sub,html.night .cover .author,html.night .cover .hint,html.night .toc a,html.night sup a,html.night .credits,html.night .foot,html.night h2{color:#EFE9DC}
+html.night .toc a,html.night .cover,html.night .toc,html.night .foot,html.night .vers,html.night .dua,html.night .regel{border-color:rgba(239,233,220,.55)}
+html.night h2::after,html.night .glossar p.in{background:#EFE9DC;border-left-color:#EFE9DC}
+html.night .regel{background:#3a3120;color:#EFE9DC}
+html.night .stage{filter:brightness(.62) saturate(.9)}
+html.night .rcont{background:#EFE9DC;color:#1c1a16} html.night .rcont button{background:#1c1a16;color:#EFE9DC} html.night .rcont .x{background:none;color:#1c1a16}
+@media (prefers-reduced-motion:reduce){.rbar,.rside,.rcont{transition:none}}
 </style>
 </head>
 <body>
@@ -801,5 +850,59 @@ main h2.in, main .vers.in, main .regel.in, main .dua.in { animation:rise .9s eas
   }
 })();
 </script>
+<script>(function(){
+  "use strict";
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var html=document.documentElement, KEY="diamant-reader";
+  var st={}; try{ st=JSON.parse(localStorage.getItem(KEY)||"{}"); }catch(e){}
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){} }
+  // Einstellungen anwenden
+  if(st.size) html.classList.add("r-size-"+st.size); if(st.night) html.classList.add("night");
+  // Kapitel
+  var hs=$$("main h2[id]"); var words=function(el){var t="",n=el.nextElementSibling;while(n&&n.tagName!=="H2"){t+=" "+(n.textContent||"");n=n.nextElementSibling;}return t.trim().split(/\s+/).length;};
+  var total=0; var chapters=hs.map(function(h2){var w=words(h2); total+=w; return {el:h2, id:h2.id, title:h2.textContent.trim(), min:Math.max(1,Math.round(w/200))};});
+  var hint=$(".cover .hint"); if(hint && total) hint.textContent+=" Lesezeit etwa "+Math.round(total/200)+" Minuten.";
+  // Chrome bauen
+  var prog=document.createElement("i"); prog.className="rprog"; document.body.appendChild(prog);
+  var bar=document.createElement("div"); bar.className="rbar"; bar.setAttribute("role","toolbar"); bar.setAttribute("aria-label","Lesen");
+  bar.innerHTML='<button type="button" class="kap" aria-expanded="false" aria-controls="rside">Kapitel</button><div class="t"><span class="ct">Der Diamant im Sumpf</span><small class="cs">Die Essenz</small></div><button type="button" class="aa" title="Schriftgröße">Aa</button><button type="button" class="nt" title="Nachtmodus">☾</button>';
+  document.body.appendChild(bar);
+  var side=document.createElement("aside"); side.className="rside"; side.id="rside"; side.setAttribute("aria-label","Kapitel");
+  side.innerHTML='<p class="h">Kapitel</p><ol>'+chapters.map(function(c){return '<li><a href="#'+c.id+'">'+c.title+'<span class="rt">'+c.min+' Min.</span></a></li>';}).join("")+'</ol>';
+  document.body.appendChild(side);
+  var links=$$("a",side);
+  var kap=$(".kap",bar), aa=$(".aa",bar), nt=$(".nt",bar), ct=$(".ct",bar), cs=$(".cs",bar);
+  kap.addEventListener("click",function(){var on=!side.classList.contains("on"); side.classList.toggle("on",on); kap.setAttribute("aria-expanded",on);});
+  links.forEach(function(a){a.addEventListener("click",function(){ if(window.innerWidth<1100){side.classList.remove("on");kap.setAttribute("aria-expanded","false");} });});
+  aa.addEventListener("click",function(){ var s=(st.size||1)%3+1; html.classList.remove("r-size-1","r-size-2","r-size-3"); if(s>1) html.classList.add("r-size-"+s); st.size=s; save(); });
+  nt.addEventListener("click",function(){ st.night=!st.night; html.classList.toggle("night",!!st.night); nt.textContent=st.night?"☀":"☾"; save(); });
+  if(st.night) nt.textContent="☀";
+  // Fortschritt, aktives Kapitel, Leiste ein/aus
+  var cover=$(".cover"); var ticking=false, lastSave=0;
+  function update(){
+    ticking=false;
+    var doc=document.documentElement, max=doc.scrollHeight-window.innerHeight, p=max>0?window.scrollY/max:0;
+    prog.style.transform="scaleX("+p+")";
+    bar.classList.toggle("on", cover ? window.scrollY>cover.offsetHeight-40 : window.scrollY>200);
+    var cur=null; for(var i=0;i<chapters.length;i++){ if(chapters[i].el.getBoundingClientRect().top<=window.innerHeight*0.4) cur=i; }
+    links.forEach(function(a,i){a.classList.toggle("cur",i===cur);});
+    if(cur!==null){ ct.textContent=chapters[cur].title; cs.textContent=(window.innerWidth<700?"":"Der Diamant im Sumpf · ")+(cur+1)+" / "+chapters.length; } else { ct.textContent="Der Diamant im Sumpf"; cs.textContent="Die Essenz"; }
+    var now=Date.now(); if(now-lastSave>1500){ lastSave=now; st.y=window.scrollY; st.chap=cur; save(); }
+  }
+  window.addEventListener("scroll",function(){ if(!ticking){ticking=true;requestAnimationFrame(update);} },{passive:true});
+  window.addEventListener("resize",update); update();
+  // Weiterlesen
+  if(st.y && st.y>window.innerHeight*1.2 && st.chap!==null && st.chap!==undefined && chapters[st.chap]){
+    var c=document.createElement("div"); c.className="rcont"; c.setAttribute("role","status");
+    c.innerHTML='<span>Weiterlesen bei „'+chapters[st.chap].title+'“?</span><button type="button" class="go">Weiter</button><button type="button" class="x" aria-label="Schließen">✕</button>';
+    document.body.appendChild(c); setTimeout(function(){c.classList.add("on");},600);
+    var y=st.y;
+    $(".go",c).addEventListener("click",function(){ window.scrollTo({top:y,behavior:"smooth"}); c.classList.remove("on"); });
+    $(".x",c).addEventListener("click",function(){ c.classList.remove("on"); });
+    setTimeout(function(){c.classList.remove("on");},12000);
+  }
+  // Tastatur: Pfeile springen zwischen Kapiteln
+  window.addEventListener("keydown",function(e){ if(e.altKey||e.ctrlKey||e.metaKey) return; if(e.key==="ArrowRight"||e.key==="ArrowLeft"){ var cur=-1; for(var i=0;i<chapters.length;i++){ if(chapters[i].el.getBoundingClientRect().top<=window.innerHeight*0.4) cur=i; } var n=e.key==="ArrowRight"?cur+1:cur-1; if(chapters[n]){ e.preventDefault(); chapters[n].el.scrollIntoView({behavior:"smooth",block:"start"}); } } });
+})();</script>
 </body>
 </html>
