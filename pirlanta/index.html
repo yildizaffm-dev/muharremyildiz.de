@@ -931,7 +931,7 @@ html.night .rcont{background:#EFE9DC;color:#1c1a16} html.night .rcont button{bac
   // Vorlesen – Web Speech API (kostenlos, läuft im Browser; Stimme je nach Gerät)
   (function(){
     var rd=$(".rd",bar); if(!rd) return;
-    if(!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)){ rd.style.display="none"; return; }
+    if(!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)){ rd.addEventListener("click",function(){ var c=document.createElement("div"); c.className="rvoice on"; c.innerHTML="<span class=\"st\">Bu tarayıcı sesli okumayı desteklemiyor. Lütfen sayfayı Chrome veya Safari ile açın.</span>"; document.body.appendChild(c); setTimeout(function(){c.remove();},6000); }); return; }
     var LANG="tr", synth=window.speechSynthesis, voice=null, rate=1, playing=false, paused=false, queue=[], qi=0, curEl=null, items=[];
     var panel=document.createElement("div"); panel.className="rvoice"; panel.setAttribute("role","group"); panel.setAttribute("aria-label","Sesli okuma");
     panel.innerHTML='<button type="button" class="primary pp">Duraklat</button><button type="button" class="stop">Durdur</button><button type="button" class="spd">1×</button><button type="button" class="x" aria-label="Kapat">✕</button><span class="st"></span>';

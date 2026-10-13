@@ -932,7 +932,7 @@ html.night .rcont{background:#EFE9DC;color:#1c1a16} html.night .rcont button{bac
   // Vorlesen – Web Speech API (kostenlos, läuft im Browser; Stimme je nach Gerät)
   (function(){
     var rd=$(".rd",bar); if(!rd) return;
-    if(!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)){ rd.style.display="none"; return; }
+    if(!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)){ rd.addEventListener("click",function(){ var c=document.createElement("div"); c.className="rvoice on"; c.innerHTML="<span class=\"st\">Dieser Browser unterstützt das Vorlesen nicht. Bitte die Seite in Chrome oder Safari öffnen.</span>"; document.body.appendChild(c); setTimeout(function(){c.remove();},6000); }); return; }
     var LANG="de", synth=window.speechSynthesis, voice=null, rate=1, playing=false, paused=false, queue=[], qi=0, curEl=null, items=[];
     var panel=document.createElement("div"); panel.className="rvoice"; panel.setAttribute("role","group"); panel.setAttribute("aria-label","Vorlesen");
     panel.innerHTML='<button type="button" class="primary pp">Pause</button><button type="button" class="stop">Stopp</button><button type="button" class="spd">1×</button><button type="button" class="x" aria-label="Schließen">✕</button><span class="st"></span>';
