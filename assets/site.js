@@ -8,6 +8,8 @@
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var hasGsap = typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined";
   if (hasGsap) gsap.registerPlugin(ScrollTrigger);
+  if ("scrollRestoration" in history) { history.scrollRestoration = "manual"; }
+  if (!location.hash) { window.scrollTo(0, 0); }
 
   function splitWords(el) {
     if (!el || el.dataset.split) return $$(".w", el);
@@ -132,10 +134,12 @@
     if (reduce || !hasGsap) {
       heroWrap.classList.add("is-static");
     } else {
-      gsap.set(lines, { yPercent: 110 });
-      gsap.to(lines, { yPercent: 0, duration: 1.3, ease: "power4.out", stagger: 0.12, delay: 0.15 });
-      gsap.from($(".portrait", hero), { y: 70, opacity: 0, duration: 1.5, ease: "power3.out", delay: 0.35 });
-      gsap.from($$(".kicker, .lead, .hint", hero), { opacity: 0, y: 12, duration: 0.9, stagger: 0.12, delay: 0.7 });
+      if (window.scrollY < 40) {
+        gsap.set(lines, { yPercent: 110 });
+        gsap.to(lines, { yPercent: 0, duration: 1.3, ease: "power4.out", stagger: 0.12, delay: 0.15 });
+        gsap.from($(".portrait", hero), { y: 70, opacity: 0, duration: 1.5, ease: "power3.out", delay: 0.35 });
+        gsap.from($$(".kicker, .lead, .hint", hero), { opacity: 0, y: 12, duration: 0.9, stagger: 0.12, delay: 0.7 });
+      }
       var tl = gsap.timeline({
         scrollTrigger: { trigger: heroWrap, start: "top top", end: "bottom bottom", scrub: 0.7, pin: hero, pinSpacing: false, onUpdate: function (s) { heroProgress = s.progress; } }
       });
