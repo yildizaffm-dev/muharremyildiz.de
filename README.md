@@ -1,6 +1,8 @@
 # muharremyildiz.de
 
-Statische Seite, gehostet über GitHub Pages.
+Statische Seite, gehostet über GitHub Pages (Branch `gh-pages`).
 
-- `/` – Landingpage
-- `/diamant/` – Der Diamant im Sumpf · Die Essenz (unverlinkt, noindex)
+- `/` – persönliche Landingpage (eigene Schriften und Skripte unter `assets/`, Bilder unter `img/`)
+- `/diamant/` – Der Diamant im Sumpf · Die Essenz (unverlinkt, noindex, nur per Link)
+
+Technik Landingpage: GSAP 3 + ScrollTrigger, Lenis, selbst gehostete Schriften (Source Serif 4, Inter). Keine Fremdabrufe, keine Tracker.

@@ -3,52 +3,217 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Muharrem Yıldız – Frankfurt am Main.">
-<title>Muharrem Yıldız</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=Inter:wght@400;500&display=swap">
-<style>
-:root { --paper:#F5F3EE; --lattice:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g fill='none' stroke='%23000000' stroke-opacity='0.17' stroke-width='0.8'><path d='M0 0H64M0 64H64M0 0V64M64 0V64'/><rect x='18' y='18' width='28' height='28'/><rect x='18' y='18' width='28' height='28' transform='rotate(45 32 32)'/><path d='M0 0L18 18M64 0L46 18M0 64L18 46M64 64L46 46'/><circle cx='32' cy='32' r='3'/></g></svg>"); }
-html, body { height:100%; }
-body { margin:0; background:var(--paper); background-image:var(--lattice); background-size:56px 56px; color:#000; font-family:"Source Serif 4","Charter",Georgia,serif; display:flex; align-items:center; justify-content:center; text-align:center; padding:24px 16px; box-sizing:border-box; overflow:hidden; }
-body::before { content:""; position:fixed; inset:0; background:rgba(245,243,238,.70); pointer-events:none; }
-canvas { position:fixed; inset:0; width:100%; height:100%; pointer-events:none; }
-.card { position:relative; max-width:520px; animation:rise 1.4s ease-out both; }
-.kicker { font-family:"Inter",Arial,sans-serif; font-size:12px; letter-spacing:.32em; text-transform:uppercase; margin:0 0 26px; }
-h1 { font-weight:400; font-size:clamp(40px,9vw,64px); line-height:1.04; margin:0 0 18px; }
-.line { font-style:italic; font-size:19px; line-height:1.45; margin:0 auto 34px; max-width:30ch; }
-.rule { width:56px; height:1px; background:#000; margin:0 auto 26px; }
-.small { font-family:"Inter",Arial,sans-serif; font-size:12.5px; letter-spacing:.08em; opacity:.75; margin:0; }
-@keyframes rise { from { opacity:.1; transform:translateY(14px); } to { opacity:1; transform:none; } }
-@media (prefers-reduced-motion: reduce) { .card { animation:none; } }
-</style>
+<title>Muharrem Yıldız – Hej, hier ist Muharrem</title>
+<meta name="description" content="Muharrem Yıldız aus Frankfurt am Main. Unternehmer, Student – und einer, der lieber gut fragt als schnell antwortet.">
+<meta property="og:title" content="Muharrem Yıldız – Hej, hier ist Muharrem">
+<meta property="og:description" content="Frankfurter, Unternehmer, Student – und einer, der lieber gut fragt als schnell antwortet.">
+<meta property="og:image" content="https://muharremyildiz.de/img/og.jpg">
+<meta property="og:url" content="https://muharremyildiz.de/">
+<meta name="theme-color" content="#F5F3EE">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/portrait.webp" as="image">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<canvas id="c"></canvas>
-<main class="card">
-  <p class="kicker">Frankfurt am Main</p>
-  <h1>Muharrem Yıldız</h1>
-  <div class="rule"></div>
-  <p class="line">Was ist wertvoller – jetzt, hier, in dieser Situation?</p>
-  <p class="small">Diese Seite entsteht.</p>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="glow" aria-hidden="true"></div>
+
+<header class="top">
+  <a class="mark" href="#top" aria-label="Zum Anfang"><i></i>Muharrem Yıldız</a>
+  <nav aria-label="Abschnitte">
+    <a href="#weg">Mein Weg</a>
+    <a href="#haltung">Haltung</a>
+    <a href="#orte">Drei Orte</a>
+    <a href="#bauen">Woran ich baue</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero-wrap">
+    <section class="hero" aria-label="Begrüßung">
+      <canvas aria-hidden="true"></canvas>
+      <div class="disc" aria-hidden="true"></div>
+      <div class="stage">
+        <div class="text">
+          <p class="kicker">Frankfurt am Main</p>
+          <h1>
+            <span class="l"><span>Hej,</span></span>
+            <span class="l"><span>hier ist <em>Muharrem.</em></span></span>
+          </h1>
+          <p class="lead">Schön, dass du hier bist. Frankfurter, Unternehmer, Student – und einer, der lieber gut fragt als schnell antwortet.</p>
+        </div>
+        <figure class="portrait">
+          <img src="img/portrait.webp" width="847" height="930" alt="Muharrem Yıldız, im dunklen Anzug, lächelt in die Kamera" fetchpriority="high">
+        </figure>
+      </div>
+      <div class="frage" aria-hidden="true">
+        <p>Was ist wertvoller – jetzt, hier, in dieser Situation?</p>
+      </div>
+      <p class="hint" aria-hidden="true"><i></i> Scroll – es geht weiter</p>
+    </section>
+  </div>
+
+  <section class="sec" id="inhalt" aria-labelledby="kurz">
+    <p class="kicker">Kurz gesagt</p>
+    <div class="intro">
+      <div>
+        <h2 id="kurz">Ich hab nie nur eine Sache gemacht.</h2>
+        <p class="measure">Pflege. Dann ein eigenes Unternehmen. Dann Pflegequalität prüfen. Irgendwann hab ich gemerkt: Alles läuft auf dieselbe Frage hinaus. Was ist gerade wirklich wichtig? Für den Menschen vor mir. Und für mich.</p>
+        <p class="measure">Deshalb lerne ich weiter. Psychologie, weil ich Menschen verstehen will. Islamische Studien, weil ich wissen will, wo Verantwortung herkommt. Und ich schreibe – weil Schreiben die ehrlichste Art ist zu denken.</p>
+        <p class="measure">Diese Seite ist kein Lebenslauf und kein Angebot. Eher ein Spaziergang. Lies, was dich anspricht. Den Rest lass liegen.</p>
+      </div>
+      <div class="lines" aria-label="Drei Sätze">
+        <p>Aus Erfahrung wurde Haltung.</p>
+        <p>Aus Haltung wurde Verantwortung.</p>
+        <p>Aus Verantwortung wurde Wirkung.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="journey" id="weg" aria-labelledby="weg-h">
+    <div class="head">
+      <p class="kicker">Mein Weg</p>
+      <h2 id="weg-h">Sieben Stationen, eine Richtung.</h2>
+      <p class="measure">Kein Lebenslauf mit Jahreszahlen. Sieben Stationen, die etwas hinterlassen haben – eine Lektion, eine Fähigkeit, eine Haltung.</p>
+    </div>
+    <div class="viewport">
+      <p class="count" aria-hidden="true">1 / 7</p>
+      <div class="track">
+        <svg class="path" aria-hidden="true"><path d=""/><circle r="4"/></svg>
+        <article class="station">
+          <span class="n">Station 1</span>
+          <h3>Pflege als Grundlage</h3>
+          <p>Am Anfang stand kein Plan. Da stand ein Mensch, der Hilfe brauchte. Die Pflege hat mir beigebracht, genau hinzusehen: auf Würde, auf kleine Signale, auf Verlässlichkeit, über die man nicht verhandelt.</p>
+          <p class="left">Gute Systeme sind nie abstrakt. Ob sie taugen, entscheidet sich am Menschen.</p>
+        </article>
+        <article class="station">
+          <span class="n">Station 2</span>
+          <h3>Verantwortung übernehmen</h3>
+          <p>Irgendwann hat es nicht mehr gereicht, selbst gut zu arbeiten. Es ging darum, Abläufe so zu bauen, dass andere gut arbeiten können. Aus Praxis wurde Organisation. Aus Organisation wurde Führung.</p>
+          <p class="left">Führung fängt da an, wo man Verantwortung teilt statt abgibt.</p>
+        </article>
+        <article class="station">
+          <span class="n">Station 3</span>
+          <h3>Ein Unternehmen bauen</h3>
+          <p>Mit der Yildizstar Holding und dem Pflegedienst Starflügel habe ich Strukturen gebaut, die auch an schlechten Tagen halten – für die Menschen, die wir versorgen, und für die, die diese Arbeit machen.</p>
+          <p class="left">Ein Unternehmen ist so stark wie seine Ordnung an schwierigen Tagen.</p>
+        </article>
+        <article class="station">
+          <span class="n">Station 4</span>
+          <h3>Qualität prüfen</h3>
+          <p>Als Pflegegutachter beim Medizinischen Dienst Hessen habe ich Versorgung von der anderen Seite gesehen: nicht machen, sondern einordnen, prüfen, begründen.</p>
+          <p class="left">Qualität ist keine Behauptung. Sie muss sich begründen lassen.</p>
+        </article>
+        <article class="station">
+          <span class="n">Station 5</span>
+          <h3>Technik, die Zeit zurückgibt</h3>
+          <p>Ich will keine Technik, die Menschen aus dem Prozess drängt. Ich will Technik, die Zeit zurückgibt. Deshalb baue ich mit KI Abläufe, die Verwaltung leiser machen.</p>
+          <p class="left">Technik ist gut, wenn sie Raum für Menschlichkeit schafft.</p>
+        </article>
+        <article class="station">
+          <span class="n">Station 6</span>
+          <h3>Menschen begleiten</h3>
+          <p>Menschen begleiten heißt nicht, fertige Antworten zu liefern. Es heißt: genauer zuhören, die richtige Frage stellen, den nächsten Schritt möglich machen.</p>
+          <p class="left">Klarheit kommt selten vom Ratschlag. Meistens von der richtigen Frage.</p>
+        </article>
+        <article class="station">
+          <span class="n">Station 7</span>
+          <h3>Weiterlernen</h3>
+          <p>Ich studiere Psychologie und vertiefe mich in islamische Studien. Kein Titel – eine Vertiefung. In den Menschen, und in die Frage, wo Verantwortung ihre Richtung herbekommt.</p>
+          <p class="left">Wer andere begleiten will, darf selbst nie aufhören zu lernen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="bands" aria-hidden="true">
+    <div class="band"><span>Pflege</span><span><b>Haltung</b></span><span>Führung</span><span><b>Lernen</b></span><span>Glaube</span><span><b>Verantwortung</b></span><span>Würde</span><span><b>Technik</b></span></div>
+    <div class="band"><span>Frankfurt</span><span><b>Istanbul</b></span><span>Doha</span><span><b>Psychologie</b></span><span>Schreiben</span><span><b>Zuhören</b></span><span>Fragen</span><span><b>Entwicklung</b></span></div>
+  </div>
+
+  <section class="sec stance" id="haltung" aria-labelledby="haltung-h">
+    <svg class="rings" viewBox="0 0 600 600" aria-hidden="true">
+      <defs>
+        <path id="rp1" d="M300,300 m-230,0 a230,230 0 1,1 460,0 a230,230 0 1,1 -460,0"/>
+        <path id="rp2" d="M300,300 m-170,0 a170,170 0 1,1 340,0 a170,170 0 1,1 -340,0"/>
+        <path id="rp3" d="M300,300 m-110,0 a110,110 0 1,1 220,0 a110,110 0 1,1 -220,0"/>
+      </defs>
+      <g><circle cx="300" cy="300" r="290"/></g>
+      <g><circle class="r1" cx="300" cy="300" r="230"/><text><textPath href="#rp1" startOffset="4%">Organisation · Struktur · Alltag</textPath></text></g>
+      <g><circle cx="300" cy="300" r="170"/><text><textPath href="#rp2" startOffset="50%">Führung · Verantwortung</textPath></text></g>
+      <g><circle class="r1" cx="300" cy="300" r="110"/><text><textPath href="#rp3" startOffset="10%">Wissen · Haltung · Glaube</textPath></text></g>
+      <g><circle cx="300" cy="300" r="52"/><text class="center" x="300" y="310" text-anchor="middle">Mensch</text></g>
+    </svg>
+    <p class="kicker">Haltung</p>
+    <h2 id="haltung-h">Woran ich mich halte, wenn's unbequem wird.</h2>
+    <p class="measure">Überzeugungen kosten nichts, solange alles leicht ist. Im Konflikt zeigt sich, was trägt. In der Mitte steht der Mensch. Alles andere dreht sich darum – und muss sich daran messen lassen.</p>
+    <div class="list">
+      <div class="item"><h3>Systeme sollen Menschen dienen.</h3><p>Nicht umgekehrt. Jede Struktur muss zeigen, ob sie entlastet oder nur verwaltet.</p></div>
+      <div class="item"><h3>Führung braucht Klarheit und Verantwortung.</h3><p>Wer führt, schuldet anderen Orientierung. Auch wenn die Antwort unbequem ist.</p></div>
+      <div class="item"><h3>Würde darf nicht der Effizienz geopfert werden.</h3><p>Was bleibt von Effizienz, wenn der Mensch darin keinen Platz mehr findet?</p></div>
+      <div class="item"><h3>Lernen ist kein Lebensabschnitt, sondern eine Haltung.</h3><p>Jede Rolle hat mir etwas beigebracht. Die wichtigste Lektion: Man ist nie fertig.</p></div>
+      <div class="item"><h3>Technik ist dann gut, wenn sie Raum für Menschlichkeit schafft.</h3><p>Nicht Technik um der Technik willen, sondern Technik im Dienst des Menschen.</p></div>
+      <div class="item"><h3>Glaube gibt Richtung, Verantwortung zeigt sich im Handeln.</h3><p>Überzeugungen sind erst glaubwürdig, wenn man sie im Alltag wiedererkennt.</p></div>
+    </div>
+  </section>
+
+  <section class="sec places" id="orte" aria-labelledby="orte-h">
+    <p class="kicker">Drei Orte</p>
+    <h2 id="orte-h">Frankfurt. Istanbul. Doha.</h2>
+    <p class="measure">Drei Orte, drei Blickwinkel. Keine Geschäftsadressen – Perspektiven, die mich prägen. Und gerade jetzt, während du liest, leben sie in drei verschiedenen Stunden.</p>
+    <div class="grid">
+      <article class="place" data-tz="Europe/Berlin">
+        <div class="sky" aria-hidden="true"><i></i></div>
+        <h3>Frankfurt</h3>
+        <p class="meta"><span>50.11° N · 8.68° O</span><time></time></p>
+        <p>Hier lebe und arbeite ich. Frankfurt steht für das, was Verlässlichkeit braucht: Ordnung, Verbindlichkeit und den Mut, Verantwortung zu übernehmen.</p>
+        <p class="gr">Guten Tag.</p>
+      </article>
+      <article class="place" data-tz="Europe/Istanbul">
+        <div class="sky" aria-hidden="true"><i></i></div>
+        <h3>Istanbul</h3>
+        <p class="meta"><span>41.01° N · 28.98° O</span><time></time></p>
+        <p>Eine Stadt zwischen zwei Kontinenten. Sie erinnert daran, dass Brücken nicht zufällig entstehen. Istanbul steht für Herkunft, Tempo und die Fähigkeit, Welten zu verbinden.</p>
+        <p class="gr">İyi günler.</p>
+      </article>
+      <article class="place" data-tz="Asia/Qatar">
+        <div class="sky" aria-hidden="true"><i></i></div>
+        <h3>Doha</h3>
+        <p class="meta"><span>25.29° N · 51.53° O</span><time></time></p>
+        <p>Doha steht für den Blick nach vorn: für Internationalität, für Räume, die gerade entstehen, und dafür, dass Tradition und Zukunft sich nicht ausschließen.</p>
+        <p class="gr" lang="ar">أهلًا وسهلًا.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec build" id="bauen" aria-labelledby="bauen-h">
+    <p class="kicker">Woran ich gerade baue</p>
+    <h2 id="bauen-h">Keine fertigen Produkte. Baustellen, ehrlich markiert.</h2>
+    <div class="list">
+      <div class="item"><h3>Intelligente Systeme für Führung und Verwaltung</h3><span class="status">im Aufbau</span><p>Werkzeuge, die Dokumentation, Planung und Abstimmung einfacher machen – damit Führungskräfte wieder führen, statt nur zu verwalten.</p></div>
+      <div class="item"><h3>Lern- und Wissenssysteme</h3><span class="status">im Aufbau</span><p>Wissen festhalten, weitergeben und wachsen lassen – für Teams, für Organisationen, für den eigenen Weg.</p></div>
+      <div class="item"><h3>Menschlichkeit, Pflege und Technologie</h3><span class="status">Forschungsfeld</span><p>Wie kann Technik Pflege entlasten, ohne sie kälter zu machen? Eine Frage, die ich aus Praxis und Verantwortung heraus weiterverfolge.</p></div>
+      <div class="item"><h3>Psychologie, Spiritualität und Organisation</h3><span class="status">Vision</span><p>Ein Raum, in dem Wissen über den Menschen, gelebte Werte und Organisation zusammenpassen, statt sich zu widersprechen.</p></div>
+      <div class="item"><h3>Ein Buch</h3><span class="status">im Entstehen</span><p>Über die Zukunft. Über das, was ich rückblickend anders machen würde. Und über das, was dazwischen wirklich zählt.</p></div>
+    </div>
+  </section>
+
+  <section class="sec end" aria-labelledby="ende-h">
+    <h2 id="ende-h">Danke fürs Lesen.</h2>
+    <p class="measure">Die Frage nehme ich dir nicht ab. Aber ich geb sie dir gern mit:</p>
+    <p class="echo">Was ist wertvoller – jetzt, hier, in dieser Situation?</p>
+  </section>
 </main>
-<script>
-(function(){
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var c = document.getElementById("c"), ctx = c.getContext("2d"), w=0,h=0,dpr=1;
-  var blobs=[{x:.18,y:.25,r:.62,rgb:"255,208,110",a:.42,sx:.00011,sy:.00007,p:0},{x:.84,y:.60,r:.55,rgb:"176,198,255",a:.34,sx:-.00009,sy:.00012,p:2.1},{x:.50,y:.98,r:.70,rgb:"255,228,170",a:.36,sx:.00007,sy:-.00009,p:4.2}];
-  var motes=[]; for(var i=0;i<46;i++) motes.push({x:Math.random(),y:Math.random(),r:Math.random()*1.5+.7,v:Math.random()*.00003+.000012,o:Math.random()*6.28});
-  function size(){ var W=window.innerWidth,H=window.innerHeight; dpr=Math.min(window.devicePixelRatio||1,1.5); if(W!==w||H!==h){ w=W;h=H;c.width=w*dpr;c.height=h*dpr; } ctx.setTransform(dpr,0,0,dpr,0,0); }
-  var last=performance.now(), t=0;
-  function frame(now){ var dt=Math.min(50,now-last); last=now; t+=dt; size(); ctx.clearRect(0,0,w,h);
-    ctx.save(); ctx.translate(w*.80,-h*.12);
-    for(var i=0;i<3;i++){ var ang=.50+i*.11+Math.sin(t*.00008+i)*.035; ctx.save(); ctx.rotate(ang); var g=ctx.createLinearGradient(0,0,0,h*1.9); var k=.09+.04*Math.sin(t*.00025+i*1.7); g.addColorStop(0,"rgba(226,186,104,0)"); g.addColorStop(.25,"rgba(226,186,104,"+k+")"); g.addColorStop(1,"rgba(226,186,104,0)"); ctx.fillStyle=g; var bw=w*(.045+.02*i); ctx.fillRect(-bw/2,0,bw,h*1.9); ctx.restore(); }
-    ctx.restore();
-    for(var j=0;j<blobs.length;j++){ var b=blobs[j]; var x=(b.x+Math.sin(t*b.sx+b.p)*.09)*w, y=(b.y+Math.cos(t*b.sy+b.p)*.09)*h, r=b.r*Math.max(w,h); var g2=ctx.createRadialGradient(x,y,0,x,y,r); g2.addColorStop(0,"rgba("+b.rgb+","+b.a+")"); g2.addColorStop(.6,"rgba("+b.rgb+","+(b.a*.25)+")"); g2.addColorStop(1,"rgba("+b.rgb+",0)"); ctx.fillStyle=g2; ctx.fillRect(x-r,y-r,2*r,2*r); }
-    for(var m=0;m<motes.length;m++){ var q=motes[m]; q.y-=q.v*dt; if(q.y<-.02){q.y=1.02;q.x=Math.random();} var a=.18+.22*(.5+.5*Math.sin(t*.0018+q.o)); ctx.fillStyle="rgba(214,164,70,"+a+")"; ctx.beginPath(); ctx.arc(q.x*w+Math.sin(t*.0004+q.o)*9,q.y*h,q.r,0,Math.PI*2); ctx.fill(); }
-    if(!reduce) requestAnimationFrame(frame); }
-  if(reduce){ t=4000; frame(performance.now()); } else requestAnimationFrame(frame);
-})();
-</script>
+
+<footer>
+  <span>Muharrem Yıldız · Frankfurt am Main · 2026</span>
+  <a href="#top">Nach oben</a>
+</footer>
+
+<script src="assets/gsap.min.js"></script>
+<script src="assets/ScrollTrigger.min.js"></script>
+<script src="assets/lenis.min.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>
