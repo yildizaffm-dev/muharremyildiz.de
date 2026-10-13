@@ -27,7 +27,7 @@
   /* ---------- Weicher Scroll ---------- */
   var lenis = null;
   if (!reduce && hasGsap && typeof Lenis !== "undefined") {
-    lenis = new Lenis({ lerp: 0.09, smoothWheel: true });
+    lenis = new Lenis({ lerp: 0.08, smoothWheel: true });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
     gsap.ticker.lagSmoothing(0);
@@ -155,6 +155,39 @@
     }
   }
 
+  /* ---------- Abschnitte: Einblendung und wanderndes Licht ---------- */
+  var sun = $(".sunglow");
+  if (hasGsap && !reduce) {
+    $$(".sec, .journey .head").forEach(function (sec) {
+      var h2 = $("h2", sec), kicker = $(".kicker", sec), paras = $$(":scope > .measure, :scope > .intro > div > .measure", sec);
+      if (h2) gsap.from(h2, { clipPath: "inset(0 0 100% 0)", y: 34, duration: 1.3, ease: "power3.out", scrollTrigger: { trigger: sec, start: "top 80%", once: true } });
+      var rest = [].concat(kicker ? [kicker] : [], paras);
+      if (rest.length) gsap.from(rest, { y: 28, opacity: 0, duration: 1.1, ease: "power3.out", stagger: 0.1, delay: 0.15, scrollTrigger: { trigger: sec, start: "top 80%", once: true } });
+    });
+    var placeEls = $$(".place");
+    if (placeEls.length) gsap.from(placeEls, { y: 56, opacity: 0, duration: 1.2, ease: "power3.out", stagger: 0.14, scrollTrigger: { trigger: ".places .grid", start: "top 82%", once: true } });
+    var bandsEl = $(".bands");
+    if (bandsEl) gsap.from(bandsEl, { opacity: 0, y: 50, duration: 1.2, ease: "power2.out", scrollTrigger: { trigger: bandsEl, start: "top 95%", once: true } });
+    var endH = $(".end h2");
+    if (sun) {
+      var spots = [
+        { sel: ".hero-wrap", x: 0.5, y: 0.5, o: 0 },
+        { sel: "#inhalt", x: 0.86, y: 0.28, o: 0.9 },
+        { sel: ".journey", x: 0.12, y: 0.82, o: 0.75 },
+        { sel: ".bands", x: 0.5, y: 0.5, o: 0.55 },
+        { sel: ".stance", x: 0.82, y: 0.55, o: 0.9 },
+        { sel: ".places", x: 0.5, y: 0.12, o: 0.7 },
+        { sel: ".end", x: 0.34, y: 0.62, o: 0.95 }
+      ];
+      var moveSun = function (s) { gsap.to(sun, { x: s.x * window.innerWidth, y: s.y * window.innerHeight, opacity: s.o, duration: 1.6, ease: "power2.inOut", overwrite: true }); };
+      spots.forEach(function (s) {
+        var el = $(s.sel); if (!el) return;
+        ScrollTrigger.create({ trigger: el, start: "top 60%", end: "bottom 60%", onEnter: function () { moveSun(s); }, onEnterBack: function () { moveSun(s); } });
+      });
+      window.addEventListener("resize", function () { var a = ScrollTrigger.getAll().filter(function (t) { return t.isActive; }); });
+    }
+  }
+
   /* ---------- Kurz gesagt: Wort für Wort ---------- */
   $$(".lines p, .echo").forEach(function (p) {
     var ws = splitWords(p);
@@ -183,6 +216,7 @@
         path.style.strokeDasharray = L; path.style.strokeDashoffset = L;
       }
       buildPath();
+      gsap.from(track, { opacity: 0, y: 70, ease: "none", scrollTrigger: { trigger: vp, start: "top 96%", end: "top 25%", scrub: true } });
       var dist = function () { return track.scrollWidth - vp.clientWidth; };
       var tween = gsap.to(track, {
         x: function () { return -dist(); }, ease: "none",

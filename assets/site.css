@@ -168,11 +168,17 @@ footer a:hover{text-decoration:underline}
 .vorraum-weiter a{font-family:var(--sans);font-size:14px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);padding:16px 26px;display:inline-flex;gap:12px;align-items:center;transition:background .3s,color .3s}
 .vorraum-weiter a:hover{background:var(--ink);color:var(--paper)}
 
+/* Wanderndes Licht zwischen den Abschnitten */
+.sunglow{position:fixed;left:0;top:0;width:84vmax;height:84vmax;margin:-42vmax 0 0 -42vmax;pointer-events:none;z-index:1;opacity:0;will-change:transform,opacity}
+.sunglow i{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(242,223,168,.78),rgba(242,223,168,.28) 42%,rgba(242,223,168,0) 68%);animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(-3%,-2%) scale(1)}to{transform:translate(3%,3%) scale(1.06)}}
+.sec h2,.journey .head h2{will-change:clip-path,transform}
 /* Cursorlicht */
 .glow{position:fixed;left:0;top:0;width:280px;height:280px;margin:-140px 0 0 -140px;border-radius:50%;background:radial-gradient(circle,rgba(242,223,168,.55),rgba(242,223,168,0) 70%);pointer-events:none;z-index:2;opacity:0;mix-blend-mode:multiply;will-change:transform,opacity}
 @media (pointer:coarse){.glow{display:none}}
 
 @media (prefers-reduced-motion:reduce){
+  .sunglow{display:none}
   .hero .hint i{animation:none;transform:none}
   .intro .lines .w,.hero .frage .w,.end .echo .w{opacity:1!important;transform:none!important}
   .stance .item{clip-path:none!important}
