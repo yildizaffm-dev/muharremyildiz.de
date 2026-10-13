@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="Bataklıktaki Pırlanta – Öz. Değer, şimdi ve dönüş üzerine felsefi bir deneme.">
+<meta property="og:title" content="Bataklıktaki Pırlanta – Öz">
+<meta property="og:description" content="Değer, şimdi ve dönüş üzerine felsefi bir deneme.">
+<meta property="og:type" content="article">
+<title>Bataklıktaki Pırlanta – Öz</title>
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:200 900;font-display:swap;src:url("../assets/fonts/source-serif-4-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:200 900;font-display:swap;src:url("../assets/fonts/source-serif-4-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Source Serif 4";font-style:italic;font-weight:200 900;font-display:swap;src:url("../assets/fonts/source-serif-4-latin-italic.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("../assets/fonts/inter-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("../assets/fonts/inter-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+</style>
+<style>/* Eine Buchseite, die sich bewegt: Papier mit feinem Muster, schwarze Schrift, eine Spalte – jedes Kapitel mit eigener Bühne */
+:root {
+  --paper: #F5F3EE;
+  --stage: #ECE6D8;
+  --lattice: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g fill='none' stroke='%23000000' stroke-opacity='0.17' stroke-width='0.8'><path d='M0 0H64M0 64H64M0 0V64M64 0V64'/><rect x='18' y='18' width='28' height='28'/><rect x='18' y='18' width='28' height='28' transform='rotate(45 32 32)'/><path d='M0 0L18 18M64 0L46 18M0 64L18 46M64 64L46 46'/><circle cx='32' cy='32' r='3'/></g></svg>");
+}
+html { background:var(--paper); }
+body { background:var(--paper); background-image:var(--lattice); background-size:56px 56px; color:#000000; margin:0; padding-block:0 48px; padding-inline:16px;
+  font-family:"Source Serif 4","Charter",Georgia,serif; font-size:17.5px; line-height:1.62; overflow-x:hidden; }
+/* das Muster bleibt im Hintergrund leise: eine Schicht Papier darüber */
+body::before { content:""; position:fixed; inset:0; background:rgba(245,243,238,.70); pointer-events:none; z-index:0; }
+.wrap { position:relative; z-index:1; max-width:640px; margin:0 auto; }
+
+/* Titel */
+.cover { position:relative; text-align:center; padding-block:64px 44px; border-bottom:1px solid #000; overflow:hidden; margin:0 -16px; }
+.cover canvas { position:absolute; inset:0; width:100%; height:100%; display:block; pointer-events:none; }
+.cover-inner { position:relative; z-index:1; padding-inline:16px; animation: rise 1.4s ease-out both; }
+.cover .author { font-family:"Inter","Helvetica Neue",Arial,sans-serif; font-size:12px; letter-spacing:.3em; text-transform:uppercase; margin:0 0 28px; color:#000; }
+.cover h1 { font-family:"Source Serif 4","Charter",Georgia,serif; font-weight:400; font-size:clamp(40px,9.5vw,60px); line-height:1.04; margin:0 0 18px; text-wrap:balance; color:#000; }
+.cover .sub { font-style:italic; font-size:19px; line-height:1.4; margin:0 auto 26px; max-width:30ch; color:#000; }
+.cover .hint { font-family:"Inter",Arial,sans-serif; font-size:12.5px; line-height:1.5; color:#000; margin:0 auto; max-width:34ch; opacity:.75; }
+
+/* Inhalt */
+.toc { padding-block:26px 10px; border-bottom:1px solid #000; }
+.toc p.t { font-family:"Inter",Arial,sans-serif; font-size:11px; letter-spacing:.3em; text-transform:uppercase; text-align:center; margin:0 0 14px; }
+.toc ol { list-style:none; padding:0; margin:0; columns:2; column-gap:24px; }
+.toc li { margin:0 0 6px; break-inside:avoid; }
+.toc a { color:#000; text-decoration:none; border-bottom:1px solid #000; }
+
+/* Text */
+h2 { font-family:"Source Serif 4","Charter",Georgia,serif; font-weight:400; font-style:italic; font-size:30px; text-align:center; margin:72px 0 22px; line-height:1.2; text-wrap:balance; scroll-margin-top:72px; }
+h2::after { content:""; display:block; width:0; height:1px; background:#000; margin:14px auto 0; transition:width 1.4s ease; }
+h2.in::after { width:56px; }
+p { margin:0; text-indent:1.4em; }
+h2 + p, .stage + p, .epigraph + p, .vers + p, .regel + p, .dua + p, .footnote p, .glossar p, .cover p, .toc p, .credits, .foot { text-indent:0; }
+.epigraph { text-align:center; font-style:italic; margin:0 auto 28px; max-width:34ch; }
+.epi-src { font-style:normal; font-variant:small-caps; letter-spacing:.08em; font-size:14px; display:block; margin-top:4px; }
+.vers { margin:24px 8px 24px 24px; padding-left:16px; border-left:1px solid #000; font-style:italic; font-size:16.5px; line-height:1.55; }
+.vers .src { display:block; font-style:normal; font-variant:small-caps; letter-spacing:.06em; font-size:13.5px; text-align:right; margin-top:6px; }
+.regel { margin:32px 0; padding:18px 20px; border:1px solid #000; font-weight:700; font-size:18px; line-height:1.5; background:#FFE08A; color:#000; }
+.dua { margin:48px 0 40px; padding:26px 16px 24px; text-align:center; font-style:italic; border-top:1px solid #000; border-bottom:3px double #000; }
+.dua .ek { margin-bottom:18px; }
+.dua p { text-indent:0; margin:0 0 15px; line-height:1.55; font-size:1.06em; text-wrap:balance; }
+.dua p:last-of-type { margin-bottom:0; }
+.dua .orn { display:block; font-style:normal; font-size:13px; letter-spacing:.4em; margin-top:18px; opacity:.65; }
+.schluss { text-indent:0; text-align:center; margin-top:28px; font-style:italic; }
+.ek { display:block; font-family:"Inter",Arial,sans-serif; font-weight:500; font-size:11px; letter-spacing:.25em; text-transform:uppercase; margin-bottom:10px; font-style:normal; }
+.glossar p { margin:0 0 12px; padding-left:14px; border-left:2px solid transparent; font-size:16px; line-height:1.5; transition:border-color 1.2s ease; }
+.glossar p.in { border-left-color:#000; }
+.glossar i { font-style:italic; }
+sup { font-size:11px; line-height:0; }
+sup a { color:#000; text-decoration:none; }
+.footnote { font-size:14px; line-height:1.45; margin-top:8px; }
+.footnote ol { padding-left:1.6em; margin:0; } .footnote li { margin-bottom:6px; } .footnote p { display:inline; }
+em { font-style:italic; }
+.credits { font-family:"Inter",Arial,sans-serif; font-size:11.5px; line-height:1.5; color:#000; opacity:.7; margin-top:48px; text-align:center; }
+.foot { text-align:center; font-family:"Inter",Arial,sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; margin-top:18px; padding-top:20px; border-top:1px solid #000; }
+
+/* Bühnen: helles Muster statt dunkler Fläche */
+.stage { position:relative; height:min(58vh,520px); min-height:300px; margin:0 -16px 34px; overflow:hidden;
+  background:var(--stage); background-image:var(--lattice); background-size:56px 56px; border-top:1px solid rgba(0,0,0,.35); border-bottom:1px solid rgba(0,0,0,.35); }
+.stage::before { content:""; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 40%, rgba(255,255,255,.55), rgba(236,230,216,.55) 60%, rgba(0,0,0,.05) 100%); pointer-events:none; }
+.stage canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+.stage .bg { position:absolute; inset:-6%; width:112%; height:112%; object-fit:cover; display:block; animation:kb 48s ease-in-out infinite alternate; }
+.stage-photo::before { display:none; }
+.stage .veil { position:absolute; inset:0; background:rgba(8,9,12,.42); }
+.stage[data-scene="bedeckung"] .veil { background:rgba(40,36,30,.55); }
+.stage[data-scene="biene"] .veil { background:rgba(20,16,8,.35); }
+
+/* Bewegung */
+@keyframes kb { from { transform:scale(1) translate(0,0); } to { transform:scale(1.08) translate(-1.5%,1%); } }
+@keyframes rise { from { opacity:.15; transform:translateY(14px); } to { opacity:1; transform:none; } }
+main h2.in, main .vers.in, main .regel.in, main .dua.in { animation:rise .9s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .stage .bg, .cover-inner, main h2.in, main .vers.in, main .regel.in, main .dua.in { animation:none; } h2::after { transition:none; } }
+@media (max-width:480px) { .toc ol { columns:1; } .cover { padding-block:52px 36px; } body { font-size:17px; } .stage { height:min(52vh,440px); } }
+</style>
+<style>/* Lesemodus: Fortschritt, Leseleiste, Kapitelliste, Schriftgröße, Nacht */
+:root{--ink:#000;--chrome:rgba(245,243,238,.86);--line:rgba(0,0,0,.14);--gold:#C7A15A;--gold-deep:#765A26}
+html.r-size-2 body{font-size:19.5px;line-height:1.66} html.r-size-3 body{font-size:21.5px;line-height:1.7}
+html.r-size-2 .wrap,html.r-size-3 .wrap{max-width:700px}
+.rprog{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:left;transform:scaleX(0);background:var(--gold);z-index:60;pointer-events:none}
+.rbar{position:fixed;left:0;right:0;top:0;height:56px;display:flex;align-items:center;gap:12px;padding:0 14px;background:var(--chrome);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);z-index:50;font-family:"Inter",Arial,sans-serif;font-size:13px;transform:translateY(-100%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.rbar.on{transform:none}
+.rbar .t{font-family:"Source Serif 4",Georgia,serif;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.rbar .t small{display:block;font-family:"Inter",Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-top:2px}
+.rbar button{font:inherit;font-size:13px;background:none;border:1px solid var(--line);color:inherit;border-radius:999px;padding:7px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1}
+.rbar button:hover,.rbar button[aria-expanded="true"]{background:rgba(0,0,0,.06)}
+.rbar button:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+.rbar .aa{font-family:"Source Serif 4",Georgia,serif;font-size:14px}
+.rbar .rd{min-width:38px;justify-content:center} .rbar .rd[aria-pressed="true"]{background:#000;color:#F5F3EE;border-color:#000}
+html.night .rbar .rd[aria-pressed="true"]{background:#EFE9DC;color:#1c1a16;border-color:#EFE9DC}
+.rvoice{position:fixed;right:14px;top:66px;z-index:56;background:var(--chrome);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 0 0 1px var(--line),0 10px 30px rgba(0,0,0,.12);border-radius:14px;padding:12px 14px;font-family:"Inter",Arial,sans-serif;font-size:13px;display:none;gap:8px;align-items:center;flex-wrap:wrap;max-width:min(92vw,420px)}
+.rvoice.on{display:flex}
+.rvoice button{font:inherit;font-size:13px;background:none;border:1px solid var(--line);color:inherit;border-radius:999px;padding:6px 11px;cursor:pointer}
+.rvoice button.primary{background:#000;color:#F5F3EE;border-color:#000} html.night .rvoice button.primary{background:#EFE9DC;color:#1c1a16;border-color:#EFE9DC}
+.rvoice .st{flex-basis:100%;opacity:.7;font-size:12px}
+main p.lese,main .vers.lese,main .regel.lese,main .dua.lese,main .epigraph.lese{background:rgba(199,161,90,.22);box-shadow:0 0 0 8px rgba(199,161,90,.22);border-radius:3px;transition:background .3s,box-shadow .3s}
+.rside{position:fixed;left:0;top:56px;bottom:0;width:min(86vw,320px);overflow:auto;background:var(--chrome);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:1px 0 0 var(--line);z-index:49;padding:22px 20px 40px;transform:translateX(-102%);transition:transform .4s cubic-bezier(.2,.7,.2,1);font-family:"Inter",Arial,sans-serif;font-size:14px}
+.rside.on{transform:none}
+.rside p.h{font-size:11px;letter-spacing:.3em;text-transform:uppercase;margin:0 0 12px;opacity:.6}
+.rside ol{list-style:none;padding:0;margin:0}
+.rside li{margin:0}
+.rside a{display:block;padding:9px 10px;border-left:2px solid transparent;text-decoration:none;color:inherit;line-height:1.35;border-radius:0 6px 6px 0}
+.rside a:hover{background:rgba(0,0,0,.05)} .rside a.cur{border-left-color:var(--gold);background:rgba(199,161,90,.12)}
+.rside .rt{display:block;font-size:11px;opacity:.55;margin-top:2px}
+.rcont{position:fixed;left:50%;bottom:18px;transform:translate(-50%,120%);background:#000;color:#F5F3EE;font-family:"Inter",Arial,sans-serif;font-size:13px;padding:11px 16px;border-radius:999px;z-index:55;display:flex;gap:14px;align-items:center;transition:transform .45s cubic-bezier(.2,.7,.2,1);max-width:92vw}
+.rcont.on{transform:translate(-50%,0)}
+.rcont button{font:inherit;background:#F5F3EE;color:#000;border:0;border-radius:999px;padding:6px 12px;cursor:pointer}
+.rcont .x{background:none;color:#F5F3EE;padding:6px 4px;opacity:.7}
+@media (min-width:1100px){
+  .rside{transform:none;box-shadow:none;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;width:250px;left:max(16px,calc(50% - 350px - 290px));top:96px;padding:0 10px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .6s ease;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.22) transparent}
+  .rside.show{opacity:1;pointer-events:auto}
+  .rside a{padding:6px 10px} .rside .rt{display:inline;margin-left:6px}
+  .rside.hide-desk{display:none}
+  .rbar .kap{display:none}
+  body{font-size:19px;line-height:1.66}
+  .wrap{max-width:680px;margin-left:max(312px,calc(50% - 340px));margin-right:auto}
+  html.r-size-2 .wrap,html.r-size-3 .wrap{max-width:700px;margin-left:max(312px,calc(50% - 350px))}
+}
+/* Nacht */
+html.night{--chrome:rgba(28,26,22,.88);--line:rgba(255,255,255,.14)}
+html.night body{background:#1c1a16;color:#EFE9DC} html.night{background:#1c1a16}
+html.night body::before{background:rgba(28,26,22,.78)}
+html.night .cover h1,html.night .cover .sub,html.night .cover .author,html.night .cover .hint,html.night .toc a,html.night sup a,html.night .credits,html.night .foot,html.night h2{color:#EFE9DC}
+html.night .toc a,html.night .cover,html.night .toc,html.night .foot,html.night .vers,html.night .dua,html.night .regel{border-color:rgba(239,233,220,.55)}
+html.night h2::after,html.night .glossar p.in{background:#EFE9DC;border-left-color:#EFE9DC}
+html.night .regel{background:#3a3120;color:#EFE9DC}
+html.night .stage{filter:brightness(.62) saturate(.9)}
+html.night .rcont{background:#EFE9DC;color:#1c1a16} html.night .rcont button{background:#1c1a16;color:#EFE9DC} html.night .rcont .x{background:none;color:#1c1a16}
+@media (prefers-reduced-motion:reduce){.rbar,.rside,.rcont{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="cover stage" data-scene="cover">
+  <canvas></canvas>
+  <div class="cover-inner">
+    <p class="author">Muharrem Yıldız</p>
+    <h1>Bataklıktaki<br>Pırlanta</h1>
+    <p class="sub">Öz.<br>Değer, şimdi ve dönüş üzerine<br>felsefi bir deneme</p>
+    <p class="hint">Telefonda okumak için. Her bölümün kendi hareketli resmi var – yavaş yavaş okuyun. İsterseniz sesli dinleyin: çubuktaki ▶.</p>
+  </div>
+</header>
+<nav class="toc"><p class="t">On Bir Adım</p><ol><li><a href="#i-sifirlama">I · Sıfırlama</a></li><li><a href="#ii-pirlanta">II · Pırlanta</a></li><li><a href="#iii-isik-yeri">III · Işık Yeri</a></li><li><a href="#iv-ortu">IV · Örtü</a></li><li><a href="#v-yuva">V · Yuva</a></li><li><a href="#vi-egiklik">VI · Eğiklik</a></li><li><a href="#vii-ithaf">VII · İthaf</a></li><li><a href="#viii-girdap-ve-cikarilma">VIII · Girdap ve Çıkarılma</a></li><li><a href="#ix-kolaylastirilmislik">IX · Kolaylaştırılmışlık</a></li><li><a href="#x-capa">X · Çapa</a></li><li><a href="#xi-donus">XI · Dönüş</a></li><li><a href="#kavramlar">Kavramlar</a></li></ol></nav>
+<main>
+<h2 id="i-sifirlama">I · Sıfırlama</h2>
+<figure class="stage" data-scene="rueck"><canvas></canvas></figure>
+
+<p class="epigraph">“Allah'ın yaratışında değişme yoktur.”<br><span class="epi-src">Rûm Sûresi, 30</span></p>
+
+<p>Öyle bir saat vardır ki evden artık hiçbir ses gelmez ve insan kendi seslerini duymaya başlar. Böyle bir saatte, bütün dillerden önce orada olan dilde bir cümle geldi bana: <em>Fabrika ayarlarıma geri dönmek istiyorum.</em></p>
+<p>Bu cümle cihazlara aittir. Hiçbir şey yürümediğinde basılır ve her şeyin başlangıçtaki gibi olacağını vaat eder. Psikoloji bu vaadi iyi tanır ve ona <em>yeni başlangıç etkisi</em> der: Eşiklerde – pazartesi, ay başı, doğum günü – insanlar kendilerine yeni bir hayat yakıştırır, çünkü eşik eski benliği geride bırakıyormuş gibi görünür.<sup id="fnref:dai"><a class="footnote-ref" href="#fn:dai">1</a></sup> Bu etki ölçülebilir ve kısadır. Çünkü cümleyi kendine uygulayan kişi önce onu sınamak zorundadır ve sınama iki şey ortaya çıkarır. Birincisi: Sıfırlanan bir cihaz, teslimattan sonra eklenen her şeyi kaybeder. İnsan bunu yapamaz; hafızası silinemez, yalnızca üzerine yazılabilir ve ne olduysa, olduğu şeyin bir parçası olarak kalır. İkincisi: Geriye kalanı sahibi belirlememiştir, üretici belirlemiştir. O halde soru, geri dönmek isteyip istemediğim değildir. Soru, beni kimin yaptığıdır.</p>
+<p>Cevap için iki kelime gerekti ve o iki kelime, insanın karanlıkta kendi kapısının kolunu bulması gibi geldi: fıtrat – ve onu koyan, Allah azze ve celle.</p>
+<p>Böylece <em>sıfırlama</em> daha başlamadan çürütülmüş oldu. Çünkü ben fabrika ayarlarımı hatırlamıyorum. Onlar konulurken orada değildim; cihazı yalnızca bugünkü hâliyle, o günden beri üzerine gelen her şeyle birlikte tanıyorum. İlk ayar hakkında bildiklerimi, onu koyanın kılavuzundan biliyorum. Bu, bir hatıradan daha azdır ve aynı zamanda daha fazlası, çünkü bir hatıra yanıltabilir, bir kılavuz yanıltmaz. Ve kılavuz, o ayarın üzerine hiçbir zaman yazılmadığını söyler. <em>Allah'ın yaratışında değişme yoktur.</em> Üzerine hiç yazılmamış olanın sıfırlanması gerekmez – yalnızca yeniden ulaşılması gerekir.</p>
+<p>Böylece gecenin ilk kelimesinden son kelimesi doğdu: sıfırlama değil, <em>dönüş</em>. Gelenek bunun için tam da bu anlama gelen bir kelimeye sahiptir – tevbe, kelime anlamıyla: geri dönmek – ve bu denemenin yolu bir kelimeden ötekine gider.</p>
+<h2 id="ii-pirlanta">II · Pırlanta</h2>
+<figure class="stage stage-photo" data-scene="diamant"><img class="bg" src="../diamant/img/diamant.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>Sonra gelen şey, duygular üzerine değil, bir nesne üzerine düşünmekti. <em>Bu, bataklıkta duran bir pırlantadır; şimdide değildir – olması gereken yerde değil, zamanda değil, durumda değil. Değerinden ise hiçbir şey kaybetmez.</em></p>
+<p>Bu son cümle bir teselli değildir. Bir tespittir ve bundan sonraki her şey onun üzerinde durur. Ben buna <em>değerin verilmişliği</em> diyorum: Pırlantanın değeri kazanılmış, hak edilmiş, atfedilmiş değildir. Verilmiştir – ve bu, bir verenden geldiği anlamına gelir. Gelenek bu armağana fıtrat der, her insanın üzerine yaratıldığı yaratılış; müfessiri Sa'dî (rh.) onu, Allah azze ve celle'nin her kalbe koyduğu hakikat sevgisi olarak anlar; kim ondan çıkarsa, ancak <em>sonradan eklenen</em> bir sebeple çıkar.<sup id="fnref:fitra"><a class="footnote-ref" href="#fn:fitra">2</a></sup> Sonradan eklenen – bataklık tek kelimeyle budur. Peygamber sallallahu aleyhi ve sellem bunu, pırlantanın yalnızca tekrar ettiği bir benzetmeyle söylemiştir: Her doğan fıtrat üzere doğar, tıpkı hayvanın bütün olarak doğması gibi – “onda kesik bir kulak görüyor musunuz?”<sup id="fnref:fitra-hadith"><a class="footnote-ref" href="#fn:fitra-hadith">3</a></sup> Hayvan bütün olarak doğar; kulağını sonradan bir başkası keser.</p>
+<p>Nur âyetinde Sa'dî (rh.), kandilin yağını – ateş değmese bile neredeyse kendiliğinden aydınlatacak olan o yağı – fıtratın kendisi olarak yorumlar: saf, hazır, neredeyse kendiliğinden ışık.<sup id="fnref:oel"><a class="footnote-ref" href="#fn:oel">4</a></sup> Benim pırlantam ile onun yağı, iki ayrı maddede tek bir sözdür. Malzeme en baştan ışıldamaya elverişlidir; ama kendinden ışıldamaz, dışarıdan bir dokunuşa ihtiyaç duyar.</p>
+<p>Felsefe bu mesafe için iki bin yıldır iki kelime kullanır: kuvve ve fiil. Bir tohum, kuvve olarak ağaçtır, fiil olarak tohumdur. Bataklıktaki pırlanta, en saf hâliyle kuvvedir – ışığı geri yansıtma yetisi eksiksiz vardır ve aynı anda sıfır gerçekleşmiştir. Psikoloji aynı mesafeyi iki başka kelimeyle ölçmüştür ve bunları birbirinden ayırmaya değer: <em>öz-değer</em>, ne olduğum sorusudur; <em>öz-yeterlik</em>, ne yapabildiğim sorusudur.<sup id="fnref:bandura"><a class="footnote-ref" href="#fn:bandura">5</a></sup> Bataklıktaki pırlantada birincisi eksiksizdir, ikincisi sıfırdadır. İkisini karıştıran, eksik etkiden değerin eksik olduğu sonucunu çıkarır ve pırlantayı yontmaya başlar. Bataklığın ilk yanılgısı budur ve araştırma onu <em>koşullu öz-değer</em> olarak tanır: Başarıya, görünüşe ya da takdire bağlanan bir değer her koşulla birlikte dalgalanır ve onu taşıyanı, yaşamak yerine koşulları beslemeye zorlar.<sup id="fnref:crocker"><a class="footnote-ref" href="#fn:crocker">6</a></sup> Carl Rogers bunun karşıtını tarif etmiş, <em>koşulsuz kabul</em> demiş ve onu her iyileşmenin şartları arasında saymıştır – ancak onda bu kabul, verebilen ya da vermeyebilen bir başka insandan gelmek zorundadır.<sup id="fnref:rogers"><a class="footnote-ref" href="#fn:rogers">7</a></sup> Değerin verilmişliği ise sarsılmayanın koşulsuz kabulüdür. Verilmiş değer, Şems Sûresi'nin söylediği gibi, daha hiçbir şey yapmadan önce bir biçime sahiptir: Allah azze ve celle orada nefse “ve onu şekillendirene” diye yemin eder.</p>
+<p>Değerin verilmişliğinden, benim <em>ışık borcu</em> dediğim bir şey doğar. Verilmiş bir değer borçlu bir değerdir: geri ödeme anlamında değil, yön anlamında borçlu. Kendi yapmadığı bir şeyi almış olanın, etkisinin gideceği bir adresi vardır. Değerden anlam doğar, anlamdan sorumluluk, sorumluluktan ışıma, ışımadan güzellik. Zincir verende başlar ve onda biter.</p>
+<h2 id="iii-isik-yeri">III · Işık Yeri</h2>
+<figure class="stage stage-photo" data-scene="lichtort"><img class="bg" src="../diamant/img/lichtort.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>Bir pırlanta, içine ışık düştüğünde etki eder ve ışık yalnızca onun durduğu yere düşer. Konumunu tarif ettiğim üç koordinat – yer, zaman, durum – demek ki yalnızca nerede durduğunu anlatmaz; ne için yapıldığını anlatır. Şimdi, pırlantanın ek olarak bir şey aldığı bir yer değildir. Şimdi, <em>ışık yeri</em>dir: kuvvenin fiile dönüştüğü tek yer.</p>
+<p>Psikoloji ışık yerini kuru bir adla ölçmüştür: <em>dikkat</em>. İnsan, dikkatinin olduğu yerdedir ve iki araştırmacı binlerce insana rastgele saatlerde o an nerede olduklarını sormuştur – zamanın neredeyse yarısında yaptıkları şeyin yanında değillerdi ve bu yarısında, ne yaptıkları fark etmeksizin, öteki yarıya göre daha mutsuzdular.<sup id="fnref:killingsworth"><a class="footnote-ref" href="#fn:killingsworth">8</a></sup> Dalıp gitmek zihnin bir hatası değil, dinlenme konumudur. Ama ışığı başka yerde olan bir pırlanta, güneş parlarken karanlıkta yatar.</p>
+<p>Heidegger insana “fırlatılmış” demiştir: kendi dünyasına ve kendi zamanına, sorulmadan. Bu imge doğrudur ve ben de o saatte onu kullandım – <em>pırlanta böylece mekâna fırlatıldı, bir yere fırlatıldı, zamana sarıldı.</em> Ama Heidegger'de fırlatan yoktur ve bu yüzden onun temel duygusu kaygıdır. Benim cümlem devam etti: <em>fırlatıldı, ışığın düştüğü yere.</em> Atışın bir yönü vardı. Ben buna <em>hedeflenmişlik</em> diyorum: İnsan yalnızca fırlatılmış değildir, hedeflenmiştir – bir yere, bir zamana, üzerine ışık düşebilecek bir duruma. Fırlatılmışlığın kaygı ürettiği yerde hedeflenmişlik bir soru üretir: Allah azze ve celle beni buraya ne için hedefledi?</p>
+<p>Sorunun bir düzeni vardır ve bu düzen her felsefeden eskidir. <em>Yapmak gerekir, yapmak iyi olur, yapılabilir.</em> Fıkıh, eylemin beş mertebesini bilir ve bunlar genel olarak neyin iyi olduğunu değil, <em>şimdi</em> neyin daha değerli olduğunu söyler. Ben bu kategoriye <em>daha değerli olan</em> diyorum. Işık yerinin bütün ahlâkı tek kelimede budur: Her durumda bir şey daha değerlidir ve hiçbiri ötekini ortadan kaldırmaz. Son on yılların davranış terapisi aynı düşünceyi <em>değer netleştirme</em> adıyla yeniden keşfetmiştir – ulaşılıp üstü çizilen hedefler değil, her saatin bir karar bıraktığı yönler. Namaz vaktinde namaz daha değerlidir – “Namaz şüphesiz, inananlara belirli vakitlerde farz kılınmıştır” (Nisâ, 103) –, daha acil olduğu için değil, bir vakti olduğu ve ötekinin olmadığı için. Acil durumda acil durum daha değerlidir, çünkü bir hayatın ertelemesi yoktur; Peygamber sallallahu aleyhi ve sellem'in kendisi Hendek günü namazı ertelemiş ve sonra kaza etmiştir.<sup id="fnref:graben"><a class="footnote-ref" href="#fn:graben">9</a></sup> Düzeni koyan işte bu kadar merhametlidir. Şimdi, üretilen bir ruh hâli değildir. Şimdi, her saat cevaplanabilecek bir sorunun cevabıdır: Şimdi daha değerli olan nedir?</p>
+<h2 id="iv-ortu">IV · Örtü</h2>
+<figure class="stage stage-photo" data-scene="bedeckung"><img class="bg" src="../diamant/img/bedeckung.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>Sonra bataklık. Ona üç adımda yaklaştım ve her adımda küçüldü. <em>Bataklık entropidir</em> – kimsenin karşı koyamayacağı bir tabiat kanunu. <em>Daha yakından bakınca bataklık dünyadır</em> – biraz daha dar, ama hâlâ her şey. <em>Daha da yakından bakınca bataklık, pırlantanın temelinde olan değil, onu ulaşılmaz ve görünmez kılan eylemlerdir.</em> Eylemler demek ki – ve eylemler, tabiat kanunlarından farklı olarak, değiştirilebilir.</p>
+<p>Bu yüzden bataklığa bozulma değil, <em>örtü</em> diyorum. Kelime benim değildir; Kur'an-ı Kerim'de, arınmanın karşıtından söz edilen yerde geçer:</p>
+<div class="vers">Kendini arıtan saadete ermiştir. Kendini fenalıklara gömen kimse de ziyana uğramıştır.<span class="src">Şems Sûresi, 9–10</span></div>
+
+<p>Mealin “fenalıklara gömmek” dediği şeyi Sa'dî (rh.) <em>örtmek</em> olarak açıklar: Kirletilmeyi hak etmeyen nefis, güzelliği gizlenene kadar davranış ve amellerle örtülür.<sup id="fnref:dassa"><a class="footnote-ref" href="#fn:dassa">10</a></sup> Örtmek demek ki, yok etmek değil: Nefis örtüldüğünde değerinden hiçbir şey kaybetmez; görünürlüğünü kaybeder. Peygamber sallallahu aleyhi ve sellem de bu süreci madenin diliyle anlatmıştır: Kul bir hata işlediğinde kalbine siyah bir nokta konur; vazgeçer, bağışlanma diler ve dönerse kalbi cilalanır; hataya dönerse nokta büyür, sonunda kalbi kaplar.<sup id="fnref:rost"><a class="footnote-ref" href="#fn:rost">11</a></sup> Örtü bir olay değil, bir birikimdir, nokta nokta – ve panzehiri de noktalar kadar küçüktür.</p>
+<p>Alışkanlık psikolojisi noktaları kendi kesinliğiyle tarif eder: Aynı yerde, aynı <em>ipucuna</em> karşılık yeterince sık yapılan şey niyetten kopar ve kendiliğinden yürür – telefona uzanmak, buzdolabına gitmek, ertelemek.<sup id="fnref:wood"><a class="footnote-ref" href="#fn:wood">12</a></sup> Bir alışkanlık, kendi kendini koyan bir noktadır. Ve tembellik gibi hissedilen erteleme, araştırmada başka bir şeydir: Hoş olmayan bir duygudan şimdi kurtulma girişimi – yarın olunacak insanın hesabına.<sup id="fnref:sirois"><a class="footnote-ref" href="#fn:sirois">13</a></sup> Davranış terapisi bu harekete <em>yaşantısal kaçınma</em> der – içeride hissedilmesi gerekenden, dışarıda daha kolay olana kaçış –; geleneğin ise bunun için aynı şeyi ve daha fazlasını söyleyen daha eski bir adı vardır: gaflet.</p>
+<p>Kalbin hocaları (rh.) katmanları adlandırmıştır ve adlandırmak ilk ciladır: kendini pırlanta sanıp bataklığı başkalarına ayıran kibir; başkalarının pırlantasına bakıp kendininkini artık görmeyen haset; seyirciler için amel; zemini bulandıran öfke; bataklığı zemin sanan dünya sevgisi; ve gaflet – en kalın katman, çünkü bir katman gibi değil, hayatın kendisi gibi hissedilir.</p>
+<p>Örtünün kendine ait bir hareketi vardır ve burada bilim onu tanımaya yardım eder. Psikolojinin <em>ruminasyon</em> dediği şey – kendi hâlinin ve sebeplerinin etrafında dönüp durmak – çökkün ruh hâlini ağırlaştırır, eylemi felç eder ve içinde döndüğü bataklığı derinleştirir.<sup id="fnref:rumination"><a class="footnote-ref" href="#fn:rumination">14</a></sup> Bataklıkta bataklık üzerine düşünmek bataklığı tutar. Kur'an-ı Kerim aynı hareketi kötülüğü emreden nefis olarak adlandırır – “Rabbimin merhameti olmadıkça” (Yûsuf, 53). İkisi de aynı şeyi söyler: Örtü karşı kuvvetle durdurulamaz; ancak başka bir yerden gelen bir şeyle durdurulur.</p>
+<p>Ve Sartre burada da haklıdır: Seçmemek de bir seçimdir. <em>Hiçbir şey söylememek de bir yoldur, eylememek de bir yoldur.</em> Yerinde kalan pırlanta karar vermiştir. Örtünün en sert yüzü budur – ve umudu da. Çünkü ihmalle örtülen, eylemle açığa çıkar. Ve eylem, görüleceği gibi, bir karış kadar küçük olabilir.</p>
+<h2 id="v-yuva">V · Yuva</h2>
+<figure class="stage" data-scene="fassung"><canvas></canvas></figure>
+
+<p>Pırlanta satın alan, onunla birlikte bir yuva da satın alır. Kimsenin aklına pırlantayı yuvasız sahiplenmek gelmez. O saatte seçilecek üç yuva vardı ve üçü de saygındı. Yüzükte pırlanta, takan için süstür. Matkap ucunda, sahibi için alettir. Kasada mülktür, güvencedir, mal mülktür. Üçünde de biri içindir. <em>Hiçbiri onu kendinden açmaz.</em></p>
+<p>Ben bu varoluş tarzına <em>biri-için-olmak</em> diyorum. Kötü değildir. Bütün dünya yuvalardan ibarettir ve kimse onların dışında yaşamaz. Ama biri-için-olmanın psikolojinin ölçtüğü bir bedeli vardır: Yüz yirmi sekiz deney boyunca beklenen ödül – övgü, fayda, güvence – eylemin iç kaynağını düşürmüştür.<sup id="fnref:deci"><a class="footnote-ref" href="#fn:deci">15</a></sup> Bu deneylerden doğan <em>öz-belirleme kuramı</em> o günden beri yuvadan gelen <em>dışsal</em> güdülenmeyle taşın kendisinden gelen <em>içsel</em> güdülenmeyi birbirinden ayırır – ve yeterince uzun süre ödendiğinde birincisinin ikincisini yerinden ettiğini gösterir. Yuva için parlayan kaynağı kaybeder. Üç yuvanın ruh biliminde benimkilerden eski adları vardır. Yüzük, C. G. Jung'un <em>persona</em> dediği şeydir: o kadar iyi oturan maske ki insan onu yüz sanır. Matkap ucu, Alfred Adler'in <em>telafi</em>sidir: dolu olmaktan değil, aksi hâlde küçük kalma duygusundan gelen faydalı olma. Kasa, Erich Fromm'un <em>sahip olma</em>sıdır: her şeyi – eşyayı, bilgiyi, hatta imanı – yaşanan bir hayat olarak değil, mülk olarak ele alma tarzı.</p>
+<p>Biri-için-olmanın karşısında <em>kendinden-olmak</em> durur ve Kant onu, ben kelimeye sahip olmadan çok önce tarif etmiştir: Güzel olan, insan bir amaç düşünmeden hoşa gidendir – amaçsız amaçlılık. Bir çiçek, bir işe yaradığı için güzel değildir. Kendinden etki eden pırlanta hiçbir şey için değildir ve güzelliği de buradadır. Gece açık kalan çelişki burada çözülür: Pırlanta nasıl hem hiçbir şey için olur hem de daha büyük bir amaca sahip olur? Çünkü daha büyük amaç faydada değil, görülmektedir. Peygamber sallallahu aleyhi ve sellem şöyle buyurmuştur: “Allah güzeldir, güzelliği sever.”<sup id="fnref:jamil"><a class="footnote-ref" href="#fn:jamil">16</a></sup> Ve: “Allah sizin suretlerinize ve mallarınıza bakmaz; kalplerinize ve amellerinize bakar.”<sup id="fnref:herzen"><a class="footnote-ref" href="#fn:herzen">17</a></sup> Yuvaya değil demek ki, pırlantaya.</p>
+<p>Geleneğin yanlış yuva için bir kelimesi vardır, riya – görülmek için amel etmek – ve yumuşatmak istemediğim bir rivayeti: Kıyamet Günü haklarında ilk hüküm verilecek üç kişi bir savaşçı, bir âlim ve bir cömerttir; her birine şöyle denir: Sen bunu, “ne cesur, ne âlim, ne cömert” densin diye yaptın. Ve denildi.<sup id="fnref:drei"><a class="footnote-ref" href="#fn:drei">18</a></sup> Ameller iyiydi; yuva yanlıştı. Yuva olmayan tek bir yuva vardır ve adı şudur: Allah azze ve celle'nin rızası için – çünkü bu yuva pırlantayı biri için tutmaz, birinin önüne koyar. Yuvasız bir pırlantanın sorumluluğu küçücük ve kesindir: temiz olmak ve ışığa dönük olmak – kendisi parlamak değil, ışık üretmek değil, seyirci getirmek değil.</p>
+<h2 id="vi-egiklik">VI · Eğiklik</h2>
+<figure class="stage" data-scene="verkippung"><canvas></canvas></figure>
+
+<p>İki fiil ve ikisi de gereklidir. Yıkanmış ama eğik duran bir pırlanta ışığı aşağıdan kaçırır ve kusursuz olduğu hâlde karanlık görünür. Doğru duran ama kirli bir pırlanta hiçbir şey yansıtmaz. <em>Görünür olması için hem yıkanmış hem de doğrultulmuş olması gerekir.</em> Örtü sorunlardan biridir, <em>eğiklik</em> öteki, ve görülmesi daha zordur, çünkü eğik bir pırlanta yukarıdan karanlık görünür ve aşağıdan parlar – ışığı gitmemiştir, gözün olmadığı yerden çıkmaktadır. Jung'un <em>gölge</em> dediği şey budur: ışık eksikliği değil, yanlış çıkıştaki ışık – eksik olmayan, yalnızca öte yana dönük duran yaşanmamışlık.</p>
+<p>İki fiilden, düşünürlerin takıldığı soru doğdu: Kim yıkar ve kim doğrultur? Kimileri her şeyin zorunluluk olduğunu söyledi; kimileri insanın kendi fiillerini kendisinin yarattığını. İkisi de yüzde yüz, ve ikisi de takıldı. Psikoloji aynı tartışmayı tek tek her insanın içinde yeniden bulmuş ve ona <em>denetim odağı</em> demiştir: İnsanın hayatının kendisine mi, yoksa başına gelenlere mi bağlı olduğuna inandığı.<sup id="fnref:rotter"><a class="footnote-ref" href="#fn:rotter">19</a></sup> Ve iki uçta neler olduğunu göstermiştir. Bir uçta <em>öğrenilmiş çaresizlik</em> vardır – yeterince kaçınılmaz darbeden sonra kapı açık olsa bile yerinde kalan hayvan<sup id="fnref:seligman"><a class="footnote-ref" href="#fn:seligman">20</a></sup> –, kendini çamur sanan pırlanta. Öteki uçta her şeyi kendi taşımak isteyen ve altında kırılan kudret vardır – kendi parlamak isteyen pırlanta. Benim cevabım o saatte sahip olduğum tek cevaptı ve en eskisi olduğu ortaya çıktı: <em>hiçbiri yüzde yüz değil.</em> Geldiğim geleneğin âlimleri (rh.) bunu şöyle öğretmiştir: seçen gerçek, kişinin kendisine ait bir irade – ve fiili yaratan bir başkası.</p>
+<p>İbn Kayyim (rh.) bu paylaşımı Nur âyetinden okumuştur ve ben onu hiçbir yerde bundan daha kesin bulmadım:</p>
+<div class="vers">Allah göklerin ve yerin Nur'udur. O'nun nuru, içinde ışık bulunan bir kandil yuvasına benzer. O ışık bir cam içindedir, cam ise, sanki inci gibi parlayan bir yıldızdır; bu ne yalnız doğuda ve ne de yalnız batıda bulunan bereketli zeytin ağacından yakılır. Ateş değmese bile, nerdeyse yağın kendisi aydınlatacak! Nur üstüne nurdur.<span class="src">Nûr Sûresi, 35</span></div>
+
+<p>Bu nurun, diye yazar, bir faili, bir alıcısı, bir yeri, bir taşıyıcısı ve bir maddesi vardır. Fail, nurları döken Allah azze ve celle'dir; alıcı kuldur; yer onun kalbidir; madde onun sözü ve amelidir; <em>taşıyıcı</em> ise onun azmi, iradesi, çabasıdır.<sup id="fnref:ibnqayyim"><a class="footnote-ref" href="#fn:ibnqayyim">21</a></sup> Eğiklik böylece açıklanmış olur: Kandili taşıyıcı tutar ve taşıyıcı benim irademdir. Pırlantayı onu tutan doğrultur; onu benim iradem tutar; ışığı ise bir başkası yapar. Ben taşıyıcıyı hareket ettiririm, daha fazlasını değil – ve ışık gelir.</p>
+<p>Kierkegaard aynı şeyi felsefe tarafından, en önemli kitabının ilk sayfasında söylemiştir: Benlik, kendisiyle ilişki kuran bir ilişkidir – ve kendisini kendisi koymamıştır. Bu yüzden kendisini iki biçimde ıskalayabilir: umutsuzca kendisi <em>olmamak</em> isteyerek – kendini çamur sanan pırlanta – ve umutsuzca, kendi gücüyle, onu koyan olmadan kendisi olmak isteyerek – kendi parlamak isteyen pırlanta. İkisi de umutsuzluktur ve umutsuzluk eğiklikten başka bir şey değildir. Umutsuzluğun olmadığı hâlin formülü onda şudur: Benliğin, onu koyan güçte saydam biçimde temellenmesi.<sup id="fnref:kierkegaard"><a class="footnote-ref" href="#fn:kierkegaard">22</a></sup> Saydam, yani: yıkanmış. Temellenmiş, yani: doğrultulmuş.</p>
+<p>Peki taşıyıcının hareketi ne kadar küçük olabilir? Allah azze ve celle hadis-i kudsîde şöyle buyurur: “Kulum bana bir karış yaklaşırsa ben ona bir arşın yaklaşırım. Bana bir arşın yaklaşırsa ben ona bir kulaç yaklaşırım. Bana yürüyerek gelirse ben ona koşarak gelirim.”<sup id="fnref:qudsi"><a class="footnote-ref" href="#fn:qudsi">23</a></sup> Ben bu harekete <em>bir karış adım</em> diyorum. Taşıyıcıyı döndüren en küçük harekettir – ve görüleceği gibi, girdapta hâlâ mümkün olan tek harekettir.</p>
+<h2 id="vii-ithaf">VII · İthaf</h2>
+<figure class="stage" data-scene="widmung"><canvas></canvas></figure>
+
+<p>Girdap gelmeden önce taşıyıcıyı neyin hareket ettirdiğini söylemem gerek. Işık değildir, çünkü o dışarıdan gelir; bataklık da değildir, çünkü o aşağı çeker. Taşıyıcıyı hareket ettiren, bütün yaratılışta yalnızca tek bir yerde bulunan bir şeydir.</p>
+<p>Kur'an-ı Kerim göklerde ve yerde olan her şeyin O'na “ister istemez” teslim olduğunu söyler (Âl-i İmrân, 83) ve Allah azze ve celle'nin göğü ve yeri nasıl çağırdığını anlatır: “İsteyerek veya istemeyerek buyruğuma gelin. İkisi de: İsteyerek geldik, dediler” (Fussilet, 11). Göğün seçeneği yoktur ve yine de cevap vermiştir. Güneş isteyerek doğmaz, arı isteyerek uçmaz, pırlanta ışığı isteyerek kırmaz. Her şey ışığa dönüktür, çünkü başka türlü olamaz. Yalnızca bir yaratık başka türlü olabilir – ve tam da bu yüzden <em>isteyerek</em> kelimesi yalnızca onda içerikle dolar. Yalnızca insan ışığa yönelebilir – çünkü yalnızca o yüz çevirebilir.</p>
+<p>Ben buna <em>ithaf</em> diyorum. Bir kitabın ilk sayfasında bir ithaf vardır: Biri için. Yazar kitabı kendisi için yazmamıştır ve ithaf ettiği kişiyi de o yapmamıştır; ama ithafı kendisi yazar, kendi isteğiyle, ve kitapta kimsenin ondan talep edemeyeceği tek şey odur. İnsan da böyledir: Değerini o yapmamıştır, ışığı da. Ama yöneliş – pırlantanın onu yaratana ithafı – yalnızca onun kendisinin yazabileceği şeydir. Ne için yaratıldığını Kur'an-ı Kerim tek cümlede söyler:</p>
+<div class="vers">Cinleri ve insanları ancak Bana kulluk etmeleri için yaratmışımdır. Onlardan bir rızık istemem; Beni doyurmalarını da istemem.<span class="src">Zâriyât Sûresi, 56–57</span></div>
+
+<p>Sa'dî (rh.) burada sözü edilen kulluğu bir görev olarak değil, bir ilişki olarak açıklar: Allah'ı tanımayı, O'nu sevmeyi, O'na dönmeyi, O'na yönelmeyi ve O'ndan başka her şeyden yüz çevirmeyi kapsar – ve kul Rabbini ne kadar tanırsa kulluğu o kadar tam olur. Onları bunun için yaratmıştır, onlara duyduğu bir ihtiyaçtan değil.<sup id="fnref:saadi51"><a class="footnote-ref" href="#fn:saadi51">24</a></sup> İbn Kayyim (rh.) bir adım daha atar ve her ithaftan önce gelen soruyu cevaplar – kime yarar? Onları bir ihtiyaçtan yaratmamıştır, onlardan kazanmak için de değil, cömertlik ve lütuftan yaratmıştır: O'na kulluk etsinler ve bu arada bütün kazancı kendileri götürsünler diye – buyrulduğu gibi: “İyilik ederseniz kendinize iyilik etmiş olursunuz” (İsrâ, 7).<sup id="fnref:ibnqayyim51"><a class="footnote-ref" href="#fn:ibnqayyim51">25</a></sup> İthaf demek ki bir vergi değildir; pırlantanın sahip olduğu tek şeydir ve ona geri döner.</p>
+<p>Bu okuyuşu borçlu olduğum Kur'an hocası Nouman Ali Khan, Dubai'deki bir konuşmasında bunu tek cümlede söylemiştir: Her şeye sahip olana sunacak hiçbir şeyimiz yoktur – dualarımız bile; biz dua ederiz, çünkü O'nunla uyum içinde hissederiz. Ve kulluğa <em>şerefli</em> bir kulluk demiştir.<sup id="fnref:nak-dubai"><a class="footnote-ref" href="#fn:nak-dubai">26</a></sup> Başka bir yerde ithafın karara bağlandığı noktayı adlandırmıştır: Allah azze ve celle'yi Yaratıcı olarak kabul etmek kolaydır; asıl imtihan O'nu <em>Rab</em> olarak kabul etmektir – ve kendini kul olarak. Bir Rab ile bir işverenle pazarlık eder gibi pazarlık edilmez. Ve yine de bu kulluk sadakatten, şükürden, sevgiden, dostluktan ve zikirden ibarettir: “Beni anın, Ben de sizi anayım” (Bakara, 152).<sup id="fnref:nak-master"><a class="footnote-ref" href="#fn:nak-master">27</a></sup> Kul her zaman kuldur; namazlar arasında olanlar kalbin hâlini gösterir.<sup id="fnref:nak-return"><a class="footnote-ref" href="#fn:nak-return">28</a></sup> Öz İslâmîdir, çözüm de öyle: kendini özgürleştiren bir insan değil, Rabbine kendi isteğiyle adanan bir kul – ve bununla başka her şeyden kurtulan.</p>
+<p>İthafın özgür olması gerektiğini Kur'an-ı Kerim açıkça söyler ve bunu en az beklenen yerde söyler:</p>
+<div class="vers">Dinde zorlama yoktur; artık hak ile batıl iyice ayrılmıştır. Tağutu inkâr edip Allah'a inanan kimse, kopmak bilmeyen sağlam bir kulpa sarılmıştır.<span class="src">Bakara Sûresi, 256</span></div>
+
+<p>Sa'dî (rh.) nedenini açıklar: Zorlama ancak alâmetleri gizli ve etkileri karanlık bir şeyde ya da nefse derinden aykırı bir şeyde gerekir. Bu yol ise akla açık hâle gelmiştir; doğru basireti alan, ilk bakışta onu seçer. Ve zorlananın imanı geçerli değildir.<sup id="fnref:saadi256"><a class="footnote-ref" href="#fn:saadi256">29</a></sup> İthafın yalnızca kendi isteğiyle yazılabilmesinin bütün sebebi budur: Zorlanmış bir ışık, ışık olmazdı. Psikoloji bunu kendi laboratuvarında doğrulamıştır. Ona <em>tepkisellik</em> der: Bir insanın bir şeyi seçme özgürlüğü elinden alınırsa, tam da tersini ister – daha iyi olduğu için değil, kendisinin olacağı için.<sup id="fnref:brehm"><a class="footnote-ref" href="#fn:brehm">30</a></sup> Ve öz-belirleme kuramı on yıllar boyunca bir eylemin ancak <em>özerk</em> hâle geldiğinde kalıcı olduğunu göstermiştir: dışarıdan dayatılmamış, yalnızca vicdan azabından devralınmamış, kişinin kendisininki olarak tanıyacağı kadar içine göç etmiş.<sup id="fnref:ryan"><a class="footnote-ref" href="#fn:ryan">31</a></sup> Bu kuramın her gelişmenin şartı olarak saydığı üç ihtiyaç – özerklik, yeterlik, ilişkili olma – âyette başka bir sırayla durur: işiten ve bilenle ilişkili olma; yeterlik, çünkü yol iyice ayrılmıştır; özerklik, çünkü zorlama yoktur.</p>
+<p>Filozoflar özgürlüğü büyütmüş ve ondan umutsuzluğa düşmüştür. Kant ona özerklik demiştir: İnsanın yasasını kendisine kendisinin vermesi. Sartre insanı özgürlüğe mahkûm saymıştır: Kimse ona ne için olduğunu söylemeden seçmek zorunda olması. Özgürlüğü ikisinden de iyi bilen Viktor Frankl – çünkü onu hiç olmadığı yerde bulmuştu – özgürlüğün hakikatin yalnızca yarısı olduğunu söylemiştir; sorumluluk olmadan salt keyfîliğe dönüşür<sup id="fnref:frankl"><a class="footnote-ref" href="#fn:frankl">32</a></sup> – ve sorumluluk, bir başkasının sorduğu soruya cevap vermek demektir. İthaf, Frankl'ın ikinci yarısıdır. İnsan yasasını kendine kendisi vermez ve boşluğa doğru seçmez. Bir başkasının tuttuğu bir kulpa tutunur ve bu tutunuş – yalnızca bu – onundur. Âlimlerin <em>hiçbiri yüzde yüz değil</em> sözüyle kastettiği budur: Kulp verilmiştir; tutunmak serbesttir.</p>
+<h2 id="viii-girdap-ve-cikarilma">VIII · Girdap ve Çıkarılma</h2>
+<figure class="stage" data-scene="sog"><canvas></canvas></figure>
+
+<p>Soru artık pırlantanın kim olduğu değildi, şuydu: İnsan bu anafordan, bu <em>girdaptan</em>, bataklıktaki o bulanık görüşten nasıl çıkar?</p>
+<p>Girdap, hareket hâlindeki örtüdür: ortaya çıkıp “peşinden git” diyen mekanizma – daha değerli olmayan bir şeye yapışan dikkatin peşinden. Saati yoktur; gecenin sessiz saatinde de gelir, bir işin önündeki aydınlık sabahta da. Ve onu ele veren bir işareti vardır: “Yapman gereken şu şu şeyler var” diyen ses sessizdir ve eylemsizdir. O ses şöyle der: Yapabilirim. Şöyle demez: Gidiyorum.</p>
+<p>Cevabı fizikte buldum ve bu bir mecaz değildir. Bataklıkta ya da kumda çırpınan batar. Fizikçiler bataklık kumunu laboratuvarda incelemiştir: Hareket altında sıvılaşır ve sonra daha sıkı kavrar; bir insan onun içinde tamamen batamaz, çünkü beden çamurdan daha az yoğundur – ancak direnirse batar.<sup id="fnref:khaldoun"><a class="footnote-ref" href="#fn:khaldoun">33</a></sup> Hareket çamuru sıvılaştırır, durmak onu taşır hâle getirir. Psikoloji çırpınmayı kendi adıyla tanır – <em>ironik süreçler</em>: Bir düşünceyi zorla bastırmak isteyen onu çağırır, çünkü zihnin başarıyı denetleyen kısmı bunun için o düşünceyi sürekli aramak zorundadır.<sup id="fnref:wegner"><a class="footnote-ref" href="#fn:wegner">34</a></sup> Bataklıkla savaşmak bataklıktır. <em>Yaratıcısından uzaklaşan çırpınır.</em> Ve bundan, bir paradoks olan ve yine de yalnızca tarif eden cümle doğar: <em>Girdaptan çıkılır, çünkü çıkarılır</em> – savaşıldığı için değil. Ben buna <em>çıkarılma</em> diyorum: Girdaptan kurtuluş, tek bir etkin yeri olan bir edilgenliktir ve o etkin yer bir karış adımdır – ithafın en küçük hareketine indirilmiş hâli.</p>
+<p>Kur'an-ı Kerim çıkarılmayı adıyla söyler, sağlam kulp âyetinin hemen ardından:</p>
+<div class="vers">Allah inananların dostudur, onları karanlıklardan aydınlığa çıkarır.<span class="src">Bakara Sûresi, 257</span></div>
+
+<p>Küfrün, günahların ve cehaletin karanlıklarından, diye açıklar Sa'dî (rh.), imanın, itaatin ve ilmin aydınlığına – çünkü O'nu dost edinmiş ve başkasını aramamışlardır.<sup id="fnref:saadi257"><a class="footnote-ref" href="#fn:saadi257">35</a></sup> Âyetteki sıra kurtuluşun sırasıdır: önce dost, sonra çıkış. Mümin kendini aydınlığa kendisi çıkarmaz; çıkarılır.</p>
+<p>Gelişim psikolojisi bu sırayı her hayatın başlangıcından bilir. Bir bebek kendini sakinleştiremez; sakinleştirilir – bedeni sükûnetin ne olduğunu öğrenene kadar onu tutan bir başkası tarafından. Buna <em>eş-düzenleme</em> der ve öz-düzenlemenin, içselleştirilmiş eş-düzenlemeden başka bir şey olmadığını bilir. Girdapta oturan insan, tutulması gerektiğinde gerilememiştir; her insanın başladığı yerdedir. Ve eylem bilimi bu edilgenlik için <em>davranışsal aktivasyon</em> dediği bir yöntem bulmuştur; bu, çoğu insanın beklediği sıranın tersine çevrilmesidir. Önce istemek, sonra yapmak değil – yapmak, ve hâl arkasından gelir. Yirmi altı kontrollü çalışmada bu tersine çeviriş felce karşı, karşılaştırma koşullarından belirgin biçimde üstündü.<sup id="fnref:ekers"><a class="footnote-ref" href="#fn:ekers">36</a></sup> İsteyene kadar bekleyen, bataklıkta bekler.</p>
+<p>O saatte düşünmeyi bıraktım ve istemediğim şeyi yaptım. Kalktım ve suya gittim – ve burada kesin olmam gerek, çünkü hurafe tam bu noktada başlar. Su değildi; su tek başına büyü olurdu: ıslak olduğu için etki eden bir araç. <em>Abdest</em>ti – benden önce sayısız kez alınmış bir eylem, belli uzuvlar ve belli bir sırayla: eller, ağız, burun, yüz, dirseklere kadar kollar, baş, kulaklar, ayaklar. Bedeni, kendi icat etmediği bir düzenden geçirir ve kendi içinde bitmez, namazın önünde biter. Büyü ile ritüel arasındaki fark budur: Büyü bir şey elde etmek ister; ritüel birinin önüne koyar. <em>Abdest, içimden istemediğim hâlde, alındı.</em> Bir namaz kılındı, Yaratıcının huzurunda durmanın hafif bir bilinciyle. İnsanın hiçbir şey olduğu ve O'nun, kendini nasıl adlandırıyorsa öyle olduğu söylendi – işte böyle geliyorum Sana.</p>
+<p>Bu cümleleri edilgen bırakıyorum, çünkü böyle doğrudur: O dakikalarda bir şey yapan ben değildim; üzerinde bir şey olan bendim. Taşıyıcı hareket ettirilmişti – bir karış – ve ışık, hadisin dediği gibi, koşarak geldi. Sonra listeyi okuyan ses sessizdi. Ne boşluk vardı ne baskı – <em>nötrdür.</em> Ve girdaptan sonra nötrlüğün az değil, en çoğu olduğunu öğrendim: Psikoloji, sinir sisteminin alarm durumundan temeline geri döndüğünü söylerdi – sevinç değil, keder değil, düzenlenme. Kur'an-ı Kerim bu hâli adıyla anar ve ona bütün delillerden daha çok sayan tek çağrıyı yöneltir: “Ey huzur içinde olan can! O, senden, sen de O'ndan hoşnut olarak Rabbine dön!” (Fecr, 27–28). Kur'an-ı Kerim'in üç nefsi – emreden, kınayan, huzura ermiş – üç ayrı insan ve bir kez çıkılan basamaklar değildir; insan onları bir saat içinde geçer ve arada bir kavrayış değil, bir eylem vardır.</p>
+<p>O saatte kendime yazdığım beş adımın, sonradan eski sıranın yeni sözlerle söylenişi olduğu ortaya çıktı: Kontrolü bırakmak – tevekkül; terapinin <em>kabul</em> dediği ve daha fazlası olan şey, çünkü bırakılacak biri vardır. Umut toplamak – recâ. Küçük hareket etmek – amel. Hiçbir şey olduğunu görmek – ubûdiyet. Ve tutunmak: “Toptan Allah'ın ipine sarılın” (Âl-i İmrân, 103). Bir ip – ve hep birlikte. Kimse kendini bataklıktan tek başına çekip çıkaramaz. İp iki ucundan tutulur ve öteki ucu insanlar ile sabit vakitlerdir – beş vakit namaz, bireyden gelmeyen ve pazarlık edilmeyen bir ritim. Peygamber sallallahu aleyhi ve sellem çırpınmamayı bir emir olarak söylemiştir: “Din kolaylıktır; kim dini zorlaştırırsa din ona galip gelir. … Sabah, akşam ve gecenin bir kısmıyla yardım isteyin.”<sup id="fnref:yusr"><a class="footnote-ref" href="#fn:yusr">37</a></sup> Gecenin bir kısmı demek ki – tamamı değil.</p>
+<h2 id="ix-kolaylastirilmislik">IX · Kolaylaştırılmışlık</h2>
+<figure class="stage stage-photo" data-scene="biene"><img class="bg" src="../diamant/img/biene.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>Daha aynı saatte, uyanık ve nötr, arı geldi. Ona uçmayı kimse öğretmemiştir. Kovanı terk eder, çayırı bulur, dönüş yolunu bulur ve içinden çıkan şifadır – ve bunların hiçbirinden haberi yoktur.</p>
+<div class="vers">Rabbin bal arısına: “Dağlarda, ağaçlarda ve hazırlanmış kovanlarda yuva edin; sonra her çeşit üründen ye; sonra da Rabbinin işlemen için gösterdiği yollardan yürü” diye öğretti.<span class="src">Nahl Sûresi, 68–69</span></div>
+
+<p>Allah azze ve celle'nin arıya bir şey bildirdiği kelime, peygamberlere – aleyhimüsselam – gelen vahiy için kullanılan kelimenin aynısıdır. Arının öğretmensiz bir ilhamı vardır ve yolları <em>gösterilmiş</em>, düzlenmiştir: Yaptığı şey ona güç harcatmaz, çünkü yol ondan önce zaten oradaydı. Bundan yedinci cümle doğdu: <em>Onun yolları nasıl kolaylaştırıldıysa, ben de bana kolaylaştırılmış olanı arıyorum.</em> Gelenek buna şâkile der – “De ki: Herkes yaradılışına göre davranır” (İsrâ, 84) – ve Peygamber sallallahu aleyhi ve sellem, “öyleyse çaba ne için?” sorusuna şöyle cevap vermiştir: “Herkese, ne için yaratıldıysa o kolaylaştırılır.”<sup id="fnref:muyassar"><a class="footnote-ref" href="#fn:muyassar">38</a></sup></p>
+<p>Ben buna <em>kolaylaştırılmışlık</em> diyorum ve bu, hedeflenmişliğin karşı parçasıdır: Hedeflenmiş olana bir yol da düzlenmiştir ve yol herkes için aynı değildir. Herkes başka türlü fırlatılır ve herkese başka türlü kolaylaştırılır. Ruh biliminin bunun için birbirini tamamlayan üç kelimesi vardır. Adler, insanın hedeflere doğru ilerlemekteki kendine özgü, erken şekillenmiş tarzına <em>yaşam tarzı</em> demiştir – el yazısı kadar kişisel, tanınabilir, düzeltilebilir ama değiştirilemez. Jung ona giden yola <em>bireyleşme</em> demiştir – yeni bir insan icat etmek değil, eskisini, taşıdığı bütün yaşanmamışlıkla birlikte açığa çıkarmak. Ve son on yılların araştırması bir insanın düzlenmiş yolunda olduğu hâli ölçmüş ve ona <em>akış</em> demiştir: yetiye o kadar iyi uyan uğraş ki zaman kaybolur ve çaba çaba gibi görünmez.<sup id="fnref:flow"><a class="footnote-ref" href="#fn:flow">39</a></sup> Uçuştaki arı: yontmak değil, açığa çıkarmak.</p>
+<p>Kolaylaştırılmışlık bir teselli değil, bir çağrıdır – ve çağrı seçilmez, verilir. Kur'an-ı Kerim bunu çoğunlukla bir hafifletme olarak okunan ve öyle de olan bir âyette söyler:</p>
+<div class="vers">Allah kişiye ancak gücünün yeteceği kadar yükler; kazandığı iyilik lehine, ettiği kötülük de aleyhinedir.<span class="src">Bakara Sûresi, 286</span></div>
+
+<p>Ama âyetin, tersinden okuduğum ikinci bir yüzü vardır: Taşıyamayacağı hiçbir şey yüklenmeyen, taşıyabildiğinden sorulacaktır. Kolaylaştırılmışlık sorumluluğun ölçüsüdür. Benden büyük olan istenmez – ama bana kolaylaştırılmış olan benden istenir, tam da kolaylaştırıldığı için. Arıya şarkı söyleyip söylemediği sorulmaz, uçup uçmadığı sorulur.</p>
+<p>Kolaylaştırılmışlığın abdest için, geç fark ettiğim bir sonucu vardır. Sinir sistemi durmakla sükûnete ermeyen bir insan için – ve araştırma böyle tarzların olduğunu gösterir: <em>öz-düzenlemede</em> biraz daha zayıf, ondan yoksun değil<sup id="fnref:robe"><a class="footnote-ref" href="#fn:robe">40</a></sup> – sükûnet yatmak değil, ritimdir: hareket, nefes, tekrar. Yüze soğuk su bir refleks üzerinden kalp atışını yavaşlatır. Kıraat, hecelere bölünmüş yavaş bir nefes verişidir. Namazın akışı döngüler hâlinde harekettir. Böyle bir insan için namaz engel değil, sükûnetin ona ulaşabileceği biçimin ta kendisidir – on dört yüzyıl önce onunki gibi bedenler için düzlenmiş bir ritim. Biyolojinin doğruladığı kolaylaştırılmışlık budur: Düzlenmiş yol onun için hareketsiz oturmak değil, ritimdir.</p>
+<p>Aramanın ölçüsünü de Peygamber sallallahu aleyhi ve sellem söylemiştir; Allah azze ve celle'ye en sevimli amelin hangisi olduğu sorulduğunda: “Az da olsa en devamlı olanı.”<sup id="fnref:bestaendig"><a class="footnote-ref" href="#fn:bestaendig">41</a></sup> Şâkileyi aramak kendini yontmak değil, yavaşlamak demektir – ve büyüğü değil, doğruyu yapmak.</p>
+<h2 id="x-capa">X · Çapa</h2>
+<figure class="stage" data-scene="anker"><canvas></canvas></figure>
+
+<p>Bir saat bir kural değildir. İmgeden bir tutamak çıkması gerekiyordu ve tutamağın bir adı vardır: <em>çapa</em>. Bir çapa ağır olduğu için tutmaz; çekiş gelmeden önce zemine yerleştiği için tutar.</p>
+<p>Kur'an-ı Kerim tutamağı benden önce adlandırmıştır. Allah azze ve celle'ye yönelen, “kopmak bilmeyen sağlam bir kulpa sarılmıştır” (Bakara, 256). Sa'dî (rh.) kulpu, temelleri sağlam ve direkleri köklü dosdoğru iman olarak açıklar; ona tutunan işinden emindir, çünkü kopmayana tutunmaktadır.<sup id="fnref2:saadi256"><a class="footnote-ref" href="#fn:saadi256">29</a></sup> Âyette iki şey vardır ve ikisi de çapaya aittir: Kulp kopmaz – bu benim başarım değildir. Ve ona <em>tutunan</em> benim – bu, tek bir tutunuşa sığmış ithaftır. Atılmayan çapa hiçbir gemiyi tutmaz.</p>
+<p>Çekiş girdaptır ve girdabın saati yoktur. Bu yüzden kural bir saate değil, onun işaretine asılır: yapışan dikkate, sessiz ve eylemsiz olan sese. Kuralın kendisi tek bir cümledir:</p>
+<div class="regel">Girdap geldiğinde – ne zaman olursa olsun – abdest. Her zaman değil. Ama önümde bir acil durum yoksa her seferinde. İçimden istemesem de. Önce abdest, sonra geri kalan her şey.</div>
+
+<p>Neden bu biçimde bir cümle? Çünkü niyet bilimi, niyetlerin neredeyse hiçbir şey, <em>eğer–o zaman planlarının</em> ise çok şey yaptığını göstermiştir: Eylemi bir tetikleyiciye bağlar ve o andaki kararın yükünü alırlar.<sup id="fnref:gollwitzer"><a class="footnote-ref" href="#fn:gollwitzer">42</a></sup> Alışkanlık araştırması bunun neden işlediğini açıklar: Örtü kendiliğinden tetikleyen ipuçları üzerinden yürür – ve bir eğer–o zaman planı aynı ipucuna başka bir eylem koyar, ta ki o da kendiliğinden yürüyene kadar.<sup id="fnref2:wood"><a class="footnote-ref" href="#fn:wood">12</a></sup> Tetikleyici – girdap – her niyetten daha güvenilir gelir. Kural düşmanı çalar saate çevirir. Bu arada bir karış adım namaz değildir, hatta abdestin tamamı bile değildir. Şudur: kalkmak, suya gitmek, sağ el. Yer değiştirmek açı değiştirmektir – düşünmek değil, gitmek. Sonrası saatin daha değerli olanına göre belirlenir: namaz vaktinde farz namaz; yoksa iki rekât ve bir dua; fıkıh âlimlerinin nafile namazı tavsiye etmediği vakitlerde ise abdest ve zikir kalır, namaz bekler.<sup id="fnref:makruh"><a class="footnote-ref" href="#fn:makruh">43</a></sup> Çapa namaz değil, abdesttir; namaz, abdestin mümkün kıldığı şeydir.</p>
+<p>Çapanın her zamankinden ağır bastığı bir saat vardır – bu denemenin başladığı saat. Peygamber sallallahu aleyhi ve sellem şöyle buyurmuştur: “Rabbimiz, mübarek ve yüce, her gece gecenin son üçte biri kaldığında dünya semasına iner ve şöyle buyurur: Bana dua eden yok mu, ona icabet edeyim? Benden isteyen yok mu, ona vereyim? Benden bağışlanma dileyen yok mu, onu bağışlayayım?”<sup id="fnref:drittel"><a class="footnote-ref" href="#fn:drittel">44</a></sup> Bu saatte dağınıklık bir yönden gelen tekliftir; öteki yönden bir soru gelir. Bu saatte zaten uyanık olan, özel bir teklifin olduğu yerdedir. Ama gelenek bu önceliğe hemen bir ölçü koyar ve ölçü öncelikten daha önemlidir: “Amellerden gücünüzün yettiğini alın; çünkü siz usanmadıkça Allah usanmaz.”<sup id="fnref2:bestaendig"><a class="footnote-ref" href="#fn:bestaendig">41</a></sup> Uyuyan hiçbir şey kaçırmaz; uyanık olan abdest alır.</p>
+<p>Kural ancak bir hafta tuttuğunda kişinin kendisinin sayılır – yedi gün namaz değil, girdap geldiğinde abdestin geldiği yedi gün. Girdapsız günler yaşanmış sayılır. Sonra hiçbir niyetin başaramadığı ve psikolojinin davranıştan <em>benlik kavramına</em> geçiş dediği şey olur: Eylem, insanın kim olduğunun bir parçası hâline gelir. İnsan artık “suya gitmeye çalışıyorum” demez – “ben suya giden biriyim” der.</p>
+<h2 id="xi-donus">XI · Dönüş</h2>
+<figure class="stage" data-scene="rueckkehr"><canvas></canvas></figure>
+
+<p>Fabrika ayarlarına dönmek istiyordum ve aynı saatte kelimenin doğru olmadığını fark ettim. Sıfırlanan bir cihaz, sonradan eklenenleri kaybeder. Ben hiçbir şey kaybetmedim. Çamurda yatan bir pırlantam var ve onu çekip çıkarmadım – çırpınmayı bıraktım, birkaç adım suya gittim ve istemediğim hâlde abdest aldım. Sonra ışık geldi, dışarıdan, her zamanki gibi.</p>
+<p>Dönüşün bir tonu vardır ve ton, dönüşün başarılı olup olmayacağına karar verir. Dönerken kendini hor gören, bataklığa döner; ruminasyon yalnızca konusunu değiştirmiştir. Psikoloji öteki tonu incelemiş ve ona <em>öz-şefkat</em> demiştir: başarısızlıkta kendine bir dosta bakar gibi bakmak – ve insanları yeniden harekete geçirenin sertlik değil, tam da bu ton olduğunu bulmuştur.<sup id="fnref:neff"><a class="footnote-ref" href="#fn:neff">45</a></sup> Geleneğin bunun için ayrı bir kelimeye ihtiyacı olmamıştır, çünkü ton zaten tevbe kelimesinin içindedir: İnsan, kapıyı kapatmamış olan birine döner. Dönüş insanın kendine yüklediği bir ceza değildir; koşarak karşılayana giden yoldur.</p>
+<p>Bu denemenin bütün yolu budur ve kendi kelimeleriyle ezbere okunabilir. <em>Değerin verilmişliği</em>: Değer verilmiştir ve değişmez. <em>Işık borcu</em>: Verilmiş olanın bir adresi vardır. <em>Hedeflenmişlik</em>: Ben yalnızca fırlatılmış değilim, hedeflenmişim – <em>daha değerli olanın</em> her saat bulunabileceği <em>ışık yerine</em>. <em>Örtü</em>: Bataklık pırlanta değildir, eylemlerdir, nokta nokta. <em>Yuva</em>: <em>Biri-için-olmak</em> kaynağı kaybeder; <em>kendinden-olmak</em> hiçbir şey için değildir ve tam da bu yüzden görülür. <em>Eğiklik</em>: Taşıyıcı benim irademdir, ışığı bir başkası yapar – hiçbiri yüzde yüz değil. <em>İthaf</em>: Her şey ışığa dönüktür, çünkü başka türlü olamaz; yalnızca insan yönelir, çünkü yüz çevirebilirdi – ve yalnızca bu yüzden yönelişi bir şey eder. <em>Girdap</em> ve <em>çıkarılma</em>: Çırpınan batar; <em>bir karış adımı</em> atan çıkarılır. <em>Kolaylaştırılmışlık</em>: Düzlenmiş yol herkes için aynı değildir ve kimileri için ritimdir; bir çağrıdır ve ondan sorulur. <em>Çapa</em>: girdap ne zaman gelirse gelsin abdest – kopmayan kulpa tutunuş. Ve sonunda <em>dönüş</em> – tevbe –; bu bir sıfırlama değildir, çünkü hiçbir şeyin üzerine yazılmamıştır.</p>
+<p>Bu imgeyi sonra, söyleyecek sözü olan herkesin önüne koydum – Kur'an-ı Kerim müfessirlerinin, nefis ilminin, Aristoteles'ten Kierkegaard'a filozofların, bataklık kumundan alışkanlığa bilimlerin – ve bu seslerden hiçbiri onu çürütmedi. Her biri ona bir yüz ekledi. Birbirleriyle çeliştikleri yerde – fırlatanda, adreste, verilmiş değer ile yansıtılmış değerde, boşluğa seçen özgürlük ile tutunan özgürlükte – kavrayış, çelişkinin kendisindeydi. Bütün konuşma kitapta duruyor; burada, kitap kapatıldığında geriye kalan duruyor.</p>
+<div class="dua">
+<span class="ek">O Saatin Duası</span>
+<p>Sen, kendini nasıl adlandırıyorsan öylesin –<br>ben ise hiçim.</p>
+<p>Her iyiliği veren Sensin,<br>bana her iyilikten ver.</p>
+<p>Koruyan Sensin,<br>beni her kötülükten koru.</p>
+<p>İşte böyle geliyorum Sana:<br>Sen daha iyi bilirsin, Sen daha iyi tanırsın<br>ve Senin sözün daha iyidir.</p>
+<p>Bağışlayan Sensin, bağışla.<br>Doğru yola ileten Sensin, doğru yola ilet.</p>
+<p>Ve ben istemediğimde –<br>hangi saatte olursa olsun –<br>ellerimi, irademden önce<br>suya gönder.</p>
+<span class="orn" aria-hidden="true">◇</span>
+</div>
+
+<p class="schluss">Fabrika kapandı. Sıfırlanmadı, geri döndü.</p>
+<h2 id="kavramlar">Kavramlar</h2>
+<div class="glossar">
+<p><b>Sıfırlama / Dönüş</b> – Cihaz sıfırlanır ve sonradan ekleneni kaybeder; insan döner ve hiçbir şey kaybetmez, çünkü ayarının üzerine hiç yazılmamıştır. Dönüş, tevbenin Türkçesidir. <i>Psikolojik olarak:</i> Yeni başlangıç etkisi sıfırlamayı vaat eder ve kısa sürer; öz-şefkat, dönüşün başarılı olduğu tondur.</p>
+<p><b>Değerin verilmişliği</b> – İnsanın değeri verilmiştir, kazanılmamıştır; etki etmeden önce bir biçimi vardır. Eksik etki, eksik değeri kanıtlamaz. <i>Psikolojik olarak:</i> Öz-değer öz-yeterlik değildir; koşullu öz-değer değeri koşullara asar, koşulsuz kabul onu koşullardan çözer – burada, sarsılmayandan gelen kabul.</p>
+<p><b>Işık borcu</b> – Verilmiş bir değer borçlu bir değerdir: Etkisinin gideceği bir adresi vardır. Değerden anlam, sorumluluk, ışıma ve güzellik doğar.</p>
+<p><b>Hedeflenmişlik</b> – Heidegger'in fırlatılmışlığına karşı: İnsan yalnızca fırlatılmış değil, hedeflenmiştir – üzerine ışık düşebilecek yere. Temel duygu kaygı değil, sorudur.</p>
+<p><b>Işık yeri</b> – Kuvvenin fiile dönüştüğü tek yer olarak şimdi: zaman, yer, durum. <i>Psikolojik olarak:</i> Dikkat – insan dikkatinin olduğu yerdedir; dalıp gitmek zihnin dinlenme konumudur ve mutsuz eder.</p>
+<p><b>Daha değerli olan</b> – Şimdinin kategorisi: Her durumda bir şey daha değerlidir ve hiçbiri ötekini ortadan kaldırmaz. Namaz vaktinde namaz, acil durumda acil durum. <i>Psikolojik olarak:</i> Değer netleştirme – hedefler yerine yönler.</p>
+<p><b>Örtü</b> – Bataklık: bozulma değil, pırlantayı görünmez kılan eylemler ve ihmaller, nokta nokta. Panzehiri noktaları kadar küçüktür. <i>Psikolojik olarak:</i> Alışkanlık ve ipucu, yaşantısal kaçınma, duygu düzenleme olarak erteleme, kendi hareketi olarak ruminasyon.</p>
+<p><b>Biri-için-olmak / Kendinden-olmak</b> – Yuva: Yüzük, matkap ucu, kasa pırlantayı biri için var eder ve kaynağa mal olur. Kendinden olduğunda hiçbir şey için değildir – ve tam da bu yüzden görülür. <i>Psikolojik olarak:</i> dışsal güdülenmeye karşı içsel güdülenme; persona (Jung), telafi (Adler), sahip olma (Fromm).</p>
+<p><b>Eğiklik</b> – Yanlış duran yıkanmış pırlanta: Işığı gözün olmadığı yerden çıkar. Kierkegaard'ın umutsuzluğu, İbn Kayyim'in (rh.) kaymış taşıyıcısı. <i>Psikolojik olarak:</i> gölge (Jung); iki ucuyla denetim odağı, öğrenilmiş çaresizlik ve kudret.</p>
+<p><b>Taşıyıcı</b> – İbn Kayyim'e (rh.) göre: azim, irade, çaba. Kandili tutan ve doğrultan şey – benim payım, hiçbiri yüzde yüz değil.</p>
+<p><b>İthaf</b> – Yaratılıştaki her şey ışığa dönüktür, çünkü başka türlü olamaz; yalnızca insan yönelir, çünkü yüz çevirebilirdi. Yöneliş, onun kendisinin yazdığı tek şeydir – kendi isteğiyle, çünkü dinde zorlama yoktur. Kulluk için yaratılmıştır; kulluk vergi değil ilişkidir ve ona geri döner. <i>Psikolojik olarak:</i> Özerklik, her kalıcı güdülenmenin şartı; tepkisellik, zorlamanın tersini ürettiğinin kanıtı. <i>Felsefi olarak:</i> Frankl'ın özgürlüğün ikinci yarısı – bir başkasının sorduğu soruya cevap olarak sorumluluk.</p>
+<p><b>Girdap</b> – Hareket hâlindeki örtü: yapışan dikkat; sessiz ve eylemsiz bir ses. Saati yok.</p>
+<p><b>Çırpınmak / Çıkarılma</b> – Savaşan batar; insan durduğunda çamur taşır. Kurtuluş, tek bir etkin yeri olan bir edilgenliktir – “onları karanlıklardan aydınlığa çıkarır”. <i>Psikolojik olarak:</i> ironik süreçler (düşünceyle savaş onu çağırır); eş-düzenleme (kendini sakinleştirmeden önce sakinleştirilmek); davranışsal aktivasyon (önce yapmak, sonra istemek).</p>
+<p><b>Bir karış adım</b> – Taşıyıcının girdapta hâlâ mümkün olan en küçük hareketi: kalkmak, suya gitmek, sağ el. Bir karışa bir arşın karşılık gelir. İthafın en küçük hareketine indirilmiş hâli.</p>
+<p><b>Abdest</b> – Su değil, ritüel: belli uzuvlar, belli sıra, birinin önünde biten bir son. Büyü elde etmek ister; ritüel birinin önüne koyar.</p>
+<p><b>Kolaylaştırılmışlık</b> – Şâkile: Herkese başka bir yol düzlenmiştir ve bana kolaylaştırılmış olan, ne için yapıldığımdır. Seçim değil çağrıdır – ve ölçüsü aynı zamanda sorgunun ölçüsüdür: Kimseye taşıyamayacağı yüklenmez; herkes taşıyabildiğinden sorulur. Kimileri için yol durmak değil, ritimdir. <i>Psikolojik olarak:</i> yaşam tarzı (Adler), bireyleşme (Jung), akış; ritim olarak öz-düzenleme.</p>
+<p><b>Çapa</b> – Girdabın kendisine asılan kural: Geldiğinde abdest – iradeye rağmen de. Düşmanı çalar saate çevirir. Kopmak bilmeyen sağlam kulpa tutunuş. <i>Psikolojik olarak:</i> eğer–o zaman planı, ipucu, alışkanlık – eylem benlik kavramına geçene kadar.</p>
+</div>
+<h2 id="notlar">Notlar</h2>
+<div class="footnote">
+<ol>
+<li id="fn:dai">
+<p>Hengchen Dai, Katherine L. Milkman, Jason Riis: The Fresh Start Effect: Temporal Landmarks Motivate Aspirational Behavior. <em>Management Science</em> 60 (2014), 2563–2582.&#160;<a class="footnote-backref" href="#fnref:dai" title="Metne dön, not 1"></a></p>
+</li>
+<li id="fn:fitra">
+<p>Sa'dî (rh.), Rûm Sûresi 30–32. âyetlerin tefsiri (<em>Teysîru'l-Kerîmi'r-Rahmân</em>, Türkçe baskı; yazarın aktarımı).&#160;<a class="footnote-backref" href="#fnref:fitra" title="Metne dön, not 2"></a></p>
+</li>
+<li id="fn:fitra-hadith">
+<p>Sahîh-i Buhârî, hadis no. 1385; ayrıca Sahîh-i Müslim ve Sünen-i Ebû Dâvûd no. 4714 (sahîh).&#160;<a class="footnote-backref" href="#fnref:fitra-hadith" title="Metne dön, not 3"></a></p>
+</li>
+<li id="fn:oel">
+<p>Sa'dî (rh.), Nûr Sûresi 35. âyetin tefsiri.&#160;<a class="footnote-backref" href="#fnref:oel" title="Metne dön, not 4"></a></p>
+</li>
+<li id="fn:bandura">
+<p>Albert Bandura: Self-efficacy: Toward a unifying theory of behavioral change. <em>Psychological Review</em> 84 (1977), 191–215.&#160;<a class="footnote-backref" href="#fnref:bandura" title="Metne dön, not 5"></a></p>
+</li>
+<li id="fn:crocker">
+<p>Jennifer Crocker, Connie T. Wolfe: Contingencies of self-worth. <em>Psychological Review</em> 108 (2001), 593–623.&#160;<a class="footnote-backref" href="#fnref:crocker" title="Metne dön, not 6"></a></p>
+</li>
+<li id="fn:rogers">
+<p>Carl R. Rogers: The necessary and sufficient conditions of therapeutic personality change. <em>Journal of Consulting Psychology</em> 21 (1957), 95–103.&#160;<a class="footnote-backref" href="#fnref:rogers" title="Metne dön, not 7"></a></p>
+</li>
+<li id="fn:killingsworth">
+<p>Matthew A. Killingsworth, Daniel T. Gilbert: A Wandering Mind Is an Unhappy Mind. <em>Science</em> 330 (2010), 932. 2 250 yetişkinle uygulama üzerinden örnekleme anketi; ölçümlerin yüzde 46,9'unda dalıp gitme.&#160;<a class="footnote-backref" href="#fnref:killingsworth" title="Metne dön, not 8"></a></p>
+</li>
+<li id="fn:graben">
+<p>Sahîh-i Müslim, Mescidler Kitabı; Hendek (Ahzâb) günü hakkında Ali (r.a.) ve Abdullah b. Mes'ûd (r.a.) rivayetleri.&#160;<a class="footnote-backref" href="#fnref:graben" title="Metne dön, not 9"></a></p>
+</li>
+<li id="fn:dassa">
+<p>Sa'dî (rh.), Şems Sûresi 7–10. âyetlerin tefsiri; <em>dessâhâ</em> fiilini Diyanet meali “fenalıklara gömmek”, Sa'dî'nin (rh.) Türkçe baskısı ise <em>örtmek</em> olarak karşılar.&#160;<a class="footnote-backref" href="#fnref:dassa" title="Metne dön, not 10"></a></p>
+</li>
+<li id="fn:rost">
+<p>Sünen-i Tirmizî no. 3334 (Tirmizî: hasen sahîh; Elbânî (rh.): hasen; Zübeyr Ali Zâî: zayıf), Mutaffifîn Sûresi 14. âyet hakkında.&#160;<a class="footnote-backref" href="#fnref:rost" title="Metne dön, not 11"></a></p>
+</li>
+<li id="fn:wood">
+<p>Wendy Wood, David T. Neal: A new look at habits and the habit–goal interface. <em>Psychological Review</em> 114 (2007), 843–863.&#160;<a class="footnote-backref" href="#fnref:wood" title="Metne dön, not 12"></a><a class="footnote-backref" href="#fnref2:wood" title="Metne dön, not 12"></a></p>
+</li>
+<li id="fn:sirois">
+<p>Fuschia Sirois, Timothy Pychyl: Procrastination and the priority of short-term mood regulation: Consequences for future self. <em>Social and Personality Psychology Compass</em> 7 (2013), 115–127.&#160;<a class="footnote-backref" href="#fnref:sirois" title="Metne dön, not 13"></a></p>
+</li>
+<li id="fn:rumination">
+<p>Susan Nolen-Hoeksema, Blair E. Wisco, Sonja Lyubomirsky: Rethinking Rumination. <em>Perspectives on Psychological Science</em> 3 (2008), 400–424.&#160;<a class="footnote-backref" href="#fnref:rumination" title="Metne dön, not 14"></a></p>
+</li>
+<li id="fn:deci">
+<p>Edward L. Deci, Richard Koestner, Richard M. Ryan: A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation. <em>Psychological Bulletin</em> 125 (1999), 627–668. 128 deney; küçükten ortaya, istikrarlı etkiler.&#160;<a class="footnote-backref" href="#fnref:deci" title="Metne dön, not 15"></a></p>
+</li>
+<li id="fn:jamil">
+<p>Sahîh-i Müslim, İman Kitabı, Abdullah b. Mes'ûd (r.a.) rivayeti.&#160;<a class="footnote-backref" href="#fnref:jamil" title="Metne dön, not 16"></a></p>
+</li>
+<li id="fn:herzen">
+<p>Sahîh-i Müslim, Birr ve Sıla Kitabı, Ebû Hüreyre (r.a.) rivayeti.&#160;<a class="footnote-backref" href="#fnref:herzen" title="Metne dön, not 17"></a></p>
+</li>
+<li id="fn:drei">
+<p>Sahîh-i Müslim, İmâre Kitabı, Ebû Hüreyre (r.a.) rivayeti; ayrıca Sünen-i Nesâî no. 3137 (sahîh).&#160;<a class="footnote-backref" href="#fnref:drei" title="Metne dön, not 18"></a></p>
+</li>
+<li id="fn:rotter">
+<p>Julian B. Rotter: Generalized expectancies for internal versus external control of reinforcement. <em>Psychological Monographs</em> 80 (1966), no. 609.&#160;<a class="footnote-backref" href="#fnref:rotter" title="Metne dön, not 19"></a></p>
+</li>
+<li id="fn:seligman">
+<p>Steven F. Maier, Martin E. P. Seligman: Learned helplessness: Theory and evidence. <em>Journal of Experimental Psychology: General</em> 105 (1976), 3–46.&#160;<a class="footnote-backref" href="#fnref:seligman" title="Metne dön, not 20"></a></p>
+</li>
+<li id="fn:ibnqayyim">
+<p>İbn Kayyim el-Cevziyye (rh.), Nûr Sûresi 35. âyet hakkında: fail (fâil), alıcı (kâbil), yer (mahal), taşıyıcı (hâmil), madde (mâdde); orada ayrıca kalbin ev olarak benzetmesi. Yazarın aktarımı.&#160;<a class="footnote-backref" href="#fnref:ibnqayyim" title="Metne dön, not 21"></a></p>
+</li>
+<li id="fn:kierkegaard">
+<p>Søren Kierkegaard: <em>Ölümcül Hastalık (Sygdommen til Døden).</em> Kopenhag 1849, Birinci Bölüm, A; Almanca baskıdan aktarım.&#160;<a class="footnote-backref" href="#fnref:kierkegaard" title="Metne dön, not 22"></a></p>
+</li>
+<li id="fn:qudsi">
+<p>Sahîh-i Buhârî no. 7405 (hadis-i kudsî).&#160;<a class="footnote-backref" href="#fnref:qudsi" title="Metne dön, not 23"></a></p>
+</li>
+<li id="fn:saadi51">
+<p>Sa'dî (rh.), Zâriyât Sûresi 56. âyetin tefsiri (<em>Teysîru'l-Kerîmi'r-Rahmân</em>, Arapça baskı; yazarın aktarımı).&#160;<a class="footnote-backref" href="#fnref:saadi51" title="Metne dön, not 24"></a></p>
+</li>
+<li id="fn:ibnqayyim51">
+<p>İbn Kayyim el-Cevziyye (rh.), Zâriyât Sûresi 56. âyet hakkında (eserlerinden derlenmiş tefsir; yazarın aktarımı).&#160;<a class="footnote-backref" href="#fnref:ibnqayyim51" title="Metne dön, not 25"></a></p>
+</li>
+<li id="fn:nak-dubai">
+<p>Nouman Ali Khan, Dubai'deki konuşma; aktaran: American Muslim scholar speaks in Dubai. <em>Gulf News</em> (gulfnews.com); orada “honourable slavery to God” ve “we have nothing to offer someone who has everything, not even our prayers. We pray because we feel at one with God” ifadeleri. Yazarın çevirisi.&#160;<a class="footnote-backref" href="#fnref:nak-dubai" title="Metne dön, not 26"></a></p>
+</li>
+<li id="fn:nak-master">
+<p>Nouman Ali Khan: <em>Master and Slaves</em> (konuşma; özeti AboutIslam.net'te). Konuşma Bakara Sûresi 152. âyete dayanır.&#160;<a class="footnote-backref" href="#fnref:nak-master" title="Metne dön, not 27"></a></p>
+</li>
+<li id="fn:nak-return">
+<p>Nouman Ali Khan: <em>How to Come Back to Allah</em> (kısa konuşma; özeti AboutIslam.net'te): “A slave is a slave all the time.” Yazarın çevirisi.&#160;<a class="footnote-backref" href="#fnref:nak-return" title="Metne dön, not 28"></a></p>
+</li>
+<li id="fn:saadi256">
+<p>Sa'dî (rh.), Bakara Sûresi 256. âyetin tefsiri (Arapça baskı; yazarın aktarımı). Sa'dî (rh.) orada aynı zamanda âyetin yalnızca imanın kabulünden söz ettiğini, başka fıkhî meselelerden söz etmediğini vurgular.&#160;<a class="footnote-backref" href="#fnref:saadi256" title="Metne dön, not 29"></a><a class="footnote-backref" href="#fnref2:saadi256" title="Metne dön, not 29"></a></p>
+</li>
+<li id="fn:brehm">
+<p>Jack W. Brehm: <em>A Theory of Psychological Reactance.</em> New York 1966.&#160;<a class="footnote-backref" href="#fnref:brehm" title="Metne dön, not 30"></a></p>
+</li>
+<li id="fn:ryan">
+<p>Richard M. Ryan, Edward L. Deci: Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. <em>American Psychologist</em> 55 (2000), 68–78.&#160;<a class="footnote-backref" href="#fnref:ryan" title="Metne dön, not 31"></a></p>
+</li>
+<li id="fn:frankl">
+<p>Viktor E. Frankl: <em>Man’s Search for Meaning.</em> Boston 1962, II. Kısım (“Logotherapy in a Nutshell”): Özgürlük bütünün yalnızca olumsuz yüzüdür, olumlu yüzü sorumluluktur; onsuz salt keyfîliğe dönüşme tehlikesi taşır. Yazarın çevirisi.&#160;<a class="footnote-backref" href="#fnref:frankl" title="Metne dön, not 32"></a></p>
+</li>
+<li id="fn:khaldoun">
+<p>A. Khaldoun, E. Eiser, G. H. Wegdam, D. Bonn: Liquefaction of quicksand under stress. <em>Nature</em> 437 (2005), 635.&#160;<a class="footnote-backref" href="#fnref:khaldoun" title="Metne dön, not 33"></a></p>
+</li>
+<li id="fn:wegner">
+<p>Daniel M. Wegner: Ironic processes of mental control. <em>Psychological Review</em> 101 (1994), 34–52.&#160;<a class="footnote-backref" href="#fnref:wegner" title="Metne dön, not 34"></a></p>
+</li>
+<li id="fn:saadi257">
+<p>Sa'dî (rh.), Bakara Sûresi 257. âyetin tefsiri (Arapça baskı; yazarın aktarımı).&#160;<a class="footnote-backref" href="#fnref:saadi257" title="Metne dön, not 35"></a></p>
+</li>
+<li id="fn:ekers">
+<p>David Ekers vd.: Behavioural activation for depression; an update of meta-analysis. <em>PLoS One</em> 9 (2014), e100100. 26 çalışma, 1 524 katılımcı.&#160;<a class="footnote-backref" href="#fnref:ekers" title="Metne dön, not 36"></a></p>
+</li>
+<li id="fn:yusr">
+<p>Sahîh-i Buhârî no. 39; Sünen-i Nesâî no. 5034 (sahîh).&#160;<a class="footnote-backref" href="#fnref:yusr" title="Metne dön, not 37"></a></p>
+</li>
+<li id="fn:muyassar">
+<p>Sahîh-i Buhârî no. 7551; Sünen-i Ebû Dâvûd no. 4709 (sahîh).&#160;<a class="footnote-backref" href="#fnref:muyassar" title="Metne dön, not 38"></a></p>
+</li>
+<li id="fn:flow">
+<p>Mihaly Csikszentmihalyi: <em>Flow: The Psychology of Optimal Experience.</em> New York 1990.&#160;<a class="footnote-backref" href="#fnref:flow" title="Metne dön, not 39"></a></p>
+</li>
+<li id="fn:robe">
+<p>Andreea Robe vd.: ADHD and task-related heart rate variability: A systematic review and meta-analysis. <em>Neuroscience &amp; Biobehavioral Reviews</em> 99 (2019), 11–22. Hedges’ g = 0,20 – küçük bir etki.&#160;<a class="footnote-backref" href="#fnref:robe" title="Metne dön, not 40"></a></p>
+</li>
+<li id="fn:bestaendig">
+<p>Sahîh-i Buhârî no. 1151 ve 6465; Sahîh-i Müslim, Yolcu Namazı Kitabı.&#160;<a class="footnote-backref" href="#fnref:bestaendig" title="Metne dön, not 41"></a><a class="footnote-backref" href="#fnref2:bestaendig" title="Metne dön, not 41"></a></p>
+</li>
+<li id="fn:gollwitzer">
+<p>Peter M. Gollwitzer, Paschal Sheeran: Implementation intentions and goal achievement: A meta-analysis. <em>Advances in Experimental Social Psychology</em> 38 (2006), 69–119. 94 çalışma, d ≈ 0,65.&#160;<a class="footnote-backref" href="#fnref:gollwitzer" title="Metne dön, not 42"></a></p>
+</li>
+<li id="fn:makruh">
+<p>Sahîh-i Buhârî no. 586, Ebû Saîd el-Hudrî (r.a.) rivayeti; mezhepler bunu, bu vakitlerde nafile namazın tavsiye edilmemesi olarak anlar – dua ve zikir bundan etkilenmez.&#160;<a class="footnote-backref" href="#fnref:makruh" title="Metne dön, not 43"></a></p>
+</li>
+<li id="fn:drittel">
+<p>Sahîh-i Buhârî no. 1145; Sünen-i Ebû Dâvûd no. 1315 (sahîh).&#160;<a class="footnote-backref" href="#fnref:drittel" title="Metne dön, not 44"></a></p>
+</li>
+<li id="fn:neff">
+<p>Kristin D. Neff: Self-compassion: An alternative conceptualization of a healthy attitude toward oneself. <em>Self and Identity</em> 2 (2003), 85–101.&#160;<a class="footnote-backref" href="#fnref:neff" title="Metne dön, not 45"></a></p>
+</li>
+</ol>
+</div>
+<h2 id="yazar-hakkinda">Yazar Hakkında</h2>
+<p>Muharrem Yıldız ailesiyle birlikte Frankfurt am Main'da yaşıyor. <em>Bataklıktaki Pırlanta. Fabrika Ayarlarına Dönüş: Fıtrat, Girdap ve Çapa Duası</em> ilk kitabıdır. Tek bir sorudan doğmuştur: Daha değerli olan nedir – şimdi, burada, bu durumda?</p>
+</main>
+<p class="credits">Fotoğraflar: Bas van den Eijkhof, Dominik Lückmann, Pascal Debrunner, Wolfgang Hasselmann – Unsplash, telifsiz. Çizimler ve hareket: bu metin için özel olarak.</p>
+<p class="foot">Fabrika kapandı · Sıfırlanmadı, geri döndü</p>
+</div>
+<script>(function () {
+  "use strict";
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Hilfen ---------- */
+  function diamondPath(ctx, cx, cy, s, rot) {
+    ctx.save(); ctx.translate(cx, cy); ctx.rotate(rot || 0);
+    ctx.beginPath();
+    ctx.moveTo(-s * 0.9, -s * 0.25); ctx.lineTo(-s * 0.5, -s * 0.6); ctx.lineTo(s * 0.5, -s * 0.6);
+    ctx.lineTo(s * 0.9, -s * 0.25); ctx.lineTo(0, s * 0.8); ctx.closePath();
+    ctx.restore();
+  }
+  function drawDiamond(ctx, cx, cy, s, rot, fill, stroke) {
+    diamondPath(ctx, cx, cy, s, rot);
+    ctx.fillStyle = fill; ctx.fill();
+    ctx.strokeStyle = stroke; ctx.lineWidth = 1.2; ctx.stroke();
+    ctx.save(); ctx.translate(cx, cy); ctx.rotate(rot || 0);
+    ctx.strokeStyle = stroke; ctx.globalAlpha = ctx.globalAlpha * 0.65; ctx.lineWidth = 0.9;
+    ctx.beginPath();
+    ctx.moveTo(-s * 0.9, -s * 0.25); ctx.lineTo(s * 0.9, -s * 0.25);
+    ctx.moveTo(-s * 0.5, -s * 0.6); ctx.lineTo(-s * 0.3, -s * 0.25); ctx.lineTo(0, s * 0.8);
+    ctx.moveTo(s * 0.5, -s * 0.6); ctx.lineTo(s * 0.3, -s * 0.25); ctx.lineTo(0, s * 0.8);
+    ctx.moveTo(0, -s * 0.6); ctx.lineTo(0, -s * 0.25);
+    ctx.stroke(); ctx.restore();
+  }
+  function label(ctx, text, x, y, color, italic) {
+    ctx.save();
+    ctx.font = (italic ? "italic 400 14px 'Source Serif 4', Georgia, serif" : "500 11px Inter, 'Helvetica Neue', Arial, sans-serif");
+    ctx.textAlign = "center"; ctx.textBaseline = "alphabetic"; ctx.fillStyle = color;
+    ctx.fillText(text, x, y); ctx.restore();
+  }
+
+  /* ---------- Szenen ---------- */
+  const S = {};
+
+  // Titel: Licht fällt von oben rechts, Staub steigt auf
+  S.cover = {
+    init(st) {
+      st.blobs = [
+        { x: .18, y: .25, r: .62, rgb: "255,208,110", a: .42, sx: .00011, sy: .00007, p: 0 },
+        { x: .84, y: .60, r: .55, rgb: "176,198,255", a: .34, sx: -.00009, sy: .00012, p: 2.1 },
+        { x: .50, y: .98, r: .70, rgb: "255,228,170", a: .36, sx: .00007, sy: -.00009, p: 4.2 }];
+      st.motes = Array.from({ length: 46 }, () => ({ x: Math.random(), y: Math.random(), r: Math.random() * 1.5 + .7, v: Math.random() * .00003 + .000012, o: Math.random() * 6.28 }));
+    },
+    draw(ctx, w, h, t, p, st, dt) {
+      ctx.clearRect(0, 0, w, h);
+      ctx.save(); ctx.translate(w * .80, -h * .12);
+      for (let i = 0; i < 3; i++) {
+        const ang = .50 + i * .11 + Math.sin(t * .00008 + i) * .035;
+        ctx.save(); ctx.rotate(ang);
+        const g = ctx.createLinearGradient(0, 0, 0, h * 1.9);
+        const k = .09 + .04 * Math.sin(t * .00025 + i * 1.7);
+        g.addColorStop(0, "rgba(226,186,104,0)"); g.addColorStop(.25, "rgba(226,186,104," + k + ")"); g.addColorStop(1, "rgba(226,186,104,0)");
+        ctx.fillStyle = g; const bw = w * (.045 + .02 * i); ctx.fillRect(-bw / 2, 0, bw, h * 1.9); ctx.restore();
+      }
+      ctx.restore();
+      for (const b of st.blobs) {
+        const x = (b.x + Math.sin(t * b.sx + b.p) * .09) * w, y = (b.y + Math.cos(t * b.sy + b.p) * .09) * h, r = b.r * Math.max(w, h);
+        const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+        g.addColorStop(0, "rgba(" + b.rgb + "," + b.a + ")"); g.addColorStop(.6, "rgba(" + b.rgb + "," + (b.a * .25) + ")"); g.addColorStop(1, "rgba(" + b.rgb + ",0)");
+        ctx.fillStyle = g; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
+      }
+      for (const m of st.motes) {
+        m.y -= m.v * dt; if (m.y < -.02) { m.y = 1.02; m.x = Math.random(); }
+        const a = .18 + .22 * (.5 + .5 * Math.sin(t * .0018 + m.o));
+        ctx.fillStyle = "rgba(214,164,70," + a + ")"; ctx.beginPath();
+        ctx.arc(m.x * w + Math.sin(t * .0004 + m.o) * 9, m.y * h, m.r, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+  };
+
+  // I · Rücksetzung: ein Gerät setzt zurück – und das Wort kehrt zurück
+  S.rueck = {
+    init(st) { st.from = "SIFIRLAMA"; st.to = "DÖNÜŞ"; st.chars = "ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ·"; },
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const cyc = 9000, u = (t % cyc) / cyc, n = st.from.length; let txt = "";
+      for (let i = 0; i < n; i++) {
+        const li = i / n; let ch;
+        if (u < .3) ch = st.from[i];
+        else if (u < .62) { const q = (u - .3) / .32, thr = q * 1.25 - .15; if (li < thr - .12) ch = st.to[i]; else if (li < thr + .05) ch = st.chars[Math.floor(Math.random() * st.chars.length)]; else ch = st.from[i]; }
+        else ch = st.to[i];
+        txt += ch;
+      }
+      const fs = Math.min(w / 11.5, h / 4.2), alpha = u > .95 ? (1 - u) / .05 : 1;
+      ctx.save(); ctx.font = "500 " + fs + "px Inter, 'Helvetica Neue', Arial, sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      try { ctx.letterSpacing = "0.1em"; } catch (e) { }
+      ctx.fillStyle = "rgba(0,0,0," + alpha + ")"; ctx.fillText(txt, w / 2, h / 2 - fs * .2);
+      ctx.font = "400 " + (fs * .3) + "px Inter, Arial, sans-serif"; ctx.fillStyle = "rgba(0,0,0," + (.65 * alpha) + ")";
+      ctx.fillText(u < .62 ? "cihaz, sonradan ekleneni kaybeder" : "insan hiçbir şey kaybetmez", w / 2, h / 2 + fs * .75);
+      ctx.restore();
+      const bw = Math.min(w * .5, 320), bx = (w - bw) / 2, by = h / 2 + fs * 1.15;
+      ctx.strokeStyle = "rgba(0,0,0,0.5)"; ctx.lineWidth = 1; ctx.strokeRect(bx, by, bw, 4);
+      const prog = u < .3 ? u / .3 : u < .62 ? 1 - (u - .3) / .32 : 0;
+      ctx.fillStyle = "rgba(226,186,104,0.9)"; ctx.fillRect(bx, by, bw * prog, 4);
+    }
+  };
+
+  // II · Der Diamant: Glanz, der über die Facetten wandert
+  S.diamant = {
+    init(st) { st.sp = []; },
+    draw(ctx, w, h, t, p, st, dt) {
+      ctx.clearRect(0, 0, w, h);
+      const dcx = w / 2, dcy = h * .5, ds = Math.min(w, h) * .3;
+      ctx.save(); const gl = ctx.createRadialGradient(dcx, dcy, 0, dcx, dcy, ds * 2.4); gl.addColorStop(0, "rgba(176,198,255,0.28)"); gl.addColorStop(1, "rgba(176,198,255,0)"); ctx.fillStyle = gl; ctx.fillRect(0, 0, w, h); ctx.restore();
+      drawDiamond(ctx, dcx, dcy, ds, 0, "rgba(255,255,255,0.18)", "rgba(255,255,255,0.95)");
+      const cyc = 5200, u = (t % cyc) / cyc, x = -w * .3 + u * (w * 1.6);
+      ctx.save(); ctx.globalCompositeOperation = "lighter"; ctx.translate(x, 0); ctx.rotate(-.35);
+      const g = ctx.createLinearGradient(-70, 0, 70, 0); g.addColorStop(0, "rgba(255,255,255,0)"); g.addColorStop(.5, "rgba(255,255,255,0.2)"); g.addColorStop(1, "rgba(255,255,255,0)");
+      ctx.fillStyle = g; ctx.fillRect(-90, -h, 180, h * 3); ctx.restore();
+      if (Math.random() < .07 && st.sp.length < 14) st.sp.push({ x: Math.random() * w, y: h * .2 + Math.random() * h * .65, r: 4 + Math.random() * 10, life: 0, max: 900 + Math.random() * 900 });
+      ctx.save(); ctx.globalCompositeOperation = "lighter";
+      for (const s of st.sp) {
+        s.life += dt; const k = s.life / s.max; if (k >= 1) { s.dead = true; continue; }
+        const a = k < .5 ? k * 2 : (1 - k) * 2;
+        ctx.strokeStyle = "rgba(255,255,255," + (.85 * a) + ")"; ctx.lineWidth = 1; ctx.beginPath();
+        ctx.moveTo(s.x - s.r, s.y); ctx.lineTo(s.x + s.r, s.y); ctx.moveTo(s.x, s.y - s.r); ctx.lineTo(s.x, s.y + s.r); ctx.stroke();
+        ctx.fillStyle = "rgba(255,255,255," + (.9 * a) + ")"; ctx.beginPath(); ctx.arc(s.x, s.y, 1.6, 0, Math.PI * 2); ctx.fill();
+      }
+      st.sp = st.sp.filter(s => !s.dead); ctx.restore();
+      label(ctx, "Değerinden hiçbir şey kaybetmez.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // III · Der Lichtort: der Strahl wandert, der Diamant leuchtet nur, wo er getroffen wird
+  S.lichtort = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const ang = Math.sin(t * .00035) * .55, ox = w / 2, oy = -h * .1, L = h * 1.4;
+      ctx.save(); ctx.translate(ox, oy); ctx.rotate(ang); ctx.globalCompositeOperation = "lighter";
+      const g = ctx.createLinearGradient(0, 0, 0, L); g.addColorStop(0, "rgba(255,236,190,0)"); g.addColorStop(.2, "rgba(255,236,190,0.30)"); g.addColorStop(1, "rgba(255,236,190,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.moveTo(-w * .03, 0); ctx.lineTo(w * .03, 0); ctx.lineTo(w * .17, L); ctx.lineTo(-w * .17, L); ctx.closePath(); ctx.fill(); ctx.restore();
+      const dx = w * .5, dy = h * .76, s = Math.min(w, h) * .075;
+      const bx = ox - Math.tan(ang) * (dy - oy), hit = Math.max(0, 1 - Math.abs(bx - dx) / (w * .13));
+      if (hit > 0) {
+        ctx.save(); ctx.globalCompositeOperation = "lighter"; const n = 12;
+        for (let i = 0; i < n; i++) {
+          const a = i / n * Math.PI * 2 + t * .0006, len = s * (2.5 + 3 * hit) * (.6 + .4 * Math.sin(t * .004 + i));
+          const g2 = ctx.createLinearGradient(dx, dy, dx + Math.cos(a) * len, dy + Math.sin(a) * len);
+          g2.addColorStop(0, "rgba(255,255,255," + (.75 * hit) + ")"); g2.addColorStop(1, "rgba(255,255,255,0)");
+          ctx.strokeStyle = g2; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(dx, dy); ctx.lineTo(dx + Math.cos(a) * len, dy + Math.sin(a) * len); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      drawDiamond(ctx, dx, dy, s, 0, "rgba(255,255,255," + (.15 + .8 * hit) + ")", "rgba(255,255,255,0.9)");
+      label(ctx, hit > .5 ? "Zaman · Yer · Durum – ışık buraya düşer" : "Pırlanta yalnızca durduğu yerde etki eder.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // IV · Die Bedeckung: Punkt für Punkt – und Punkt für Punkt poliert
+  S.bedeckung = {
+    init(st) { st.pts = []; st.last = 1; },
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const cx = w / 2, cy = h * .5, s = Math.min(w, h) * .27, cyc = 13000, u = (t % cyc) / cyc;
+      if (u < st.last) st.pts = []; st.last = u;
+      ctx.save(); const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, s * 2.2); g.addColorStop(0, "rgba(255,230,170,0.35)"); g.addColorStop(1, "rgba(255,230,170,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      drawDiamond(ctx, cx, cy, s, 0, "rgba(250,247,240,0.94)", "rgba(60,50,40,0.9)");
+      if (u < .55) {
+        const want = Math.floor(u / .55 * 260); let guard = 0;
+        while (st.pts.length < want && guard++ < 400) {
+          const x = cx + (Math.random() * 2 - 1) * s * .9, y = cy + (Math.random() * 1.4 - .6) * s;
+          diamondPath(ctx, cx, cy, s, 0); if (ctx.isPointInPath(x, y)) st.pts.push({ x, y, r: 2 + Math.random() * 3 }); else want--;
+        }
+      }
+      let px = -1; if (u > .62 && u < .95) { const q = (u - .62) / .33; px = cx - s * 1.2 + q * s * 2.4; }
+      for (const q of st.pts) {
+        if (px > 0 && Math.abs(q.x - px) < s * .22) q.dead = true;
+        ctx.fillStyle = "rgba(30,24,20,0.85)"; ctx.beginPath(); ctx.arc(q.x, q.y, q.r, 0, Math.PI * 2); ctx.fill();
+      }
+      st.pts = st.pts.filter(q => !q.dead);
+      if (px > 0) { ctx.save(); const g2 = ctx.createRadialGradient(px, cy, 0, px, cy, s * .55); g2.addColorStop(0, "rgba(255,255,255,0.75)"); g2.addColorStop(1, "rgba(255,255,255,0)"); ctx.fillStyle = g2; ctx.fillRect(px - s, cy - s * 1.2, 2 * s, 2.4 * s); ctx.restore(); }
+      label(ctx, u < .6 ? "Örtü: bir birikim, nokta nokta." : "Cila: vazgeçmek, dilemek, dönmek – nokta nokta.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // V · Die Fassung: Ring, Bohrkopf, Tresor kreisen – der Diamant bleibt, wo das Licht ist
+  S.fassung = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const cx = w / 2, cy = h * .5, s = Math.min(w, h) * .13, R = Math.min(w, h) * .38, names = ["Yüzük", "Matkap ucu", "Kasa"];
+      ctx.strokeStyle = "rgba(0,0,0,0.9)"; ctx.lineWidth = 1.5;
+      for (let i = 0; i < 3; i++) {
+        const a = t * .00025 + i * Math.PI * 2 / 3, pulse = Math.max(0, Math.sin(t * .0012 + i * 2.1)), r = R * (1 - .22 * pulse);
+        const x = cx + Math.cos(a) * r * 1.15, y = cy + Math.sin(a) * r * .62;
+        ctx.save(); ctx.translate(x, y); ctx.strokeStyle = "rgba(0,0,0,0.9)"; ctx.fillStyle = "rgba(0,0,0,0.9)"; ctx.lineWidth = 1.5;
+        if (i === 0) { ctx.beginPath(); ctx.arc(0, 0, s * .55, 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.arc(0, 0, s * .38, 0, Math.PI * 2); ctx.stroke(); }
+        else if (i === 1) { ctx.beginPath(); ctx.moveTo(-s * .5, -s * .5); ctx.lineTo(s * .5, -s * .5); ctx.lineTo(0, s * .6); ctx.closePath(); ctx.stroke(); for (let k = -2; k <= 2; k++) { ctx.beginPath(); ctx.moveTo(k * s * .18, -s * .5); ctx.lineTo(k * s * .09, s * .05); ctx.stroke(); } }
+        else { ctx.strokeRect(-s * .55, -s * .5, s * 1.1, s); ctx.beginPath(); ctx.arc(0, 0, s * .22, 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(s * .2, -s * .1); ctx.stroke(); }
+        ctx.font = "500 11px Inter, Arial, sans-serif"; ctx.textAlign = "center"; ctx.fillText(names[i], 0, s * .95); ctx.restore();
+      }
+      ctx.save(); ctx.globalCompositeOperation = "multiply"; const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, s * 2.6); g.addColorStop(0, "rgba(255,215,130,0.6)"); g.addColorStop(1, "rgba(255,215,130,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      drawDiamond(ctx, cx, cy, s, 0, "rgba(255,255,255,0.97)", "rgba(0,0,0,0.9)");
+      label(ctx, "Hiçbiri onu kendinden açmaz.", cx, h - 18, "#000", true);
+    }
+  };
+
+  // VI · Die Verkippung: beim Weiterlesen richtet sich der Diamant auf
+  S.verkippung = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const q = reduce ? 1 : Math.min(1, Math.max(0, (p - .18) / .55)), tilt = (1 - q) * .6;
+      const cx = w / 2, cy = h * .56, s = Math.min(w, h) * .17;
+      // der Strahl von oben rechts – auf hellem Grund als warme Verdichtung (multiply)
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const sx = w * .82, sy = -h * .1, g = ctx.createLinearGradient(sx, sy, cx, cy - s * .4);
+      g.addColorStop(0, "rgba(226,186,104,0)"); g.addColorStop(.3, "rgba(226,186,104,0.45)"); g.addColorStop(1, "rgba(226,186,104,0.75)");
+      ctx.strokeStyle = g; ctx.lineWidth = s * .5; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(cx, cy - s * .4); ctx.stroke(); ctx.restore();
+      if (tilt > .02) {
+        ctx.save(); ctx.globalCompositeOperation = "multiply"; const k = tilt / .6;
+        const g2 = ctx.createLinearGradient(cx, cy + s * .6, cx + s * 1.6, h * 1.3); g2.addColorStop(0, "rgba(200,120,70," + (.55 * k) + ")"); g2.addColorStop(1, "rgba(200,120,70,0)");
+        ctx.strokeStyle = g2; ctx.lineWidth = s * .35; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(cx, cy + s * .6); ctx.lineTo(cx + s * 1.6, h * 1.3); ctx.stroke(); ctx.restore();
+      }
+      if (q > .05) {
+        ctx.save(); ctx.globalCompositeOperation = "multiply"; const n = 14;
+        for (let i = 0; i < n; i++) {
+          const a = -Math.PI / 2 + (i / (n - 1) - .5) * 1.5, len = s * (1.5 + 3 * q) * (.7 + .3 * Math.sin(t * .003 + i));
+          const x2 = cx + Math.cos(a) * len, y2 = cy - s * .6 + Math.sin(a) * len;
+          const g3 = ctx.createLinearGradient(cx, cy - s * .6, x2, y2); g3.addColorStop(0, "rgba(214,164,70," + (.9 * q) + ")"); g3.addColorStop(1, "rgba(214,164,70,0)");
+          ctx.strokeStyle = g3; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, cy - s * .6); ctx.lineTo(x2, y2); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      drawDiamond(ctx, cx, cy, s, tilt, "rgba(255,255,255," + (.35 + .6 * q) + ")", "rgba(0,0,0,0.9)");
+      label(ctx, q < .5 ? "Eğik: ışık aşağıdan, gözün olmadığı yerden kaçar." : "Doğrultulmuş: taşıyıcı hareket etti – ışık geri geldi.", cx, h - 18, "#000", true);
+      if (q < .9) label(ctx, "OKUMAYA DEVAM ET – DOĞRULUR", cx, 24, "rgba(0,0,0,0.55)", false);
+    }
+  };
+
+  // VII · Die Widmung: alles wird zum Licht gezogen – nur der Diamant wendet sich selbst zu
+  S.widmung = {
+    init(st) {
+      st.grains = Array.from({ length: 70 }, () => ({ x: Math.random() * 1.3 - .15, y: Math.random() * 1.3 - .15, v: .00004 + Math.random() * .00005, l: 6 + Math.random() * 8 }));
+      st.rot = 0; st.free = 0;
+    },
+    draw(ctx, w, h, t, p, st, dt) {
+      ctx.clearRect(0, 0, w, h);
+      const lx = w * .86, ly = h * .12, cx = w / 2, cy = h * .58, s = Math.min(w, h) * .16;
+      // die Lichtquelle: warm, oben rechts
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const g = ctx.createRadialGradient(lx, ly, 0, lx, ly, Math.max(w, h) * .55);
+      g.addColorStop(0, "rgba(226,186,104,0.75)"); g.addColorStop(.35, "rgba(226,186,104,0.25)"); g.addColorStop(1, "rgba(226,186,104,0)");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      // die Schöpfung: Körner, die alle gezogen werden – „freiwillig oder widerwillig“
+      ctx.save(); ctx.strokeStyle = "rgba(0,0,0,0.55)"; ctx.lineWidth = 1.1; ctx.lineCap = "round";
+      for (const q of st.grains) {
+        const dx = lx / w - q.x, dy = ly / h - q.y, d = Math.hypot(dx, dy) || 1;
+        q.x += dx / d * q.v * dt; q.y += dy / d * q.v * dt;
+        if (d < .05) { q.x = Math.random() < .5 ? -.1 : Math.random(); q.y = q.x < 0 ? Math.random() : 1.1; }
+        const px = q.x * w, py = q.y * h, ux = dx / d * q.l, uy = dy / d * q.l;
+        ctx.beginPath(); ctx.moveTo(px - ux, py - uy); ctx.lineTo(px, py); ctx.stroke();
+      }
+      ctx.restore();
+      // der Diamant: zuerst treibt er, dann richtet er sich – beim Weiterlesen – selbst aus
+      const want = reduce ? 1 : Math.min(1, Math.max(0, (p - .2) / .5));
+      st.free += (want - st.free) * Math.min(1, dt / 600);
+      const drift = Math.sin(t * .0007) * .9 + Math.sin(t * .0023) * .25;
+            const rot = drift * (1 - st.free);  // zugewandt heißt: aufrecht, zum Licht hin offen
+      if (st.free > .05) {
+        ctx.save(); ctx.globalCompositeOperation = "multiply"; const n = 10;
+        for (let i = 0; i < n; i++) {
+          const a = Math.atan2(ly - cy, lx - cx) + (i / (n - 1) - .5) * .9, len = s * (1 + 2.5 * st.free) * (.7 + .3 * Math.sin(t * .003 + i));
+          const x2 = cx + Math.cos(a) * len, y2 = cy + Math.sin(a) * len;
+          const g3 = ctx.createLinearGradient(cx, cy, x2, y2); g3.addColorStop(0, "rgba(214,164,70," + (.85 * st.free) + ")"); g3.addColorStop(1, "rgba(214,164,70,0)");
+          ctx.strokeStyle = g3; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x2, y2); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      drawDiamond(ctx, cx, cy, s, rot, "rgba(255,255,255," + (.4 + .55 * st.free) + ")", "rgba(0,0,0,0.9)");
+      label(ctx, st.free < .5 ? "Her şey çekilir – isteyerek ya da istemeyerek." : "Yalnızca insan yönelir. Çünkü yüz çevirebilirdi.", cx, h - 18, "#000", true);
+      if (st.free < .9) label(ctx, "OKUMAYA DEVAM ET – YÖNELİYOR", cx, 24, "rgba(0,0,0,0.55)", false);
+    }
+  };
+
+  // VII · Der Sog: strampeln, aufhören, die Gebetswaschung
+  S.sog = {
+    init(st) { st.rip = []; },
+    draw(ctx, w, h, t, p, st, dt) {
+      const cyc = 14000, u = (t % cyc) / cyc, wash = u < .6 ? 0 : Math.min(1, (u - .6) / .25);
+      ctx.clearRect(0, 0, w, h);
+      // der Boden: warmes Moor, das sich beim Waschen in klares Wasser wandelt (multiply, bleibt hell)
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const r = Math.round(205 + (185 - 205) * wash), g = Math.round(185 + (210 - 185) * wash), b = Math.round(150 + (230 - 150) * wash);
+      ctx.fillStyle = "rgba(" + r + "," + g + "," + b + ",0.75)"; ctx.fillRect(0, 0, w, h); ctx.restore();
+      const cx = w / 2, cy = h * .5, base = Math.min(w, h);
+      ctx.save(); ctx.translate(cx, cy); ctx.rotate(t * .0004);
+      for (let i = 1; i <= 9; i++) {
+        const rr = i * base * .055; ctx.beginPath();
+        for (let a = 0; a <= Math.PI * 2 + .01; a += .1) { const wob = 1 + .06 * Math.sin(a * 3 + i + t * .001); const x = Math.cos(a) * rr * wob * 1.6, y = Math.sin(a) * rr * wob * .7; if (a === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
+        ctx.strokeStyle = "rgba(70,50,30," + (.5 * (1 - wash)) + ")"; ctx.lineWidth = 2; ctx.stroke();
+      }
+      ctx.restore();
+      let fy, jit = 0;
+      if (u < .45) { fy = cy - h * .1 + (u / .45) * h * .22; jit = Math.sin(t * .03) * 6; }
+      else if (u < .6) { const q = (u - .45) / .15; fy = cy + h * .12 - q * h * .22; }
+      else fy = cy - h * .1;
+      ctx.fillStyle = "rgba(0,0,0,0.9)"; ctx.beginPath(); ctx.arc(cx + jit, fy, base * .03, 0, Math.PI * 2); ctx.fill();
+      if (wash > 0) {
+        if (Math.random() < .07) st.rip.push({ x: cx + (Math.random() - .5) * w * .6, y: cy + (Math.random() - .5) * h * .45, r: 0 });
+        for (const q of st.rip) { q.r += dt * .05; const a = Math.max(0, 1 - q.r / (base * .35)); ctx.strokeStyle = "rgba(30,90,150," + (.75 * a) + ")"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.ellipse(q.x, q.y, q.r * 1.6, q.r * .7, 0, 0, Math.PI * 2); ctx.stroke(); if (a <= 0) q.dead = true; }
+        st.rip = st.rip.filter(q => !q.dead);
+      } else st.rip = [];
+      label(ctx, u < .45 ? "Çırpınmak – çamur kavrar." : (u < .6 ? "Durmak – çamur taşır." : "Abdest – çıkarıldı, savaşarak çıkmadı."), cx, h - 18, "#000", true);
+    }
+  };
+
+  // VIII · Das Leichtgemachtsein: Bienen auf geebneten Wegen
+  S.biene = {
+    init(st) { st.bees = Array.from({ length: 6 }, (_, i) => ({ ph: i * 1.1, f1: .00018 + i * .00002, f2: .00013 + i * .00003, ax: .38, ay: .3, trail: [] })); },
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      ctx.save(); ctx.setLineDash([2, 7]); ctx.strokeStyle = "rgba(255,225,150,0.5)"; ctx.lineWidth = 1;
+      for (let i = 0; i < 3; i++) { ctx.beginPath(); for (let x = 0; x <= w; x += 8) { const y = h * (.3 + .2 * i) + Math.sin(x / w * Math.PI * 2 + i) * h * .08; if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); } ctx.stroke(); }
+      ctx.restore();
+      for (const b of st.bees) {
+        const x = w / 2 + Math.cos(t * b.f1 + b.ph) * w * b.ax, y = h / 2 + Math.sin(t * b.f2 + b.ph * .7) * h * b.ay;
+        b.trail.push({ x, y }); if (b.trail.length > 40) b.trail.shift();
+        ctx.save(); ctx.globalCompositeOperation = "lighter";
+        for (let i = 1; i < b.trail.length; i++) { const a = i / b.trail.length; ctx.strokeStyle = "rgba(255,210,110," + (.4 * a) + ")"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(b.trail[i - 1].x, b.trail[i - 1].y); ctx.lineTo(b.trail[i].x, b.trail[i].y); ctx.stroke(); }
+        ctx.restore();
+        const n = b.trail.length, dx = n > 1 ? x - b.trail[n - 2].x : 1, dy = n > 1 ? y - b.trail[n - 2].y : 0, ang = Math.atan2(dy, dx);
+        ctx.save(); ctx.translate(x, y); ctx.rotate(ang);
+        const wf = Math.sin(t * .08 + b.ph) * .5 + .5;
+        ctx.fillStyle = "rgba(255,255,255," + (.35 + .4 * wf) + ")"; ctx.beginPath(); ctx.ellipse(-1, -5, 5, 3, -.5, 0, Math.PI * 2); ctx.fill(); ctx.beginPath(); ctx.ellipse(-1, 5, 5, 3, .5, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#f2c230"; ctx.beginPath(); ctx.ellipse(0, 0, 7, 4, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#1d1a14"; ctx.fillRect(-2, -4, 2, 8); ctx.fillRect(2, -3.5, 2, 7); ctx.restore();
+      }
+      label(ctx, "Rabbinin sana gösterdiği yollardan yürü.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // IX · Der Anker: er setzt sich in den Grund, bevor der Zug kommt
+  S.anker = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const g0 = ctx.createLinearGradient(0, 0, 0, h); g0.addColorStop(0, "rgba(200,220,238,0.55)"); g0.addColorStop(1, "rgba(150,185,215,0.75)"); ctx.fillStyle = g0; ctx.fillRect(0, 0, w, h); ctx.restore();
+      const cyc = 11000, u = (t % cyc) / cyc, set = u < .5 ? u / .5 : 1, calm = u < .5 ? 0 : Math.min(1, (u - .5) / .3), amp = h * .03 * (1 - .8 * calm);
+      for (let i = 0; i < 4; i++) {
+        ctx.beginPath(); for (let x = 0; x <= w; x += 6) { const y = h * .2 + i * 7 + Math.sin(x * .02 + t * .003 + i) * amp; if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
+        ctx.strokeStyle = "rgba(20,70,120," + (.6 - i * .11) + ")"; ctx.lineWidth = 1.2; ctx.stroke();
+      }
+      const cx = w / 2, topY = h * .05, botY = h * .7, y = topY + (botY - topY) * (1 - Math.pow(1 - set, 2)), sway = (1 - set) * Math.sin(t * .004) * .15, s = Math.min(w, h) * .09;
+      ctx.strokeStyle = "rgba(0,0,0,0.85)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, -5); ctx.quadraticCurveTo(cx + (1 - set) * 20, y / 2, cx + Math.sin(sway) * 10, y - s * .9); ctx.stroke();
+      ctx.save(); ctx.translate(cx, y); ctx.rotate(sway); ctx.strokeStyle = "rgba(0,0,0,0.9)"; ctx.lineWidth = 3; ctx.lineCap = "round";
+      ctx.beginPath(); ctx.arc(0, -s * .75, s * .18, 0, Math.PI * 2); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(0, -s * .55); ctx.lineTo(0, s * .7); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(-s * .45, -s * .25); ctx.lineTo(s * .45, -s * .25); ctx.stroke();
+      ctx.beginPath(); ctx.arc(0, s * .15, s * .6, Math.PI * .15, Math.PI * .85); ctx.stroke();
+      ctx.restore();
+      ctx.save(); ctx.globalCompositeOperation = "multiply"; ctx.fillStyle = "rgba(190,170,140,0.7)"; ctx.fillRect(0, h * .82, w, h * .18); ctx.restore();
+      label(ctx, set >= 1 ? "Çekiş gelmeden yerleşmiş: Girdap geldiğinde abdest." : "Bir çapa ağır olduğu için tutmaz.", cx, h - 18, "#000", true);
+    }
+  };
+
+  // X · Die Rückkehr: Morgen, Licht über Licht
+  S.rueckkehr = {
+    init(st) { st.m = Array.from({ length: 30 }, () => ({ x: Math.random(), y: Math.random(), v: .00002 + Math.random() * .00003, o: Math.random() * 6 })); },
+    draw(ctx, w, h, t, p, st, dt) {
+      const cyc = 16000, u = (t % cyc) / cyc, dawn = Math.sin(u * Math.PI);
+      ctx.clearRect(0, 0, w, h);
+      // Morgen: ein heller Himmel, der sich von kühlem Blau in warmes Gold wandelt (multiply, bleibt hell)
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const g = ctx.createLinearGradient(0, 0, 0, h);
+      g.addColorStop(0, "rgba(" + Math.round(180 + 40 * dawn) + "," + Math.round(200 + 20 * dawn) + "," + Math.round(230 - 30 * dawn) + ",0.7)");
+      g.addColorStop(1, "rgba(" + Math.round(240) + "," + Math.round(200 + 20 * dawn) + "," + Math.round(140 + 40 * (1 - dawn)) + ",0.8)");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      const cx = w / 2, cy = h * .6, s = Math.min(w, h) * .14;
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      for (let i = 0; i < 2; i++) { const r = s * (2.2 + i * 1.3) * (1 + .06 * Math.sin(t * .0015 + i * 2)); const gg = ctx.createRadialGradient(cx, cy - s * .2, s * .3, cx, cy - s * .2, r); gg.addColorStop(0, "rgba(226,186,104," + (.25 + .35 * dawn) + ")"); gg.addColorStop(1, "rgba(226,186,104,0)"); ctx.fillStyle = gg; ctx.fillRect(0, 0, w, h); }
+      ctx.restore();
+      for (const m of st.m) { m.y -= m.v * dt; if (m.y < 0) { m.y = 1; m.x = Math.random(); } ctx.fillStyle = "rgba(160,110,30," + (.3 + .3 * Math.sin(t * .002 + m.o)) + ")"; ctx.beginPath(); ctx.arc(m.x * w, m.y * h, 1.3, 0, Math.PI * 2); ctx.fill(); }
+      drawDiamond(ctx, cx, cy, s, 0, "rgba(255,255,255,0.96)", "rgba(0,0,0,0.95)");
+      label(ctx, "Fabrika kapandı. Sıfırlanmadı, geri döndü.", cx, h - 18, "#000", true);
+    }
+  };
+
+  /* ---------- Antrieb ---------- */
+  const stages = Array.prototype.slice.call(document.querySelectorAll(".stage[data-scene]"));
+  const entries = stages.map(function (el) {
+    const c = el.querySelector("canvas");
+    return { el: el, c: c, ctx: c.getContext("2d"), scene: S[el.getAttribute("data-scene")], st: {}, active: false, w: 0, h: 0, dpr: 1, drawn: false };
+  }).filter(function (e) { return e.scene; });
+  entries.forEach(function (e) { if (e.scene.init) e.scene.init(e.st); });
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(function (list) {
+      list.forEach(function (x) { const e = entries.find(function (e) { return e.el === x.target; }); if (e) e.active = x.isIntersecting; });
+    }, { rootMargin: "25% 0px" });
+    entries.forEach(function (e) { io.observe(e.el); });
+  } else entries.forEach(function (e) { e.active = true; });
+
+  function size(e) {
+    const r = e.el.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 1.5), w = Math.round(r.width), h = Math.round(r.height);
+    if (w !== e.w || h !== e.h || dpr !== e.dpr) { e.w = w; e.h = h; e.dpr = dpr; e.c.width = Math.max(1, w * dpr); e.c.height = Math.max(1, h * dpr); e.c.style.width = w + "px"; e.c.style.height = h + "px"; }
+    e.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function progress(e) { const r = e.el.getBoundingClientRect(), vh = window.innerHeight || 800; return Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height))); }
+  let last = performance.now(), t = 0;
+  function frame(now) {
+    const dt = Math.min(50, now - last); last = now; t += dt;
+    for (const e of entries) {
+      if (e.drawn && !e.active) continue;
+      size(e); if (e.w < 2 || e.h < 2) continue;
+      e.ctx.clearRect(0, 0, e.w, e.h);
+      try { e.scene.draw(e.ctx, e.w, e.h, t, progress(e), e.st, dt); } catch (err) { }
+      e.drawn = true;
+    }
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  if (reduce) { t = 4000; frame(performance.now()); } else requestAnimationFrame(frame);
+  window.addEventListener("resize", function () { entries.forEach(function (e) { e.drawn = false; }); });
+
+  /* ---------- Text erwacht beim Hereinscrollen ---------- */
+  if ("IntersectionObserver" in window) {
+    const io2 = new IntersectionObserver(function (list) { list.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io2.unobserve(x.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll("main h2, main .vers, main .regel, main .dua, .glossar p").forEach(function (el) { io2.observe(el); });
+  }
+})();
+</script>
+<script>(function(){
+  "use strict";
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var html=document.documentElement, KEY="pirlanta-reader";
+  var st={}; try{ st=JSON.parse(localStorage.getItem(KEY)||"{}"); }catch(e){}
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){} }
+  // Einstellungen anwenden
+  if(st.size) html.classList.add("r-size-"+st.size); if(st.night) html.classList.add("night");
+  // Kapitel
+  var hs=$$("main h2[id]"); var words=function(el){var t="",n=el.nextElementSibling;while(n&&n.tagName!=="H2"){t+=" "+(n.textContent||"");n=n.nextElementSibling;}return t.trim().split(/\s+/).length;};
+  var total=0; var chapters=hs.map(function(h2){var w=words(h2); total+=w; return {el:h2, id:h2.id, title:h2.textContent.trim(), min:Math.max(1,Math.round(w/200))};});
+  var hint=$(".cover .hint"); if(hint && total) hint.textContent+=" Okuma süresi yaklaşık "+Math.round(total/200)+" dakika.";
+  // Chrome bauen
+  var prog=document.createElement("i"); prog.className="rprog"; document.body.appendChild(prog);
+  var bar=document.createElement("div"); bar.className="rbar"; bar.setAttribute("role","toolbar"); bar.setAttribute("aria-label","Okuma");
+  bar.innerHTML='<button type="button" class="kap" aria-expanded="false" aria-controls="rside">Bölümler</button><div class="t"><span class="ct">Bataklıktaki Pırlanta</span><small class="cs">Öz</small></div><button type="button" class="rd" title="Sesli oku" aria-pressed="false">▶</button><button type="button" class="aa" title="Yazı boyutu">Aa</button><button type="button" class="nt" title="Gece modu">☾</button>';
+  document.body.appendChild(bar);
+  var side=document.createElement("aside"); side.className="rside"; side.id="rside"; side.setAttribute("aria-label","Bölümler");
+  side.innerHTML='<p class="h">Bölümler</p><ol>'+chapters.map(function(c){return '<li><a href="#'+c.id+'">'+c.title+'<span class="rt">'+c.min+' dk.</span></a></li>';}).join("")+'</ol>';
+  document.body.appendChild(side);
+  var links=$$("a",side);
+  var kap=$(".kap",bar), aa=$(".aa",bar), nt=$(".nt",bar), ct=$(".ct",bar), cs=$(".cs",bar);
+  kap.addEventListener("click",function(){var on=!side.classList.contains("on"); side.classList.toggle("on",on); kap.setAttribute("aria-expanded",on);});
+  links.forEach(function(a){a.addEventListener("click",function(){ if(window.innerWidth<1100){side.classList.remove("on");kap.setAttribute("aria-expanded","false");} });});
+  aa.addEventListener("click",function(){ var s=(st.size||1)%3+1; html.classList.remove("r-size-1","r-size-2","r-size-3"); if(s>1) html.classList.add("r-size-"+s); st.size=s; save(); });
+  nt.addEventListener("click",function(){ st.night=!st.night; html.classList.toggle("night",!!st.night); nt.textContent=st.night?"☀":"☾"; save(); });
+  if(st.night) nt.textContent="☀";
+  // Fortschritt, aktives Kapitel, Leiste ein/aus
+  var cover=$(".cover"); var ticking=false, lastSave=0;
+  function update(){
+    ticking=false;
+    var doc=document.documentElement, max=doc.scrollHeight-window.innerHeight, p=max>0?window.scrollY/max:0;
+    prog.style.transform="scaleX("+p+")";
+    var barOn = cover ? window.scrollY>cover.offsetHeight-40 : window.scrollY>200;
+    bar.classList.toggle("on", barOn); side.classList.toggle("show", barOn);
+    var cur=null; for(var i=0;i<chapters.length;i++){ if(chapters[i].el.getBoundingClientRect().top<=window.innerHeight*0.4) cur=i; }
+    links.forEach(function(a,i){a.classList.toggle("cur",i===cur);});
+    if(cur!==null){ ct.textContent=chapters[cur].title; cs.textContent=(window.innerWidth<700?"":"Bataklıktaki Pırlanta · ")+(cur+1)+" / "+chapters.length; } else { ct.textContent="Bataklıktaki Pırlanta"; cs.textContent="Öz"; }
+    var now=Date.now(); if(now-lastSave>1500){ lastSave=now; st.y=window.scrollY; st.chap=cur; save(); }
+  }
+  window.addEventListener("scroll",function(){ if(!ticking){ticking=true;requestAnimationFrame(update);} },{passive:true});
+  window.addEventListener("resize",update); update();
+  // Weiterlesen
+  if(st.y && st.y>window.innerHeight*1.2 && st.chap!==null && st.chap!==undefined && chapters[st.chap]){
+    var c=document.createElement("div"); c.className="rcont"; c.setAttribute("role","status");
+    c.innerHTML='<span>“'+chapters[st.chap].title+'” bölümünden devam edilsin mi?</span><button type="button" class="go">Devam</button><button type="button" class="x" aria-label="Kapat">✕</button>';
+    document.body.appendChild(c); setTimeout(function(){c.classList.add("on");},600);
+    var y=st.y;
+    $(".go",c).addEventListener("click",function(){ window.scrollTo({top:y,behavior:"smooth"}); c.classList.remove("on"); });
+    $(".x",c).addEventListener("click",function(){ c.classList.remove("on"); });
+    setTimeout(function(){c.classList.remove("on");},12000);
+  }
+
+  // Vorlesen – Web Speech API (kostenlos, läuft im Browser; Stimme je nach Gerät)
+  (function(){
+    var rd=$(".rd",bar); if(!rd) return;
+    if(!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)){ rd.style.display="none"; return; }
+    var LANG="tr", synth=window.speechSynthesis, voice=null, rate=1, playing=false, paused=false, queue=[], qi=0, curEl=null, items=[];
+    var panel=document.createElement("div"); panel.className="rvoice"; panel.setAttribute("role","group"); panel.setAttribute("aria-label","Sesli okuma");
+    panel.innerHTML='<button type="button" class="primary pp">Duraklat</button><button type="button" class="stop">Durdur</button><button type="button" class="spd">1×</button><button type="button" class="x" aria-label="Kapat">✕</button><span class="st"></span>';
+    document.body.appendChild(panel);
+    var pp=$(".pp",panel), stop=$(".stop",panel), spd=$(".spd",panel), st=$(".st",panel);
+    function pickVoice(){
+      var vs=synth.getVoices().filter(function(v){return (v.lang||"").toLowerCase().indexOf(LANG)===0;});
+      if(!vs.length) return null;
+      var score=function(v){var n=v.name.toLowerCase(); return (n.indexOf("natural")>-1?40:0)+(n.indexOf("google")>-1?20:0)+(n.indexOf("microsoft")>-1?10:0)+(v.localService?0:5);};
+      vs.sort(function(a,b){return score(b)-score(a);}); return vs[0];
+    }
+    function collect(){
+      items=[]; $$("main > *").forEach(function(el){
+        if(el.matches("h2, p, .vers, .regel, .dua, .epigraph")) items.push(el);
+        if(el.classList.contains("glossar")) $$("p",el).forEach(function(p){items.push(p);});
+      });
+    }
+    function textOf(el){
+      var c=el.cloneNode(true); $$("sup, .src, .epi-src, .orn, .footnote-backref",c).forEach(function(x){x.remove();});
+      var t=(c.textContent||"").replace(/\s+/g," ").trim();
+      t=t.replace(/\b([IVX]+) · /,"$1. "); return t;
+    }
+    function sentences(t){ var out=[], re=/[^.!?…:;]+[.!?…:;]+["“”»]?\s*|[^.!?…:;]+$/g, m; while((m=re.exec(t))){ if(m[0].trim()) out.push(m[0].trim()); } return out.length?out:[t]; }
+    function mark(el){ if(curEl) curEl.classList.remove("lese"); curEl=el; if(el){ el.classList.add("lese"); var r=el.getBoundingClientRect(); if(r.top<80||r.bottom>window.innerHeight-40) window.scrollTo({top:window.scrollY+r.top-Math.min(160,window.innerHeight*0.25),behavior:"smooth"}); } }
+    function speakNext(){
+      if(!playing) return;
+      if(qi>=queue.length){ // nächstes Element
+        var i=items.indexOf(curEl); var nx=items[i+1]; if(!nx){ end(); st.textContent="Metnin sonu."; return; }
+        start(nx); return;
+      }
+      var u=new SpeechSynthesisUtterance(queue[qi++]); u.lang=LANG==="tr"?"tr-TR":"de-DE"; if(voice) u.voice=voice; u.rate=rate; u.pitch=1;
+      u.onend=function(){ if(playing&&!paused) speakNext(); };
+      u.onerror=function(e){ if(e.error==="interrupted"||e.error==="canceled") return; st.textContent=voice?"Ses kesildi – lütfen ▶ düğmesine yeniden dokunun.":"Bu cihazda sesli okuma için bir ses bulunamadı."; end(); };
+      synth.speak(u);
+    }
+    function start(el){
+      if(!el) return; playing=true; paused=false; mark(el); queue=sentences(textOf(el)); qi=0;
+      rd.setAttribute("aria-pressed","true"); rd.textContent="❚❚"; pp.textContent="Duraklat"; panel.classList.add("on");
+      var n=items.indexOf(el); var h=null; for(var i=n;i>=0;i--){ if(items[i].tagName==="H2"){h=items[i];break;} }
+      st.textContent=(voice?voice.name.replace(/ \(.*$/,"")+" · ":"")+(h?textOf(h):"");
+      synth.cancel(); setTimeout(speakNext,60);
+    }
+    function end(){ playing=false; paused=false; synth.cancel(); mark(null); rd.setAttribute("aria-pressed","false"); rd.textContent="▶"; }
+    function currentStart(){ // ab dem Absatz, der oben im Bild steht
+      for(var i=0;i<items.length;i++){ var r=items[i].getBoundingClientRect(); if(r.bottom>90 && r.top<window.innerHeight*0.6) return items[i]; }
+      for(var j=0;j<items.length;j++){ if(items[j].getBoundingClientRect().top>60) return items[j]; }
+      return items[0];
+    }
+    rd.addEventListener("click",function(){
+      voice=voice||pickVoice(); collect();
+      if(playing){ if(paused){ synth.resume(); paused=false; pp.textContent="Duraklat"; } else { end(); } return; }
+      if(!voice){ st.textContent="Bu cihazda Türkçe ses bulunamadı."; panel.classList.add("on"); }
+      start(currentStart());
+    });
+    pp.addEventListener("click",function(){ if(!playing) return; if(paused){ synth.resume(); paused=false; pp.textContent="Duraklat"; } else { synth.pause(); paused=true; pp.textContent="Devam"; } });
+    stop.addEventListener("click",function(){ end(); panel.classList.remove("on"); });
+    $(".x",panel).addEventListener("click",function(){ end(); panel.classList.remove("on"); });
+    spd.addEventListener("click",function(){ rate=rate===1?1.15:rate===1.15?0.9:1; spd.textContent=(rate===1?"1":rate===1.15?"1,15":"0,9")+"×"; if(playing&&!paused){ var el=curEl, k=qi-1; synth.cancel(); queue=sentences(textOf(el)); qi=Math.max(0,k); setTimeout(speakNext,80); } });
+    // Antippen eines Absatzes während des Vorlesens: dort weiterlesen
+    document.addEventListener("click",function(e){ if(!playing) return; var el=e.target.closest("main p, main .vers, main .regel, main .dua, main h2"); if(el && items.indexOf(el)>-1 && el!==curEl){ start(el); } });
+    if(synth.onvoiceschanged!==undefined){ synth.addEventListener("voiceschanged",function(){ if(!voice) voice=pickVoice(); }); }
+    window.addEventListener("pagehide",function(){ synth.cancel(); });
+  })();
+  // Tastatur: Pfeile springen zwischen Kapiteln
+  window.addEventListener("keydown",function(e){ if(e.altKey||e.ctrlKey||e.metaKey) return; if(e.key==="ArrowRight"||e.key==="ArrowLeft"){ var cur=-1; for(var i=0;i<chapters.length;i++){ if(chapters[i].el.getBoundingClientRect().top<=window.innerHeight*0.4) cur=i; } var n=e.key==="ArrowRight"?cur+1:cur-1; if(chapters[n]){ e.preventDefault(); chapters[n].el.scrollIntoView({behavior:"smooth",block:"start"}); } } });
+})();</script>
+</body>
+</html>
