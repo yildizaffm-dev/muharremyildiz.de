@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="description" content="The Diamond in the Swamp – The Essence. A philosophical essay on worth, presence and return.">
+<meta property="og:title" content="The Diamond in the Swamp – The Essence">
+<meta property="og:description" content="A philosophical essay on worth, presence and return.">
+<meta property="og:type" content="article">
+<title>The Diamond in the Swamp – The Essence</title>
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Noto Naskh Arabic";font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/noto-naskh-arabic-400.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:200 900;font-display:swap;src:url("../assets/fonts/source-serif-4-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:200 900;font-display:swap;src:url("../assets/fonts/source-serif-4-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Source Serif 4";font-style:italic;font-weight:200 900;font-display:swap;src:url("../assets/fonts/source-serif-4-latin-italic.woff2") format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("../assets/fonts/inter-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("../assets/fonts/inter-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+</style>
+<style>/* Eine Buchseite, die sich bewegt: Papier mit feinem Muster, schwarze Schrift, eine Spalte – jedes Kapitel mit eigener Bühne */
+:root {
+  --paper: #F5F3EE;
+  --stage: #ECE6D8;
+  --lattice: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g fill='none' stroke='%23000000' stroke-opacity='0.17' stroke-width='0.8'><path d='M0 0H64M0 64H64M0 0V64M64 0V64'/><rect x='18' y='18' width='28' height='28'/><rect x='18' y='18' width='28' height='28' transform='rotate(45 32 32)'/><path d='M0 0L18 18M64 0L46 18M0 64L18 46M64 64L46 46'/><circle cx='32' cy='32' r='3'/></g></svg>");
+}
+html { background:var(--paper); }
+body { background:var(--paper); background-image:var(--lattice); background-size:56px 56px; color:#000000; margin:0; padding-block:0 48px; padding-inline:16px;
+  font-family:"Source Serif 4","Charter",Georgia,serif; font-size:17.5px; line-height:1.62; overflow-x:hidden; }
+/* das Muster bleibt im Hintergrund leise: eine Schicht Papier darüber */
+body::before { content:""; position:fixed; inset:0; background:rgba(245,243,238,.70); pointer-events:none; z-index:0; }
+.wrap { position:relative; z-index:1; max-width:640px; margin:0 auto; }
+
+/* Titel */
+.cover { position:relative; text-align:center; padding-block:64px 44px; border-bottom:1px solid #000; overflow:hidden; margin:0 -16px; }
+.cover canvas { position:absolute; inset:0; width:100%; height:100%; display:block; pointer-events:none; }
+.cover-inner { position:relative; z-index:1; padding-inline:16px; animation: rise 1.4s ease-out both; }
+.cover .author { font-family:"Inter","Helvetica Neue",Arial,sans-serif; font-size:12px; letter-spacing:.3em; text-transform:uppercase; margin:0 0 28px; color:#000; }
+.cover h1 { font-family:"Source Serif 4","Charter",Georgia,serif; font-weight:400; font-size:clamp(40px,9.5vw,60px); line-height:1.04; margin:0 0 18px; text-wrap:balance; color:#000; }
+.cover .sub { font-style:italic; font-size:19px; line-height:1.4; margin:0 auto 26px; max-width:30ch; color:#000; }
+.cover .hint { font-family:"Inter",Arial,sans-serif; font-size:12.5px; line-height:1.5; color:#000; margin:0 auto; max-width:34ch; opacity:.75; }
+
+/* Inhalt */
+.toc { padding-block:26px 10px; border-bottom:1px solid #000; }
+.toc p.t { font-family:"Inter",Arial,sans-serif; font-size:11px; letter-spacing:.3em; text-transform:uppercase; text-align:center; margin:0 0 14px; }
+.toc ol { list-style:none; padding:0; margin:0; columns:2; column-gap:24px; }
+.toc li { margin:0 0 6px; break-inside:avoid; }
+.toc a { color:#000; text-decoration:none; border-bottom:1px solid #000; }
+
+/* Text */
+h2 { font-family:"Source Serif 4","Charter",Georgia,serif; font-weight:400; font-style:italic; font-size:30px; text-align:center; margin:72px 0 22px; line-height:1.2; text-wrap:balance; scroll-margin-top:72px; }
+h2::after { content:""; display:block; width:0; height:1px; background:#000; margin:14px auto 0; transition:width 1.4s ease; }
+h2.in::after { width:56px; }
+p { margin:0; text-indent:1.4em; }
+h2 + p, .stage + p, .epigraph + p, .vers + p, .regel + p, .dua + p, .footnote p, .glossar p, .cover p, .toc p, .credits, .foot { text-indent:0; }
+.epigraph { text-align:center; font-style:italic; margin:0 auto 28px; max-width:34ch; }
+.epi-src { font-style:normal; font-variant:small-caps; letter-spacing:.08em; font-size:14px; display:block; margin-top:4px; }
+.vers { margin:24px 8px 24px 24px; padding-left:16px; border-left:1px solid #000; font-style:italic; font-size:16.5px; line-height:1.55; }
+.vers .src { display:block; font-style:normal; font-variant:small-caps; letter-spacing:.06em; font-size:13.5px; text-align:right; margin-top:6px; }
+.regel { margin:32px 0; padding:18px 20px; border:1px solid #000; font-weight:700; font-size:18px; line-height:1.5; background:#FFE08A; color:#000; }
+.dua { margin:48px 0 40px; padding:26px 16px 24px; text-align:center; font-style:italic; border-top:1px solid #000; border-bottom:3px double #000; }
+.dua .ek { margin-bottom:18px; }
+.dua p { text-indent:0; margin:0 0 15px; line-height:1.55; font-size:1.06em; text-wrap:balance; }
+.dua p:last-of-type { margin-bottom:0; }
+.dua .orn { display:block; font-style:normal; font-size:13px; letter-spacing:.4em; margin-top:18px; opacity:.65; }
+.schluss { text-indent:0; text-align:center; margin-top:28px; font-style:italic; }
+.ek { display:block; font-family:"Inter",Arial,sans-serif; font-weight:500; font-size:11px; letter-spacing:.25em; text-transform:uppercase; margin-bottom:10px; font-style:normal; }
+.glossar p { margin:0 0 12px; padding-left:14px; border-left:2px solid transparent; font-size:16px; line-height:1.5; transition:border-color 1.2s ease; }
+.glossar p.in { border-left-color:#000; }
+.glossar i { font-style:italic; }
+sup { font-size:11px; line-height:0; }
+sup a { color:#000; text-decoration:none; }
+.footnote { font-size:14px; line-height:1.45; margin-top:8px; }
+.footnote ol { padding-left:1.6em; margin:0; } .footnote li { margin-bottom:6px; } .footnote p { display:inline; }
+em { font-style:italic; }
+.credits { font-family:"Inter",Arial,sans-serif; font-size:11.5px; line-height:1.5; color:#000; opacity:.7; margin-top:48px; text-align:center; }
+.foot { text-align:center; font-family:"Inter",Arial,sans-serif; font-size:12px; letter-spacing:.2em; text-transform:uppercase; margin-top:18px; padding-top:20px; border-top:1px solid #000; }
+
+/* Bühnen: helles Muster statt dunkler Fläche */
+.stage { position:relative; height:min(58vh,520px); min-height:300px; margin:0 -16px 34px; overflow:hidden;
+  background:var(--stage); background-image:var(--lattice); background-size:56px 56px; border-top:1px solid rgba(0,0,0,.35); border-bottom:1px solid rgba(0,0,0,.35); }
+.stage::before { content:""; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 40%, rgba(255,255,255,.55), rgba(236,230,216,.55) 60%, rgba(0,0,0,.05) 100%); pointer-events:none; }
+.stage canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+.stage .bg { position:absolute; inset:-6%; width:112%; height:112%; object-fit:cover; display:block; animation:kb 48s ease-in-out infinite alternate; }
+.stage-photo::before { display:none; }
+.stage .veil { position:absolute; inset:0; background:rgba(8,9,12,.42); }
+.stage[data-scene="bedeckung"] .veil { background:rgba(40,36,30,.55); }
+.stage[data-scene="biene"] .veil { background:rgba(20,16,8,.35); }
+
+/* Bewegung */
+@keyframes kb { from { transform:scale(1) translate(0,0); } to { transform:scale(1.08) translate(-1.5%,1%); } }
+@keyframes rise { from { opacity:.15; transform:translateY(14px); } to { opacity:1; transform:none; } }
+main h2.in, main .vers.in, main .regel.in, main .dua.in { animation:rise .9s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .stage .bg, .cover-inner, main h2.in, main .vers.in, main .regel.in, main .dua.in { animation:none; } h2::after { transition:none; } }
+@media (max-width:480px) { .toc ol { columns:1; } .cover { padding-block:52px 36px; } body { font-size:17px; } .stage { height:min(52vh,440px); } }
+</style>
+<style>/* Lesemodus: Fortschritt, Leseleiste, Kapitelliste, Schriftgröße, Nacht */
+:root{--ink:#000;--chrome:rgba(245,243,238,.86);--line:rgba(0,0,0,.14);--gold:#C7A15A;--gold-deep:#765A26}
+html.r-size-2 body{font-size:19.5px;line-height:1.66} html.r-size-3 body{font-size:21.5px;line-height:1.7}
+html.r-size-2 .wrap,html.r-size-3 .wrap{max-width:700px}
+.rprog{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:left;transform:scaleX(0);background:var(--gold);z-index:60;pointer-events:none}
+.rbar{position:fixed;left:0;right:0;top:0;height:56px;display:flex;align-items:center;gap:12px;padding:0 14px;background:var(--chrome);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);z-index:50;font-family:"Inter",Arial,sans-serif;font-size:13px;transform:translateY(-100%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.rbar.on{transform:none}
+.rbar .t{font-family:"Source Serif 4",Georgia,serif;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.rbar .t small{display:block;font-family:"Inter",Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-top:2px}
+.rbar button{font:inherit;font-size:13px;background:none;border:1px solid var(--line);color:inherit;border-radius:999px;padding:7px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;line-height:1}
+.rbar button:hover,.rbar button[aria-expanded="true"]{background:rgba(0,0,0,.06)}
+.rbar button:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+.rbar .aa{font-family:"Source Serif 4",Georgia,serif;font-size:14px}
+.rbar .rd{min-width:38px;justify-content:center} .rbar .rd[aria-pressed="true"]{background:#000;color:#F5F3EE;border-color:#000}
+html.night .rbar .rd[aria-pressed="true"]{background:#EFE9DC;color:#1c1a16;border-color:#EFE9DC}
+.rvoice{position:fixed;right:14px;top:66px;z-index:56;background:var(--chrome);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 0 0 1px var(--line),0 10px 30px rgba(0,0,0,.12);border-radius:14px;padding:12px 14px;font-family:"Inter",Arial,sans-serif;font-size:13px;display:none;gap:8px;align-items:center;flex-wrap:wrap;max-width:min(92vw,420px)}
+.rvoice.on{display:flex}
+.rvoice button{font:inherit;font-size:13px;background:none;border:1px solid var(--line);color:inherit;border-radius:999px;padding:6px 11px;cursor:pointer}
+.rvoice button.primary{background:#000;color:#F5F3EE;border-color:#000} html.night .rvoice button.primary{background:#EFE9DC;color:#1c1a16;border-color:#EFE9DC}
+.rvoice .st{flex-basis:100%;opacity:.7;font-size:12px}
+main p.lese,main .vers.lese,main .regel.lese,main .dua.lese,main .epigraph.lese{background:rgba(199,161,90,.22);box-shadow:0 0 0 8px rgba(199,161,90,.22);border-radius:3px;transition:background .3s,box-shadow .3s}
+.rside{position:fixed;left:0;top:56px;bottom:0;width:min(86vw,320px);overflow:auto;background:var(--chrome);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:1px 0 0 var(--line);z-index:49;padding:22px 20px 40px;transform:translateX(-102%);transition:transform .4s cubic-bezier(.2,.7,.2,1);font-family:"Inter",Arial,sans-serif;font-size:14px}
+.rside.on{transform:none}
+.rside p.h{font-size:11px;letter-spacing:.3em;text-transform:uppercase;margin:0 0 12px;opacity:.6}
+.rside ol{list-style:none;padding:0;margin:0}
+.rside li{margin:0}
+.rside a{display:block;padding:9px 10px;border-left:2px solid transparent;text-decoration:none;color:inherit;line-height:1.35;border-radius:0 6px 6px 0}
+.rside a:hover{background:rgba(0,0,0,.05)} .rside a.cur{border-left-color:var(--gold);background:rgba(199,161,90,.12)}
+.rside .rt{display:block;font-size:11px;opacity:.55;margin-top:2px}
+.rcont{position:fixed;left:50%;bottom:18px;transform:translate(-50%,120%);background:#000;color:#F5F3EE;font-family:"Inter",Arial,sans-serif;font-size:13px;padding:11px 16px;border-radius:999px;z-index:55;display:flex;gap:14px;align-items:center;transition:transform .45s cubic-bezier(.2,.7,.2,1);max-width:92vw}
+.rcont.on{transform:translate(-50%,0)}
+.rcont button{font:inherit;background:#F5F3EE;color:#000;border:0;border-radius:999px;padding:6px 12px;cursor:pointer}
+.rcont .x{background:none;color:#F5F3EE;padding:6px 4px;opacity:.7}
+@media (min-width:1100px){
+  .rside{transform:none;box-shadow:none;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;width:250px;left:max(16px,calc(50% - 350px - 290px));top:96px;padding:0 10px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .6s ease;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.22) transparent}
+  .rside.show{opacity:1;pointer-events:auto}
+  .rside a{padding:6px 10px} .rside .rt{display:inline;margin-left:6px}
+  .rside.hide-desk{display:none}
+  .rbar .kap{display:none}
+  body{font-size:19px;line-height:1.66}
+  .wrap{max-width:680px;margin-left:max(312px,calc(50% - 340px));margin-right:auto}
+  html.r-size-2 .wrap,html.r-size-3 .wrap{max-width:700px;margin-left:max(312px,calc(50% - 350px))}
+}
+/* Nacht */
+html.night{--chrome:rgba(28,26,22,.88);--line:rgba(255,255,255,.14)}
+html.night body{background:#1c1a16;color:#EFE9DC} html.night{background:#1c1a16}
+html.night body::before{background:rgba(28,26,22,.78)}
+html.night .cover h1,html.night .cover .sub,html.night .cover .author,html.night .cover .hint,html.night .toc a,html.night sup a,html.night .credits,html.night .foot,html.night h2{color:#EFE9DC}
+html.night .toc a,html.night .cover,html.night .toc,html.night .foot,html.night .vers,html.night .dua,html.night .regel{border-color:rgba(239,233,220,.55)}
+html.night h2::after,html.night .glossar p.in{background:#EFE9DC;border-left-color:#EFE9DC}
+html.night .regel{background:#3a3120;color:#EFE9DC}
+html.night .stage{filter:brightness(.62) saturate(.9)}
+html.night .rcont{background:#EFE9DC;color:#1c1a16} html.night .rcont button{background:#1c1a16;color:#EFE9DC} html.night .rcont .x{background:none;color:#1c1a16}
+@media (prefers-reduced-motion:reduce){.rbar,.rside,.rcont{transition:none}}
+</style>
+<style>/* English edition: Arabic verse line above the translation */
+.epigraph .ar,.vers .ar{display:block;font-family:"Noto Naskh Arabic",serif;font-style:normal;font-size:1.18em;line-height:2.1;direction:rtl;text-align:center;margin-bottom:.4em}
+.vers .ar{text-align:right}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="cover stage" data-scene="cover">
+  <canvas></canvas>
+  <div class="cover-inner">
+    <p class="author">Muharrem Yıldız</p>
+    <h1>The Diamond<br>in the Swamp</h1>
+    <p class="sub">The Essence.<br>A philosophical essay<br>on worth, presence and return</p>
+    <p class="hint">Made for reading on a phone. Every chapter has its own moving picture; read on slowly. If you like, you can have it read aloud: ▶ in the bar.</p>
+  </div>
+</header>
+<nav class="toc"><p class="t">Eleven Steps</p><ol><li><a href="#i-die-ruecksetzung">I · Reset</a></li><li><a href="#ii-der-diamant">II · The Diamond</a></li><li><a href="#iii-der-lichtort">III · The Place of Light</a></li><li><a href="#iv-die-bedeckung">IV · The Covering</a></li><li><a href="#v-die-fassung">V · The Setting</a></li><li><a href="#vi-die-verkippung">VI · The Tilt</a></li><li><a href="#vii-die-widmung">VII · The Dedication</a></li><li><a href="#viii-der-sog-und-das-herausgebrachtwerden">VIII · The Pull and Being Brought Out</a></li><li><a href="#ix-das-leichtgemachtsein">IX · Being Made Easy</a></li><li><a href="#x-der-anker">X · The Anchor</a></li><li><a href="#xi-die-rueckkehr">XI · The Return</a></li><li><a href="#die-begriffe">The Terms</a></li></ol></nav>
+<main>
+<h2 id="i-die-ruecksetzung">I · Reset</h2>
+<figure class="stage" data-scene="rueck"><canvas></canvas></figure>
+
+<p class="epigraph"><span class="ar" lang="ar" dir="rtl">لَا تَبْدِيلَ لِخَلْقِ ٱللَّهِ</span>“No change should there be in the creation of Allāh.”<br><span class="epi-src">Ar-Rum 30:30</span></p>
+
+<p>There is an hour when the house stops making sounds and you begin to hear your own. In such an hour a sentence came to me, in the language that was there before all the others: <em>I want to go back to my factory settings.</em></p>
+<p>The sentence belongs to devices. You press it when nothing works anymore, and it promises that everything will be as it was in the beginning. Psychology knows this promise well; it calls it the <em>fresh-start effect</em>. At thresholds (a Monday, the first of the month, a birthday) people believe they can begin a new life, because the threshold seems to leave the old self behind.<sup id="fnref:dai"><a class="footnote-ref" href="#fn:dai">1</a></sup> The effect is measurable, and it is brief. Anyone who seriously wants to apply the sentence to themselves has to test it first, and the test explains why the effect is so brief. It yields two things. First: a device that is reset loses everything that was added after it was shipped. A person cannot do that; memory cannot be erased, only overwritten, and what we have become remains part of what we are. Second: what is left after the reset was decided not by the owner but by the maker. So the question is not whether I want to go back. The question is who made me.</p>
+<p>The answer took two words, and they came the way your hand finds the handle of your own door in the dark: the fitrah, and the One who set it, Allah, the Mighty and Majestic.</p>
+<p>With that, the <em>reset</em> was refuted before it had begun. For I do not remember my factory settings. I was not there when they were set; I know the device only as it is today, with everything that has been added since. What I know of the original setting, I know from the manual of the One who set it. That is less than a memory and at the same time more, because a memory can deceive and a manual from the maker's own hand cannot. And the manual says that the setting was never overwritten: what gets overwritten is what was added, not what lies underneath. <em>No change should there be in the creation of Allāh.</em> What was never overwritten does not need to be reset; it only needs to be reached again.</p>
+<p>So the first word of the night became the last: not reset (<span lang="de">Rücksetzung</span>), but <em>return</em> (<span lang="de">Rückkehr</span>). The tradition has a word that means exactly this, tawbah (literally, “to return”), and the path of this essay leads from the one word to the other.</p>
+<h2 id="ii-der-diamant">II · The Diamond</h2>
+<figure class="stage stage-photo" data-scene="diamant"><img class="bg" src="img/diamant.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>What came next was not a reflection on feelings but on an object. <em>It is a diamond lying in the swamp and not in the present—not in the place where it should be, not in the time and not in the situation. It loses nothing of its worth.</em></p>
+<p>That last sentence is not a consolation. It is a premise, and everything that follows stands on it. I call it the <em>givenness of worth</em> (<span lang="de">Wertgegebenheit</span>): the diamond's worth is not acquired, not earned, not ascribed. It is given, which means it comes from a Giver. The tradition calls the gift fitrah, the disposition upon which every human being is created. The exegete as-Sa'di (rh) understands it as the love of truth that Allah, the Mighty and Majestic, has placed in every heart; whoever departs from it does so only because of a cause that was <em>added</em>.<sup id="fnref:fitra"><a class="footnote-ref" href="#fn:fitra">2</a></sup> Added: that is the swamp in a single word. The Prophet ﷺ said it in an image that the diamond only repeats: every newborn is born upon the fitrah, just as an animal comes into the world unblemished: “Do you see a cropped ear on it?”<sup id="fnref:fitra-hadith"><a class="footnote-ref" href="#fn:fitra-hadith">3</a></sup> The animal is born whole; it takes someone else to cut off its ear.</p>
+<p>In the Light Verse, as-Sa'di reads the oil of the lamp, the oil that would almost glow even if untouched by fire, as the fitrah itself: pure, ready, almost light of its own accord.<sup id="fnref:oel"><a class="footnote-ref" href="#fn:oel">4</a></sup> My diamond and his oil are one statement in two materials. The substance is capable of shining from the beginning, yet it does not shine of itself; it needs a touch from outside.</p>
+<p>For this gap, philosophy has had two words for two thousand years: potentiality and actuality. A seed is potentially a tree and actually a seed. The diamond in the swamp is potentiality in its purest form: its capacity to throw back light is fully present and at the same time not realized in the slightest. Psychology has measured the same gap with two other words, and it is worth keeping them apart: <em>self-worth</em> is the question of what I am; <em>self-efficacy</em> is the question of what I can bring about.<sup id="fnref:bandura"><a class="footnote-ref" href="#fn:bandura">5</a></sup> The diamond in the swamp has the first undiminished and the second at zero. Anyone who confuses the two concludes from the missing effect that the worth is missing, and starts working on the diamond. That is the first error of the swamp, and research calls it <em>contingent self-worth</em>: worth that is hung on achievement, looks or approval wavers with every condition and forces whoever carries it to serve the conditions instead of living.<sup id="fnref:crocker"><a class="footnote-ref" href="#fn:crocker">6</a></sup> Carl Rogers described its counterpart, <em>unconditional positive regard</em>, and counted it among the conditions of all healing, except that for him it has to come from another human being, who may give it or may not.<sup id="fnref:rogers"><a class="footnote-ref" href="#fn:rogers">7</a></sup> The givenness of worth is unconditional positive regard from the One who does not waver. And the given worth, as Surah ash-Shams says, has a form before it does anything at all: there Allah, the Mighty and Majestic, swears by the soul “and He who proportioned it.”</p>
+<p>From the givenness of worth follows something I call the <em>debt of light</em> (<span lang="de">Lichtschuld</span>). A worth that is given is a worth that is owed: owed not in the sense of repayment but in the sense of direction. Anyone who has received something they did not make themselves has an address to which their effect is sent. From worth follows meaning, from meaning responsibility, from responsibility radiance, from radiance beauty; each link carries the next. The chain begins with the Giver, and it ends with Him.</p>
+<h2 id="iii-der-lichtort">III · The Place of Light</h2>
+<figure class="stage stage-photo" data-scene="lichtort"><img class="bg" src="img/lichtort.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>A diamond does its work when light falls into it, and light falls into it only where it is. So the three coordinates I had used to describe its position (place, time, situation) tell us more than where it lies. They tell us what it is made for. The present is not a place where the diamond would receive something in addition. It is the <em>place of light</em> (<span lang="de">Lichtort</span>): the one place where potentiality becomes actuality.</p>
+<p>Psychology has measured the place of light under a sober name: <em>attention</em>. A person is where their attention is. Two researchers asked thousands of people, at random moments, where they were just then. Almost half the time their minds were not on what they were doing, and in that half they were unhappier than in the other, no matter what they were busy with.<sup id="fnref:killingsworth"><a class="footnote-ref" href="#fn:killingsworth">8</a></sup> Mind-wandering is not a fault of the mind; it is its resting state. But a diamond whose light is elsewhere lies in the dark, even while the sun is shining.</p>
+<p>Heidegger called the human being “thrown”: into a world and a time, without having been asked. The image is true, and I used it myself in that hour: <em>so the diamond was thrown into space, thrown into a place, wrapped in time.</em> But in Heidegger there is no thrower, and that is why his fundamental attunement is anxiety. My sentence went on: <em>thrown to where the light falls in.</em> The throw had a direction. I call this <em>aimedness</em> (<span lang="de">Gezieltheit</span>): a human being is thrown, yes, but he is also aimed at a place, at a time, into a situation in which light can fall on him. Where thrownness (<span lang="de">Geworfenheit</span>) produces anxiety, aimedness produces a question: What has Allah, the Mighty and Majestic, aimed me here for?</p>
+<p>The question has an order, and it is older than any philosophy. <em>It must be done, it should be done, it could be done.</em> Islamic jurisprudence distinguishes five grades of action, and they do not say what is good in general but what is more valuable <em>now</em>. I call this category <em>the more valuable</em> (<span lang="de">das Wertvollere</span>). It is the whole ethics of the place of light in a single word: in every situation something is more valuable, and neither cancels the other. Behavior therapy in recent decades has rediscovered the same thought under the name <em>values clarification</em>: not goals that you reach and check off, but directions in which every hour allows a decision. At the time of prayer the prayer is more valuable, not because it is more urgent but because it has a time and the other thing does not: “Indeed, prayer has been decreed upon the believers a decree of specified times” (Surah an-Nisa, verse 103). In an emergency the emergency is more valuable, because a life cannot be put off; the Prophet ﷺ himself, on the Day of the Trench, postponed the prayer and made it up later.<sup id="fnref:graben"><a class="footnote-ref" href="#fn:graben">9</a></sup> So merciful is the One who made the order. Presence is not a mood that you produce. It is the answer to a question that can be answered in every hour: What is more valuable now?</p>
+<h2 id="iv-die-bedeckung">IV · The Covering</h2>
+<figure class="stage stage-photo" data-scene="bedeckung"><img class="bg" src="img/bedeckung.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>Then the swamp. I approached it in three steps, and with each step it grew smaller. <em>The swamp is entropy</em>: a law of nature that no one can do anything about. <em>Put more precisely, the swamp is the world</em>: narrower already, but still everything. <em>Put more precisely still, the swamp is not what underlies the diamond but the actions that make it unreachable and invisible.</em> Actions, then—and actions, unlike laws of nature, can be changed.</p>
+<p>That is why I call the swamp not corruption but <em>covering</em> (<span lang="de">Bedeckung</span>). The word is not mine. It is in the Noble Qur'an, in the passage that speaks of the opposite of purification:</p>
+<div class="vers"><span class="ar" lang="ar" dir="rtl">قَدْ أَفْلَحَ مَن زَكَّىٰهَا ۝ وَقَدْ خَابَ مَن دَسَّىٰهَا</span>He has succeeded who purifies it, and he has failed who instills it [with corruption].<span class="src">Ash-Shams 91:9–10</span></div>
+
+<p>What the translation renders as “instills it [with corruption],” as-Sa'di explains as <em>covering</em>: the soul, which did not deserve to be soiled, is covered over with conduct and deeds until its beauty is veiled.<sup id="fnref:dassa"><a class="footnote-ref" href="#fn:dassa">10</a></sup> Covered, then, not destroyed. The soul loses nothing of its worth when it is covered; what it loses is its visibility. And the Prophet ﷺ described the process in the language of metal: when the servant commits a wrong, a black spot is placed on his heart; if he stops, asks forgiveness and turns back, his heart is polished; if he falls back into it, the spot grows until it spreads over the whole heart.<sup id="fnref:rost"><a class="footnote-ref" href="#fn:rost">11</a></sup> The covering is not an event but an accumulation, spot by spot, and its remedy is as small as the spots.</p>
+<p>The psychology of habit describes these spots with a precision of its own. Whatever has been done often enough in the same place in response to the same <em>cue</em> comes loose from intention and runs by itself: reaching for the phone, walking to the fridge, putting things off.<sup id="fnref:wood"><a class="footnote-ref" href="#fn:wood">12</a></sup> A habit is a spot that places itself. And putting things off, which feels like laziness, turns out in the research to be something else: an attempt to get rid of an unpleasant feeling now, at the expense of the person one will be tomorrow.<sup id="fnref:sirois"><a class="footnote-ref" href="#fn:sirois">13</a></sup> Behavior therapy calls this movement <em>experiential avoidance</em>: dodging what one would have to feel inside by turning to what is easier outside. The tradition has an older name for it, one that means the same and more: ghaflah, heedlessness.</p>
+<p>The teachers of the heart (rh) named the layers, and naming them is the first polish: pride, which takes itself for the diamond and reserves the swamp for others; envy, which stares at other people's diamonds until it can no longer see its own; acting for an audience; anger, which churns up the ground; love of the world, which takes the swamp for solid ground; and heedlessness, the thickest layer, because it does not feel like a layer at all but like life itself.</p>
+<p>The covering has a momentum of its own, and here science helps us recognize it. What psychology calls <em>rumination</em>, circling around one's own state and its causes, intensifies low mood, paralyzes action and deepens the very swamp in which it takes place.<sup id="fnref:rumination"><a class="footnote-ref" href="#fn:rumination">14</a></sup> Whoever thinks about the swamp from inside the swamp keeps the swamp alive. The Qur'an gives this same momentum the name of the soul that enjoins evil, “except those upon which my Lord has mercy” (Surah Yusuf, verse 53). Both say the same thing: the covering cannot be stopped by a counterforce, only by something that comes from elsewhere.</p>
+<p>And Sartre is right here too: not choosing is also a choice. <em>Saying nothing is also a way; not acting is also a way.</em> The diamond that stays where it lies has made its decision. This is the hardest side of the covering, and at the same time its hope. For the covering is made of actions, and staying put is one of them; what was covered by doing is uncovered by doing. And the doing, as we will see, may be as small as a hand's span.</p>
+<h2 id="v-die-fassung">V · The Setting</h2>
+<figure class="stage" data-scene="fassung"><canvas></canvas></figure>
+
+<p>When you buy a diamond, you buy a setting (<span lang="de">Fassung</span>) along with it. No one would think of owning a diamond without one. Three settings were there to choose from in that hour, and all three were honorable. In a ring the diamond is an ornament for a hand; in a drill bit, a tool for an owner; in a safe, property, security, belongings. In all three it exists for someone. <em>None of them lets it unfold from within itself.</em></p>
+<p>I call this mode of being <em>being-for-someone</em> (<span lang="de">Fürjemandsein</span>). It is not evil. The whole world is made of settings, and no one lives outside them. But being-for-someone has a price, and psychology has measured it: across a hundred and twenty-eight experiments, an expected reward (praise, usefulness, security) weakened the inner source of action.<sup id="fnref:deci"><a class="footnote-ref" href="#fn:deci">15</a></sup> The <em>self-determination theory</em> that grew out of these experiments has since distinguished between <em>extrinsic</em> motivation, which comes from the setting, and <em>intrinsic</em> motivation, which comes from the stone itself. It also shows that the first crowds out the second if you keep paying it long enough. Whoever shines for the setting loses the source. In the study of the soul, the three settings have names older than mine. The ring is what C. G. Jung called the <em>persona</em>: the mask that fits so well one takes it for the face. The drill bit is Alfred Adler's <em>compensation</em>: a usefulness that springs not from fullness but from the feeling that one would otherwise be too small. The safe is Erich Fromm's <em>having</em>: the way of treating everything (things, knowledge, even faith) as a possession instead of as life that is lived.</p>
+<p>Against being-for-someone stands <em>being-from-itself</em> (<span lang="de">Aussichheraussein</span>), and Kant described it long before I had the word. The beautiful, he said, is what pleases without our having any purpose in mind: purposiveness without purpose. A flower is not beautiful because it is good for something. The diamond that acts from within itself exists for nothing, and that is where its beauty lies. Here the contradiction left open that night is resolved. How can the diamond exist for nothing and still have a greater purpose? Because the greater purpose lies not in being useful but in being seen. The Prophet ﷺ said: “Allah is beautiful and loves beauty.”<sup id="fnref:jamil"><a class="footnote-ref" href="#fn:jamil">16</a></sup> And: “Allah does not look at your forms or your wealth, but at your hearts and your deeds.”<sup id="fnref:herzen"><a class="footnote-ref" href="#fn:herzen">17</a></sup> Not at the setting, then, but at the diamond.</p>
+<p>The tradition has a word for the false setting, riya' (doing deeds in order to be seen by people), and a narration I do not wish to soften. The first three to be judged on the Last Day are a fighter, a scholar and a generous man, and each of them is told: You did it so that people would say “a brave man,” “a scholar,” “a generous man,” and it has been said.<sup id="fnref:drei"><a class="footnote-ref" href="#fn:drei">18</a></sup> The deeds were good; the setting was wrong. There is only one setting that is no setting at all: for the sake of the pleasure of Allah, the Mighty and Majestic. It does not hold the diamond ready for someone; it places it before someone. For someone means being used. Before someone means being seen. The responsibility of a diamond without a setting is tiny and sharply defined: to be clean and to be turned toward the light. It does not have to shine by itself, produce light or bring in onlookers.</p>
+<h2 id="vi-die-verkippung">VI · The Tilt</h2>
+<figure class="stage" data-scene="verkippung"><canvas></canvas></figure>
+
+<p>Two verbs, and both are needed: to wash and to align. A diamond that has been washed but lies tilted lets the light escape downward and looks dark, though it is flawless. A diamond that lies the right way but is dirty reflects nothing back. <em>To become visible, it must be both washed and aligned.</em> The covering is one problem and the <em>tilt</em> (<span lang="de">Verkippung</span>) is the other. The tilt is harder to recognize, because a tilted diamond looks dark from above and shines downward. Its light is not gone; it simply comes out where there is no eye to see it. This is what Jung called the <em>shadow</em>: not a lack of light, but light at the wrong exit, the unlived, which is not missing but only lies turned away.</p>
+<p>From the two verbs came the question on which the thinkers foundered: who washes, and who aligns? Some said everything is compulsion; others, that man creates his own deeds. Each side held its view a hundred percent, and both foundered. Psychology has found the same dispute inside every single person and named it <em>locus of control</em>: whether people believe their life depends on them or on what happens to them.<sup id="fnref:rotter"><a class="footnote-ref" href="#fn:rotter">19</a></sup> And it has shown what happens at either end. At one end lies <em>learned helplessness</em>: the animal that, after enough inescapable shocks, stays down even when the door stands open.<sup id="fnref:seligman"><a class="footnote-ref" href="#fn:seligman">20</a></sup> That is the diamond that takes itself for mud. At the other end lies omnipotence, which wants to carry everything by itself and breaks under the weight: the diamond that wants to shine by itself. My answer was the only one I had in that hour, and it has proved to be the oldest: <em>neither one a hundred percent.</em> The scholars (rh) of the tradition I come from taught it like this: a real will of one's own that chooses, and another who creates the act.</p>
+<p>Ibn al-Qayyim (rh) read this division off the Light Verse, and I have not found it set out more precisely anywhere:</p>
+<div class="vers"><span class="ar" lang="ar" dir="rtl">ٱللَّهُ نُورُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ مَثَلُ نُورِهِۦ كَمِشْكَوٰةٍ فِيهَا مِصْبَاحٌ ۖ ٱلْمِصْبَاحُ فِى زُجَاجَةٍ ۖ ٱلزُّجَاجَةُ كَأَنَّهَا كَوْكَبٌ دُرِّىٌّ يُوقَدُ مِن شَجَرَةٍ مُّبَـٰرَكَةٍ زَيْتُونَةٍ لَّا شَرْقِيَّةٍ وَلَا غَرْبِيَّةٍ يَكَادُ زَيْتُهَا يُضِىٓءُ وَلَوْ لَمْ تَمْسَسْهُ نَارٌ ۚ نُّورٌ عَلَىٰ نُورٍ</span>Allāh is the Light of the heavens and the earth. The example of His light is like a niche within which is a lamp; the lamp is within glass, the glass as if it were a pearly [white] star lit from [the oil of] a blessed olive tree, neither of the east nor of the west, whose oil would almost glow even if untouched by fire. Light upon light.<span class="src">An-Nur 24:35</span></div>
+
+<p>This light, he writes, has an agent, a recipient, a place, a bearer and a substance. The agent is Allah, the Mighty and Majestic, who pours out the lights; the recipient is the servant; the place is his heart; the substance is his word and his deed; but the <em>bearer</em> (<span lang="de">Träger</span>) is his resolve, his will, his striving.<sup id="fnref:ibnqayyim"><a class="footnote-ref" href="#fn:ibnqayyim">21</a></sup> That explains the tilt. The bearer holds the lamp, and the bearer is my will. The diamond is aligned by whoever holds it; it is held by my will; but the light is made by another. I move the bearer, nothing more—and the light comes.</p>
+<p>Kierkegaard said the same thing from the side of philosophy, on the first page of his most important book: the self is a relation that relates itself to itself, and it did not establish itself. That is why it can go wrong in two ways: in despair <em>not</em> wanting to be itself (the diamond that takes itself for mud), and in despair wanting to be itself, by its own strength, without the One who established it (the diamond that wants to shine by itself). Both are despair, and despair is nothing but tilt. His formula for the state in which there is no despair is this: that the self is grounded transparently in the power that established it.<sup id="fnref:kierkegaard"><a class="footnote-ref" href="#fn:kierkegaard">22</a></sup> Transparent: that is, washed. Grounded: that is, aligned.</p>
+<p>And how small may the bearer's movement be? Allah, the Mighty and Majestic, says in a hadith qudsi: “If he draws near to Me a hand's span, I draw near to him an arm's length. If he draws near to Me an arm's length, I draw near to him a fathom. If he comes to Me walking, I come to him running.”<sup id="fnref:qudsi"><a class="footnote-ref" href="#fn:qudsi">23</a></sup> I call this movement the <em>hand's-span step</em> (<span lang="de">Handspannenschritt</span>). It is the smallest movement that turns the bearer, and, as we will see, the only one still possible in the pull.</p>
+<h2 id="vii-die-widmung">VII · The Dedication</h2>
+<figure class="stage" data-scene="widmung"><canvas></canvas></figure>
+
+<p>Before the pull comes, I have to say what moves the bearer. It is not the light, for the light comes from outside; and it is not the swamp, for the swamp drags downward. What moves the bearer is something that occurs in all of creation only where a choice can be made.</p>
+<p>The Qur'an says that everything in the heavens and on the earth has submitted to Him, “willingly or by compulsion” (Surah Al 'Imran, verse 83), and it tells how Allah, the Mighty and Majestic, called the heaven and the earth: “Come [into being], willingly or by compulsion.” They said, “We have come willingly” (Surah Fussilat, verse 11). The heaven had no choice, and still it answered. The sun does not rise willingly, the bee does not fly willingly, the diamond does not refract the light willingly. Everything is turned toward the light because it cannot do otherwise. Only a creature that can choose can also do otherwise (the Qur'an names the jinn and humankind; here I am speaking of the human being), and that is exactly why only for him does the word <em>willingly</em> have any content. Only the human being can turn toward the light, because only he can also turn away.</p>
+<p>I call this the <em>dedication</em> (<span lang="de">Widmung</span>). On its first page a book carries a dedication: for someone. The author did not write the book for himself, and he did not make the person to whom it is dedicated; but the dedication he writes himself, of his own free will, and it is the one thing in the book that no one can demand of him. So it is with the human being. He made neither his worth nor the light. But the turning toward, the diamond's dedication to the One who created it, he alone can write. What he was created for, the Qur'an says in a single sentence:</p>
+<div class="vers"><span class="ar" lang="ar" dir="rtl">وَمَا خَلَقْتُ ٱلْجِنَّ وَٱلْإِنسَ إِلَّا لِيَعْبُدُونِ ۝ مَآ أُرِيدُ مِنْهُم مِّن رِّزْقٍ وَمَآ أُرِيدُ أَن يُطْعِمُونِ</span>And I did not create the jinn and mankind except to worship Me. I do not want from them any provision, nor do I want them to feed Me.<span class="src">Adh-Dhariyat 51:56–57</span></div>
+
+<p>As-Sa'di (rh) explains the worship spoken of here not as a duty performed but as a relationship: it comprises knowing Allah, loving Him, returning to Him, turning toward Him and turning away from everything else, and the better the servant knows his Lord, the more complete his worship becomes. He created them for this, not out of any need of them.<sup id="fnref:saadi51"><a class="footnote-ref" href="#fn:saadi51">24</a></sup> Ibn al-Qayyim (rh) goes one step further and answers the question that comes before every dedication: whom does it benefit? He did not create them out of need, nor to gain anything from them, but out of generosity and kindness, so that they would worship Him and carry off all the gain themselves, as it is said: “If you do good, you do good for yourselves” (Surah al-Isra', verse 7).<sup id="fnref:ibnqayyim51"><a class="footnote-ref" href="#fn:ibnqayyim51">25</a></sup> The dedication, then, is no tribute. It is the only thing the diamond has, and it comes back to the diamond.</p>
+<p>The Qur'an teacher Nouman Ali Khan, to whom I owe this reading, put it into words during a talk in Dubai: “we have nothing to offer someone who has everything, not even our prayers. We pray because we feel at one with God.” The newspaper report of that talk calls this servitude an <em>honorable</em> one.<sup id="fnref:nak-dubai"><a class="footnote-ref" href="#fn:nak-dubai">26</a></sup> Elsewhere he has named the point at which the dedication is decided. To accept Allah, the Mighty and Majestic, as Creator is easy, he explains; the real test is to accept Him as <em>Master</em>, and oneself as His servant. One does not bargain with a Master the way one bargains with an employer. And yet, as he describes it, this servitude is made of loyalty, gratitude, love, friendship and remembrance: “So remember Me; I will remember you” (Surah al-Baqarah, verse 152).<sup id="fnref:nak-master"><a class="footnote-ref" href="#fn:nak-master">27</a></sup> A servant, he says, is a servant all the time, and what happens between the prayers shows the state of the heart.<sup id="fnref:nak-return"><a class="footnote-ref" href="#fn:nak-return">28</a></sup> The heart of this essay is Islamic, and so is its answer: not a human being who frees himself, but a servant who dedicates himself to his Lord of his own free will, and in doing so is free of everything else.</p>
+<p>The Qur'an states plainly that the dedication must be free, and it says so in the place where one would least expect it:</p>
+<div class="vers"><span class="ar" lang="ar" dir="rtl">لَآ إِكْرَاهَ فِى ٱلدِّينِ ۖ قَد تَّبَيَّنَ ٱلرُّشْدُ مِنَ ٱلْغَىِّ ۚ فَمَن يَكْفُرْ بِٱلطَّـٰغُوتِ وَيُؤْمِنۢ بِٱللَّهِ فَقَدِ ٱسْتَمْسَكَ بِٱلْعُرْوَةِ ٱلْوُثْقَىٰ لَا ٱنفِصَامَ لَهَا ۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌ</span>There shall be no compulsion in [acceptance of] the religion. The right course has become distinct from the wrong. So whoever disbelieves in ṭāghūt and believes in Allāh has grasped the most trustworthy handhold with no break in it. And Allāh is Hearing and Knowing.<span class="src">Al-Baqarah 2:256</span></div>
+
+<p>As-Sa'di (rh) explains why. Compulsion, he says, is needed only for a matter whose signs are hidden and whose effects are obscure, or for one the soul finds deeply repugnant. This path, however, has become clear to the mind; whoever has been given sound insight chooses it at first sight. And the faith of one who is compelled is not valid.<sup id="fnref:saadi256"><a class="footnote-ref" href="#fn:saadi256">29</a></sup> That is the whole reason the dedication can only be written freely: a light that was forced would be no light. Psychology has confirmed this in its own laboratory. It calls it <em>reactance</em>: take away a person's freedom to choose something, and he will want precisely the opposite, not because it would be better, but because it would be his.<sup id="fnref:brehm"><a class="footnote-ref" href="#fn:brehm">30</a></sup> And over decades, self-determination theory has shown that an action lasts only once it has become <em>autonomous</em>: not imposed from outside, not simply adopted out of a guilty conscience, but taken so far into the person that he recognizes it as his own.<sup id="fnref:ryan"><a class="footnote-ref" href="#fn:ryan">31</a></sup> This theory names three needs as the condition of all flourishing (autonomy, competence, relatedness), and all three stand in this one verse: autonomy, because there is no compulsion; competence, because the right course has become distinct; relatedness with the One who hears and knows.</p>
+<p>The philosophers exalted freedom and then despaired of it. Kant called it autonomy: the human being giving himself his own law. Sartre said that man is condemned to be free: he has to choose, and no one tells him what for. Viktor Frankl, who knew more about freedom than either of them because he had found it where there was none, said that freedom is only half of the truth; without responsibility it degenerates into mere arbitrariness.<sup id="fnref:frankl"><a class="footnote-ref" href="#fn:frankl">32</a></sup> And responsibility means answering a question that someone else asks. The dedication is Frankl's other half. The human being does not give himself his law, and he does not choose into a void. He reaches for a handhold that another holds, and this grip, this alone, is his. That is what the theologians meant by <em>neither one a hundred percent</em>: the handhold is given; the grasping is free.</p>
+<h2 id="viii-der-sog-und-das-herausgebrachtwerden">VIII · The Pull and Being Brought Out</h2>
+<figure class="stage" data-scene="sog"><canvas></canvas></figure>
+
+<p>The question then was no longer who the diamond is. It was this: how do you get out of the spin, out of the <em>pull</em> (<span lang="de">Sog</span>), out of the blurred view inside the swamp?</p>
+<p>The pull is the covering in motion: the mechanism of attention clinging to something that is not more valuable, which speaks up and says: go after it. It keeps no hours. It comes in the silent hour of the night just as it comes on a bright morning with a task ahead of you. And it has one trait that gives it away: the voice that says, but you still have this and that to get done, is quiet and has no action in it. It says: I could. It does not say: I'm going.</p>
+<p>I found the answer in physics, and it is not a metaphor. If you thrash in a bog or in quicksand, you sink. Physicists have studied quicksand in the laboratory: under movement it liquefies, and afterwards it grips all the more firmly. A person cannot sink into it completely, because the body is lighter than the mud; but the more he struggles, the deeper he sinks, and the more firmly the mud holds him.<sup id="fnref:khaldoun"><a class="footnote-ref" href="#fn:khaldoun">33</a></sup> Movement liquefies the mud; stillness lets it bear your weight. Psychology has its own name for this thrashing: <em>ironic processes</em>. Whoever tries to push a thought away by force summons it, because the part of the mind that monitors for success has to keep searching for that very thought in order to do so.<sup id="fnref:wegner"><a class="footnote-ref" href="#fn:wegner">34</a></sup> Fighting the swamp is swamp. <em>Whoever distances himself from his Creator is thrashing</em> (<span lang="de">strampelt</span>). And from this follows a sentence that is a paradox and yet only describes what happens: <em>you get out of a pull because you are brought out</em>, not because you fight. I call this <em>being brought out</em> (<span lang="de">Herausgebrachtwerden</span>). Rescue from the pull is a passive with a single active point in it, and that active point is the hand's-span step: the dedication reduced to its smallest movement.</p>
+<p>The Qur'an calls this being brought out by its name, right after the verse of the most trustworthy handhold:</p>
+<div class="vers"><span class="ar" lang="ar" dir="rtl">ٱللَّهُ وَلِىُّ ٱلَّذِينَ ءَامَنُوا۟ يُخْرِجُهُم مِّنَ ٱلظُّلُمَـٰتِ إِلَى ٱلنُّورِ</span>Allāh is the Ally of those who believe. He brings them out from darknesses into the light.<span class="src">Al-Baqarah 2:257</span></div>
+
+<p>Out of the darknesses of disbelief, of sins and of ignorance, as-Sa'di (rh) explains, into the light of faith, of obedience and of knowledge, because they took Him as their Ally and sought no other.<sup id="fnref:saadi257"><a class="footnote-ref" href="#fn:saadi257">35</a></sup> The order in the verse is the order of rescue: first the Ally, then the way out. The believer does not bring himself into the light. He is brought.</p>
+<p>Developmental psychology sees this order at the start of every life. An infant cannot soothe itself; it is soothed, by someone else who holds it until its body has learned what calm is. The field calls this <em>co-regulation</em>, and it knows that self-regulation was never anything other than co-regulation taken inward. The person stuck in the pull has not fallen back if he needs to be held. He is where every human being begins. And the science of action has found a method for this passive, which it calls <em>behavioral activation</em>. It reverses the order most people wait for: not wanting first and then doing, but doing, and the state follows. In twenty-six controlled trials, this reversal, used against paralysis, clearly outperformed the comparison conditions.<sup id="fnref:ekers"><a class="footnote-ref" href="#fn:ekers">36</a></sup> Whoever waits until he wants to is waiting in the swamp.</p>
+<p>In that hour I stopped thinking and did what I did not want to do. I got up and went to the water. Here I have to be exact, because this is the point where superstition begins. It was not the water; water alone would be a spell, a means that works because it is wet. It was the <em>ritual ablution, wudu</em>, an act performed countless times before me, with set parts of the body in a set order: the hands, the mouth, the nose, the face, the arms up to the elbows, the head, the ears, the feet. It leads the body through an order the body did not invent, and it does not end in itself; it ends before the prayer. That is the difference between a spell and a rite: the spell wants to bring something about; the rite places you before someone. <em>Wudu, though inwardly I did not want it, was performed.</em> A prayer was prayed, with a faint awareness of standing before the Creator. It was said that one is nothing, and that He is as He names Himself—this is how I come to You.</p>
+<p>I leave these sentences in the passive because that is how they are true. In those minutes I was not the one who did something; I was the one to whom something happened. The bearer had been moved by a hand's span, and the light came, as the hadith says, running. Afterwards the voice with the list was silent. There was no emptiness and no pressure—<em>it is neutral.</em> And I learned that after a pull, neutrality is no small thing but the greatest thing of all. Psychology would say that the nervous system had returned from a state of alarm to its baseline: not joy, not sorrow, but regulation. The Qur'an calls this state by its name and addresses to it the one call that weighs more than every argument: “O reassured soul, return to your Lord, well-pleased and pleasing [to Him]” (Surah al-Fajr, verses 27–28). The three souls of the Qur'an (the commanding soul, the self-reproaching soul, the soul that has come to rest) are not three people, nor stages one climbs once and for all; one passes through them within an hour, and what lies between them is not an insight but an act.</p>
+<p>The five steps I wrote down for myself in that hour later turned out to be the old order in new words. Letting go of control: tawakkul, which therapy calls <em>acceptance</em>, and which is more, because there is someone to let go to. Gathering hope: raja'. Moving a little: 'amal. Seeing that one is nothing: 'ubudiyyah. And holding fast: “And hold firmly to the rope of Allāh all together” (Surah Al 'Imran, verse 103). One rope, and all together. No one pulls himself out of the bog alone. The rope is held at both ends, and its other end is people and fixed times: the five prayers, a rhythm that does not come from the individual and is not up for negotiation. The Prophet ﷺ made not-thrashing a command: “The religion is ease, and no one overburdens himself in the religion without it overcoming him. … Seek help in the morning, in the afternoon and with something of the night.”<sup id="fnref:yusr"><a class="footnote-ref" href="#fn:yusr">37</a></sup> Something of the night, then. Not all of it.</p>
+<h2 id="ix-das-leichtgemachtsein">IX · Being Made Easy</h2>
+<figure class="stage stage-photo" data-scene="biene"><img class="bg" src="img/biene.jpg" alt="" loading="lazy"><div class="veil"></div><canvas></canvas></figure>
+
+<p>In that same hour, awake and neutral, the bee came. No one taught her to fly. She leaves the hive, finds the meadow, finds her way back, and what comes out of her heals, and she knows nothing of any of it.</p>
+<div class="vers"><span class="ar" lang="ar" dir="rtl">وَأَوْحَىٰ رَبُّكَ إِلَى ٱلنَّحْلِ أَنِ ٱتَّخِذِى مِنَ ٱلْجِبَالِ بُيُوتًا وَمِنَ ٱلشَّجَرِ وَمِمَّا يَعْرِشُونَ ۝ ثُمَّ كُلِى مِن كُلِّ ٱلثَّمَرَٰتِ فَٱسْلُكِى سُبُلَ رَبِّكِ ذُلُلًا</span>And your Lord inspired to the bee, "Take for yourself among the mountains, houses [i.e., hives], and among the trees and [in] that which they construct. Then eat from all the fruits and follow the ways of your Lord laid down [for you]."<span class="src">An-Nahl 16:68–69</span></div>
+
+<p>The word with which Allah, the Mighty and Majestic, inspires the bee is the same word used for the revelation given to the prophets, peace be upon them. The bee has inspiration without instruction, and her ways are <em>made smooth</em>: what she does costs her no strength, because the way was there before her. This became the seventh sentence of that night: <em>As her ways were made easy for her, I look for what has been made easy for me.</em> The tradition calls this shakila: “Say, ‘Each works according to his manner’” (Surah al-Isra', verse 84). And when the Prophet ﷺ was asked what, then, the effort was for, he answered: “For each person, what he was created for is made easy.”<sup id="fnref:muyassar"><a class="footnote-ref" href="#fn:muyassar">38</a></sup></p>
+<p>I call this <em>being made easy</em> (<span lang="de">Leichtgemachtsein</span>), and it is the counterpart of aimedness: whoever is aimed also has a way made smooth for him, and that way is not the same for everyone. Each of us is thrown differently, and for each of us something different is made easy. The study of the soul has three words for this, and they complement one another. Adler called a person's own way of moving toward goals, formed early in life, the <em>style of life</em>, as personal as handwriting: recognizable, correctable, but not replaceable. Jung called the way there <em>individuation</em>: not the invention of a new person but the uncovering of the old one, with all that is unlived in him. And research in recent decades has measured the state in which a person is on his smoothed path and called it <em>flow</em>: an activity that fits one's ability so well that time disappears and effort no longer looks like effort.<sup id="fnref:flow"><a class="footnote-ref" href="#fn:flow">39</a></sup> The bee in flight: not grinding, but uncovering.</p>
+<p>Being made easy is not a consolation but a calling, and a calling is not chosen; it is given. The Qur'an says so in a verse that is usually read as a relief, and rightly so:</p>
+<div class="vers"><span class="ar" lang="ar" dir="rtl">لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا ٱكْتَسَبَتْ</span>Allāh does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned.<span class="src">Al-Baqarah 2:286</span></div>
+
+<p>But the verse has a second side, which I read as its reverse: whoever is charged with nothing he cannot bear will be asked about what he could bear. The verse says this itself in its second half: the soul will bear what it has earned. Being made easy is the measure of responsibility. Greatness is not asked of me. But what has been made easy for me is asked of me, precisely because it was made easy for me. The bee is not asked whether she sang, but whether she flew.</p>
+<p>Being made easy has a consequence for wudu that I saw only late. Some people's nervous systems do not come to rest through stillness; research shows that such people exist, somewhat weaker in <em>self-regulation</em> but not without it.<sup id="fnref:robe"><a class="footnote-ref" href="#fn:robe">40</a></sup> For such a person, rest is not lying down but rhythm: movement, breath, repetition. Cold water on the face lowers the heart rate by way of a reflex. Recitation is slow exhalation carried on syllables. The sequence of the prayer is movement in cycles. For him, prayer is no obstacle; it is precisely the form in which rest comes within his reach: a rhythm made smooth fourteen centuries ago for bodies like his. This is being made easy, confirmed by biology: for him the smoothed path is not sitting still but rhythm.</p>
+<p>And the Prophet ﷺ named the measure of the seeking when he was asked which deed is most beloved to Allah, the Mighty and Majestic: “The most constant, even if it is little.”<sup id="fnref:bestaendig"><a class="footnote-ref" href="#fn:bestaendig">41</a></sup> To seek one's shakila does not mean grinding oneself down but slowing down, and doing the right thing, not the great one.</p>
+<h2 id="x-der-anker">X · The Anchor</h2>
+<figure class="stage" data-scene="anker"><canvas></canvas></figure>
+
+<p>An hour is not a rule. The image had to become something I could grip, and the grip has a name: the <em>anchor</em> (<span lang="de">Anker</span>). An anchor does not hold because it is heavy; it holds because it has bedded itself into the seabed before the strain comes.</p>
+<p>The Qur'an named this grip before I did. Whoever turns toward Allah, the Mighty and Majestic, “has grasped the most trustworthy handhold with no break in it” (Surah al-Baqarah, verse 256). As-Sa'di explains the handhold as upright faith, whose foundations stand firm and whose pillars are rooted; whoever holds fast to it can be sure of his course, for he is holding on to what does not break.<sup id="fnref2:saadi256"><a class="footnote-ref" href="#fn:saadi256">29</a></sup> Two things are in the verse, and both belong to the anchor. The handhold does not break: that is not my merit. And it is <em>held</em> by me: that is the dedication, in a single grip. An anchor that is never thrown holds no ship.</p>
+<p>The strain is the pull, and the pull keeps no hours. So the rule is tied not to an hour but to the hallmark of the pull: attention that sticks, and a voice that is quiet and has no action in it. The rule itself is one sentence:</p>
+<div class="regel">When the pull comes, whenever it comes, then wudu. Not always. But every time, unless an emergency stands before me. Even when inwardly I don't want to. Wudu first, then everything else.</div>
+
+<p>Why a sentence of this form? Because research on intentions has shown that bare intentions achieve little and <em>if-then plans</em> achieve a great deal: they tie the action to a trigger and lift the burden of deciding in the moment.<sup id="fnref:gollwitzer"><a class="footnote-ref" href="#fn:gollwitzer">42</a></sup> Habit research explains why this works. The covering runs on cues that set it off by themselves, and an if-then plan attaches a different action to the same cue until that action, too, runs by itself.<sup id="fnref2:wood"><a class="footnote-ref" href="#fn:wood">12</a></sup> The trigger, the pull, arrives more reliably than any intention. The rule turns the enemy into the alarm clock. The hand's-span step here is not the prayer, and not even the whole of wudu. It is this: stand up, go to the water, the right hand. A change of place is a change of angle: not thinking, but going. What comes next is set by the more valuable of the hour: at prayer time, the obligatory prayer; otherwise two units of prayer and a supplication; and in the times when the jurists advise against voluntary prayer, wudu and remembrance remain, and the prayer waits.<sup id="fnref:makruh"><a class="footnote-ref" href="#fn:makruh">43</a></sup> The anchor is not the prayer but wudu; the prayer is what wudu makes possible. And if the pull comes ten times a day, wudu comes ten times; it is small enough for that. This, too, is why the anchor is wudu and not the prayer.</p>
+<p>There is one hour in which the anchor weighs more than at any other: the hour in which this essay began. The Prophet ﷺ said: “Our Lord, Blessed and Exalted is He, descends every night to the lowest heaven when the last third of the night remains, and says: Who is calling upon Me, that I may answer him? Who is asking of Me, that I may give him? Who is seeking My forgiveness, that I may forgive him?”<sup id="fnref:drittel"><a class="footnote-ref" href="#fn:drittel">44</a></sup> In this hour, distraction is the offer from one direction; from the other comes a question. Anyone who is awake at this hour anyway stands where a special offer is made. But the tradition immediately gives this privilege a measure, and the measure matters more than the privilege: “Take on only those deeds you are able to bear, for Allah does not tire until you tire.”<sup id="fnref2:bestaendig"><a class="footnote-ref" href="#fn:bestaendig">41</a></sup> Whoever sleeps misses nothing; whoever is awake makes wudu.</p>
+<p>The rule counts as one's own only once it has held for a week: not seven days of prayer, but seven days on which, whenever the pull came, wudu came. Days without the pull count as lived. After that, something happens that no resolution can produce, and that psychology calls the passage from behavior into the <em>self-concept</em>: the action becomes part of who one is. One no longer says, I am trying to go to the water, but rather: I am someone who goes to the water.</p>
+<h2 id="xi-die-rueckkehr">XI · The Return</h2>
+<figure class="stage" data-scene="rueckkehr"><canvas></canvas></figure>
+
+<p>I wanted to go back to factory settings, and in that same hour I realized the word was wrong. A device that is reset loses whatever was added to it. I have lost nothing. I have a diamond that lay in the mud, and I did not pull it out. I stopped thrashing, walked a few steps to the water and made wudu, although I did not want to. Then the light came, from outside, as it always does.</p>
+<p>The return has a tone, and the tone decides whether it succeeds. Anyone who returns while despising himself returns to the swamp; rumination has only changed its subject. Psychology has studied the other tone and called it <em>self-compassion</em>: looking at oneself in failure as one would look at a friend; and it has found that this tone, not harshness, is what sets people moving again.<sup id="fnref:neff"><a class="footnote-ref" href="#fn:neff">45</a></sup> The tradition needed no word of its own for this, because the tone already lies in the word tawbah: one returns to someone who has not closed the door. The return is not a punishment one imposes on oneself; it is the way to the One who comes running to meet us.</p>
+<p>That is the whole path of this essay, and it can be recited in its own words. The <em>givenness of worth</em>: the worth is given and does not change. The <em>debt of light</em>: what is given has an address. <em>Aimedness</em>: I am not simply thrown but aimed, at the <em>place of light</em>, where <em>the more valuable</em> can be found in every hour. The <em>covering</em>: the swamp is not the diamond but actions, spot by spot. The <em>setting</em>: <em>being-for-someone</em> loses the source; <em>being-from-itself</em> is there for nothing and is seen precisely because of it. The <em>tilt</em>: the bearer is my will, the light is made by another; neither one a hundred percent. The <em>dedication</em>: everything is turned toward the light because it cannot do otherwise; only the human being turns toward it, because he could turn away, and only for that reason is his turning toward worth anything. The <em>pull</em> and <em>being brought out</em>: whoever thrashes sinks; whoever takes the <em>hand's-span step</em> is brought out. <em>Being made easy</em>: the smoothed path is not the same for everyone, and for some it is rhythm; it is a calling, and we will be asked about it. The <em>anchor</em>: wudu whenever the pull comes, the grip on the handhold that does not break. And at the end the <em>return</em>, tawbah, which is no reset, because nothing was ever overwritten.</p>
+<p>Afterwards I put this image before everyone who had something to say about it: the commentators of the Qur'an, the study of the soul, the philosophers from Aristotle to Kierkegaard, the sciences from quicksand to habit. None of these voices refuted it. Each added a facet. Where they contradicted one another (over the thrower, the addressee, given and mirrored worth, the freedom that chooses into the void and the freedom that takes hold), the insight lay in the contradiction itself. The whole conversation is in the book; here is what remains once you close it.</p>
+<div class="dua">
+<span class="ek">The Supplication of the Hour</span>
+<p>You are as You name Yourself—<br>and I am nothing.</p>
+<p>You are the One who gives all that is good,<br>so give me of all that is good.</p>
+<p>You are the One who protects,<br>so protect me from all that is evil.</p>
+<p>This is how I come to You:<br>You know better, You understand better,<br>and Your word is better.</p>
+<p>You are the Forgiving, so forgive.<br>You are the Guide, so guide.</p>
+<p>And when I do not want to,<br>at whatever hour it may be,<br>let my hands, before my will,<br>go to the water.</p>
+<span class="orn" aria-hidden="true">◇</span>
+</div>
+
+<p class="schluss">The factory is closed. Not reset, but returned.</p>
+<h2 id="die-begriffe">The Terms</h2>
+<div class="glossar">
+<p><b>Reset / Return (<span lang="de">Rücksetzung / Rückkehr</span>)</b> – A device is reset and loses whatever was added to it; a human being returns and loses nothing, because his settings were never overwritten. Return is the English word for tawbah. <i>Psychologically:</i> The fresh-start effect promises the reset and holds only briefly; self-compassion is the tone in which the return succeeds.</p>
+<p><b>The givenness of worth (<span lang="de">Wertgegebenheit</span>)</b> – A person's worth is given, not earned; it has a form before it has an effect. A missing effect does not prove missing worth. <i>Psychologically:</i> Self-worth is not self-efficacy; contingent self-worth hangs worth on conditions, and unconditional positive regard releases it from them, here through the One who does not waver.</p>
+<p><b>The debt of light (<span lang="de">Lichtschuld</span>)</b> – A worth that is given is a worth that is owed: it has an address to which its effect is sent. From worth follow meaning, responsibility, radiance, beauty.</p>
+<p><b>Aimedness (<span lang="de">Gezieltheit</span>)</b> – Set against Heidegger's thrownness: the human being is thrown, but he is also aimed at the place where light can fall on him. The fundamental attunement is not anxiety but a question.</p>
+<p><b>The place of light (<span lang="de">Lichtort</span>)</b> – The present as the only place where potentiality becomes actuality: time, place, situation. <i>Psychologically:</i> Attention: a person is where his attention is; mind-wandering is the mind's resting state, and it makes us unhappy.</p>
+<p><b>The more valuable (<span lang="de">Das Wertvollere</span>)</b> – The category of the present: in every situation something is more valuable, and neither cancels out the other. At prayer time, the prayer; in an emergency, the emergency. <i>Psychologically:</i> Values clarification: directions instead of goals.</p>
+<p><b>The covering (<span lang="de">Bedeckung</span>)</b> – The swamp: not corruption, but actions and omissions that make the diamond invisible, spot by spot. Its remedy is as small as its spots. <i>Psychologically:</i> Habit and cue, experiential avoidance, procrastination as emotion regulation, rumination as a momentum of its own.</p>
+<p><b>Being-for-someone / being-from-itself (<span lang="de">Fürjemandsein / Aussichheraussein</span>)</b> – The setting: ring, drill bit and safe make the diamond something that is there for someone, and the price is its source. From itself, it is there for nothing, and that is exactly why it is seen. <i>Psychologically:</i> extrinsic versus intrinsic motivation; persona (Jung), compensation (Adler), having (Fromm).</p>
+<p><b>The tilt (<span lang="de">Verkippung</span>)</b> – The washed diamond lying at the wrong angle: its light leaves it where there is no eye. Kierkegaard's despair; the displaced bearer of Ibn al-Qayyim (rh). <i>Psychologically:</i> the shadow (Jung); locus of control with its two extremes, learned helplessness and omnipotence.</p>
+<p><b>The bearer (<span lang="de">Träger</span>)</b> – Following Ibn al-Qayyim (rh): resolve, will, striving. That which holds the lamp and aligns it; my share, neither one a hundred percent.</p>
+<p><b>The dedication (<span lang="de">Widmung</span>)</b> – Everything in creation is turned toward the light because it cannot do otherwise; only the human being turns toward it, because he could turn away. Turning toward is the one thing he writes himself, of his own free will, for there is no compulsion in religion. Created to serve; and service is a relationship, not a tribute, and it comes back to him. <i>Psychologically:</i> autonomy as the condition of any motivation that lasts; reactance as proof that compulsion produces the opposite. <i>Philosophically:</i> Frankl's second half of freedom: responsibility as the answer to a question someone else asks.</p>
+<p><b>The pull (<span lang="de">Sog</span>)</b> – The covering in motion: attention that sticks; a voice that is quiet and has no action in it. It keeps no hours.</p>
+<p><b>Thrashing / being brought out (<span lang="de">Strampeln / Herausgebrachtwerden</span>)</b> – Whoever fights, sinks; the mud holds you up as soon as you stop. Rescue is a passive with a single active point: “He brings them out from darknesses into the light.” <i>Psychologically:</i> ironic processes (fighting a thought summons it); co-regulation (being calmed before you are able to calm yourself); behavioral activation (first do, then want).</p>
+<p><b>The hand's-span step (<span lang="de">Handspannenschritt</span>)</b> – The smallest movement of the bearer that is still possible in the pull: getting up, going to the water, the right hand. For a hand's span, an arm's length comes to meet you. The dedication, brought down to its smallest movement.</p>
+<p><b>Wudu, the ritual ablution (<span lang="de">Gebetswaschung</span>)</b> – Not water, but a rite: set parts of the body, a set order, an ending before someone. A spell wants to bring something about; a rite places you before someone.</p>
+<p><b>Being made easy (<span lang="de">Leichtgemachtsein</span>)</b> – The shakila: each of us has a different path made smooth, and what has been made easy for me is what I was made for. It is a calling, not a choice, and its measure is also the measure of what we will be asked: no one is burdened with more than he can bear; everyone is asked about what he was able to bear. For some, the path is a rhythm, not standing still. <i>Psychologically:</i> style of life (Adler), individuation (Jung), flow; self-regulation as rhythm.</p>
+<p><b>The anchor (<span lang="de">Anker</span>)</b> – The rule that is tied to the pull itself: when it comes, then wudu, even against my will. It turns the enemy into an alarm clock. The grip on the most trustworthy handhold with no break in it. <i>Psychologically:</i> if-then plan, cue, habit, until the action becomes part of the self-concept.</p>
+</div>
+<h2 id="anmerkungen">Notes</h2>
+<div class="footnote">
+<ol>
+<li id="fn:dai">
+<p>Hengchen Dai, Katherine L. Milkman, Jason Riis: The Fresh Start Effect: Temporal Landmarks Motivate Aspirational Behavior. <em>Management Science</em> 60 (2014), 2563–2582.&#160;<a class="footnote-backref" href="#fnref:dai" title="Jump back to footnote 1 in the text"></a></p>
+</li>
+<li id="fn:fitra">
+<p>As-Sa'di (rh) on Surah ar-Rum, verses 30–32 (Turkish edition of <em>Taysīr al-Karīm ar-Raḥmān</em>; author's rendering).&#160;<a class="footnote-backref" href="#fnref:fitra" title="Jump back to footnote 2 in the text"></a></p>
+</li>
+<li id="fn:fitra-hadith">
+<p>Ṣaḥīḥ al-Bukhārī no. 1385; also in Ṣaḥīḥ Muslim and Sunan Abī Dāwūd no. 4714 (ṣaḥīḥ).&#160;<a class="footnote-backref" href="#fnref:fitra-hadith" title="Jump back to footnote 3 in the text"></a></p>
+</li>
+<li id="fn:oel">
+<p>As-Sa'di (rh) on Surah an-Nur, verse 35.&#160;<a class="footnote-backref" href="#fnref:oel" title="Jump back to footnote 4 in the text"></a></p>
+</li>
+<li id="fn:bandura">
+<p>Albert Bandura: Self-efficacy: Toward a unifying theory of behavioral change. <em>Psychological Review</em> 84 (1977), 191–215.&#160;<a class="footnote-backref" href="#fnref:bandura" title="Jump back to footnote 5 in the text"></a></p>
+</li>
+<li id="fn:crocker">
+<p>Jennifer Crocker, Connie T. Wolfe: Contingencies of self-worth. <em>Psychological Review</em> 108 (2001), 593–623.&#160;<a class="footnote-backref" href="#fnref:crocker" title="Jump back to footnote 6 in the text"></a></p>
+</li>
+<li id="fn:rogers">
+<p>Carl R. Rogers: The necessary and sufficient conditions of therapeutic personality change. <em>Journal of Consulting Psychology</em> 21 (1957), 95–103.&#160;<a class="footnote-backref" href="#fnref:rogers" title="Jump back to footnote 7 in the text"></a></p>
+</li>
+<li id="fn:killingsworth">
+<p>Matthew A. Killingsworth, Daniel T. Gilbert: A Wandering Mind Is an Unhappy Mind. <em>Science</em> 330 (2010), 932. Experience sampling of 2,250 adults via an app; minds were wandering in 46.9 percent of the samples.&#160;<a class="footnote-backref" href="#fnref:killingsworth" title="Jump back to footnote 8 in the text"></a></p>
+</li>
+<li id="fn:graben">
+<p>Ṣaḥīḥ Muslim, Book of Mosques, narrations from ʿAlī (ra) and from ʿAbdallāh ibn Masʿūd (ra) concerning the Day of the Confederates (al-Aḥzāb, the Battle of the Trench).&#160;<a class="footnote-backref" href="#fnref:graben" title="Jump back to footnote 9 in the text"></a></p>
+</li>
+<li id="fn:dassa">
+<p>As-Sa'di (rh) on Surah ash-Shams, verses 7–10. Bubenheim's German translation renders the verb <em>dassāhā</em> as <span lang="de">„verkümmern läßt“</span> (“lets it wither”); the Turkish edition of as-Sa'di (rh) renders it as <em lang="tr">&#246;rten</em>, “covers.”&#160;<a class="footnote-backref" href="#fnref:dassa" title="Jump back to footnote 10 in the text"></a></p>
+</li>
+<li id="fn:rost">
+<p>Sunan at-Tirmidhī no. 3334 (at-Tirmidhī: ḥasan ṣaḥīḥ; al-Albānī (rh): ḥasan; Zubair ʿAlī Zaʾī: ḍaʿīf), on Surah al-Mutaffifin, verse 14.&#160;<a class="footnote-backref" href="#fnref:rost" title="Jump back to footnote 11 in the text"></a></p>
+</li>
+<li id="fn:wood">
+<p>Wendy Wood, David T. Neal: A new look at habits and the habit–goal interface. <em>Psychological Review</em> 114 (2007), 843–863.&#160;<a class="footnote-backref" href="#fnref:wood" title="Jump back to footnote 12 in the text"></a><a class="footnote-backref" href="#fnref2:wood" title="Jump back to footnote 12 in the text"></a></p>
+</li>
+<li id="fn:sirois">
+<p>Fuschia Sirois, Timothy Pychyl: Procrastination and the priority of short-term mood regulation: Consequences for future self. <em>Social and Personality Psychology Compass</em> 7 (2013), 115–127.&#160;<a class="footnote-backref" href="#fnref:sirois" title="Jump back to footnote 13 in the text"></a></p>
+</li>
+<li id="fn:rumination">
+<p>Susan Nolen-Hoeksema, Blair E. Wisco, Sonja Lyubomirsky: Rethinking Rumination. <em>Perspectives on Psychological Science</em> 3 (2008), 400–424.&#160;<a class="footnote-backref" href="#fnref:rumination" title="Jump back to footnote 14 in the text"></a></p>
+</li>
+<li id="fn:deci">
+<p>Edward L. Deci, Richard Koestner, Richard M. Ryan: A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation. <em>Psychological Bulletin</em> 125 (1999), 627–668. 128 experiments; small to moderate, consistent effects.&#160;<a class="footnote-backref" href="#fnref:deci" title="Jump back to footnote 15 in the text"></a></p>
+</li>
+<li id="fn:jamil">
+<p>Ṣaḥīḥ Muslim, Book of Faith, narrated by ʿAbdallāh ibn Masʿūd (ra).&#160;<a class="footnote-backref" href="#fnref:jamil" title="Jump back to footnote 16 in the text"></a></p>
+</li>
+<li id="fn:herzen">
+<p>Ṣaḥīḥ Muslim, Book of Virtue and the Ties of Kinship, narrated by Abū Hurayra (ra).&#160;<a class="footnote-backref" href="#fnref:herzen" title="Jump back to footnote 17 in the text"></a></p>
+</li>
+<li id="fn:drei">
+<p>Ṣaḥīḥ Muslim, Book of Government, narrated by Abū Hurayra (ra); also Sunan an-Nasāʾī no. 3137 (ṣaḥīḥ).&#160;<a class="footnote-backref" href="#fnref:drei" title="Jump back to footnote 18 in the text"></a></p>
+</li>
+<li id="fn:rotter">
+<p>Julian B. Rotter: Generalized expectancies for internal versus external control of reinforcement. <em>Psychological Monographs</em> 80 (1966), no. 609.&#160;<a class="footnote-backref" href="#fnref:rotter" title="Jump back to footnote 19 in the text"></a></p>
+</li>
+<li id="fn:seligman">
+<p>Steven F. Maier, Martin E. P. Seligman: Learned helplessness: Theory and evidence. <em>Journal of Experimental Psychology: General</em> 105 (1976), 3–46.&#160;<a class="footnote-backref" href="#fnref:seligman" title="Jump back to footnote 20 in the text"></a></p>
+</li>
+<li id="fn:ibnqayyim">
+<p>Ibn Qayyim al-Jawziyya (rh) on Surah an-Nur, verse 35: the agent (fāʿil), the recipient (qābil), the place (maḥall), the bearer (ḥāmil), the substance (mādda); the same passage contains the parable of the heart as a house. Author's rendering.&#160;<a class="footnote-backref" href="#fnref:ibnqayyim" title="Jump back to footnote 21 in the text"></a></p>
+</li>
+<li id="fn:kierkegaard">
+<p>Søren Kierkegaard: <em><span lang="de">Die Krankheit zum Tode</span></em> (<em>The Sickness unto Death</em>). Copenhagen 1849, Part One, A; rendered from the German edition.&#160;<a class="footnote-backref" href="#fnref:kierkegaard" title="Jump back to footnote 22 in the text"></a></p>
+</li>
+<li id="fn:qudsi">
+<p>Ṣaḥīḥ al-Bukhārī no. 7405 (ḥadīth qudsī).&#160;<a class="footnote-backref" href="#fnref:qudsi" title="Jump back to footnote 23 in the text"></a></p>
+</li>
+<li id="fn:saadi51">
+<p>As-Sa'di (rh) on Surah adh-Dhariyat, verse 56 (<em>Taysīr al-Karīm ar-Raḥmān</em>, Arabic edition; author's rendering).&#160;<a class="footnote-backref" href="#fnref:saadi51" title="Jump back to footnote 24 in the text"></a></p>
+</li>
+<li id="fn:ibnqayyim51">
+<p>Ibn Qayyim al-Jawziyya (rh) on Surah adh-Dhariyat, verse 56 (tafsir compiled from his works; author's rendering).&#160;<a class="footnote-backref" href="#fnref:ibnqayyim51" title="Jump back to footnote 25 in the text"></a></p>
+</li>
+<li id="fn:nak-dubai">
+<p>Nouman Ali Khan, talk in Dubai, reported in: American Muslim scholar speaks in Dubai. <em>Gulf News</em> (gulfnews.com). The report quotes him directly with the words “we have nothing to offer someone who has everything, not even our prayers.” and “We pray because we feel at one with God.” The phrase “honourable slavery to God” is the reporter's wording, not a quotation from Khan.&#160;<a class="footnote-backref" href="#fnref:nak-dubai" title="Jump back to footnote 26 in the text"></a></p>
+</li>
+<li id="fn:nak-master">
+<p>Nouman Ali Khan: <em>Master and Slaves</em> (talk; summary at AboutIslam.net). The talk refers to Surah al-Baqarah, verse 152. The text follows this summary in indirect speech; author's paraphrase.&#160;<a class="footnote-backref" href="#fnref:nak-master" title="Jump back to footnote 27 in the text"></a></p>
+</li>
+<li id="fn:nak-return">
+<p>Nouman Ali Khan: <em>How to Come Back to Allah</em> (short talk; summary at AboutIslam.net). The summary contains the sentence “A slave is a slave all the time.” The text follows it in indirect speech; author's paraphrase.&#160;<a class="footnote-backref" href="#fnref:nak-return" title="Jump back to footnote 28 in the text"></a></p>
+</li>
+<li id="fn:saadi256">
+<p>As-Sa'di (rh) on Surah al-Baqarah, verse 256 (Arabic edition; author's rendering). As-Sa'di (rh) also stresses there that the verse concerns only the acceptance of faith and not other legal questions.&#160;<a class="footnote-backref" href="#fnref:saadi256" title="Jump back to footnote 29 in the text"></a><a class="footnote-backref" href="#fnref2:saadi256" title="Jump back to footnote 29 in the text"></a></p>
+</li>
+<li id="fn:brehm">
+<p>Jack W. Brehm: <em>A Theory of Psychological Reactance.</em> New York 1966.&#160;<a class="footnote-backref" href="#fnref:brehm" title="Jump back to footnote 30 in the text"></a></p>
+</li>
+<li id="fn:ryan">
+<p>Richard M. Ryan, Edward L. Deci: Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. <em>American Psychologist</em> 55 (2000), 68–78.&#160;<a class="footnote-backref" href="#fnref:ryan" title="Jump back to footnote 31 in the text"></a></p>
+</li>
+<li id="fn:frankl">
+<p>Viktor E. Frankl: <em>Man's Search for Meaning.</em> Boston 1962, Part II (“Logotherapy in a Nutshell”): freedom, he argues, is only the negative aspect of the whole, whose positive aspect is responsibleness; without it, freedom is in danger of degenerating into mere arbitrariness. Author's paraphrase.&#160;<a class="footnote-backref" href="#fnref:frankl" title="Jump back to footnote 32 in the text"></a></p>
+</li>
+<li id="fn:khaldoun">
+<p>A. Khaldoun, E. Eiser, G. H. Wegdam, D. Bonn: Liquefaction of quicksand under stress. <em>Nature</em> 437 (2005), 635.&#160;<a class="footnote-backref" href="#fnref:khaldoun" title="Jump back to footnote 33 in the text"></a></p>
+</li>
+<li id="fn:wegner">
+<p>Daniel M. Wegner: Ironic processes of mental control. <em>Psychological Review</em> 101 (1994), 34–52.&#160;<a class="footnote-backref" href="#fnref:wegner" title="Jump back to footnote 34 in the text"></a></p>
+</li>
+<li id="fn:saadi257">
+<p>As-Sa'di (rh) on Surah al-Baqarah, verse 257 (Arabic edition; author's rendering).&#160;<a class="footnote-backref" href="#fnref:saadi257" title="Jump back to footnote 35 in the text"></a></p>
+</li>
+<li id="fn:ekers">
+<p>David Ekers et al.: Behavioural activation for depression; an update of meta-analysis. <em>PLoS One</em> 9 (2014), e100100. 26 studies, 1,524 participants.&#160;<a class="footnote-backref" href="#fnref:ekers" title="Jump back to footnote 36 in the text"></a></p>
+</li>
+<li id="fn:yusr">
+<p>Ṣaḥīḥ al-Bukhārī no. 39; Sunan an-Nasāʾī no. 5034 (ṣaḥīḥ).&#160;<a class="footnote-backref" href="#fnref:yusr" title="Jump back to footnote 37 in the text"></a></p>
+</li>
+<li id="fn:muyassar">
+<p>Ṣaḥīḥ al-Bukhārī no. 7551; Sunan Abī Dāwūd no. 4709 (ṣaḥīḥ).&#160;<a class="footnote-backref" href="#fnref:muyassar" title="Jump back to footnote 38 in the text"></a></p>
+</li>
+<li id="fn:flow">
+<p>Mihaly Csikszentmihalyi: <em>Flow: The Psychology of Optimal Experience.</em> New York 1990.&#160;<a class="footnote-backref" href="#fnref:flow" title="Jump back to footnote 39 in the text"></a></p>
+</li>
+<li id="fn:robe">
+<p>Andreea Robe et al.: ADHD and task-related heart rate variability: A systematic review and meta-analysis. <em>Neuroscience &amp; Biobehavioral Reviews</em> 99 (2019), 11–22. Hedges’ g = 0.20, a small effect.&#160;<a class="footnote-backref" href="#fnref:robe" title="Jump back to footnote 40 in the text"></a></p>
+</li>
+<li id="fn:bestaendig">
+<p>Ṣaḥīḥ al-Bukhārī nos. 1151 and 6465; Ṣaḥīḥ Muslim, Book of the Prayer of Travelers.&#160;<a class="footnote-backref" href="#fnref:bestaendig" title="Jump back to footnote 41 in the text"></a><a class="footnote-backref" href="#fnref2:bestaendig" title="Jump back to footnote 41 in the text"></a></p>
+</li>
+<li id="fn:gollwitzer">
+<p>Peter M. Gollwitzer, Paschal Sheeran: Implementation intentions and goal achievement: A meta-analysis. <em>Advances in Experimental Social Psychology</em> 38 (2006), 69–119. 94 studies, d ≈ 0.65.&#160;<a class="footnote-backref" href="#fnref:gollwitzer" title="Jump back to footnote 42 in the text"></a></p>
+</li>
+<li id="fn:makruh">
+<p>Ṣaḥīḥ al-Bukhārī no. 586, narrated by Abū Saʿīd al-Khudrī (ra). The schools of law understand this as discouraging voluntary prayer at these times; supplication and remembrance are not affected.&#160;<a class="footnote-backref" href="#fnref:makruh" title="Jump back to footnote 43 in the text"></a></p>
+</li>
+<li id="fn:drittel">
+<p>Ṣaḥīḥ al-Bukhārī no. 1145; Sunan Abī Dāwūd no. 1315 (ṣaḥīḥ).&#160;<a class="footnote-backref" href="#fnref:drittel" title="Jump back to footnote 44 in the text"></a></p>
+</li>
+<li id="fn:neff">
+<p>Kristin D. Neff: Self-compassion: An alternative conceptualization of a healthy attitude toward oneself. <em>Self and Identity</em> 2 (2003), 85–101.&#160;<a class="footnote-backref" href="#fnref:neff" title="Jump back to footnote 45 in the text"></a></p>
+</li>
+</ol>
+</div>
+<h2 id="ueber-den-autor">About the Author</h2>
+<p>Muharrem Yıldız lives with his family in Frankfurt am Main. <em>The Diamond in the Swamp. Back to Factory Settings: Fitrah, the Pull and the Anchor Prayer</em> is his first book. It grew out of a single question: What is more valuable now, here, in this situation?</p>
+</main>
+<p class="credits">Photographs: Bas van den Eijkhof, <span lang="de">Dominik Lückmann</span>, Pascal Debrunner, Wolfgang Hasselmann (Unsplash, royalty-free). Drawings and motion: made especially for this text. Qur'an translation: Sahih International.</p>
+<p class="foot">The factory is closed · Not reset, but returned</p>
+</div>
+<script>(function () {
+  "use strict";
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Hilfen ---------- */
+  function diamondPath(ctx, cx, cy, s, rot) {
+    ctx.save(); ctx.translate(cx, cy); ctx.rotate(rot || 0);
+    ctx.beginPath();
+    ctx.moveTo(-s * 0.9, -s * 0.25); ctx.lineTo(-s * 0.5, -s * 0.6); ctx.lineTo(s * 0.5, -s * 0.6);
+    ctx.lineTo(s * 0.9, -s * 0.25); ctx.lineTo(0, s * 0.8); ctx.closePath();
+    ctx.restore();
+  }
+  function drawDiamond(ctx, cx, cy, s, rot, fill, stroke) {
+    diamondPath(ctx, cx, cy, s, rot);
+    ctx.fillStyle = fill; ctx.fill();
+    ctx.strokeStyle = stroke; ctx.lineWidth = 1.2; ctx.stroke();
+    ctx.save(); ctx.translate(cx, cy); ctx.rotate(rot || 0);
+    ctx.strokeStyle = stroke; ctx.globalAlpha = ctx.globalAlpha * 0.65; ctx.lineWidth = 0.9;
+    ctx.beginPath();
+    ctx.moveTo(-s * 0.9, -s * 0.25); ctx.lineTo(s * 0.9, -s * 0.25);
+    ctx.moveTo(-s * 0.5, -s * 0.6); ctx.lineTo(-s * 0.3, -s * 0.25); ctx.lineTo(0, s * 0.8);
+    ctx.moveTo(s * 0.5, -s * 0.6); ctx.lineTo(s * 0.3, -s * 0.25); ctx.lineTo(0, s * 0.8);
+    ctx.moveTo(0, -s * 0.6); ctx.lineTo(0, -s * 0.25);
+    ctx.stroke(); ctx.restore();
+  }
+  function label(ctx, text, x, y, color, italic) {
+    ctx.save();
+    ctx.font = (italic ? "italic 400 14px 'Source Serif 4', Georgia, serif" : "500 11px Inter, 'Helvetica Neue', Arial, sans-serif");
+    ctx.textAlign = "center"; ctx.textBaseline = "alphabetic"; ctx.fillStyle = color;
+    ctx.fillText(text, x, y); ctx.restore();
+  }
+
+  /* ---------- Szenen ---------- */
+  const S = {};
+
+  // Titel: Licht fällt von oben rechts, Staub steigt auf
+  S.cover = {
+    init(st) {
+      st.blobs = [
+        { x: .18, y: .25, r: .62, rgb: "255,208,110", a: .42, sx: .00011, sy: .00007, p: 0 },
+        { x: .84, y: .60, r: .55, rgb: "176,198,255", a: .34, sx: -.00009, sy: .00012, p: 2.1 },
+        { x: .50, y: .98, r: .70, rgb: "255,228,170", a: .36, sx: .00007, sy: -.00009, p: 4.2 }];
+      st.motes = Array.from({ length: 46 }, () => ({ x: Math.random(), y: Math.random(), r: Math.random() * 1.5 + .7, v: Math.random() * .00003 + .000012, o: Math.random() * 6.28 }));
+    },
+    draw(ctx, w, h, t, p, st, dt) {
+      ctx.clearRect(0, 0, w, h);
+      ctx.save(); ctx.translate(w * .80, -h * .12);
+      for (let i = 0; i < 3; i++) {
+        const ang = .50 + i * .11 + Math.sin(t * .00008 + i) * .035;
+        ctx.save(); ctx.rotate(ang);
+        const g = ctx.createLinearGradient(0, 0, 0, h * 1.9);
+        const k = .09 + .04 * Math.sin(t * .00025 + i * 1.7);
+        g.addColorStop(0, "rgba(226,186,104,0)"); g.addColorStop(.25, "rgba(226,186,104," + k + ")"); g.addColorStop(1, "rgba(226,186,104,0)");
+        ctx.fillStyle = g; const bw = w * (.045 + .02 * i); ctx.fillRect(-bw / 2, 0, bw, h * 1.9); ctx.restore();
+      }
+      ctx.restore();
+      for (const b of st.blobs) {
+        const x = (b.x + Math.sin(t * b.sx + b.p) * .09) * w, y = (b.y + Math.cos(t * b.sy + b.p) * .09) * h, r = b.r * Math.max(w, h);
+        const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+        g.addColorStop(0, "rgba(" + b.rgb + "," + b.a + ")"); g.addColorStop(.6, "rgba(" + b.rgb + "," + (b.a * .25) + ")"); g.addColorStop(1, "rgba(" + b.rgb + ",0)");
+        ctx.fillStyle = g; ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
+      }
+      for (const m of st.motes) {
+        m.y -= m.v * dt; if (m.y < -.02) { m.y = 1.02; m.x = Math.random(); }
+        const a = .18 + .22 * (.5 + .5 * Math.sin(t * .0018 + m.o));
+        ctx.fillStyle = "rgba(214,164,70," + a + ")"; ctx.beginPath();
+        ctx.arc(m.x * w + Math.sin(t * .0004 + m.o) * 9, m.y * h, m.r, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+  };
+
+  // I · Rücksetzung: ein Gerät setzt zurück – und das Wort kehrt zurück
+  S.rueck = {
+    init(st) { st.from = "RESET "; st.to = "RETURN"; st.chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ·"; },
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const cyc = 9000, u = (t % cyc) / cyc, n = st.from.length; let txt = "";
+      for (let i = 0; i < n; i++) {
+        const li = i / n; let ch;
+        if (u < .3) ch = st.from[i];
+        else if (u < .62) { const q = (u - .3) / .32, thr = q * 1.25 - .15; if (li < thr - .12) ch = st.to[i]; else if (li < thr + .05) ch = st.chars[Math.floor(Math.random() * st.chars.length)]; else ch = st.from[i]; }
+        else ch = st.to[i];
+        txt += ch;
+      }
+      const fs = Math.min(w / 11.5, h / 4.2), alpha = u > .95 ? (1 - u) / .05 : 1;
+      ctx.save(); ctx.font = "500 " + fs + "px Inter, 'Helvetica Neue', Arial, sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      try { ctx.letterSpacing = "0.1em"; } catch (e) { }
+      ctx.fillStyle = "rgba(0,0,0," + alpha + ")"; ctx.fillText(txt, w / 2, h / 2 - fs * .2);
+      ctx.font = "400 " + (fs * .3) + "px Inter, Arial, sans-serif"; ctx.fillStyle = "rgba(0,0,0," + (.65 * alpha) + ")";
+      ctx.fillText(u < .62 ? "the device loses what was added" : "the human being loses nothing", w / 2, h / 2 + fs * .75);
+      ctx.restore();
+      const bw = Math.min(w * .5, 320), bx = (w - bw) / 2, by = h / 2 + fs * 1.15;
+      ctx.strokeStyle = "rgba(0,0,0,0.5)"; ctx.lineWidth = 1; ctx.strokeRect(bx, by, bw, 4);
+      const prog = u < .3 ? u / .3 : u < .62 ? 1 - (u - .3) / .32 : 0;
+      ctx.fillStyle = "rgba(226,186,104,0.9)"; ctx.fillRect(bx, by, bw * prog, 4);
+    }
+  };
+
+  // II · Der Diamant: Glanz, der über die Facetten wandert
+  S.diamant = {
+    init(st) { st.sp = []; },
+    draw(ctx, w, h, t, p, st, dt) {
+      ctx.clearRect(0, 0, w, h);
+      const dcx = w / 2, dcy = h * .5, ds = Math.min(w, h) * .3;
+      ctx.save(); const gl = ctx.createRadialGradient(dcx, dcy, 0, dcx, dcy, ds * 2.4); gl.addColorStop(0, "rgba(176,198,255,0.28)"); gl.addColorStop(1, "rgba(176,198,255,0)"); ctx.fillStyle = gl; ctx.fillRect(0, 0, w, h); ctx.restore();
+      drawDiamond(ctx, dcx, dcy, ds, 0, "rgba(255,255,255,0.18)", "rgba(255,255,255,0.95)");
+      const cyc = 5200, u = (t % cyc) / cyc, x = -w * .3 + u * (w * 1.6);
+      ctx.save(); ctx.globalCompositeOperation = "lighter"; ctx.translate(x, 0); ctx.rotate(-.35);
+      const g = ctx.createLinearGradient(-70, 0, 70, 0); g.addColorStop(0, "rgba(255,255,255,0)"); g.addColorStop(.5, "rgba(255,255,255,0.2)"); g.addColorStop(1, "rgba(255,255,255,0)");
+      ctx.fillStyle = g; ctx.fillRect(-90, -h, 180, h * 3); ctx.restore();
+      if (Math.random() < .07 && st.sp.length < 14) st.sp.push({ x: Math.random() * w, y: h * .2 + Math.random() * h * .65, r: 4 + Math.random() * 10, life: 0, max: 900 + Math.random() * 900 });
+      ctx.save(); ctx.globalCompositeOperation = "lighter";
+      for (const s of st.sp) {
+        s.life += dt; const k = s.life / s.max; if (k >= 1) { s.dead = true; continue; }
+        const a = k < .5 ? k * 2 : (1 - k) * 2;
+        ctx.strokeStyle = "rgba(255,255,255," + (.85 * a) + ")"; ctx.lineWidth = 1; ctx.beginPath();
+        ctx.moveTo(s.x - s.r, s.y); ctx.lineTo(s.x + s.r, s.y); ctx.moveTo(s.x, s.y - s.r); ctx.lineTo(s.x, s.y + s.r); ctx.stroke();
+        ctx.fillStyle = "rgba(255,255,255," + (.9 * a) + ")"; ctx.beginPath(); ctx.arc(s.x, s.y, 1.6, 0, Math.PI * 2); ctx.fill();
+      }
+      st.sp = st.sp.filter(s => !s.dead); ctx.restore();
+      label(ctx, "It loses nothing of its worth.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // III · Der Lichtort: der Strahl wandert, der Diamant leuchtet nur, wo er getroffen wird
+  S.lichtort = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const ang = Math.sin(t * .00035) * .55, ox = w / 2, oy = -h * .1, L = h * 1.4;
+      ctx.save(); ctx.translate(ox, oy); ctx.rotate(ang); ctx.globalCompositeOperation = "lighter";
+      const g = ctx.createLinearGradient(0, 0, 0, L); g.addColorStop(0, "rgba(255,236,190,0)"); g.addColorStop(.2, "rgba(255,236,190,0.30)"); g.addColorStop(1, "rgba(255,236,190,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.moveTo(-w * .03, 0); ctx.lineTo(w * .03, 0); ctx.lineTo(w * .17, L); ctx.lineTo(-w * .17, L); ctx.closePath(); ctx.fill(); ctx.restore();
+      const dx = w * .5, dy = h * .76, s = Math.min(w, h) * .075;
+      const bx = ox - Math.tan(ang) * (dy - oy), hit = Math.max(0, 1 - Math.abs(bx - dx) / (w * .13));
+      if (hit > 0) {
+        ctx.save(); ctx.globalCompositeOperation = "lighter"; const n = 12;
+        for (let i = 0; i < n; i++) {
+          const a = i / n * Math.PI * 2 + t * .0006, len = s * (2.5 + 3 * hit) * (.6 + .4 * Math.sin(t * .004 + i));
+          const g2 = ctx.createLinearGradient(dx, dy, dx + Math.cos(a) * len, dy + Math.sin(a) * len);
+          g2.addColorStop(0, "rgba(255,255,255," + (.75 * hit) + ")"); g2.addColorStop(1, "rgba(255,255,255,0)");
+          ctx.strokeStyle = g2; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(dx, dy); ctx.lineTo(dx + Math.cos(a) * len, dy + Math.sin(a) * len); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      drawDiamond(ctx, dx, dy, s, 0, "rgba(255,255,255," + (.15 + .8 * hit) + ")", "rgba(255,255,255,0.9)");
+      label(ctx, hit > .5 ? "Time · place · situation: here the light falls" : "The diamond acts only where it lies.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // IV · Die Bedeckung: Punkt für Punkt – und Punkt für Punkt poliert
+  S.bedeckung = {
+    init(st) { st.pts = []; st.last = 1; },
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const cx = w / 2, cy = h * .5, s = Math.min(w, h) * .27, cyc = 13000, u = (t % cyc) / cyc;
+      if (u < st.last) st.pts = []; st.last = u;
+      ctx.save(); const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, s * 2.2); g.addColorStop(0, "rgba(255,230,170,0.35)"); g.addColorStop(1, "rgba(255,230,170,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      drawDiamond(ctx, cx, cy, s, 0, "rgba(250,247,240,0.94)", "rgba(60,50,40,0.9)");
+      if (u < .55) {
+        const want = Math.floor(u / .55 * 260); let guard = 0;
+        while (st.pts.length < want && guard++ < 400) {
+          const x = cx + (Math.random() * 2 - 1) * s * .9, y = cy + (Math.random() * 1.4 - .6) * s;
+          diamondPath(ctx, cx, cy, s, 0); if (ctx.isPointInPath(x, y)) st.pts.push({ x, y, r: 2 + Math.random() * 3 }); else want--;
+        }
+      }
+      let px = -1; if (u > .62 && u < .95) { const q = (u - .62) / .33; px = cx - s * 1.2 + q * s * 2.4; }
+      for (const q of st.pts) {
+        if (px > 0 && Math.abs(q.x - px) < s * .22) q.dead = true;
+        ctx.fillStyle = "rgba(30,24,20,0.85)"; ctx.beginPath(); ctx.arc(q.x, q.y, q.r, 0, Math.PI * 2); ctx.fill();
+      }
+      st.pts = st.pts.filter(q => !q.dead);
+      if (px > 0) { ctx.save(); const g2 = ctx.createRadialGradient(px, cy, 0, px, cy, s * .55); g2.addColorStop(0, "rgba(255,255,255,0.75)"); g2.addColorStop(1, "rgba(255,255,255,0)"); ctx.fillStyle = g2; ctx.fillRect(px - s, cy - s * 1.2, 2 * s, 2.4 * s); ctx.restore(); }
+      label(ctx, u < .6 ? "The covering: an accumulation, spot by spot." : "The polish: let go, ask, turn back. Spot by spot.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // V · Die Fassung: Ring, Bohrkopf, Tresor kreisen – der Diamant bleibt, wo das Licht ist
+  S.fassung = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const cx = w / 2, cy = h * .5, s = Math.min(w, h) * .13, R = Math.min(w, h) * .38, names = ["Ring", "Drill bit", "Safe"];
+      ctx.strokeStyle = "rgba(0,0,0,0.9)"; ctx.lineWidth = 1.5;
+      for (let i = 0; i < 3; i++) {
+        const a = t * .00025 + i * Math.PI * 2 / 3, pulse = Math.max(0, Math.sin(t * .0012 + i * 2.1)), r = R * (1 - .22 * pulse);
+        const x = cx + Math.cos(a) * r * 1.15, y = cy + Math.sin(a) * r * .62;
+        ctx.save(); ctx.translate(x, y); ctx.strokeStyle = "rgba(0,0,0,0.9)"; ctx.fillStyle = "rgba(0,0,0,0.9)"; ctx.lineWidth = 1.5;
+        if (i === 0) { ctx.beginPath(); ctx.arc(0, 0, s * .55, 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.arc(0, 0, s * .38, 0, Math.PI * 2); ctx.stroke(); }
+        else if (i === 1) { ctx.beginPath(); ctx.moveTo(-s * .5, -s * .5); ctx.lineTo(s * .5, -s * .5); ctx.lineTo(0, s * .6); ctx.closePath(); ctx.stroke(); for (let k = -2; k <= 2; k++) { ctx.beginPath(); ctx.moveTo(k * s * .18, -s * .5); ctx.lineTo(k * s * .09, s * .05); ctx.stroke(); } }
+        else { ctx.strokeRect(-s * .55, -s * .5, s * 1.1, s); ctx.beginPath(); ctx.arc(0, 0, s * .22, 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(s * .2, -s * .1); ctx.stroke(); }
+        ctx.font = "500 11px Inter, Arial, sans-serif"; ctx.textAlign = "center"; ctx.fillText(names[i], 0, s * .95); ctx.restore();
+      }
+      ctx.save(); ctx.globalCompositeOperation = "multiply"; const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, s * 2.6); g.addColorStop(0, "rgba(255,215,130,0.6)"); g.addColorStop(1, "rgba(255,215,130,0)"); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      drawDiamond(ctx, cx, cy, s, 0, "rgba(255,255,255,0.97)", "rgba(0,0,0,0.9)");
+      label(ctx, "None of them lets it shine from itself.", cx, h - 18, "#000", true);
+    }
+  };
+
+  // VI · Die Verkippung: beim Weiterlesen richtet sich der Diamant auf
+  S.verkippung = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      const q = reduce ? 1 : Math.min(1, Math.max(0, (p - .18) / .55)), tilt = (1 - q) * .6;
+      const cx = w / 2, cy = h * .56, s = Math.min(w, h) * .17;
+      // der Strahl von oben rechts – auf hellem Grund als warme Verdichtung (multiply)
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const sx = w * .82, sy = -h * .1, g = ctx.createLinearGradient(sx, sy, cx, cy - s * .4);
+      g.addColorStop(0, "rgba(226,186,104,0)"); g.addColorStop(.3, "rgba(226,186,104,0.45)"); g.addColorStop(1, "rgba(226,186,104,0.75)");
+      ctx.strokeStyle = g; ctx.lineWidth = s * .5; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(cx, cy - s * .4); ctx.stroke(); ctx.restore();
+      if (tilt > .02) {
+        ctx.save(); ctx.globalCompositeOperation = "multiply"; const k = tilt / .6;
+        const g2 = ctx.createLinearGradient(cx, cy + s * .6, cx + s * 1.6, h * 1.3); g2.addColorStop(0, "rgba(200,120,70," + (.55 * k) + ")"); g2.addColorStop(1, "rgba(200,120,70,0)");
+        ctx.strokeStyle = g2; ctx.lineWidth = s * .35; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(cx, cy + s * .6); ctx.lineTo(cx + s * 1.6, h * 1.3); ctx.stroke(); ctx.restore();
+      }
+      if (q > .05) {
+        ctx.save(); ctx.globalCompositeOperation = "multiply"; const n = 14;
+        for (let i = 0; i < n; i++) {
+          const a = -Math.PI / 2 + (i / (n - 1) - .5) * 1.5, len = s * (1.5 + 3 * q) * (.7 + .3 * Math.sin(t * .003 + i));
+          const x2 = cx + Math.cos(a) * len, y2 = cy - s * .6 + Math.sin(a) * len;
+          const g3 = ctx.createLinearGradient(cx, cy - s * .6, x2, y2); g3.addColorStop(0, "rgba(214,164,70," + (.9 * q) + ")"); g3.addColorStop(1, "rgba(214,164,70,0)");
+          ctx.strokeStyle = g3; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, cy - s * .6); ctx.lineTo(x2, y2); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      drawDiamond(ctx, cx, cy, s, tilt, "rgba(255,255,255," + (.35 + .6 * q) + ")", "rgba(0,0,0,0.9)");
+      label(ctx, q < .5 ? "Tilted: the light escapes downward, where there is no eye." : "Aligned: the bearer moves, and the light comes back.", cx, h - 18, "#000", true);
+      if (q < .9) label(ctx, "READ ON AND IT TURNS UPRIGHT", cx, 24, "rgba(0,0,0,0.55)", false);
+    }
+  };
+
+  // VII · Die Widmung: alles wird zum Licht gezogen – nur der Diamant wendet sich selbst zu
+  S.widmung = {
+    init(st) {
+      st.grains = Array.from({ length: 70 }, () => ({ x: Math.random() * 1.3 - .15, y: Math.random() * 1.3 - .15, v: .00004 + Math.random() * .00005, l: 6 + Math.random() * 8 }));
+      st.rot = 0; st.free = 0;
+    },
+    draw(ctx, w, h, t, p, st, dt) {
+      ctx.clearRect(0, 0, w, h);
+      const lx = w * .86, ly = h * .12, cx = w / 2, cy = h * .58, s = Math.min(w, h) * .16;
+      // die Lichtquelle: warm, oben rechts
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const g = ctx.createRadialGradient(lx, ly, 0, lx, ly, Math.max(w, h) * .55);
+      g.addColorStop(0, "rgba(226,186,104,0.75)"); g.addColorStop(.35, "rgba(226,186,104,0.25)"); g.addColorStop(1, "rgba(226,186,104,0)");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      // die Schöpfung: Körner, die alle gezogen werden – „freiwillig oder widerwillig“
+      ctx.save(); ctx.strokeStyle = "rgba(0,0,0,0.55)"; ctx.lineWidth = 1.1; ctx.lineCap = "round";
+      for (const q of st.grains) {
+        const dx = lx / w - q.x, dy = ly / h - q.y, d = Math.hypot(dx, dy) || 1;
+        q.x += dx / d * q.v * dt; q.y += dy / d * q.v * dt;
+        if (d < .05) { q.x = Math.random() < .5 ? -.1 : Math.random(); q.y = q.x < 0 ? Math.random() : 1.1; }
+        const px = q.x * w, py = q.y * h, ux = dx / d * q.l, uy = dy / d * q.l;
+        ctx.beginPath(); ctx.moveTo(px - ux, py - uy); ctx.lineTo(px, py); ctx.stroke();
+      }
+      ctx.restore();
+      // der Diamant: zuerst treibt er, dann richtet er sich – beim Weiterlesen – selbst aus
+      const want = reduce ? 1 : Math.min(1, Math.max(0, (p - .2) / .5));
+      st.free += (want - st.free) * Math.min(1, dt / 600);
+      const drift = Math.sin(t * .0007) * .9 + Math.sin(t * .0023) * .25;
+            const rot = drift * (1 - st.free);  // zugewandt heißt: aufrecht, zum Licht hin offen
+      if (st.free > .05) {
+        ctx.save(); ctx.globalCompositeOperation = "multiply"; const n = 10;
+        for (let i = 0; i < n; i++) {
+          const a = Math.atan2(ly - cy, lx - cx) + (i / (n - 1) - .5) * .9, len = s * (1 + 2.5 * st.free) * (.7 + .3 * Math.sin(t * .003 + i));
+          const x2 = cx + Math.cos(a) * len, y2 = cy + Math.sin(a) * len;
+          const g3 = ctx.createLinearGradient(cx, cy, x2, y2); g3.addColorStop(0, "rgba(214,164,70," + (.85 * st.free) + ")"); g3.addColorStop(1, "rgba(214,164,70,0)");
+          ctx.strokeStyle = g3; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(x2, y2); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      drawDiamond(ctx, cx, cy, s, rot, "rgba(255,255,255," + (.4 + .55 * st.free) + ")", "rgba(0,0,0,0.9)");
+      label(ctx, st.free < .5 ? "Everything is drawn, willingly or by compulsion." : "Only the human being turns toward it, because he could turn away.", cx, h - 18, "#000", true);
+      if (st.free < .9) label(ctx, "READ ON AND IT TURNS TOWARD THE LIGHT", cx, 24, "rgba(0,0,0,0.55)", false);
+    }
+  };
+
+  // VII · Der Sog: strampeln, aufhören, die Gebetswaschung
+  S.sog = {
+    init(st) { st.rip = []; },
+    draw(ctx, w, h, t, p, st, dt) {
+      const cyc = 14000, u = (t % cyc) / cyc, wash = u < .6 ? 0 : Math.min(1, (u - .6) / .25);
+      ctx.clearRect(0, 0, w, h);
+      // der Boden: warmes Moor, das sich beim Waschen in klares Wasser wandelt (multiply, bleibt hell)
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const r = Math.round(205 + (185 - 205) * wash), g = Math.round(185 + (210 - 185) * wash), b = Math.round(150 + (230 - 150) * wash);
+      ctx.fillStyle = "rgba(" + r + "," + g + "," + b + ",0.75)"; ctx.fillRect(0, 0, w, h); ctx.restore();
+      const cx = w / 2, cy = h * .5, base = Math.min(w, h);
+      ctx.save(); ctx.translate(cx, cy); ctx.rotate(t * .0004);
+      for (let i = 1; i <= 9; i++) {
+        const rr = i * base * .055; ctx.beginPath();
+        for (let a = 0; a <= Math.PI * 2 + .01; a += .1) { const wob = 1 + .06 * Math.sin(a * 3 + i + t * .001); const x = Math.cos(a) * rr * wob * 1.6, y = Math.sin(a) * rr * wob * .7; if (a === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
+        ctx.strokeStyle = "rgba(70,50,30," + (.5 * (1 - wash)) + ")"; ctx.lineWidth = 2; ctx.stroke();
+      }
+      ctx.restore();
+      let fy, jit = 0;
+      if (u < .45) { fy = cy - h * .1 + (u / .45) * h * .22; jit = Math.sin(t * .03) * 6; }
+      else if (u < .6) { const q = (u - .45) / .15; fy = cy + h * .12 - q * h * .22; }
+      else fy = cy - h * .1;
+      ctx.fillStyle = "rgba(0,0,0,0.9)"; ctx.beginPath(); ctx.arc(cx + jit, fy, base * .03, 0, Math.PI * 2); ctx.fill();
+      if (wash > 0) {
+        if (Math.random() < .07) st.rip.push({ x: cx + (Math.random() - .5) * w * .6, y: cy + (Math.random() - .5) * h * .45, r: 0 });
+        for (const q of st.rip) { q.r += dt * .05; const a = Math.max(0, 1 - q.r / (base * .35)); ctx.strokeStyle = "rgba(30,90,150," + (.75 * a) + ")"; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.ellipse(q.x, q.y, q.r * 1.6, q.r * .7, 0, 0, Math.PI * 2); ctx.stroke(); if (a <= 0) q.dead = true; }
+        st.rip = st.rip.filter(q => !q.dead);
+      } else st.rip = [];
+      label(ctx, u < .45 ? "Thrashing. The mud grips." : (u < .6 ? "Stop. The mud holds you." : "Wudu: brought out, not fought out."), cx, h - 18, "#000", true);
+    }
+  };
+
+  // VIII · Das Leichtgemachtsein: Bienen auf geebneten Wegen
+  S.biene = {
+    init(st) { st.bees = Array.from({ length: 6 }, (_, i) => ({ ph: i * 1.1, f1: .00018 + i * .00002, f2: .00013 + i * .00003, ax: .38, ay: .3, trail: [] })); },
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      ctx.save(); ctx.setLineDash([2, 7]); ctx.strokeStyle = "rgba(255,225,150,0.5)"; ctx.lineWidth = 1;
+      for (let i = 0; i < 3; i++) { ctx.beginPath(); for (let x = 0; x <= w; x += 8) { const y = h * (.3 + .2 * i) + Math.sin(x / w * Math.PI * 2 + i) * h * .08; if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); } ctx.stroke(); }
+      ctx.restore();
+      for (const b of st.bees) {
+        const x = w / 2 + Math.cos(t * b.f1 + b.ph) * w * b.ax, y = h / 2 + Math.sin(t * b.f2 + b.ph * .7) * h * b.ay;
+        b.trail.push({ x, y }); if (b.trail.length > 40) b.trail.shift();
+        ctx.save(); ctx.globalCompositeOperation = "lighter";
+        for (let i = 1; i < b.trail.length; i++) { const a = i / b.trail.length; ctx.strokeStyle = "rgba(255,210,110," + (.4 * a) + ")"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(b.trail[i - 1].x, b.trail[i - 1].y); ctx.lineTo(b.trail[i].x, b.trail[i].y); ctx.stroke(); }
+        ctx.restore();
+        const n = b.trail.length, dx = n > 1 ? x - b.trail[n - 2].x : 1, dy = n > 1 ? y - b.trail[n - 2].y : 0, ang = Math.atan2(dy, dx);
+        ctx.save(); ctx.translate(x, y); ctx.rotate(ang);
+        const wf = Math.sin(t * .08 + b.ph) * .5 + .5;
+        ctx.fillStyle = "rgba(255,255,255," + (.35 + .4 * wf) + ")"; ctx.beginPath(); ctx.ellipse(-1, -5, 5, 3, -.5, 0, Math.PI * 2); ctx.fill(); ctx.beginPath(); ctx.ellipse(-1, 5, 5, 3, .5, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#f2c230"; ctx.beginPath(); ctx.ellipse(0, 0, 7, 4, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = "#1d1a14"; ctx.fillRect(-2, -4, 2, 8); ctx.fillRect(2, -3.5, 2, 7); ctx.restore();
+      }
+      label(ctx, "Follow the ways of your Lord laid down for you.", w / 2, h - 18, "rgba(255,255,255,0.92)", true);
+    }
+  };
+
+  // IX · Der Anker: er setzt sich in den Grund, bevor der Zug kommt
+  S.anker = {
+    draw(ctx, w, h, t, p, st) {
+      ctx.clearRect(0, 0, w, h);
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const g0 = ctx.createLinearGradient(0, 0, 0, h); g0.addColorStop(0, "rgba(200,220,238,0.55)"); g0.addColorStop(1, "rgba(150,185,215,0.75)"); ctx.fillStyle = g0; ctx.fillRect(0, 0, w, h); ctx.restore();
+      const cyc = 11000, u = (t % cyc) / cyc, set = u < .5 ? u / .5 : 1, calm = u < .5 ? 0 : Math.min(1, (u - .5) / .3), amp = h * .03 * (1 - .8 * calm);
+      for (let i = 0; i < 4; i++) {
+        ctx.beginPath(); for (let x = 0; x <= w; x += 6) { const y = h * .2 + i * 7 + Math.sin(x * .02 + t * .003 + i) * amp; if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
+        ctx.strokeStyle = "rgba(20,70,120," + (.6 - i * .11) + ")"; ctx.lineWidth = 1.2; ctx.stroke();
+      }
+      const cx = w / 2, topY = h * .05, botY = h * .7, y = topY + (botY - topY) * (1 - Math.pow(1 - set, 2)), sway = (1 - set) * Math.sin(t * .004) * .15, s = Math.min(w, h) * .09;
+      ctx.strokeStyle = "rgba(0,0,0,0.85)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, -5); ctx.quadraticCurveTo(cx + (1 - set) * 20, y / 2, cx + Math.sin(sway) * 10, y - s * .9); ctx.stroke();
+      ctx.save(); ctx.translate(cx, y); ctx.rotate(sway); ctx.strokeStyle = "rgba(0,0,0,0.9)"; ctx.lineWidth = 3; ctx.lineCap = "round";
+      ctx.beginPath(); ctx.arc(0, -s * .75, s * .18, 0, Math.PI * 2); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(0, -s * .55); ctx.lineTo(0, s * .7); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(-s * .45, -s * .25); ctx.lineTo(s * .45, -s * .25); ctx.stroke();
+      ctx.beginPath(); ctx.arc(0, s * .15, s * .6, Math.PI * .15, Math.PI * .85); ctx.stroke();
+      ctx.restore();
+      ctx.save(); ctx.globalCompositeOperation = "multiply"; ctx.fillStyle = "rgba(190,170,140,0.7)"; ctx.fillRect(0, h * .82, w, h * .18); ctx.restore();
+      label(ctx, set >= 1 ? "Set before the strain comes: when the pull comes, then wudu." : "An anchor does not hold because it is heavy.", cx, h - 18, "#000", true);
+    }
+  };
+
+  // X · Die Rückkehr: Morgen, Licht über Licht
+  S.rueckkehr = {
+    init(st) { st.m = Array.from({ length: 30 }, () => ({ x: Math.random(), y: Math.random(), v: .00002 + Math.random() * .00003, o: Math.random() * 6 })); },
+    draw(ctx, w, h, t, p, st, dt) {
+      const cyc = 16000, u = (t % cyc) / cyc, dawn = Math.sin(u * Math.PI);
+      ctx.clearRect(0, 0, w, h);
+      // Morgen: ein heller Himmel, der sich von kühlem Blau in warmes Gold wandelt (multiply, bleibt hell)
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      const g = ctx.createLinearGradient(0, 0, 0, h);
+      g.addColorStop(0, "rgba(" + Math.round(180 + 40 * dawn) + "," + Math.round(200 + 20 * dawn) + "," + Math.round(230 - 30 * dawn) + ",0.7)");
+      g.addColorStop(1, "rgba(" + Math.round(240) + "," + Math.round(200 + 20 * dawn) + "," + Math.round(140 + 40 * (1 - dawn)) + ",0.8)");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); ctx.restore();
+      const cx = w / 2, cy = h * .6, s = Math.min(w, h) * .14;
+      ctx.save(); ctx.globalCompositeOperation = "multiply";
+      for (let i = 0; i < 2; i++) { const r = s * (2.2 + i * 1.3) * (1 + .06 * Math.sin(t * .0015 + i * 2)); const gg = ctx.createRadialGradient(cx, cy - s * .2, s * .3, cx, cy - s * .2, r); gg.addColorStop(0, "rgba(226,186,104," + (.25 + .35 * dawn) + ")"); gg.addColorStop(1, "rgba(226,186,104,0)"); ctx.fillStyle = gg; ctx.fillRect(0, 0, w, h); }
+      ctx.restore();
+      for (const m of st.m) { m.y -= m.v * dt; if (m.y < 0) { m.y = 1; m.x = Math.random(); } ctx.fillStyle = "rgba(160,110,30," + (.3 + .3 * Math.sin(t * .002 + m.o)) + ")"; ctx.beginPath(); ctx.arc(m.x * w, m.y * h, 1.3, 0, Math.PI * 2); ctx.fill(); }
+      drawDiamond(ctx, cx, cy, s, 0, "rgba(255,255,255,0.96)", "rgba(0,0,0,0.95)");
+      label(ctx, "The factory is closed. Not reset, but returned.", cx, h - 18, "#000", true);
+    }
+  };
+
+  /* ---------- Antrieb ---------- */
+  const stages = Array.prototype.slice.call(document.querySelectorAll(".stage[data-scene]"));
+  const entries = stages.map(function (el) {
+    const c = el.querySelector("canvas");
+    return { el: el, c: c, ctx: c.getContext("2d"), scene: S[el.getAttribute("data-scene")], st: {}, active: false, w: 0, h: 0, dpr: 1, drawn: false };
+  }).filter(function (e) { return e.scene; });
+  entries.forEach(function (e) { if (e.scene.init) e.scene.init(e.st); });
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(function (list) {
+      list.forEach(function (x) { const e = entries.find(function (e) { return e.el === x.target; }); if (e) e.active = x.isIntersecting; });
+    }, { rootMargin: "25% 0px" });
+    entries.forEach(function (e) { io.observe(e.el); });
+  } else entries.forEach(function (e) { e.active = true; });
+
+  function size(e) {
+    const r = e.el.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 1.5), w = Math.round(r.width), h = Math.round(r.height);
+    if (w !== e.w || h !== e.h || dpr !== e.dpr) { e.w = w; e.h = h; e.dpr = dpr; e.c.width = Math.max(1, w * dpr); e.c.height = Math.max(1, h * dpr); e.c.style.width = w + "px"; e.c.style.height = h + "px"; }
+    e.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function progress(e) { const r = e.el.getBoundingClientRect(), vh = window.innerHeight || 800; return Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height))); }
+  let last = performance.now(), t = 0;
+  function frame(now) {
+    const dt = Math.min(50, now - last); last = now; t += dt;
+    for (const e of entries) {
+      if (e.drawn && !e.active) continue;
+      size(e); if (e.w < 2 || e.h < 2) continue;
+      e.ctx.clearRect(0, 0, e.w, e.h);
+      try { e.scene.draw(e.ctx, e.w, e.h, t, progress(e), e.st, dt); } catch (err) { }
+      e.drawn = true;
+    }
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  if (reduce) { t = 4000; frame(performance.now()); } else requestAnimationFrame(frame);
+  window.addEventListener("resize", function () { entries.forEach(function (e) { e.drawn = false; }); });
+
+  /* ---------- Text erwacht beim Hereinscrollen ---------- */
+  if ("IntersectionObserver" in window) {
+    const io2 = new IntersectionObserver(function (list) { list.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io2.unobserve(x.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll("main h2, main .vers, main .regel, main .dua, .glossar p").forEach(function (el) { io2.observe(el); });
+  }
+})();
+</script>
+<script>(function(){
+  "use strict";
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var html=document.documentElement, KEY="diamond-reader";
+  var st={}; try{ st=JSON.parse(localStorage.getItem(KEY)||"{}"); }catch(e){}
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){} }
+  // Einstellungen anwenden
+  if(st.size) html.classList.add("r-size-"+st.size); if(st.night) html.classList.add("night");
+  // Kapitel
+  var hs=$$("main h2[id]"); var words=function(el){var t="",n=el.nextElementSibling;while(n&&n.tagName!=="H2"){t+=" "+(n.textContent||"");n=n.nextElementSibling;}return t.trim().split(/\s+/).length;};
+  var total=0; var chapters=hs.map(function(h2){var w=words(h2); total+=w; return {el:h2, id:h2.id, title:h2.textContent.trim(), min:Math.max(1,Math.round(w/200))};});
+  var hint=$(".cover .hint"); if(hint && total) hint.textContent+=" Reading time about "+Math.round(total/200)+" minutes.";
+  // Chrome bauen
+  var prog=document.createElement("i"); prog.className="rprog"; document.body.appendChild(prog);
+  var bar=document.createElement("div"); bar.className="rbar"; bar.setAttribute("role","toolbar"); bar.setAttribute("aria-label","Reading");
+  bar.innerHTML='<button type="button" class="kap" aria-expanded="false" aria-controls="rside">Chapters</button><div class="t"><span class="ct">The Diamond in the Swamp</span><small class="cs">The Essence</small></div><button type="button" class="rd" title="Read aloud" aria-pressed="false">▶</button><button type="button" class="aa" title="Text size">Aa</button><button type="button" class="nt" title="Night mode">☾</button>';
+  document.body.appendChild(bar);
+  var side=document.createElement("aside"); side.className="rside"; side.id="rside"; side.setAttribute("aria-label","Chapters");
+  side.innerHTML='<p class="h">Chapters</p><ol>'+chapters.map(function(c){return '<li><a href="#'+c.id+'">'+c.title+'<span class="rt">'+c.min+' min</span></a></li>';}).join("")+'</ol>';
+  document.body.appendChild(side);
+  var links=$$("a",side);
+  var kap=$(".kap",bar), aa=$(".aa",bar), nt=$(".nt",bar), ct=$(".ct",bar), cs=$(".cs",bar);
+  kap.addEventListener("click",function(){var on=!side.classList.contains("on"); side.classList.toggle("on",on); kap.setAttribute("aria-expanded",on);});
+  links.forEach(function(a){a.addEventListener("click",function(){ if(window.innerWidth<1100){side.classList.remove("on");kap.setAttribute("aria-expanded","false");} });});
+  aa.addEventListener("click",function(){ var s=(st.size||1)%3+1; html.classList.remove("r-size-1","r-size-2","r-size-3"); if(s>1) html.classList.add("r-size-"+s); st.size=s; save(); });
+  nt.addEventListener("click",function(){ st.night=!st.night; html.classList.toggle("night",!!st.night); nt.textContent=st.night?"☀":"☾"; save(); });
+  if(st.night) nt.textContent="☀";
+  // Fortschritt, aktives Kapitel, Leiste ein/aus
+  var cover=$(".cover"); var ticking=false, lastSave=0;
+  function update(){
+    ticking=false;
+    var doc=document.documentElement, max=doc.scrollHeight-window.innerHeight, p=max>0?window.scrollY/max:0;
+    prog.style.transform="scaleX("+p+")";
+    var barOn = cover ? window.scrollY>cover.offsetHeight-40 : window.scrollY>200;
+    bar.classList.toggle("on", barOn); side.classList.toggle("show", barOn);
+    var cur=null; for(var i=0;i<chapters.length;i++){ if(chapters[i].el.getBoundingClientRect().top<=window.innerHeight*0.4) cur=i; }
+    links.forEach(function(a,i){a.classList.toggle("cur",i===cur);});
+    if(cur!==null){ ct.textContent=chapters[cur].title; cs.textContent=(window.innerWidth<700?"":"The Diamond in the Swamp · ")+(cur+1)+" / "+chapters.length; } else { ct.textContent="The Diamond in the Swamp"; cs.textContent="The Essence"; }
+    var now=Date.now(); if(now-lastSave>1500){ lastSave=now; st.y=window.scrollY; st.chap=cur; save(); }
+  }
+  window.addEventListener("scroll",function(){ if(!ticking){ticking=true;requestAnimationFrame(update);} },{passive:true});
+  window.addEventListener("resize",update); update();
+  // Weiterlesen
+  if(st.y && st.y>window.innerHeight*1.2 && st.chap!==null && st.chap!==undefined && chapters[st.chap]){
+    var c=document.createElement("div"); c.className="rcont"; c.setAttribute("role","status");
+    c.innerHTML='<span>Continue at “'+chapters[st.chap].title+'”?</span><button type="button" class="go">Continue</button><button type="button" class="x" aria-label="Close">✕</button>';
+    document.body.appendChild(c); setTimeout(function(){c.classList.add("on");},600);
+    var y=st.y;
+    $(".go",c).addEventListener("click",function(){ window.scrollTo({top:y,behavior:"smooth"}); c.classList.remove("on"); });
+    $(".x",c).addEventListener("click",function(){ c.classList.remove("on"); });
+    setTimeout(function(){c.classList.remove("on");},12000);
+  }
+
+  // Vorlesen – Web Speech API (kostenlos, läuft im Browser; Stimme je nach Gerät)
+  (function(){
+    var rd=$(".rd",bar); if(!rd) return;
+    if(!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)){ rd.addEventListener("click",function(){ var c=document.createElement("div"); c.className="rvoice on"; c.innerHTML="<span class=\"st\">This browser cannot read aloud. Please open the page in Chrome or Safari.</span>"; document.body.appendChild(c); setTimeout(function(){c.remove();},6000); }); return; }
+    var LANG="de", synth=window.speechSynthesis, voice=null, rate=1, playing=false, paused=false, queue=[], qi=0, curEl=null, items=[];
+    var panel=document.createElement("div"); panel.className="rvoice"; panel.setAttribute("role","group"); panel.setAttribute("aria-label","Read aloud");
+    panel.innerHTML='<button type="button" class="primary pp">Pause</button><button type="button" class="stop">Stop</button><button type="button" class="spd">1×</button><button type="button" class="x" aria-label="Close">✕</button><span class="st"></span>';
+    document.body.appendChild(panel);
+    var pp=$(".pp",panel), stop=$(".stop",panel), spd=$(".spd",panel), st=$(".st",panel);
+    function pickVoice(){
+      var vs=synth.getVoices().filter(function(v){return (v.lang||"").toLowerCase().indexOf(LANG)===0;});
+      if(!vs.length) return null;
+      var score=function(v){var n=v.name.toLowerCase(); return (n.indexOf("natural")>-1?40:0)+(n.indexOf("google")>-1?20:0)+(n.indexOf("microsoft")>-1?10:0)+(v.localService?0:5);};
+      vs.sort(function(a,b){return score(b)-score(a);}); return vs[0];
+    }
+    function collect(){
+      items=[]; $$("main > *").forEach(function(el){
+        if(el.matches("h2, p, .vers, .regel, .dua, .epigraph")) items.push(el);
+        if(el.classList.contains("glossar")) $$("p",el).forEach(function(p){items.push(p);});
+      });
+    }
+    function textOf(el){
+      var c=el.cloneNode(true); $$("sup, .src, .epi-src, .orn, .footnote-backref, .ar",c).forEach(function(x){x.remove();});
+      var t=(c.textContent||"").replace(/\s+/g," ").trim();
+      t=t.replace(/\b([IVX]+) · /,"$1. "); return t;
+    }
+    function sentences(t){ var out=[], re=/[^.!?…:;]+[.!?…:;]+["“”»]?\s*|[^.!?…:;]+$/g, m; while((m=re.exec(t))){ if(m[0].trim()) out.push(m[0].trim()); } return out.length?out:[t]; }
+    function mark(el){ if(curEl) curEl.classList.remove("lese"); curEl=el; if(el){ el.classList.add("lese"); var r=el.getBoundingClientRect(); if(r.top<80||r.bottom>window.innerHeight-40) window.scrollTo({top:window.scrollY+r.top-Math.min(160,window.innerHeight*0.25),behavior:"smooth"}); } }
+    function speakNext(){
+      if(!playing) return;
+      if(qi>=queue.length){ // nächstes Element
+        var i=items.indexOf(curEl); var nx=items[i+1]; if(!nx){ end(); st.textContent="End of text."; return; }
+        start(nx); return;
+      }
+      var u=new SpeechSynthesisUtterance(queue[qi++]); u.lang="en-US"; if(voice) u.voice=voice; u.rate=rate; u.pitch=1;
+      u.onend=function(){ if(playing&&!paused) speakNext(); };
+      u.onerror=function(e){ if(e.error==="interrupted"||e.error==="canceled") return; st.textContent=voice?"The voice stopped. Please tap ▶ again.":"No reading voice is available on this device."; end(); };
+      synth.speak(u);
+    }
+    function start(el){
+      if(!el) return; playing=true; paused=false; mark(el); queue=sentences(textOf(el)); qi=0;
+      rd.setAttribute("aria-pressed","true"); rd.textContent="❚❚"; pp.textContent="Pause"; panel.classList.add("on");
+      var n=items.indexOf(el); var h=null; for(var i=n;i>=0;i--){ if(items[i].tagName==="H2"){h=items[i];break;} }
+      st.textContent=(voice?voice.name.replace(/ \(.*$/,"")+" · ":"")+(h?textOf(h):"");
+      synth.cancel(); setTimeout(speakNext,60);
+    }
+    function end(){ playing=false; paused=false; synth.cancel(); mark(null); rd.setAttribute("aria-pressed","false"); rd.textContent="▶"; }
+    function currentStart(){ // ab dem Absatz, der oben im Bild steht
+      for(var i=0;i<items.length;i++){ var r=items[i].getBoundingClientRect(); if(r.bottom>90 && r.top<window.innerHeight*0.6) return items[i]; }
+      for(var j=0;j<items.length;j++){ if(items[j].getBoundingClientRect().top>60) return items[j]; }
+      return items[0];
+    }
+    rd.addEventListener("click",function(){
+      voice=voice||pickVoice(); collect();
+      if(playing){ if(paused){ synth.resume(); paused=false; pp.textContent="Pause"; } else { end(); } return; }
+      if(!voice){ st.textContent="No English voice found on this device."; panel.classList.add("on"); }
+      start(currentStart());
+    });
+    pp.addEventListener("click",function(){ if(!playing) return; if(paused){ synth.resume(); paused=false; pp.textContent="Pause"; } else { synth.pause(); paused=true; pp.textContent="Resume"; } });
+    stop.addEventListener("click",function(){ end(); panel.classList.remove("on"); });
+    $(".x",panel).addEventListener("click",function(){ end(); panel.classList.remove("on"); });
+    spd.addEventListener("click",function(){ rate=rate===1?1.15:rate===1.15?0.9:1; spd.textContent=(rate===1?"1":rate===1.15?"1,15":"0,9")+"×"; if(playing&&!paused){ var el=curEl, k=qi-1; synth.cancel(); queue=sentences(textOf(el)); qi=Math.max(0,k); setTimeout(speakNext,80); } });
+    // Antippen eines Absatzes während des Vorlesens: dort weiterlesen
+    document.addEventListener("click",function(e){ if(!playing) return; var el=e.target.closest("main p, main .vers, main .regel, main .dua, main h2"); if(el && items.indexOf(el)>-1 && el!==curEl){ start(el); } });
+    if(synth.onvoiceschanged!==undefined){ synth.addEventListener("voiceschanged",function(){ if(!voice) voice=pickVoice(); }); }
+    window.addEventListener("pagehide",function(){ synth.cancel(); });
+  })();
+  // Tastatur: Pfeile springen zwischen Kapiteln
+  window.addEventListener("keydown",function(e){ if(e.altKey||e.ctrlKey||e.metaKey) return; if(e.key==="ArrowRight"||e.key==="ArrowLeft"){ var cur=-1; for(var i=0;i<chapters.length;i++){ if(chapters[i].el.getBoundingClientRect().top<=window.innerHeight*0.4) cur=i; } var n=e.key==="ArrowRight"?cur+1:cur-1; if(chapters[n]){ e.preventDefault(); chapters[n].el.scrollIntoView({behavior:"smooth",block:"start"}); } } });
+})();</script>
+</body>
+</html>
