@@ -6,6 +6,7 @@ Statische Seite, gehostet über GitHub Pages (Branch `gh-pages`).
 - `/diamant/` – Der Diamant im Sumpf · Die Essenz (unverlinkt, noindex, nur per Link)
 - `/pirlanta/` – türkische Fassung (Bataklıktaki Pırlanta · Öz)
 - `/diamond/` – englische Fassung (The Diamond in the Swamp · The Essence); Koranverse Arabisch + Sahih International
+- `/darija/` – marokkanische Fassung (الماس فالمرجة · الجوهر), gebildete Darija; Koran nur im arabischen Original
 - `/almas/` – persische Fassung (الماس در مرداب · جان‌مایه), von rechts nach links; Schriften Noto Naskh Arabic + Vazirmatn (SIL OFL), Koranverse: Arabisch (Quran.com, Uthmani) + persische Übersetzung M. M. Fooladvand
 
 Technik Landingpage: GSAP 3 + ScrollTrigger, Lenis, selbst gehostete Schriften (Source Serif 4, Inter). Keine Fremdabrufe, keine Tracker.
