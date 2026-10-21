@@ -134,24 +134,31 @@
     if (reduce || !hasGsap) {
       heroWrap.classList.add("is-static");
     } else {
-      if (window.scrollY < 40) {
-        gsap.set(lines, { yPercent: 110 });
-        gsap.to(lines, { yPercent: 0, duration: 1.3, ease: "power4.out", stagger: 0.12, delay: 0.15 });
-        gsap.from($(".portrait", hero), { y: 70, opacity: 0, duration: 1.5, ease: "power3.out", delay: 0.35 });
-        gsap.from($$(".kicker, .lead, .hint", hero), { opacity: 0, y: 12, duration: 0.9, stagger: 0.12, delay: 0.7 });
-      }
+      // 1) Scroll-Zeitleiste zuerst anlegen, solange alles im Endzustand steht.
+      //    So kehrt die Seite beim Zurückscrollen immer zum fertigen Bild zurück.
+      var intro = [];
+      var finishIntro = function () { intro.forEach(function (t) { t.progress(1).kill(); }); intro = []; };
       var tl = gsap.timeline({
-        scrollTrigger: { trigger: heroWrap, start: "top top", end: "bottom bottom", scrub: 0.7, pin: hero, pinSpacing: false, onUpdate: function (s) { heroProgress = s.progress; } }
+        scrollTrigger: { trigger: heroWrap, start: "top top", end: "bottom bottom", scrub: 0.7, pin: hero, pinSpacing: false,
+          onUpdate: function (s) { heroProgress = s.progress; if (intro.length && s.progress > 0.002) finishIntro(); } }
       });
-      tl.to($(".hint", hero), { opacity: 0, duration: 0.06 }, 0)
-        .to($$(".kicker, .lead", hero), { opacity: 0, y: -24, duration: 0.16 }, 0.02)
-        .to(lines, { yPercent: -125, duration: 0.3, stagger: 0.05, ease: "power2.in" }, 0.06)
-        .to($(".portrait", hero), { yPercent: -14, scale: 0.7, opacity: 0, transformOrigin: "50% 100%", duration: 0.36, ease: "power2.in" }, 0.1)
+      tl.fromTo($(".hint", hero), { opacity: 1 }, { opacity: 0, duration: 0.06, immediateRender: false }, 0)
+        .fromTo($$(".kicker, .lead", hero), { opacity: 1, y: 0 }, { opacity: 0, y: -24, duration: 0.16, immediateRender: false }, 0.02)
+        .fromTo(lines, { yPercent: 0 }, { yPercent: -125, duration: 0.3, stagger: 0.05, ease: "power2.in", immediateRender: false }, 0.06)
+        .fromTo($(".portrait", hero), { y: 0, yPercent: 0, scale: 1, opacity: 1 }, { y: 0, yPercent: -14, scale: 0.7, opacity: 0, transformOrigin: "50% 100%", duration: 0.36, ease: "power2.in", immediateRender: false }, 0.1)
         .to($(".disc", hero), { scale: 10, duration: 0.42, ease: "power2.inOut" }, 0.24)
         .to($(".frage", hero), { opacity: 1, duration: 0.08 }, 0.5)
         .to(words, { opacity: 1, duration: 0.3, stagger: { each: 0.035 }, ease: "none" }, 0.54)
         .to($(".disc", hero), { opacity: 0, duration: 0.12, ease: "power1.inOut" }, 0.9)
         .to({}, { duration: 0.02 });
+      tl.progress(1, true).progress(0, true); // Startwerte jetzt festhalten, vor der Einstiegsanimation
+      // 2) Danach die Einstiegsanimation. Beim ersten Scrollen wird sie sofort
+      //    fertiggestellt, damit „Hej, hier ist Muharrem" nicht kurz zurückkommt.
+      if (window.scrollY < 40) {
+        intro.push(gsap.fromTo(lines, { yPercent: 110 }, { yPercent: 0, duration: 1.3, ease: "power4.out", stagger: 0.12, delay: 0.15 }));
+        intro.push(gsap.from($(".portrait", hero), { y: 70, opacity: 0, duration: 1.5, ease: "power3.out", delay: 0.35 }));
+        intro.push(gsap.from($$(".kicker, .lead, .hint", hero), { opacity: 0, y: 12, duration: 0.9, stagger: 0.12, delay: 0.7 }));
+      }
     }
   }
 
