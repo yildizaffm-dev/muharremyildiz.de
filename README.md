@@ -2,11 +2,10 @@
 
 Statische Seite, gehostet über GitHub Pages (Branch `gh-pages`).
 
-- `/` – persönliche Landingpage (eigene Schriften und Skripte unter `assets/`, Bilder unter `img/`)
-- `/diamant/` – Der Diamant im Sumpf · Die Essenz (unverlinkt, noindex, nur per Link)
-- `/pirlanta/` – türkische Fassung (Bataklıktaki Pırlanta · Öz)
-- `/diamond/` – englische Fassung (The Diamond in the Swamp · The Essence); Koranverse Arabisch + Sahih International
-- `/darija/` – marokkanische Fassung (الماس فالمرجة · الجوهر), gebildete Darija; Koran nur im arabischen Original
-- `/almas/` – persische Fassung (الماس در مرداب · جان‌مایه), von rechts nach links; Schriften Noto Naskh Arabic + Vazirmatn (SIL OFL), Koranverse: Arabisch (Quran.com, Uthmani) + persische Übersetzung M. M. Fooladvand
+- `/` – Landingpage
+- `/datenschutz/` – Datenschutzerklärung (Hosting GitHub Pages)
+- `/diamant/`, `/diamond/`, `/pirlanta/`, `/almas/`, `/darija/` – Der Diamant im Sumpf · Die Essenz in fünf Sprachen (unverlinkt, noindex)
 
-Technik Landingpage: GSAP 3 + ScrollTrigger, Lenis, selbst gehostete Schriften (Source Serif 4, Inter). Keine Fremdabrufe, keine Tracker.
+Alle Seiten tragen `noindex`; die robots.txt erlaubt das Crawlen, damit Suchmaschinen das noindex lesen können.
+
+© 2026 Muharrem Yıldız. Alle Rechte vorbehalten. Kein Open Source: Texte, Bilder und Gestaltung dürfen ohne schriftliche Zustimmung nicht übernommen werden.
