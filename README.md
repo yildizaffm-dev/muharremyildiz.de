@@ -3,6 +3,7 @@
 Statische Seite, gehostet über GitHub Pages (Branch `gh-pages`).
 
 - `/` – Landingpage
+- `/impressum/` – Impressum (§ 18 Abs. 1 MStV, c/o Büroanschrift)
 - `/datenschutz/` – Datenschutzerklärung (Hosting GitHub Pages)
 - `/diamant/`, `/diamond/`, `/pirlanta/`, `/almas/`, `/darija/` – Der Diamant im Sumpf · Die Essenz in fünf Sprachen (unverlinkt, noindex)
 
