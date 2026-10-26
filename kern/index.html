@@ -14,11 +14,9 @@
 @font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url("../assets/fonts/inter-latin-ext.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 /* Eine Buchseite wie die Essenz: Papier, eine Spalte, schwarze Schrift; Dunkelmodus als Nachtpapier */
 :root {
-  --bg:#F5F3EE; --fg:#111111; --rule:#111111; --muted:#5a574f; --mark:#FFE08A; --box:#ECE8DE; --term:#1f3a2e;
+  --bg:#FFFFFF; --fg:#111111; --rule:#111111; --muted:#5a574f; --mark:#FFE08A; --box:#F3F1EC; --term:#1f3a2e;
   --serif:"Source Serif 4","Charter",Georgia,serif; --sans:"Inter","Helvetica Neue",Arial,sans-serif;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#15161a; --fg:#ece8df; --rule:#ece8df; --muted:#a39e92; --mark:#5a4a12; --box:#22242a; --term:#9fd0b4; color-scheme:dark } }
-:root[data-theme="dark"] { --bg:#15161a; --fg:#ece8df; --rule:#ece8df; --muted:#a39e92; --mark:#5a4a12; --box:#22242a; --term:#9fd0b4; color-scheme:dark }
 body { background:var(--bg); color:var(--fg); margin:0; padding-block:0 64px; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); font-family:var(--serif); font-size:18px; line-height:1.62; overflow-x:hidden; }
 .wrap { max-width:640px; margin:0 auto; }
 .cover { text-align:center; padding-block:64px 40px; border-bottom:1px solid var(--rule); }
