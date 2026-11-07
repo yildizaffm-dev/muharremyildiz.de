@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elemente zur Auswahl</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+:root{--sand:#EDE6DA;--creme:#F6F1E8;--taupe:#4A4037;--taupe2:#6B5D4F;--gold:#B8893F;--goldl:#EBD3A0;--ink:#1d1a16}
+body{background:var(--sand);color:var(--ink)}
+body::before,body::after{display:none}
+.kopf{padding:48px var(--gutter) 10px}
+.kopf h1{font-size:clamp(34px,5vw,60px);font-weight:400;margin:0 0 8px}
+.kopf p{font-family:var(--sans);font-size:15px;opacity:.75;max-width:60ch}
+.el{padding:56px var(--gutter);border-top:1px solid rgba(0,0,0,.1)}
+.el:nth-of-type(even){background:var(--creme)}
+.nr{display:inline-block;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:var(--taupe);color:var(--goldl);padding:5px 12px;border-radius:999px;margin-bottom:10px}
+.el h2{font-size:clamp(26px,3vw,38px);font-weight:400;margin:0 0 6px;max-width:none}
+.el .wozu{font-family:var(--sans);font-size:14px;opacity:.7;margin:0 0 26px;max-width:62ch}
+
+/* 1 Bildbaender wie unqc */
+.baender{position:relative;height:340px;overflow:hidden;border-radius:22px;background:var(--taupe)}
+.baender .rot{position:absolute;left:-20%;right:-20%;top:50%;transform:translateY(-50%) rotate(-5deg);display:flex;flex-direction:column;gap:14px}
+.reihe{display:flex;gap:14px;width:max-content;animation:lauf 60s linear infinite}
+.reihe.r2{animation-direction:reverse;animation-duration:75s}
+.reihe span{width:210px;height:96px;border-radius:12px;display:grid;place-items:center;font-size:20px;font-style:italic;color:#fff}
+.reihe span:nth-child(4n+1){background:linear-gradient(135deg,#8a7660,#5b4d40)}
+.reihe span:nth-child(4n+2){background:linear-gradient(135deg,#B8893F,#7A5A26)}
+.reihe span:nth-child(4n+3){background:linear-gradient(135deg,#6B5D4F,#3e352d)}
+.reihe span:nth-child(4n){background:linear-gradient(135deg,#a89276,#6B5D4F)}
+@keyframes lauf{to{transform:translateX(-50%)}}
+.baender .ueber{position:absolute;inset:0;background:linear-gradient(90deg,rgba(74,64,55,.92) 30%,rgba(74,64,55,.2));display:flex;flex-direction:column;justify-content:center;padding:0 40px;color:#F6F1E8}
+.baender .ueber b{font-size:clamp(28px,4vw,48px);font-weight:400}
+
+/* 2 Weltkarte drei Orte */
+.karte{background:var(--taupe);border-radius:22px;padding:20px;color:#F6F1E8}
+.karte svg{width:100%;height:auto;display:block}
+.bogen{fill:none;stroke:#EBD3A0;stroke-width:1.6;stroke-dasharray:6 6;animation:strich 3s linear infinite}
+@keyframes strich{to{stroke-dashoffset:-48}}
+.punkt{fill:#B8893F}.puls{fill:none;stroke:#EBD3A0;animation:pulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pulse{from{r:4;opacity:1}to{r:18;opacity:0}}
+
+/* 3 Umdrehkarten */
+.dreh3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.dk{perspective:900px;height:200px;cursor:pointer}
+.dk .in{position:relative;height:100%;transition:transform .7s;transform-style:preserve-3d}
+.dk:hover .in,.dk.um .in{transform:rotateY(180deg)}
+.dk .f,.dk .b{position:absolute;inset:0;border-radius:18px;padding:22px;backface-visibility:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.dk .f{background:#fff;border:1px solid rgba(0,0,0,.1)}
+.dk .f b{font-size:22px;font-weight:400}
+.dk .b{background:var(--taupe);color:#F6F1E8;transform:rotateY(180deg)}
+
+/* 4 Bildkacheln mit Zahl */
+.bk{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.bk div{position:relative;height:210px;border-radius:18px;overflow:hidden;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
+.bk div::before{content:"";position:absolute;inset:0;background:var(--bg);transition:transform .8s}
+.bk div:hover::before{transform:scale(1.08)}
+.bk div::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.65))}
+.bk strong,.bk span{position:relative;z-index:1}.bk strong{font-size:40px;font-weight:400}.bk span{font-family:var(--sans);font-size:13px}
+
+/* 5 Buecherregal */
+.regal{display:flex;align-items:flex-end;gap:6px;height:230px;padding:0 10px;border-bottom:10px solid #6B5D4F}
+.ruecken{width:44px;border-radius:4px 4px 0 0;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:#F6F1E8;transition:transform .3s;cursor:pointer}
+.ruecken:hover{transform:rotate(180deg) translateY(10px)}
+
+/* 6 Gespraech buchen */
+.buchen{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;background:#fff;border-radius:22px;padding:28px;border:1px solid rgba(0,0,0,.1)}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.slots span{font-family:var(--sans);font-size:14px;text-align:center;padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,.15)}
+.slots span.f{background:var(--gold);border-color:var(--gold)}
+
+/* 7 Lesefortschritt + Kapitelpunkte */
+.fortschritt{height:6px;background:rgba(0,0,0,.08);border-radius:9px;overflow:hidden;margin-bottom:16px}
+.fortschritt i{display:block;height:100%;width:0;background:var(--gold);animation:fuell 6s ease-in-out infinite}
+@keyframes fuell{50%{width:100%}}
+.punkte{display:flex;gap:10px;font-family:var(--sans);font-size:13px;flex-wrap:wrap}
+.punkte span{padding:6px 12px;border-radius:999px;background:#fff;border:1px solid rgba(0,0,0,.12)}
+.punkte span.an{background:var(--taupe);color:var(--goldl)}
+
+/* 8 Satz des Tages */
+.satz{background:var(--taupe);color:#F6F1E8;border-radius:22px;padding:40px;text-align:center}
+.satz q{font-size:clamp(24px,3vw,38px);font-style:italic;quotes:"„" "“"}
+.satz small{display:block;margin-top:14px;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--goldl)}
+
+/* 9 Video-Kachel */
+.video{position:relative;aspect-ratio:16/9;max-width:760px;border-radius:22px;overflow:hidden;background:radial-gradient(120% 90% at 30% 20%,#8a7660,#3e352d)}
+.video .play{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px;border-radius:50%;background:rgba(246,241,232,.92);display:grid;place-items:center;animation:atme 2.6s ease-in-out infinite}
+.video .play::after{content:"";border-left:24px solid var(--taupe);border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+@keyframes atme{50%{transform:scale(1.08)}}
+.video p{position:absolute;left:24px;bottom:16px;margin:0;color:#F6F1E8;font-family:var(--sans);font-size:14px}
+
+@media (max-width:860px){.dreh3,.bk{grid-template-columns:1fr 1fr}.buchen{grid-template-columns:1fr}.baender{height:280px}}
+</style>
+</head>
+<body>
+<header class="kopf">
+  <h1>Elemente zur Auswahl</h1>
+  <p>Neun Bausteine für Modell D. Sagen Sie einfach die Nummern, die Sie haben möchten.</p>
+</header>
+
+<section class="el"><span class="nr">Nr. 1 · wie unqc</span><h2>Bewegte Bildbänder im Kopf</h2><p class="wozu">Schräge Reihen ziehen langsam vorbei, darüber Ihr Satz. Später mit echten Fotos aus Frankfurt, Istanbul, Doha und aus Ihrem Alltag.</p>
+<div class="baender"><div class="rot">
+<div class="reihe"><span>Frankfurt</span><span>Schreiben</span><span>Istanbul</span><span>Lernen</span><span>Doha</span><span>Familie</span><span>Frankfurt</span><span>Schreiben</span><span>Istanbul</span><span>Lernen</span><span>Doha</span><span>Familie</span></div>
+<div class="reihe r2"><span>Haltung</span><span>Glaube</span><span>Führung</span><span>Fragen</span><span>Würde</span><span>Technik</span><span>Haltung</span><span>Glaube</span><span>Führung</span><span>Fragen</span><span>Würde</span><span>Technik</span></div>
+<div class="reihe"><span>Psychologie</span><span>Zuhören</span><span>Verantwortung</span><span>Wachsen</span><span>Psychologie</span><span>Zuhören</span><span>Verantwortung</span><span>Wachsen</span></div>
+</div><div class="ueber"><b>Hej, hier ist Muharrem.</b></div></div></section>
+
+<section class="el"><span class="nr">Nr. 2 · ganz anders</span><h2>Karte mit drei Orten</h2><p class="wozu">Frankfurt, Istanbul und Doha als leuchtende Punkte, verbunden durch laufende Bögen. Passt zu Ihrem Abschnitt „Drei Orte“.</p>
+<div class="karte"><svg viewBox="0 0 800 300" aria-label="Karte">
+<path d="M60 220 Q140 120 260 150 T480 120 T740 170" fill="none" stroke="rgba(235,211,160,.18)" stroke-width="60" stroke-linecap="round"/>
+<path class="bogen" d="M230 110 Q330 30 430 130"/><path class="bogen" d="M430 130 Q540 80 620 200"/>
+<circle class="punkt" cx="230" cy="110" r="6"/><circle class="puls" cx="230" cy="110" r="4"/>
+<circle class="punkt" cx="430" cy="130" r="6"/><circle class="puls" cx="430" cy="130" r="4"/>
+<circle class="punkt" cx="620" cy="200" r="6"/><circle class="puls" cx="620" cy="200" r="4"/>
+<text x="230" y="92" fill="#F6F1E8" font-size="16" text-anchor="middle">Frankfurt</text>
+<text x="430" y="160" fill="#F6F1E8" font-size="16" text-anchor="middle">Istanbul</text>
+<text x="620" y="230" fill="#F6F1E8" font-size="16" text-anchor="middle">Doha</text></svg></div></section>
+
+<section class="el"><span class="nr">Nr. 3 · wie unqc</span><h2>Umdrehkarten für Ihre Haltung</h2><p class="wozu">Vorne der Satz, hinten die Begründung. Mit der Maus oder dem Finger umdrehen.</p>
+<div class="dreh3">
+<div class="dk"><div class="in"><div class="f"><b>Systeme sollen Menschen dienen.</b></div><div class="b">Jede Struktur muss zeigen, ob sie entlastet oder nur verwaltet.</div></div></div>
+<div class="dk"><div class="in"><div class="f"><b>Würde vor Effizienz.</b></div><div class="b">Was bleibt von Effizienz, wenn der Mensch darin keinen Platz mehr findet?</div></div></div>
+<div class="dk"><div class="in"><div class="f"><b>Glaube gibt Richtung.</b></div><div class="b">Überzeugungen sind erst glaubwürdig, wenn man sie im Alltag wiedererkennt.</div></div></div>
+</div></section>
+
+<section class="el"><span class="nr">Nr. 4 · wie unqc</span><h2>Zahlen auf Bildkacheln</h2><p class="wozu">Wie auf der Pflegeberatungsseite: Zahl groß auf einem Bild, das beim Darüberfahren näher kommt. Hier mit Farbflächen, später mit Ihren Fotos.</p>
+<div class="bk">
+<div style="--bg:linear-gradient(135deg,#8a7660,#3e352d)"><strong>1</strong><span>Frage, die mich begleitet</span></div>
+<div style="--bg:linear-gradient(135deg,#B8893F,#5b4d40)"><strong>3</strong><span>Städte, die mich prägen</span></div>
+<div style="--bg:linear-gradient(135deg,#6B5D4F,#2b2520)"><strong>7</strong><span>Stationen, eine Richtung</span></div>
+<div style="--bg:linear-gradient(135deg,#a89276,#4A4037)"><strong>5</strong><span>Sprachen meines Essays</span></div>
+</div></section>
+
+<section class="el"><span class="nr">Nr. 5 · ganz anders</span><h2>Bücherregal: Was ich lese</h2><p class="wozu">Buchrücken, die beim Darüberfahren herausrutschen. Passt zu Ihren geplanten Buch-Videos. Die Titel hier sind Platzhalter.</p>
+<div class="regal">
+<div class="ruecken" style="height:190px;background:#4A4037">Der Diamant im Sumpf</div>
+<div class="ruecken" style="height:170px;background:#7A5A26">Buch 2</div>
+<div class="ruecken" style="height:205px;background:#6B5D4F">Buch 3</div>
+<div class="ruecken" style="height:160px;background:#B8893F">Buch 4</div>
+<div class="ruecken" style="height:185px;background:#3e352d">Buch 5</div>
+<div class="ruecken" style="height:175px;background:#8a7660">Buch 6</div>
+</div></section>
+
+<section class="el"><span class="nr">Nr. 6 · wie unqc</span><h2>Gespräch direkt buchen</h2><p class="wozu">Wie bei unqc: freie Zeiten sichtbar, ein Tipp, und der Termin ist gebucht. Läuft über Ihren Google-Kalender.</p>
+<div class="buchen"><div><h3 style="margin:0 0 8px;font-weight:400;font-size:26px">Lust auf ein Gespräch?</h3><p style="margin:0;opacity:.75">Dreißig Minuten, per Video oder Telefon.</p></div>
+<div class="slots"><span>Mo 10:00</span><span class="f">Mo 14:00</span><span>Di 09:30</span><span>Di 16:00</span><span>Mi 11:00</span><span>Do 15:30</span></div></div></section>
+
+<section class="el"><span class="nr">Nr. 7 · ganz anders</span><h2>Lesefortschritt und Kapitelpunkte</h2><p class="wozu">Eine goldene Linie oben zeigt, wie weit man ist; Punkte springen zu den Abschnitten. Gut für eine lange Seite.</p>
+<div class="fortschritt"><i></i></div>
+<div class="punkte"><span class="an">Start</span><span class="an">Weg</span><span>Haltung</span><span>Orte</span><span>Texte</span><span>Kontakt</span></div></section>
+
+<section class="el"><span class="nr">Nr. 8 · ganz anders</span><h2>Satz des Tages</h2><p class="wozu">Jeden Tag ein anderer Satz aus Ihren Texten. Wer wiederkommt, findet etwas Neues.</p>
+<div class="satz"><q id="tagessatz">Nicht zurückgesetzt, sondern zurückgekehrt.</q><small>Aus: Der Diamant im Sumpf</small></div></section>
+
+<section class="el"><span class="nr">Nr. 9 · mein Fach</span><h2>Ihr Vorstellungsvideo</h2><p class="wozu">Eine Minute von Ihnen, ruhig geschnitten, mit Untertiteln. Startet erst auf Tipp, damit die Seite schnell bleibt.</p>
+<div class="video"><span class="play" aria-hidden="true"></span><p>Wer ich bin, in einer Minute</p></div></section>
+
+<script>
+document.querySelectorAll(".dk").forEach(function(d){d.onclick=function(){d.classList.toggle("um")}});
+var S=["Nicht zurückgesetzt, sondern zurückgekehrt.","Was ist wertvoller, jetzt, hier, in dieser Situation?","Wer strampelt, sinkt; wer den Handspannenschritt tut, wird herausgebracht.","Ein Anker hält nicht, weil er schwer ist, sondern weil er sich in den Grund setzt."];
+var t=new Date();document.getElementById("tagessatz").textContent=S[(t.getDate())%S.length];
+</script>
+</body>
+</html>
