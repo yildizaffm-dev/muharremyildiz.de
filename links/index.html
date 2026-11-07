@@ -154,7 +154,7 @@ h1{font-family:var(--serif);font-weight:600;font-size:1.65rem;line-height:1.15;m
     <p class="hinweis" data-t="k2">Schreiben Sie kurz: wer pflegebedürftig ist, welcher Pflegegrad besteht und ob ein Bescheid oder Gutachten vorliegt. Antwort in der Regel innerhalb von 24 Stunden.</p>
     <a class="termin" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2gqJxW3qSMt9TN8Qo8YpPsYMsQ3vn6XP1Gwu-eyHl6Z3mVQLrJ1vuw8SwwFzD1KHqLhM_xfMYg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M9 15l2 2 4-4"/></svg><span data-t="l7">Termin online buchen</span></a>
     <p class="klein" style="margin:-4px 0 2px;text-align:center" data-t="l7s">30 Minuten, kostenlos, per Video oder Telefon</p>
-    <div class="zeile"><code id="k-mail" style="user-select:none;-webkit-user-select:none">kontakt (at) pflegebegleitperson.de</code></div>
+    <div class="zeile"><code id="k-mail"><button class="kopie" type="button" id="k-mailbtn" style="margin:0">E-Mail-Adresse anzeigen</button></code></div>
     <div class="zeile"><code id="k-tel">0163 758 3513</code><button class="kopie" type="button" data-kopie="k-tel" data-t="kopie">Kopieren</button></div>
     <p class="klein" data-t="k3">Kostenfrei und unverbindlich. Keine Rechtsberatung; die Einschätzung ersetzt nicht die Begutachtung durch den Medizinischen Dienst.</p>
   </section>
@@ -319,5 +319,6 @@ document.querySelectorAll("[data-kopie]").forEach(b=>b.onclick=()=>{const el=doc
   try{navigator.clipboard.writeText(t).then(ok,()=>{const s=getSelection(),rg=document.createRange();rg.selectNodeContents(el);s.removeAllRanges();s.addRange(rg)})}catch(e){}});
 })();
 </script>
+<script>(function(){var b=document.getElementById("k-mailbtn");if(!b)return;b.onclick=function(){var a=String.fromCharCode(107,111,110,116,97,107,116)+"@"+String.fromCharCode(112,102,108,101,103,101,98,101,103,108,101,105,116,112,101,114,115,111,110,46,100,101);var l=document.createElement("a");l.href="mai"+"lto:"+a;l.textContent=a;l.style.color="inherit";var c=document.getElementById("k-mail");c.innerHTML="";c.appendChild(l);};})();</script>
 </body>
 </html>
