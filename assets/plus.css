@@ -54,8 +54,8 @@
 .texte .buch .unter{font-style:italic;margin:0 0 18px;opacity:.75}
 .texte .buch p{margin:0 0 14px}
 .texte .neu{display:inline-block;font-family:var(--sans);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;background:var(--gold-light);color:#000;border-radius:999px;padding:5px 12px;margin-bottom:14px}
-.sprachen{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.sprachen a{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--sans);font-size:14px;padding:9px 14px 9px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.25);background:var(--paper);transition:transform .2s,border-color .2s,background .2s}
+.sprachen{display:flex;flex-direction:column;align-items:stretch;gap:8px;margin-top:18px;max-width:300px}
+.sprachen a{display:flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--sans);font-size:14px;padding:9px 14px 9px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.25);background:var(--paper);transition:transform .2s,border-color .2s,background .2s}
 .sprachen a:hover{transform:translateY(-2px);border-color:var(--gold);background:#fff}
 .sprachen svg{width:24px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.15);flex:none}
 .stein{display:grid;place-items:center}
