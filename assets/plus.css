@@ -13,10 +13,17 @@
 .portrait::before{display:none}
 @media (min-width:861px){.portrait{width:min(34vw,440px);margin-bottom:clamp(28px,7vh,80px)}}
 @media (max-width:860px){
-  .portrait{width:min(46vw,210px)!important;right:5vw!important;top:84px!important}
+  .hero .stage{grid-template-columns:1fr!important;grid-template-rows:auto auto!important;align-content:start!important;align-items:start!important;padding-top:78px!important;padding-bottom:24px!important;gap:22px!important}
+  .hero .portrait{position:relative!important;order:-1;right:auto!important;top:auto!important;justify-self:center!important;align-self:start!important;width:min(48vw,200px)!important;max-height:none!important;margin:10px 0 0!important}
   .portrait .ring{inset:-9px}
-  .portrait .stempel{left:-30px;font-size:10.5px;padding:6px 10px 6px 8px}
+  .hero .text{padding-bottom:0!important}
+  .hero h1{font-size:clamp(40px,11.5vw,64px)!important}
+  .hero .lead{margin-top:14px!important;font-size:16px}
+  .wechsel{margin-top:12px}
+  .heldlinks{margin-top:14px}
+  .hero .hint{display:none}
 }
+@media (max-width:860px) and (max-height:700px){.hero .portrait{width:min(38vw,150px)!important}.hero h1{font-size:clamp(36px,10vw,52px)!important}}
 
 /* Wechselwort und Hero-Links */
 .wechsel{font-family:var(--sans);font-size:14px;letter-spacing:.04em;margin:18px 0 0;opacity:.85}
