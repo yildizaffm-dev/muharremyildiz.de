@@ -178,3 +178,7 @@
   .m-e .hero .text{max-width:none}
 }
 .m-e .hero .stage{z-index:2}.m-e .hero .stage .portrait{pointer-events:none}
+.fich{display:flex;align-items:center;gap:14px}
+.fich img{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:50% 12%;background:#8a7660;border:2px solid #B8893F;flex:none}
+.fich .fm{margin:0 0 2px}
+.fich p{margin:0}
