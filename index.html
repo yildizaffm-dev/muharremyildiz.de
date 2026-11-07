@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://pflegebegleitperson.de/">
+<meta name="description" content="Pflegeberatung in Frankfurt: Pflegegrad, Begutachtung und Bescheid verständlich erklärt. Kostenfreie Ersteinschätzung, auch auf Türkisch und Arabisch.">
+<meta name="theme-color" content="#0b1222">
+<title>Pflegeberatung · M. Yildiz</title>
+<style>
+@font-face{font-family:"Sora";font-weight:100 800;font-display:swap;src:url("fonts/sora-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Sora";font-weight:100 800;font-display:swap;src:url("fonts/sora-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Figtree";font-weight:300 900;font-display:swap;src:url("fonts/figtree-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Figtree";font-weight:300 900;font-display:swap;src:url("fonts/figtree-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+/* Layout: Aufbau wie unqc.de (Glas-Kopfleiste, Diashow-Held, Zahlenkarte, Kartenraster, Umdrehkarten, Liste, Check-Kasten, Schritte, Vergleich, FAQ, Region, Abschluss) in Navy und Gold */
+:root{
+  --bg:#0b1222;--bg2:#0f1830;--card:#131d36;--card2:#17233f;--line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.16);
+  --ink:#f4f2ed;--soft:#b6bdcc;--faint:#7d879c;
+  --gold:#d8b56a;--gold-a:#c9a254;--gold-b:#8e6f2f;--goldtext:#e7cf97;
+  --h:"Sora","Segoe UI",Arial,sans-serif;--t:"Figtree","Segoe UI",Arial,sans-serif;
+  color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--t);font-size:16px;line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.in{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--h);margin:0;text-wrap:balance;letter-spacing:-.015em}
+h2{font-size:clamp(1.75rem,3.3vw,2.6rem);line-height:1.15;font-weight:600}
+h2 .g,h1 .g{background:linear-gradient(180deg,#f0dcac,#c9a254);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:flex;align-items:center;gap:12px;font-family:var(--h);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+.eyebrow.mitte{justify-content:center}.eyebrow.mitte::after{content:"";width:28px;height:1px;background:var(--gold)}
+.lead{color:var(--soft);max-width:60ch;margin:14px 0 0}
+section{padding:96px 0;position:relative}
+.trenner{height:1px;max-width:1100px;margin:0 auto;background:linear-gradient(90deg,transparent,rgba(216,181,106,.35),transparent)}
+
+/* Knöpfe */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:8px;font-family:var(--t);font-weight:600;font-size:.98rem;text-decoration:none;border:1px solid var(--line2);color:var(--ink);background:rgba(255,255,255,.02);cursor:pointer;transition:transform .25s,box-shadow .25s,border-color .25s,background .25s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);border-color:rgba(216,181,106,.6)}
+.btn.gold{background:linear-gradient(135deg,var(--gold-a),var(--gold-b));border-color:transparent;color:#fff;box-shadow:0 10px 30px -10px rgba(201,162,84,.65)}
+.btn.gold:hover{box-shadow:0 16px 40px -10px rgba(201,162,84,.85)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Kopfleiste */
+.kopf{position:fixed;left:0;right:0;top:max(12px,env(safe-area-inset-top,0px));z-index:50}
+.kopf .bar{display:flex;align-items:center;gap:18px;padding:10px 12px 10px 18px;border-radius:14px;background:rgba(11,18,34,.72);border:1px solid var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:background .3s,padding .3s}
+.kopf.klein .bar{background:rgba(11,18,34,.92);padding-block:7px}
+.kopf .logo img{height:38px;display:block}
+.kopf nav.haupt{display:flex;gap:26px;margin-left:auto;font-size:.93rem;color:var(--soft)}
+.kopf nav.haupt a{text-decoration:none;transition:color .2s}.kopf nav.haupt a:hover{color:var(--ink)}
+.ikon{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;color:var(--ink);text-decoration:none}
+.ikon svg{width:22px;height:22px}
+.kopf .rechts{display:flex;align-items:center;gap:6px}
+.kopf .btn{padding:10px 18px;font-size:.9rem}
+.burger{display:none;width:40px;height:40px;border-radius:9px;border:1px solid var(--line2);background:rgba(255,255,255,.04);color:var(--ink);cursor:pointer;place-items:center}
+.burger svg{width:20px;height:20px}
+.menue{position:fixed;inset:0;z-index:60;background:rgba(7,12,24,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 90px) 28px 40px;gap:6px;opacity:0;pointer-events:none;transition:opacity .3s}
+.menue.offen{opacity:1;pointer-events:auto}
+.menue a{font-family:var(--h);font-size:1.5rem;text-decoration:none;padding:10px 0;border-bottom:1px solid var(--line);transform:translateY(12px);opacity:0;transition:transform .4s,opacity .4s}
+.menue.offen a{transform:none;opacity:1}
+.menue .zu{position:absolute;top:calc(env(safe-area-inset-top,0px) + 22px);right:22px}
+@media(max-width:980px){.kopf nav.haupt{display:none}.burger{display:grid}.kopf .rechts{margin-left:auto}}
+@media(max-width:520px){.kopf .btn.gold{padding:9px 14px;font-size:.85rem}.kopf .logo img{height:32px}.kopf .ikon.tel{display:none}}
+
+/* Held */
+.held{min-height:min(100vh,860px);display:flex;align-items:center;padding:150px 0 110px;overflow:hidden;position:relative}
+.buehne{position:absolute;inset:0;perspective:1400px;overflow:hidden}
+.reihe{position:absolute;left:38%;top:-8%;width:110%;display:flex;gap:28px;transform:rotateX(16deg) rotateY(-24deg) rotateZ(6deg);transform-origin:left center;animation:gleiten 46s linear infinite}
+.reihe.b{top:44%;left:30%;animation-duration:58s;animation-direction:reverse}
+.reihe img{width:360px;aspect-ratio:16/9;object-fit:cover;flex:none;border-radius:16px;border:1px solid var(--line2);box-shadow:0 30px 60px rgba(0,0,0,.55);animation:atmen 9s ease-in-out infinite alternate}
+.baender{position:absolute;left:-20%;right:-20%;top:50%;transform:translateY(-50%) rotate(-4deg);display:flex;flex-direction:column;gap:18px}
+.band{height:300px;background-repeat:repeat-x;background-size:2755px 300px;will-change:background-position}
+.b1{background-image:url(img/band1.webp);animation:bandA 110s linear infinite}
+.b2{background-image:url(img/band2.webp);animation:bandB 125s linear infinite}
+.b3{background-image:url(img/band3.webp);animation:bandA 140s linear infinite}
+.b4{background-image:url(img/band4.webp);animation:bandB 120s linear infinite}
+@keyframes bandA{from{background-position:0 50%}to{background-position:-2755px 50%}}
+@keyframes bandB{from{background-position:-2755px 50%}to{background-position:0 50%}}
+@media(max-width:700px){.band{height:180px;background-size:1653px 180px}.baender{gap:12px;left:-30%;right:-30%}
+ @keyframes bandA{from{background-position:0 50%}to{background-position:-1653px 50%}}
+ @keyframes bandB{from{background-position:-1653px 50%}to{background-position:0 50%}}}
+@keyframes gleiten{to{transform:rotateX(16deg) rotateY(-24deg) rotateZ(6deg) translateX(-50%)}}
+@keyframes atmen{to{filter:brightness(1.15)}}
+.held::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b1222 34%,rgba(11,18,34,.38) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 22%);pointer-events:none}
+.held .in{position:relative;z-index:2;width:100%}
+.held h1{font-size:clamp(2.4rem,5.6vw,4.3rem);line-height:1.06;font-weight:600;max-width:13ch}
+.held .lead{font-size:1.1rem;max-width:44ch}
+.knoepfe{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+@media(max-width:700px){
+  .held{padding:120px 0 70px;min-height:0}
+  .reihe{left:-10%;top:4%;opacity:.55}.reihe.b{top:52%;left:-30%}
+  .reihe img{width:220px}
+  .held::after{background:linear-gradient(180deg,rgba(11,18,34,.55) 0%,rgba(11,18,34,.82) 55%,var(--bg) 100%)}
+  .knoepfe{flex-direction:column;align-items:stretch}.knoepfe .btn{width:100%}
+}
+
+/* Zahlenkarte */
+.zahlen{position:relative;z-index:3;margin-top:-40px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.zk{position:relative;min-height:260px;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;background-size:cover;background-position:center 25%;border:1px solid rgba(216,181,106,.25);transition:transform .4s,background-size 1.4s ease;box-shadow:0 20px 40px -20px rgba(0,0,0,.8)}
+.zk::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,34,.08) 0%,rgba(11,18,34,.55) 45%,rgba(11,18,34,.95) 85%)}
+.zk:hover{transform:translateY(-4px)}
+.zk b,.zk>span{position:relative}
+.zk b{font-family:var(--h);font-weight:600;font-size:1.9rem;line-height:1.1;background:linear-gradient(180deg,#f3dfae,#c9a254);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.zk b span{font:inherit}
+.zk>span{font-size:.9rem;color:#dfe2e9;line-height:1.4;margin-top:4px}
+.js .zahlen .zk{transform:scale(.96);opacity:0;transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .9s}
+.js .zahlen.da .zk{transform:none;opacity:1}
+.js .zahlen.da .zk:nth-child(2){transition-delay:.12s}.js .zahlen.da .zk:nth-child(3){transition-delay:.24s}.js .zahlen.da .zk:nth-child(4){transition-delay:.36s}
+@media(max-width:900px){.zahlen{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.zk{min-height:210px;padding:16px}.zk b{font-size:1.6rem}.zk>span{font-size:.82rem}}
+/* Karten */
+.raster2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:44px}
+.raster3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:44px}
+@media(max-width:900px){.raster3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.raster2,.raster3{grid-template-columns:1fr}}
+.karte{position:relative;border-radius:16px;border:1px solid var(--line);background:var(--card);padding:30px;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}
+.karte::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 220px at var(--mx,20%) var(--my,0%),rgba(216,181,106,.16),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.karte:hover{transform:translateY(-4px);border-color:rgba(216,181,106,.4);box-shadow:0 24px 50px -24px rgba(0,0,0,.8)}
+.karte:hover::before,.karte.leucht::before{opacity:1}
+.karte.leucht{border-color:rgba(216,181,106,.45);background:linear-gradient(160deg,#2a2a2a00,#00000000),var(--card)}
+.karte.leucht::after{content:"";position:absolute;inset:0;border-radius:16px;background:radial-gradient(500px 240px at 0% 0%,rgba(216,181,106,.22),transparent 65%);pointer-events:none}
+.karte .ic{color:var(--gold);width:28px;height:28px;margin-bottom:18px;position:relative;z-index:1}
+.karte .ic svg{width:28px;height:28px}
+.karte h3{font-size:1.2rem;font-weight:600;margin:0 0 10px;position:relative;z-index:1}
+.karte p{margin:0;color:var(--soft);position:relative;z-index:1}
+
+/* Umdrehkarten */
+.dreh{perspective:1200px;min-height:230px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.dreh .innen{position:relative;width:100%;height:100%;min-height:230px;transition:transform .8s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}
+.dreh.um .innen{transform:rotateY(180deg)}
+.dreh .seite{position:absolute;inset:0;border-radius:16px;border:1px solid var(--line);background:var(--card);padding:30px;display:flex;flex-direction:column;justify-content:center;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.dreh .vorn q{font-family:var(--h);font-size:1.3rem;font-weight:600;line-height:1.35;quotes:"„" "“"}
+.dreh .vorn .zeichen{font-family:Georgia,serif;font-size:3rem;line-height:.6;color:var(--gold);opacity:.7;margin-bottom:14px}
+.dreh .vorn small{margin-top:22px;color:var(--gold);font-weight:600;font-size:.8rem}
+.dreh .hinten{transform:rotateY(180deg);background:linear-gradient(150deg,#22304f,#141e37);border-color:rgba(216,181,106,.45)}
+.dreh .hinten h3{font-size:1.05rem;color:var(--goldtext);margin-bottom:8px}
+.dreh .hinten p{margin:0;color:var(--soft);font-size:.96rem}
+@media(hover:hover){.dreh:hover .innen{transform:rotateY(180deg)}}
+
+/* Liste */
+.liste{margin-top:40px;border-top:1px solid var(--line)}
+.liste .z{display:grid;grid-template-columns:70px 1fr;gap:4px 18px;padding:26px 0;border-bottom:1px solid var(--line);transition:background .3s,padding .3s}
+.liste .z:hover{background:linear-gradient(90deg,rgba(216,181,106,.06),transparent);padding-left:12px}
+.liste .n{font-family:var(--h);font-size:.85rem;color:var(--gold);font-weight:600;padding-top:6px}
+.liste h3{font-size:1.35rem;font-weight:600}
+.liste p{grid-column:2;margin:0;color:var(--soft)}
+@media(max-width:620px){.liste .z{grid-template-columns:1fr}.liste p{grid-column:1}}
+
+/* Check-Kasten */
+.check{border-radius:20px;border:1px solid rgba(216,181,106,.35);padding:56px;background:radial-gradient(700px 300px at 85% 10%,rgba(216,181,106,.22),transparent 60%),linear-gradient(135deg,#1b2742,#111a30);display:grid;grid-template-columns:1.5fr auto;gap:30px;align-items:center;overflow:hidden;position:relative}
+.check p{color:var(--soft);margin:12px 0 0;max-width:60ch}
+@media(max-width:760px){.check{grid-template-columns:1fr;padding:32px 24px}}
+
+/* Schritte */
+.schritte{margin-top:50px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;position:relative}
+.schritt{position:relative;padding-top:30px;border-top:1px solid var(--line2)}
+.schritt::before{content:"";position:absolute;top:-1px;left:0;height:2px;width:0;background:var(--gold);transition:width 1.2s cubic-bezier(.2,.8,.2,1) .2s}
+.schritt.da::before{width:100%}
+.schritt .gross{position:absolute;right:0;top:14px;font-family:var(--h);font-weight:700;font-size:3.2rem;line-height:1;color:rgba(255,255,255,.06)}
+.schritt .ic{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:rgba(216,181,106,.12);color:var(--gold);margin-bottom:22px}
+.schritt .ic svg{width:22px;height:22px}
+.schritt h3{font-size:1.15rem;margin-bottom:8px;font-weight:600}
+.schritt p{margin:0;color:var(--soft);font-size:.95rem}
+@media(max-width:900px){.schritte{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.schritte{grid-template-columns:1fr;gap:34px}}
+
+/* Vergleich */
+.vergleich{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.vergleich .karte ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
+.vergleich li{display:grid;grid-template-columns:22px 1fr;gap:12px;color:var(--soft)}
+.vergleich li svg{width:18px;height:18px;margin-top:4px}
+.vergleich .nein li svg{color:#8a90a0}
+.vergleich .ja h3{color:var(--goldtext)}
+.vergleich .ja li{color:var(--ink)}
+.vergleich .ja li svg{color:var(--gold)}
+@media(max-width:760px){.vergleich{grid-template-columns:1fr}}
+
+/* Unterstreichung */
+.strich{position:relative;display:inline-block}
+.strich svg{position:absolute;left:-2%;bottom:-.32em;width:104%;height:.45em;overflow:visible}
+.strich path{fill:none;stroke:var(--gold);stroke-width:3;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400;transition:stroke-dashoffset 1.4s cubic-bezier(.6,.1,.2,1) .4s}
+.da .strich path,.strich.da path{stroke-dashoffset:0}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+.faq details{border-bottom:1px solid var(--line);padding:22px 0}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;font-family:var(--h);font-weight:600;font-size:1.02rem;transition:color .2s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.4rem;line-height:1;transition:transform .3s}
+.faq details[open] summary{color:var(--goldtext)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:12px 0 0;color:var(--soft)}
+@media(max-width:860px){.faq{grid-template-columns:1fr;gap:20px}}
+
+/* Region */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chips span{padding:9px 16px;border-radius:999px;border:1px solid var(--line2);font-size:.9rem;color:var(--soft);transition:border-color .25s,color .25s}
+.chips span:hover{border-color:var(--gold);color:var(--ink)}
+.kontakt{margin-top:40px;border-radius:18px;border:1px solid rgba(216,181,106,.3);padding:34px;background:radial-gradient(600px 260px at 100% 0%,rgba(216,181,106,.14),transparent 60%),var(--card);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.kontakt h3{font-size:1.3rem;margin-bottom:12px}
+.kontakt .zl{display:grid;grid-template-columns:24px 1fr;gap:12px;margin:10px 0;color:var(--soft)}
+.kontakt .zl svg{width:20px;height:20px;color:var(--gold);margin-top:3px}
+.mail{background:none;border:0;padding:0;font:inherit;color:var(--ink);cursor:pointer;text-decoration:underline;text-decoration-color:rgba(216,181,106,.5);text-underline-offset:4px}
+@media(max-width:760px){.kontakt{grid-template-columns:1fr;padding:26px}}
+
+/* Abschluss */
+.abschluss{text-align:center}
+.abschluss .wort{display:inline-block;min-width:6ch}
+.abschluss .wort span{display:inline-block;animation:wortein .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes wortein{from{opacity:0;transform:translateY(.35em);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+.abschluss .lead{margin-inline:auto}
+.abschluss .knoepfe{justify-content:center}
+
+footer{border-top:1px solid var(--line);padding:56px 0 calc(40px + env(safe-area-inset-bottom,0px));color:var(--faint);font-size:.9rem}
+footer .spalten{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+footer h4{font-family:var(--h);color:var(--ink);font-size:.95rem;margin:0 0 12px}
+footer a{display:block;text-decoration:none;color:var(--soft);padding:3px 0}
+footer a:hover{color:var(--gold)}
+footer .unten{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:760px){footer .spalten{grid-template-columns:1fr}}
+
+.demo{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:70;background:var(--gold);color:#1a1405;font-weight:700;font-size:.74rem;padding:6px 12px;border-radius:99px}
+
+/* Einblenden: Ruhezustand sichtbar, Effekt nur mit JS */
+.js .fx{opacity:0;filter:blur(10px);transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),filter 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}
+.js .fx.da{opacity:1;filter:none;transform:none}
+@media(prefers-reduced-motion:reduce){.band,.abschluss .wort span{animation:none}.js .fx{opacity:1;filter:none;transform:none;transition:none}.dreh .innen,.schritt::before{transition:none}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+
+<header class="kopf" id="kopf"><div class="in"><div class="bar">
+  <a class="logo" href="#top" aria-label="M. Yildiz, nach oben"><img src="img/logo.png" alt="M. Yildiz"></a>
+  <nav class="haupt" aria-label="Hauptmenü">
+    <a href="#hilfe">Wann ich helfe</a><a href="#leistungen">Leistungen</a><a href="#ablauf">Ablauf</a><a href="#check">Pflegegrad-Check</a><a href="#fragen">Häufige Fragen</a>
+  </nav>
+  <div class="rechts">
+    <a class="ikon tel" href="tel:+496934869001" aria-label="Anrufen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+    <a class="btn gold" href="#kontakt">Ersteinschätzung</a>
+    <button class="burger" type="button" id="burger" aria-label="Menü öffnen" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</div></div></header>
+
+<div class="menue" id="menue" aria-hidden="true">
+  <button class="burger zu" type="button" id="zu" aria-label="Menü schließen" style="display:grid"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="#hilfe">Wann ich helfe</a><a href="#leistungen">Leistungen</a><a href="#ablauf">Ablauf</a><a href="#check">Pflegegrad-Check</a><a href="#fragen">Häufige Fragen</a><a href="#kontakt">Kontakt</a>
+  <a class="btn gold" href="#kontakt" style="margin-top:22px;font-family:var(--t);font-size:1rem;border:0">Ersteinschätzung anfragen</a>
+</div>
+
+<main id="top">
+<section class="held">
+  <div class="buehne" aria-hidden="true"><div class="baender"><div class="band b1"></div><div class="band b2"></div><div class="band b3"></div><div class="band b4"></div></div></div>
+  <div class="in">
+    <p class="eyebrow fx">Pflegesachverständiger in Frankfurt</p>
+    <h1 class="fx">Pflegegrad, der zu Ihrem <span class="g">Alltag</span> passt.</h1>
+    <p class="lead fx">Ich erkläre Ihnen, wie die Begutachtung abläuft, bereite Sie auf den Termin vor und schätze Ihren Bescheid fachlich und ergebnisoffen ein. Bundesweit per Video, in Frankfurt vor Ort.</p>
+    <p class="fx" style="margin:14px 0 0;color:var(--goldtext);font-size:.95rem">Die Beratung ist unabhängig davon, welchen Pflegedienst Sie nutzen.</p>
+    <div class="knoepfe fx">
+      <a class="btn gold" href="#kontakt">Fall kostenlos prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="#check">Pflegegrad-Check</a>
+      <a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2gqJxW3qSMt9TN8Qo8YpPsYMsQ3vn6XP1Gwu-eyHl6Z3mVQLrJ1vuw8SwwFzD1KHqLhM_xfMYg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M9 15l2 2 4-4"/></svg>Termin online buchen</a>
+    </div>
+  </div>
+</section>
+
+<div class="in">
+  <div class="zahlen fx">
+    <div class="zk" style="background-image:url(img/z1.jpg)"><b>Seit <span data-zahl="2012" data-von="1996">2012</span></b><span>in der Pflege, examiniert und leitend</span></div>
+    <div class="zk" style="background-image:url(img/z2.jpg)"><b><span data-zahl="6" data-von="1">6</span></b><span>Lebensbereiche der Begutachtung, verständlich erklärt</span></div>
+    <div class="zk" style="background-image:url(img/z3.jpg)"><b><span data-zahl="24" data-von="1">24</span> h</b><span>Antwort, oft am selben Tag</span></div>
+    <div class="zk" style="background-image:url(img/z4.jpg)"><b>DE · TR · AR</b><span>Beratung auf Deutsch, Türkisch und Arabisch</span></div>
+  </div>
+</div>
+
+<section id="versprechen">
+  <div class="in">
+    <p class="eyebrow fx">Mein Versprechen</p>
+    <h2 class="fx">Was Sie von mir erwarten dürfen</h2>
+    <p class="lead fx">Eine Begutachtung ist für Familien eine Ausnahmesituation. Ich nehme mir Zeit, erkläre verständlich und bleibe an Ihrer Seite, bis die neue Entscheidung da ist.</p>
+    <div class="raster2">
+      <div class="karte leucht fx"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Schnell erreichbar</h3><p>Sie bekommen in der Regel innerhalb von 24 Stunden eine Antwort. Laufende Fristen behalte ich von Anfang an im Blick.</p></div>
+      <div class="karte fx"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><h3>Ein fester Ansprechpartner</h3><p>Kein Callcenter und keine Warteschleife. Sie sprechen immer mit mir, und ich kenne Ihren Fall.</p></div>
+      <div class="karte fx"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Unabhängig und ehrlich</h3><p>Die Beratung ist unabhängig davon, welchen Pflegedienst Sie nutzen. Meine Einschätzung ist ergebnisoffen: Passt die Einstufung, sage ich Ihnen auch das.</p></div>
+      <div class="karte fx"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h9v7H8l-4 3z"/><path d="M13 9h7v7l-3-2h-4z"/></svg></div><h3>Deutsch, Türkçe, العربية</h3><p>Ich berate in drei Sprachen, damit wirklich alle in der Familie verstehen, worum es geht.</p></div>
+    </div>
+  </div>
+</section>
+<div class="trenner"></div>
+
+<section id="hilfe">
+  <div class="in">
+    <p class="eyebrow fx">Typische Fälle</p>
+    <h2 class="fx">Wann ich Ihnen <span class="strich">helfe<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 50 4, 120 4, 197 12"/></svg></span></h2>
+    <div class="raster3">
+      <div class="karte fx"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 8l8 8"/></svg></div><h3>Pflegegrad abgelehnt</h3><p>Der Antrag wurde abgelehnt, obwohl jeden Tag Hilfe nötig ist.</p></div>
+      <div class="karte fx"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18h16M7 15V9M12 15V6M17 15v-3"/></svg></div><h3>Zu niedrig eingestuft</h3><p>Der Pflegegrad passt nicht zum tatsächlichen Hilfebedarf.</p></div>
+      <div class="karte fx"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div><h3>Begutachtung steht an</h3><p>Sie wollen gut vorbereitet sein, wenn die Gutachterin oder der Gutachter kommt.</p></div>
+      <div class="karte fx"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M6 11l6-6 6 6"/></svg></div><h3>Höherstufung</h3><p>Der Zustand hat sich verschlechtert, der bisherige Pflegegrad reicht nicht mehr.</p></div>
+      <div class="karte fx"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg></div><h3>Widerspruchsfrist läuft</h3><p>Der Bescheid ist da, und die Monatsfrist läuft bereits.</p></div>
+      <div class="karte fx"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div><h3>Erste Orientierung</h3><p>Sie wissen noch nicht, wo Sie anfangen sollen. Wir sortieren es gemeinsam.</p></div>
+    </div>
+  </div>
+</section>
+<div class="trenner"></div>
+
+<section id="wieder">
+  <div class="in">
+    <p class="eyebrow fx">Aus dem Erstgespräch</p>
+    <h2 class="fx">Erkennen Sie sich wieder?</h2>
+    <p class="lead fx">Diese vier Sätze höre ich am häufigsten. Tippen Sie auf eine Karte, um zu sehen, wie ich sie angehe.</p>
+    <div class="raster2">
+      <div class="dreh fx" tabindex="0" role="button" aria-label="Karte umdrehen"><div class="innen"><div class="seite vorn"><div class="zeichen">“</div><q>Der Gutachter war nur zwanzig Minuten da.</q><small>Antippen für die Lösung</small></div><div class="seite hinten"><h3>So gehe ich es an</h3><p>Ich prüfe, ob im Gutachten alle sechs Bereiche vollständig erfasst sind. Fehlendes belegen wir mit Pflegetagebuch und Arztberichten.</p></div></div></div>
+      <div class="dreh fx" tabindex="0" role="button" aria-label="Karte umdrehen"><div class="innen"><div class="seite vorn"><div class="zeichen">“</div><q>Mama hat sich beim Termin zusammengerissen.</q><small>Antippen für die Lösung</small></div><div class="seite hinten"><h3>So gehe ich es an</h3><p>Das passiert sehr oft. Ich bereite die Familie vor, damit der echte Alltag zur Sprache kommt, auch die schlechten Tage.</p></div></div></div>
+      <div class="dreh fx" tabindex="0" role="button" aria-label="Karte umdrehen"><div class="innen"><div class="seite vorn"><div class="zeichen">“</div><q>Den Bescheid versteht bei uns keiner.</q><small>Antippen für die Lösung</small></div><div class="seite hinten"><h3>So gehe ich es an</h3><p>Ich übersetze Bescheid und Gutachten in klare Sprache, auf Deutsch oder Türkisch, und zeige, welche Punkte entscheidend sind.</p></div></div></div>
+      <div class="dreh fx" tabindex="0" role="button" aria-label="Karte umdrehen"><div class="innen"><div class="seite vorn"><div class="zeichen">“</div><q>Lohnt sich ein Widerspruch überhaupt?</q><small>Antippen für die Lösung</small></div><div class="seite hinten"><h3>So gehe ich es an</h3><p>Ich rechne die Punkte nach den sechs Modulen nach und sage Ihnen ehrlich, ob sich der Aufwand lohnt.</p></div></div></div>
+    </div>
+  </div>
+</section>
+<div class="trenner"></div>
+
+<section id="leistungen">
+  <div class="in">
+    <p class="eyebrow fx">Leistungen</p>
+    <h2 class="fx">Meine Leistungen</h2>
+    <p class="lead fx">Pflegegrad, Begutachtung und Bescheid: drei Themen mit einem Ziel, nämlich dass Sie verstehen, wie Ihre Einstufung zustande kommt.</p>
+    <div class="liste">
+      <div class="z fx"><span class="n">01</span><h3>Kostenfreie Ersteinschätzung</h3><p>Sie schildern kurz Ihre Situation, ich sage Ihnen, wo Sie stehen und was sinnvoll ist.</p></div>
+      <div class="z fx"><span class="n">02</span><h3>Bescheid und Gutachten verstehen</h3><p>Ich erkläre Ihnen das Gutachten verständlich und gebe eine fachliche Zweitmeinung, ergebnisoffen. Passt die Einstufung, sage ich Ihnen auch das.</p></div>
+      <div class="z fx"><span class="n">03</span><h3>Begutachtung vorbereiten</h3><p>Wir gehen die sechs Bereiche gemeinsam durch, damit am Termin nichts vergessen wird.</p></div>
+      <div class="z fx"><span class="n">04</span><h3>Veränderung melden</h3><p>Hat sich der Zustand verändert, bereite ich den neuen Antrag mit Ihnen von Anfang an vor.</p></div>
+      <div class="z fx"><span class="n">05</span><h3>Fachliche Stellungnahme</h3><p>Auf Wunsch fasse ich meine Einschätzung schriftlich und nachvollziehbar zusammen und bereite Sie auf eine erneute Begutachtung vor.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="check" style="padding-top:20px">
+  <div class="in">
+    <div class="check fx">
+      <div><h2 style="font-size:clamp(1.5rem,2.6vw,2.1rem)">Welcher Pflegegrad wäre <span class="g">realistisch?</span></h2><p>Prüfen Sie in rund fünf Minuten kostenlos, wo Sie nach den sechs Modulen der Begutachtung stehen. Mit verständlichem Ergebnis, Ihre Antworten bleiben in Ihrem Browser.</p></div>
+      <a class="btn gold" href="https://muharremyildiz.de/links/#pflegegrad-check">Jetzt kostenlos prüfen</a>
+    </div>
+  </div>
+</section>
+<div class="trenner"></div>
+
+<section id="ablauf">
+  <div class="in">
+    <p class="eyebrow fx">Ablauf</p>
+    <h2 class="fx">In vier Schritten gut <span class="g">vorbereitet</span></h2>
+    <p class="lead fx">Ein klarer Ablauf spart Zeit und Nerven. Sie wissen immer, was als Nächstes passiert und was ich von Ihnen brauche.</p>
+    <div class="schritte">
+      <div class="schritt fx"><span class="gross">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h11v8H8l-4 3z"/><path d="M15 9h5v7l-3-2h-2"/></svg></div><h3>Erstgespräch</h3><p>Kostenlos und unverbindlich, per Telefon, Video oder in Frankfurt.</p></div>
+      <div class="schritt fx"><span class="gross">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h5"/></svg></div><h3>Unterlagen prüfen</h3><p>Bescheid, Gutachten und Arztberichte, Punkt für Punkt.</p></div>
+      <div class="schritt fx"><span class="gross">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>Vorbereitung</h3><p>Wir gehen die sechs Bereiche durch und legen fest, was am Termin wichtig ist.</p></div>
+      <div class="schritt fx"><span class="gross">04</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 13l4 4L19 7"/></svg></div><h3>Begleitung bis zum Ergebnis</h3><p>Ich bleibe an Ihrer Seite, bis die neue Entscheidung der Pflegekasse da ist.</p></div>
+    </div>
+  </div>
+</section>
+<div class="trenner"></div>
+
+<section id="unterschied">
+  <div class="in">
+    <p class="eyebrow fx">Warum Vorbereitung</p>
+    <h2 class="fx">Der Unterschied, den Sie <span class="strich">spüren<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 50 4, 120 4, 197 12"/></svg></span></h2>
+    <p class="lead fx">Viele Familien kommen erst nach dem Bescheid zu mir. So unterscheidet sich eine Begutachtung mit fachlicher Vorbereitung.</p>
+    <div class="vergleich">
+      <div class="karte nein fx"><h3>Ohne Vorbereitung</h3><ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>Der Termin kommt überraschend, niemand weiß, worauf es ankommt</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>Schlechte Tage und nächtliche Hilfe kommen nicht zur Sprache</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>Der Bescheid bleibt unverständlich</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>Die Widerspruchsfrist läuft unbemerkt ab</li>
+      </ul></div>
+      <div class="karte ja leucht fx"><h3>Mit fachlicher Begleitung</h3><ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Sie kennen die sechs Bereiche und Ihre Punkte vorab</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Pflegetagebuch und Unterlagen liegen bereit</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Bescheid und Gutachten werden verständlich erklärt</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>Fristen sind von Anfang an im Blick</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+<div class="trenner"></div>
+
+<section id="fragen">
+  <div class="in faq">
+    <div><p class="eyebrow fx">Häufige Fragen</p><h2 class="fx">Was Familien mich oft fragen</h2><p class="lead fx">Ihre Frage ist nicht dabei? Rufen Sie an oder schreiben Sie, ich antworte in der Regel am selben Tag.</p></div>
+    <div class="fx">
+      <details open><summary>Was kostet das?</summary><p>Die Ersteinschätzung ist kostenfrei und unverbindlich. Ist danach eine weitere Begleitung sinnvoll, sage ich Ihnen vorher klar, was sie kostet. Erst dann entscheiden Sie.</p></details>
+      <details><summary>Brauche ich ein eigenes Gutachten?</summary><p>Nein. Hilfreich sind der Bescheid, das Gutachten des Medizinischen Dienstes, Arztberichte und der Medikamentenplan.</p></details>
+      <details><summary>Wie viel Zeit habe ich für einen Widerspruch?</summary><p>In der Regel einen Monat, nachdem der Bescheid bei Ihnen angekommen ist. Fehlt die Belehrung über den Widerspruch, gilt ein Jahr. Warten Sie trotzdem nicht bis zum letzten Tag.</p></details>
+      <details><summary>Was passiert bei der Begutachtung?</summary><p>Eine Gutachterin oder ein Gutachter des Medizinischen Dienstes, bei Privatversicherten von Medicproof, kommt nach Hause und bewertet in sechs Bereichen, wie selbstständig die Person im Alltag ist.</p></details>
+      <details><summary>Geht das auch auf Türkisch oder Arabisch?</summary><p>Ja. Ich berate auf Deutsch, Türkisch und Arabisch, vor Ort in Frankfurt oder per Video.</p></details>
+      <details><summary>Wie unabhängig ist Ihre Einschätzung?</summary><p>In einem Fall habe ich immer nur eine Rolle: Ich berate Sie, oder ich begutachte, aber nie beides. Meine Einschätzung ist ergebnisoffen.</p></details>
+      <details><summary>Ist das eine Rechtsberatung?</summary><p>Nein. Ich beurteile den Pflegebedarf fachlich als Pflegesachverständiger. Eine rechtliche Vertretung, etwa vor dem Sozialgericht, übernehmen Rechtsanwälte oder registrierte Rentenberater.</p></details>
+    </div>
+  </div>
+</section>
+<div class="trenner"></div>
+
+<section id="kontakt">
+  <div class="in">
+    <p class="eyebrow fx">Standort und Region</p>
+    <h2 class="fx">In Frankfurt zu Hause, <span class="g">bundesweit</span> für Sie da</h2>
+    <p class="lead fx">Zu Hause in Frankfurt am Main. Hausbesuche im Rhein-Main-Gebiet nach Vereinbarung, Beratungen per Video in ganz Deutschland.</p>
+    <div class="chips fx"><span>Pflegeberatung Frankfurt am Main</span><span>Offenbach</span><span>Hanau</span><span>Maintal</span><span>Bad Vilbel</span><span>Mühlheim am Main</span><span>Dietzenbach</span><span>Bad Homburg</span><span>Wiesbaden</span><span>Darmstadt</span><span>bundesweit per Video</span></div>
+    <div class="kontakt fx">
+      <div><h3>M. Yildiz · Pflegeberatung</h3>
+        <div class="zl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Frankfurt am Main<br>Hausbesuche nach Vereinbarung</span></div>
+        <div class="zl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+496934869001" style="text-decoration:none">069 348 690 01</a></div>
+        <div class="zl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span id="mailplatz"><button class="mail" type="button" id="mailbtn">E-Mail-Adresse anzeigen</button></span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;justify-content:center">
+        <a class="btn gold" href="#kontakt">Fall kostenlos prüfen lassen</a>
+        <a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2gqJxW3qSMt9TN8Qo8YpPsYMsQ3vn6XP1Gwu-eyHl6Z3mVQLrJ1vuw8SwwFzD1KHqLhM_xfMYg" target="_blank" rel="noopener">Termin online buchen</a>
+        <small style="color:var(--faint)">Kostenfrei und unverbindlich. Unabhängig von Ihrem Pflegedienst. Keine Rechtsberatung.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="abschluss">
+  <div class="in">
+    <p class="eyebrow mitte fx">Kostenloses Erstgespräch</p>
+    <h2 class="fx">Lassen Sie uns über Ihren <span class="g wort" id="wort"><span>Pflegegrad</span></span> sprechen</h2>
+    <p class="lead fx">Erzählen Sie mir kurz, wie die Situation zu Hause ist. Im kostenlosen Erstgespräch klären wir, ob und wie es weitergeht.</p>
+    <div class="knoepfe fx"><a class="btn gold" href="#kontakt">Fall kostenlos prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn" href="tel:+496934869001">069 348 690 01</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="in">
+  <div class="spalten">
+    <div><img src="img/logo.png" alt="M. Yildiz" style="height:44px"><p style="margin:14px 0 0;max-width:36ch">Pflegesachverständiger in Frankfurt am Main. Pflegegrad, Begutachtung und Beratung, auf Deutsch, Türkisch und Arabisch.</p></div>
+    <div><h4>Pflegeberatung</h4><a href="#hilfe">Wann ich helfe</a><a href="#leistungen">Leistungen</a><a href="#ablauf">Ablauf</a><a href="#fragen">Häufige Fragen</a></div>
+    <div><h4>Mehr</h4><a href="https://muharremyildiz.de/links/#pflegegrad-check">Pflegegrad-Check</a><a href="https://muharremyildiz.de/">Über mich</a><a href="https://muharremyildiz.de/impressum/">Impressum</a><a href="https://muharremyildiz.de/datenschutz/">Datenschutz</a></div>
+  </div>
+  <div class="unten"><span>© 2026 M. Yildiz · Pflegeberatung</span><span>Frankfurt am Main</span></div>
+</div></footer>
+
+<script>
+(function(){
+var red=matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* Einblenden aus der Unschärfe, Geschwister versetzt */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,sib=[].filter.call(el.parentElement.children,function(x){return x.classList.contains("fx")});el.style.transitionDelay=Math.min(sib.indexOf(el),6)*110+"ms";el.classList.add("da");el.querySelectorAll(".strich").forEach(function(s){s.classList.add("da")});io.unobserve(el)})},{threshold:.15,rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".fx").forEach(function(el){io.observe(el)});
+setTimeout(function(){document.querySelectorAll(".held .fx").forEach(function(el){el.classList.add("da")})},80);
+/* Zähler */
+var zo=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var s=e.target,z=+s.dataset.zahl,v=+s.dataset.von;zo.unobserve(s);if(red){s.textContent=z;return}var t0=performance.now(),d=2200;(function f(t){var k=Math.min(1,(t-t0)/d),w=1-Math.pow(1-k,4);s.textContent=Math.round(v+(z-v)*w);if(k<1)requestAnimationFrame(f)})(t0)})},{threshold:.6});
+document.querySelectorAll("[data-zahl]").forEach(function(s){s.textContent=s.dataset.von;zo.observe(s)});
+/* Kopfleiste kleiner beim Scrollen */
+var kopf=document.getElementById("kopf");addEventListener("scroll",function(){kopf.classList.toggle("klein",scrollY>40)},{passive:true});
+/* Handy-Menü */
+var m=document.getElementById("menue"),bu=document.getElementById("burger");
+function menue(a){m.classList.toggle("offen",a);m.setAttribute("aria-hidden",!a);bu.setAttribute("aria-expanded",a);document.body.style.overflow=a?"hidden":""}
+bu.onclick=function(){menue(true)};document.getElementById("zu").onclick=function(){menue(false)};m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){menue(false)})});
+/* Umdrehkarten */
+document.querySelectorAll(".dreh").forEach(function(d){function t(){d.classList.toggle("um")}d.addEventListener("click",t);d.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();t()}})});
+/* Lichtschein folgt der Maus */
+document.querySelectorAll(".karte").forEach(function(k){k.addEventListener("pointermove",function(e){var r=k.getBoundingClientRect();k.style.setProperty("--mx",(e.clientX-r.left)+"px");k.style.setProperty("--my",(e.clientY-r.top)+"px")})});
+/* Wechselwort */
+var w=document.getElementById("wort"),ws=["Pflegegrad","Bescheid","Vorbereitung","Termin"],i=0;if(!red)setInterval(function(){i=(i+1)%ws.length;w.innerHTML="<span>"+ws[i]+"</span>"},2600);
+/* E-Mail erst auf Klick zusammensetzen, steht nie im Quelltext */
+document.getElementById("mailbtn").onclick=function(){var p=[118,101,114,119,97,108,116,117,110,103],d=[115,116,97,114,102,108,117,101,103,101,108,46,100,101],a=String.fromCharCode.apply(null,p)+"@"+String.fromCharCode.apply(null,d);var l=document.createElement("a");l.href="mai"+"lto:"+a;l.textContent=a;document.getElementById("mailplatz").replaceChildren(l)};
+})();
+</script>
+</body>
+</html>
