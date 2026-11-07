@@ -70,9 +70,19 @@ section{padding:96px 0;position:relative}
 .reihe{position:absolute;left:38%;top:-8%;width:110%;display:flex;gap:28px;transform:rotateX(16deg) rotateY(-24deg) rotateZ(6deg);transform-origin:left center;animation:gleiten 46s linear infinite}
 .reihe.b{top:44%;left:30%;animation-duration:58s;animation-direction:reverse}
 .reihe img{width:360px;aspect-ratio:16/9;object-fit:cover;flex:none;border-radius:16px;border:1px solid var(--line2);box-shadow:0 30px 60px rgba(0,0,0,.55);animation:atmen 9s ease-in-out infinite alternate}
+.baender{position:absolute;left:-30%;right:-30%;top:50%;transform:translateY(-50%) rotate(-7deg);display:flex;flex-direction:column;gap:24px}
+.band{height:400px;background-repeat:repeat-x;background-size:2940px 400px;will-change:background-position}
+.b1{background-image:url(img/band1.webp);animation:bandA 130s linear infinite}
+.b2{background-image:url(img/band2.webp);animation:bandB 150s linear infinite}
+.b3{background-image:url(img/band3.webp);animation:bandA 170s linear infinite}
+@keyframes bandA{from{background-position:0 50%}to{background-position:-2940px 50%}}
+@keyframes bandB{from{background-position:-2940px 50%}to{background-position:0 50%}}
+@media(max-width:700px){.band{height:274px;background-size:2016px 274px}.baender{gap:16px}
+ @keyframes bandA{from{background-position:0 50%}to{background-position:-2016px 50%}}
+ @keyframes bandB{from{background-position:-2016px 50%}to{background-position:0 50%}}}
 @keyframes gleiten{to{transform:rotateX(16deg) rotateY(-24deg) rotateZ(6deg) translateX(-50%)}}
 @keyframes atmen{to{filter:brightness(1.15)}}
-.held::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(11,18,34,.94) 34%,rgba(11,18,34,.55) 62%,rgba(11,18,34,.35) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 26%),linear-gradient(180deg,var(--bg) 0%,transparent 22%);pointer-events:none}
+.held::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b1222 34%,rgba(11,18,34,.38) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 22%);pointer-events:none}
 .held .in{position:relative;z-index:2;width:100%}
 .held h1{font-size:clamp(2.4rem,5.6vw,4.3rem);line-height:1.06;font-weight:600;max-width:13ch}
 .held .lead{font-size:1.1rem;max-width:44ch}
@@ -81,7 +91,7 @@ section{padding:96px 0;position:relative}
   .held{padding:120px 0 70px;min-height:0}
   .reihe{left:-10%;top:4%;opacity:.55}.reihe.b{top:52%;left:-30%}
   .reihe img{width:220px}
-  .held::after{background:linear-gradient(180deg,rgba(11,18,34,.75) 0%,rgba(11,18,34,.86) 45%,var(--bg) 100%)}
+  .held::after{background:linear-gradient(180deg,rgba(11,18,34,.55) 0%,rgba(11,18,34,.82) 55%,var(--bg) 100%)}
   .knoepfe{flex-direction:column;align-items:stretch}.knoepfe .btn{width:100%}
 }
 
@@ -212,7 +222,7 @@ footer .unten{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);
 /* Einblenden: Ruhezustand sichtbar, Effekt nur mit JS */
 .js .fx{opacity:0;filter:blur(10px);transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),filter 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}
 .js .fx.da{opacity:1;filter:none;transform:none}
-@media(prefers-reduced-motion:reduce){.reihe,.reihe img,.abschluss .wort span{animation:none}.js .fx{opacity:1;filter:none;transform:none;transition:none}.dreh .innen,.schritt::before{transition:none}}
+@media(prefers-reduced-motion:reduce){.band,.abschluss .wort span{animation:none}.js .fx{opacity:1;filter:none;transform:none;transition:none}.dreh .innen,.schritt::before{transition:none}}
 </style>
 </head>
 <body>
@@ -238,10 +248,7 @@ footer .unten{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);
 
 <main id="top">
 <section class="held">
-  <div class="buehne" aria-hidden="true">
-    <div class="reihe"><img src="img/f1.jpg" alt=""><img src="img/f3.jpg" alt=""><img src="img/f5.jpg" alt=""><img src="img/f7.jpg" alt=""><img src="img/f9.jpg" alt=""><img src="img/f1.jpg" alt=""><img src="img/f3.jpg" alt=""><img src="img/f5.jpg" alt=""><img src="img/f7.jpg" alt=""><img src="img/f9.jpg" alt=""></div>
-    <div class="reihe b"><img src="img/f2.jpg" alt=""><img src="img/f4.jpg" alt=""><img src="img/f6.jpg" alt=""><img src="img/f8.jpg" alt=""><img src="img/f10.jpg" alt=""><img src="img/f2.jpg" alt=""><img src="img/f4.jpg" alt=""><img src="img/f6.jpg" alt=""><img src="img/f8.jpg" alt=""><img src="img/f10.jpg" alt=""></div>
-  </div>
+  <div class="buehne" aria-hidden="true"><div class="baender"><div class="band b1"></div><div class="band b2"></div><div class="band b3"></div></div></div>
   <div class="in">
     <p class="eyebrow fx">Pflegesachverständiger in Frankfurt</p>
     <h1 class="fx">Pflegegrad, der zu Ihrem <span class="g">Alltag</span> passt.</h1>
