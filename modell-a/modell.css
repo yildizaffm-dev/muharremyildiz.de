@@ -92,3 +92,36 @@
 .m-c .place,.m-c .item{color:#F3EDE0}
 .m-c .top{background:rgba(20,20,20,.86)!important;box-shadow:none!important}
 .m-b .heldlinks a.voll{background:#000;border-color:#000}
+
+/* Leiste unter dem Hero (nur sichtbar in D) */
+.leiste{display:none}
+
+/* Modell D: Sand und Gold, unqc gemischt */
+.m-d{--paper:#EDE6DA;--paper-2:#E3D9C9;--ink:#1d1a16;--ink-70:rgba(29,26,22,.75);--ink-45:rgba(29,26,22,.5);--gold:#B8893F;--gold-deep:#7A5A26;--gold-light:#EBD3A0;background:#EDE6DA;color:#1d1a16}
+.m-d::before{opacity:.28}.m-d::after{background:rgba(237,230,218,.7)}
+.m-d .top{background:rgba(237,230,218,.94)!important;color:#1d1a16;box-shadow:0 1px 0 rgba(0,0,0,.08)!important}
+.m-d .hero{background:linear-gradient(90deg,#4A4037 30%,#6B5D4F 100%);color:#F6F1E8}
+.m-d .hero .lead,.m-d .hero .kicker,.m-d .wechsel{color:#F6F1E8}
+.m-d .hero .hint{color:#F6F1E8}.m-d .hero .hint i{background:#F6F1E8}
+.m-d .wechsel b{color:#EBD3A0;border-color:#EBD3A0}
+.m-d .heldlinks a{border-color:#F6F1E8;color:#F6F1E8}.m-d .heldlinks a.voll{background:#B8893F;border-color:#B8893F;color:#1d1a16}
+.m-d .portrait .rahmen{background:radial-gradient(120% 80% at 50% 18%,#8a7660 0%,#5b4d40 60%,#3e352d 100%)}
+.m-d .portrait .ring{border-color:#EBD3A0}
+.m-d .sunglow{opacity:.5}
+.m-d .leiste{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;padding:22px var(--gutter);background:#4A4037;color:#EBD3A0;font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;position:relative;z-index:1}
+.m-d .leiste span::before{content:"◆";margin-right:12px;color:#B8893F;font-size:9px;vertical-align:2px}
+.m-d .zahl,.m-d .kk,.m-d .texte .buch,.m-d .station{background:#fff!important;color:#1d1a16!important;border:1px solid rgba(29,26,22,.12)!important;box-shadow:0 18px 40px -28px rgba(74,64,55,.45)}
+.m-d .station *{color:#1d1a16!important}
+.m-d .station .n{background:#4A4037!important;color:#EBD3A0!important}
+.m-d .zahl strong{color:#7A5A26}
+.m-d .karten,.m-d .faq{background:#F6F1E8}
+.m-d .zitatband{background:#4A4037;color:#F6F1E8;border:0}
+.m-d .kbin{background:#4A4037;color:#F6F1E8;border:0}
+.m-d .kbknopf{background:#B8893F;color:#1d1a16}
+.m-d .pflegebruecke .band2{background:#fff;border-color:rgba(29,26,22,.15)}
+.m-d .fussneu{background:#3a322b;color:#EDE6DA;border:0}
+.m-d .fspalten h4{color:#EBD3A0;opacity:1}
+.m-d .zl b{background:#EDE6DA}
+.m-d .stance,.m-d .places{background:transparent}
+.m-d .place{background:#fff;border-radius:18px;padding:22px}
+.m-c .station{background:#211f1c!important;border-color:rgba(199,161,90,.35)!important}.m-c .station *{color:#F3EDE0!important}
