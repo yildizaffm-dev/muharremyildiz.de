@@ -284,14 +284,6 @@
       <button type="button" class="kbknopf" id="kbmail">Nachricht schreiben</button>
     </div>
   </section>
-  <section class="sec pflegebruecke" aria-labelledby="pflege-h">
-   <div class="band2 einblenden"><div style="display:flex;flex-direction:column;align-items:center;gap:.9rem;text-align:center;max-width:40rem;margin:0 auto">
-    <p class="kicker" style="margin:0">Pflegeberatung</p>
-    <h2 id="pflege-h" style="margin:0;max-width:none">Sind Sie wegen eines Pflegefalls hier?</h2>
-    <p class="measure" style="margin:0">Hier geht es zur kostenfreien Ersteinschätzung und zum Pflegegrad&#8209;Check.</p>
-    <div class="knopfreihe"><a class="k1" href="/pflegegrad/">Zur Pflegeberatung</a></div>
-   </div></div>
-  </section>
 
   <section class="sec end" aria-labelledby="ende-h">
     <h2 id="ende-h">Danke fürs Lesen.</h2>
@@ -329,6 +321,7 @@ var b=document.querySelector(".buchseite");if(b){function f(){b.classList.toggle
 var k=document.getElementById("kbmail");if(k)k.onclick=function(){var a=String.fromCharCode(109,117,104,97,114,114,101,109,121,105,108,100,105,122)+"@"+String.fromCharCode(108,105,118,101,46,100,101);location.href="mai"+"lto:"+a};
 })();
 var S=["Nicht zurückgesetzt, sondern zurückgekehrt.","Was ist wertvoller, jetzt, hier, in dieser Situation?","Wer strampelt, sinkt; wer den Handspannenschritt tut, wird herausgebracht.","Ein Anker hält nicht, weil er schwer ist, sondern weil er sich in den Grund setzt."];var ts=document.getElementById("tagessatz");if(ts)ts.textContent=S[new Date().getDate()%S.length];
+(function(){var v=document.querySelector(".heldvideo");if(!v)return;function f(){var o=Math.max(0,1-scrollY/(innerHeight*.3));v.style.opacity=o;v.style.visibility=o<.02?"hidden":"visible"}addEventListener("scroll",f,{passive:true});f()})();
 </script>
 </body>
 </html>

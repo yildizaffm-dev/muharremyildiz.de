@@ -182,3 +182,9 @@
 .fich img{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:50% 12%;background:#8a7660;border:2px solid #B8893F;flex:none}
 .fich .fm{margin:0 0 2px}
 .fich p{margin:0}
+.m-e .heldvideo{transition:opacity .15s linear;will-change:opacity}
+.m-e .hero .frage p{color:#1d1a16}
+/* Ohne Video: Kopf nur mit Text */
+.ohnevideo .heldvideo{display:none!important}
+.ohnevideo.m-e .hero .text{max-width:none}
+@media (max-width:860px){.ohnevideo.m-e .hero .stage{align-content:center!important;padding-top:84px!important}}
