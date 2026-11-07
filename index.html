@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Muharrem Yıldız – Hej, hier ist Muharrem</title>
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-<meta name="description" content="Muharrem Yıldız aus Frankfurt am Main. Unternehmer, Student – und einer, der lieber gut fragt als schnell antwortet.">
+<meta name="description" content="Muharrem Yıldız aus Frankfurt am Main. Unternehmer, Pflegesachverständiger – und einer, der lieber gut fragt als schnell antwortet.">
 <meta property="og:title" content="Muharrem Yıldız – Hej, hier ist Muharrem">
-<meta property="og:description" content="Frankfurter, Unternehmer, Student – und einer, der lieber gut fragt als schnell antwortet.">
+<meta property="og:description" content="Frankfurter, Unternehmer, Pflegesachverständiger – und einer, der lieber gut fragt als schnell antwortet.">
 <meta property="og:image" content="https://muharremyildiz.de/img/og.jpg">
 <meta property="og:url" content="https://muharremyildiz.de/">
 <meta name="theme-color" content="#F5F3EE">
@@ -42,7 +42,7 @@
             <span class="l"><span>Hej,</span></span>
             <span class="l"><span>hier ist <em>Muharrem.</em></span></span>
           </h1>
-          <p class="lead">Schön, dass du hier bist. Frankfurter, Unternehmer, Student – und einer, der lieber gut fragt als schnell antwortet.</p>
+          <p class="lead">Schön, dass du hier bist. Frankfurter, Unternehmer, Pflegesachverständiger – und einer, der lieber gut fragt als schnell antwortet.</p>
         </div>
         <figure class="portrait">
           <img src="img/portrait.webp" width="847" height="930" alt="Muharrem Yıldız, im dunklen Anzug, lächelt in die Kamera" fetchpriority="high">
@@ -121,7 +121,7 @@
         <article class="station">
           <span class="n">Station 7</span>
           <h3>Weiterlernen</h3>
-          <p>Ich studiere Psychologie und vertiefe mich in islamische Studien. Kein Titel – eine Vertiefung. In den Menschen, und in die Frage, wo Verantwortung ihre Richtung herbekommt.</p>
+          <p>Ich bereite mich auf ein Psychologiestudium vor.</p>
           <p class="left">Wer andere begleiten will, darf selbst nie aufhören zu lernen.</p>
         </article>
       </div>
@@ -189,6 +189,13 @@
   </section>
 
 
+  <section class="sec pflegebruecke" aria-labelledby="pflege-h" style="text-align:center">
+    <p class="kicker">Pflegeberatung</p>
+    <h2 id="pflege-h">Sind Sie wegen eines Pflegefalls hier?</h2>
+    <p class="measure" style="margin-inline:auto">Hier geht es zur kostenfreien Ersteinschätzung und zum Pflegegrad-Check.</p>
+    <p><a href="/pflegegrad/" style="display:inline-block;margin-top:.6rem;padding:.85rem 1.6rem;border-radius:999px;background:#1b2a47;color:#f5f3ee;text-decoration:none;font-weight:600;letter-spacing:.01em">Zur Pflegeberatung</a></p>
+  </section>
+
   <section class="sec end" aria-labelledby="ende-h">
     <h2 id="ende-h">Danke fürs Lesen.</h2>
     <p class="measure">Die Frage nehme ich dir nicht ab. Aber ich geb sie dir gern mit:</p>
@@ -205,5 +212,10 @@
 <script src="assets/ScrollTrigger.min.js"></script>
 <script src="assets/lenis.min.js"></script>
 <script src="assets/site.js"></script>
+<script>
+(function(){var G={"Europe/Berlin":["Gute Nacht.","Guten Morgen.","Guten Tag.","Guten Abend."],"Europe/Istanbul":["İyi geceler.","Günaydın.","İyi günler.","İyi akşamlar."],"Asia/Qatar":["تصبح على خير.","صباح الخير.","أهلًا وسهلًا.","مساء الخير."]};
+function upd(){document.querySelectorAll(".place[data-tz]").forEach(function(p){var g=G[p.dataset.tz],el=p.querySelector(".gr");if(!g||!el)return;var h=+new Intl.DateTimeFormat("de-DE",{hour:"numeric",hourCycle:"h23",timeZone:p.dataset.tz}).format(new Date());el.textContent=h<5||h>=22?g[0]:h<11?g[1]:h<18?g[2]:g[3];});}
+try{upd();setInterval(upd,60000)}catch(e){}})();
+</script>
 </body>
 </html>
