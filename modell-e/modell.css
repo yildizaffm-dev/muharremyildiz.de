@@ -159,3 +159,22 @@
 .satz small{display:block;margin-top:14px;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#EBD3A0}
 .kbfoto{width:132px;height:132px;border-radius:50%;object-fit:cover;object-position:50% 12%;background:#8a7660;border:3px solid #B8893F;margin:0 auto 18px;display:block}
 @media (max-width:860px){.m-e .hero .stage{align-content:center!important;padding-top:64px!important}.m-e .kbaender::after{background:linear-gradient(180deg,rgba(74,64,55,.55),rgba(74,64,55,.92) 45%,rgba(74,64,55,.6))}}
+
+/* Modell E: Video direkt im Kopf */
+.heldvideo{display:none}
+.m-e .heldvideo{display:block;position:absolute;top:64px;right:0;bottom:0;width:56%;z-index:1;cursor:pointer;
+  background:radial-gradient(90% 80% at 60% 40%,#8a7660 0%,#5b4d40 55%,#3e352d 100%)}
+.m-e .heldvideo::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#4A4037 0%,rgba(74,64,55,0) 45%)}
+.m-e .heldvideo .play{position:absolute;left:55%;top:50%;width:96px;height:96px;margin:-48px;border-radius:50%;background:rgba(246,241,232,.94);display:grid;place-items:center;animation:atme 2.6s ease-in-out infinite;box-shadow:0 0 0 14px rgba(246,241,232,.14)}
+.m-e .heldvideo .play::after{content:"";border-left:28px solid #4A4037;border-top:17px solid transparent;border-bottom:17px solid transparent;margin-left:7px}
+.m-e .heldvideo .vlabel{position:absolute;left:55%;top:calc(50% + 70px);transform:translateX(-50%);white-space:nowrap;font-family:var(--sans);font-size:14px;letter-spacing:.06em;color:#F6F1E8}
+.m-e .hero .text{max-width:44%}
+@media (max-width:860px){
+  .m-e .heldvideo{top:64px;left:0;right:0;bottom:auto;width:auto;height:38svh}
+  .m-e .heldvideo::before{background:linear-gradient(180deg,rgba(74,64,55,0) 55%,#4A4037 100%)}
+  .m-e .heldvideo .play{left:50%;width:76px;height:76px;margin:-38px}
+  .m-e .heldvideo .vlabel{left:50%;top:calc(50% + 56px);font-size:13px}
+  .m-e .hero .stage{align-content:end!important;padding-top:calc(38svh + 74px)!important}
+  .m-e .hero .text{max-width:none}
+}
+.m-e .hero .stage{z-index:2}.m-e .hero .stage .portrait{pointer-events:none}
