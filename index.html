@@ -468,5 +468,6 @@ var w=document.getElementById("wort"),ws=["Pflegegrad","Bescheid","Vorbereitung"
 document.getElementById("mailbtn").onclick=function(){var p=[107,111,110,116,97,107,116],d=[112,102,108,101,103,101,98,101,103,108,101,105,116,112,101,114,115,111,110,46,100,101],a=String.fromCharCode.apply(null,p)+"@"+String.fromCharCode.apply(null,d);var l=document.createElement("a");l.href="mai"+"lto:"+a;l.textContent=a;document.getElementById("mailplatz").replaceChildren(l)};
 })();
 </script>
+<script>(function(){function go(){if(location.hash!=="#termin")return;var e=document.getElementById("termin");if(!e)return;e.classList.add("da");e.querySelectorAll(".fx").forEach(function(x){x.classList.add("da")});e.scrollIntoView({block:"start"});}addEventListener("load",function(){go();setTimeout(go,400);setTimeout(go,1200)});addEventListener("hashchange",go);})();</script>
 </body>
 </html>
