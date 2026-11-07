@@ -84,13 +84,15 @@
     </div>
   </section>
 
-  <div class="leiste" aria-label="Kurz"><span>Frankfurt am Main</span><span>Unternehmer</span><span>Psychologie</span><span>Schreiben</span><span>Fünf Sprachen</span></div>
-  <section class="zahlen" aria-label="In Zahlen">
+  <div class="leiste" aria-label="Kurz"><div class="lband"><span>Frankfurt am Main</span><span>Unternehmer</span><span>Psychologie</span><span>Schreiben</span><span>Fünf Sprachen</span><span>Frankfurt am Main</span><span>Unternehmer</span><span>Psychologie</span><span>Schreiben</span><span>Fünf Sprachen</span></div></div>
+  <section class="zahlen" aria-labelledby="zahlen-h">
+    <p class="kicker">Auf einen Blick</p>
+    <h2 id="zahlen-h">Vier Zahlen, die mich beschreiben.</h2>
     <div class="gitter">
-      <div class="zahl glanz einblenden"><strong data-zaehl="1">1</strong><span>Frage, die mich begleitet: Was ist jetzt wertvoller?</span></div>
-      <div class="zahl glanz einblenden"><strong data-zaehl="3">3</strong><span>Städte, die mich prägen: Frankfurt, Istanbul, Doha.</span></div>
-      <div class="zahl glanz einblenden"><strong data-zaehl="7">7</strong><span>Stationen auf meinem Weg, eine Richtung.</span></div>
-      <div class="zahl glanz einblenden"><strong data-zaehl="5">5</strong><span>Sprachen, in denen mein Essay gelesen werden kann.</span></div>
+      <div class="zahl glanz einblenden"><span class="zsym" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.6M12 17h.01"/></svg></span><strong data-zaehl="1">1</strong><b>Frage</b><span>die mich begleitet: Was ist jetzt wertvoller?</span></div>
+      <div class="zahl glanz einblenden"><span class="zsym" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg></span><strong data-zaehl="3">3</strong><b>Städte</b><span>die mich prägen: Frankfurt, Istanbul, Doha.</span></div>
+      <div class="zahl glanz einblenden"><span class="zsym" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18h4l3-6 3 3 4-8"/><circle cx="4" cy="18" r="1.4"/><circle cx="18" cy="7" r="1.4"/></svg></span><strong data-zaehl="7">7</strong><b>Stationen</b><span>auf meinem Weg, eine Richtung.</span></div>
+      <div class="zahl glanz einblenden"><span class="zsym" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h10M4 18h13"/></svg></span><strong data-zaehl="5">5</strong><b>Sprachen</b><span>in denen mein Essay gelesen werden kann.</span></div>
     </div>
   </section>
 
@@ -278,9 +280,24 @@
 
   <section class="sec kontaktband" aria-labelledby="kb-h">
     <div class="kbin einblenden">
-      <h2 id="kb-h">Deine Gedanken sind willkommen.</h2>
-      <p>Vielleicht möchtest du mein Buch kritisieren, mir eine Frage stellen oder einfach Danke sagen. Ich freue mich über jede Zeile und antworte, so gut ich kann.</p>
-      <button type="button" class="kbknopf" id="kbmail">Nachricht schreiben</button>
+      <div class="kbtext">
+        <p class="kicker">Schreib mir</p>
+        <h2 id="kb-h">Deine Gedanken sind willkommen.</h2>
+        <p>Vielleicht möchtest du mein Buch kritisieren, mir eine Frage stellen oder einfach Danke sagen. Ich freue mich über jede Zeile und antworte, so gut ich kann.</p>
+        <p class="kbklein">Die Nachricht öffnet sich in deinem E-Mail-Programm. Auf dieser Seite wird nichts gespeichert.</p>
+      </div>
+      <form class="kbform" id="kbform" novalidate>
+        <fieldset class="anlass"><legend>Worum geht es?</legend>
+          <label><input type="radio" name="anlass" value="Kritik zum Buch" checked><span>Kritik zum Buch</span></label>
+          <label><input type="radio" name="anlass" value="Eine Frage"><span>Eine Frage</span></label>
+          <label><input type="radio" name="anlass" value="Danke"><span>Danke sagen</span></label>
+          <label><input type="radio" name="anlass" value="Etwas anderes"><span>Etwas anderes</span></label>
+        </fieldset>
+        <label class="feld"><span>Dein Name</span><input type="text" name="name" autocomplete="name" placeholder="Vor- und Nachname"></label>
+        <label class="feld"><span>Deine Nachricht</span><textarea name="text" rows="5" placeholder="Schreib, was dir auf dem Herzen liegt."></textarea></label>
+        <p class="kbfehler" id="kbfehler" role="alert"></p>
+        <button type="submit" class="kbknopf">Nachricht senden</button>
+      </form>
     </div>
   </section>
 
@@ -317,10 +334,11 @@ var zl=document.querySelector(".zl");
 function z(){if(!zl)return;var r=zl.getBoundingClientRect(),h=innerHeight;var p=Math.min(1,Math.max(0,(h*.7-r.top)/r.height));zl.style.setProperty("--p",p.toFixed(3));zl.querySelectorAll("li").forEach(function(li,i){li.classList.toggle("an",p>=(i+.3)/7)})}
 addEventListener("scroll",z,{passive:true});z();
 var b=document.querySelector(".buchseite");if(b){function f(){b.classList.toggle("um")}b.onclick=f;b.onkeydown=function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();f()}}}
-var k=document.getElementById("kbmail");if(k)k.onclick=function(){var a=String.fromCharCode(109,117,104,97,114,114,101,109,121,105,108,100,105,122)+"@"+String.fromCharCode(108,105,118,101,46,100,101);location.href="mai"+"lto:"+a};
+var fm=document.getElementById("kbform");if(fm)fm.onsubmit=function(e){e.preventDefault();var t=fm.text.value.trim(),n=fm.name.value.trim(),an=(fm.querySelector("input[name=anlass]:checked")||{}).value||"Nachricht",er=document.getElementById("kbfehler");if(t.length<3){er.textContent="Bitte schreib zuerst ein paar Worte.";fm.text.focus();return}er.textContent="";var a=String.fromCharCode(109,117,104,97,114,114,101,109,121,105,108,100,105,122)+"@"+String.fromCharCode(108,105,118,101,46,100,101);location.href="mai"+"lto:"+a+"?subject="+encodeURIComponent(an+(n?" – "+n:""))+"&body="+encodeURIComponent(t+(n?"\n\n"+n:""))};
 })();
 var S=["Nicht zurückgesetzt, sondern zurückgekehrt.","Was ist wertvoller, jetzt, hier, in dieser Situation?","Wer strampelt, sinkt; wer den Handspannenschritt tut, wird herausgebracht.","Ein Anker hält nicht, weil er schwer ist, sondern weil er sich in den Grund setzt."];var ts=document.getElementById("tagessatz");if(ts)ts.textContent=S[new Date().getDate()%S.length];
-(function(){var v=document.querySelector(".heldvideo");if(!v)return;function f(){var o=Math.max(0,1-scrollY/(innerHeight*.3));v.style.opacity=o;v.style.visibility=o<.02?"hidden":"visible"}addEventListener("scroll",f,{passive:true});f()})();
+(function(){var hv=document.querySelector(".heldvideo"),hero=document.querySelector(".hero"),wrap=document.querySelector(".hero-wrap");if(hv&&hero&&wrap){var mq=matchMedia("(max-width:1100px)");function lage(){if(mq.matches){if(hv.parentNode!==wrap.parentNode){wrap.parentNode.insertBefore(hv,wrap);hv.classList.add("fluss")}}else if(hv.parentNode!==hero){hero.insertBefore(hv,hero.querySelector(".stage"));hv.classList.remove("fluss")}}lage();mq.addEventListener?mq.addEventListener("change",lage):mq.addListener(lage)}})();
+(function(){var v=document.querySelector(".heldvideo");if(!v)return;function f(){if(v.classList.contains("fluss")){v.style.opacity=1;v.style.visibility="visible";return}var o=Math.max(0,1-scrollY/(innerHeight*.3));v.style.opacity=o;v.style.visibility=o<.02?"hidden":"visible"}addEventListener("scroll",f,{passive:true});f()})();
 (function(){var v=document.getElementById("vorstellung"),b=document.getElementById("tonknopf");if(!v||!b)return;
 if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){v.removeAttribute("autoplay");v.pause()}
 b.onclick=function(){v.muted=false;v.loop=false;v.currentTime=0;v.controls=true;v.play();b.style.display="none"};

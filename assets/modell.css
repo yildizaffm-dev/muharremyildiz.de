@@ -199,3 +199,64 @@
 .m-e .heldvideo .tonknopf .vlabel{position:static;transform:none}
 @media (max-width:860px){.m-e .heldvideo{height:46svh}.m-e .heldvideo .vrahmen{height:calc(100% - 24px)}.m-e .hero .stage{padding-top:calc(46svh + 74px)!important}.m-e .heldvideo .tonknopf{font-size:12.5px;bottom:12px}}
 @media (min-width:861px){.m-e .hero h1{font-size:clamp(52px,7vw,112px)!important}.m-e .hero .text{max-width:50%!important}}
+
+/* ===== Runde 7: Video, Leiste, Zahlen, Kontakt, Fusszeile ===== */
+.m-e .hero .stage{pointer-events:none}
+.m-e .hero .stage a,.m-e .hero .stage button{pointer-events:auto}
+.m-e .heldvideo{z-index:3}
+/* Video als eigener Block oben auf Handy und Tablet */
+.m-e .heldvideo.fluss{position:relative!important;inset:auto!important;top:auto!important;width:auto!important;height:auto!important;padding:84px var(--gutter) 28px;background:linear-gradient(180deg,#4A4037,#5b4d40)}
+.m-e .heldvideo.fluss::before{display:none}
+.m-e .heldvideo.fluss .vrahmen{height:auto!important;width:min(78vw,340px);margin:0 auto}
+@media (max-width:1100px){
+  .m-e .hero .stage{padding-top:84px!important;align-content:center!important}
+  .m-e .hero .text{max-width:none!important}
+  .m-e .hero h1{font-size:clamp(40px,11vw,72px)!important}
+}
+/* Leiste als Laufband */
+.m-d .leiste{display:block!important;overflow:hidden;padding:18px 0!important;margin:0 0 clamp(56px,9vh,96px)}
+.m-d .leiste .lband{display:flex;gap:44px;width:max-content;animation:band 36s linear infinite}
+.m-d .leiste span{white-space:nowrap}
+/* Zahlen */
+.m-d .zahlen{padding:0 var(--gutter) clamp(72px,11vh,130px)}
+.m-d .zahlen h2{margin:0 0 30px;max-width:none}
+.m-d .zahlen .gitter{gap:20px}
+.m-d .zahl{min-height:220px!important;padding:28px 26px!important;justify-content:flex-start!important;border-radius:22px!important;background:linear-gradient(180deg,#fff 0%,#FBF7F0 100%)!important}
+.m-d .zahl::before{display:none}
+.m-d .zahl .zsym{width:44px;height:44px;border-radius:50%;background:#F3E7CF;color:#7A5A26;display:grid;place-items:center;margin-bottom:18px}
+.m-d .zahl .zsym svg{width:22px;height:22px}
+.m-d .zahl strong{font-size:clamp(46px,4.6vw,64px)!important;background:linear-gradient(135deg,#B8893F,#7A5A26);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.m-d .zahl b{font-family:var(--serif);font-weight:500;font-size:22px;margin:6px 0 6px;color:#1d1a16}
+.m-d .zahl span:last-child{margin-top:0!important;font-size:14.5px!important}
+@media (max-width:860px){
+  .m-d .zahlen .gitter{grid-template-columns:1fr!important;gap:14px}
+  .m-d .zahl{min-height:0!important;display:grid!important;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:18px;align-items:center;padding:22px!important}
+  .m-d .zahl .zsym{display:none}
+  .m-d .zahl strong{grid-row:1 / 3;font-size:56px!important;min-width:56px;text-align:center}
+  .m-d .zahl b{margin:0}
+}
+/* Kontakt mit Formular */
+.m-d .kbin{display:grid!important;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,56px);text-align:left!important;align-items:start;padding:clamp(28px,5vw,64px)!important}
+.m-d .kbin h2{margin:0 0 14px!important;font-size:clamp(30px,3.6vw,46px)}
+.m-d .kbin .kicker{color:#EBD3A0;opacity:1}
+.m-d .kbklein{font-family:var(--sans);font-size:12.5px;opacity:.7;margin-top:18px}
+.kbform{background:#F6F1E8;color:#1d1a16;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.kbform .anlass{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.kbform legend{font-family:var(--sans);font-size:13px;letter-spacing:.06em;margin-bottom:10px;color:#7A5A26}
+.kbform .anlass label{cursor:pointer}
+.kbform .anlass input{position:absolute;opacity:0;pointer-events:none}
+.kbform .anlass span{display:inline-block;font-family:var(--sans);font-size:14px;padding:8px 14px;border-radius:999px;border:1px solid rgba(29,26,22,.2);background:#fff;transition:background .2s,border-color .2s}
+.kbform .anlass input:checked+span{background:#4A4037;color:#F6F1E8;border-color:#4A4037}
+.kbform .anlass input:focus-visible+span{outline:2px solid #B8893F;outline-offset:2px}
+.kbform .feld{display:flex;flex-direction:column;gap:6px;font-family:var(--sans);font-size:13px;color:#4A4037}
+.kbform input[type=text],.kbform textarea{font:inherit;font-family:var(--serif);font-size:17px;padding:12px 14px;border-radius:12px;border:1px solid rgba(29,26,22,.18);background:#fff;color:#1d1a16;resize:vertical}
+.kbform input:focus,.kbform textarea:focus{outline:none;border-color:#B8893F;box-shadow:0 0 0 3px rgba(184,137,63,.2)}
+.kbform .kbknopf{align-self:flex-start;margin-top:4px}
+.kbfehler{margin:0;min-height:1em;font-family:var(--sans);font-size:13px;color:#a33}
+@media (max-width:860px){.m-d .kbin{grid-template-columns:1fr}.kbform{padding:18px}}
+/* Fusszeile ueber die volle Breite */
+.m-d footer.fussneu{margin:0!important;padding:56px var(--gutter) 40px!important;display:block!important;border-radius:0}
+.m-d .fspalten{max-width:1200px;margin:0 auto}
+.m-d .fcopy{max-width:1200px;margin:36px auto 0;padding-top:20px;border-top:1px solid rgba(235,211,160,.2)}
+.m-d .fspalten a{color:#EDE6DA}
+@media (max-width:860px){.m-d .fspalten{grid-template-columns:1fr 1fr;row-gap:30px}.m-d .fich{grid-column:1 / -1}}
