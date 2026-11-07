@@ -125,3 +125,37 @@
 .m-d .stance,.m-d .places{background:transparent}
 .m-d .place{background:#fff;border-radius:18px;padding:22px}
 .m-c .station{background:#211f1c!important;border-color:rgba(199,161,90,.35)!important}.m-c .station *{color:#F3EDE0!important}
+
+/* Modell E */
+.m-e .hero .portrait{display:none!important}
+.m-e .hero .stage{grid-template-columns:1fr!important}
+.kbaender{display:none}
+.m-e .kbaender{display:block;position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.m-e .kbaender::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(74,64,55,.95) 28%,rgba(74,64,55,.35) 100%)}
+.kbaender .rot{position:absolute;left:-20%;right:-20%;top:50%;transform:translateY(-50%) rotate(-5deg);display:flex;flex-direction:column;gap:16px}
+.kbaender .reihe{display:flex;gap:16px;width:max-content;animation:lauf 70s linear infinite}
+.kbaender .reihe.r2{animation-direction:reverse;animation-duration:85s}
+.kbaender .reihe span{width:240px;height:120px;border-radius:14px;display:grid;place-items:center;font-size:22px;font-style:italic;color:#fff}
+.kbaender .reihe span:nth-child(4n+1){background:linear-gradient(135deg,#8a7660,#5b4d40)}
+.kbaender .reihe span:nth-child(4n+2){background:linear-gradient(135deg,#B8893F,#7A5A26)}
+.kbaender .reihe span:nth-child(4n+3){background:linear-gradient(135deg,#6B5D4F,#3e352d)}
+.kbaender .reihe span:nth-child(4n){background:linear-gradient(135deg,#a89276,#6B5D4F)}
+@keyframes lauf{to{transform:translateX(-50%)}}
+.m-e .hero .text{position:relative;z-index:2}
+.m-e .videoabschnitt{background:#F6F1E8}
+.video{position:relative;aspect-ratio:16/9;max-width:900px;border-radius:22px;overflow:hidden;background:radial-gradient(120% 90% at 30% 20%,#8a7660,#3e352d)}
+.video .play{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px;border-radius:50%;background:rgba(246,241,232,.92);display:grid;place-items:center;animation:atme 2.6s ease-in-out infinite}
+.video .play::after{content:"";border-left:24px solid #4A4037;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+@keyframes atme{50%{transform:scale(1.08)}}
+.video p{position:absolute;left:24px;bottom:16px;margin:0;color:#F6F1E8;font-family:var(--sans);font-size:14px}
+.karte{background:#4A4037;border-radius:22px;padding:18px;margin:0 0 26px}
+.karte svg{width:100%;height:auto;display:block}
+.bogen{fill:none;stroke:#EBD3A0;stroke-width:1.6;stroke-dasharray:6 6;animation:strich 3s linear infinite}
+@keyframes strich{to{stroke-dashoffset:-48}}
+.punkt{fill:#B8893F}.puls{fill:none;stroke:#EBD3A0;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{r:4;opacity:1}to{r:18;opacity:0}}
+.satz{background:#4A4037;color:#F6F1E8;border-radius:22px;padding:44px;text-align:center}
+.satz q{font-size:clamp(24px,3vw,38px);font-style:italic;quotes:"„" "“"}
+.satz small{display:block;margin-top:14px;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#EBD3A0}
+.kbfoto{width:132px;height:132px;border-radius:50%;object-fit:cover;object-position:50% 12%;background:#8a7660;border:3px solid #B8893F;margin:0 auto 18px;display:block}
+@media (max-width:860px){.m-e .hero .stage{align-content:center!important;padding-top:64px!important}.m-e .kbaender::after{background:linear-gradient(180deg,rgba(74,64,55,.55),rgba(74,64,55,.92) 45%,rgba(74,64,55,.6))}}

@@ -1,0 +1,161 @@
+/* Gemeinsame neue Abschnitte (unqc-Grundstruktur) */
+.modellschild{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:80;background:#000;color:#fff;font-family:var(--sans);font-size:12.5px;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.modellschild a{color:#F2DFA8;margin-left:6px}
+.videohinweis{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:3;font-family:var(--sans);font-size:11px;letter-spacing:.08em;background:rgba(0,0,0,.55);color:#fff;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.portrait .rahmen img{animation:kenburns 14s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:translateY(2%) scale(1)}to{transform:translateY(0) scale(1.07)}}
+
+.kgitter{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.kk{border:1px solid rgba(0,0,0,.14);border-radius:20px;padding:28px 24px;background:rgba(255,255,255,.6);transition:transform .25s}
+.kk:hover{transform:translateY(-4px)}
+.kk svg{width:34px;height:34px;color:var(--gold-deep)}
+.kk h3{font-size:24px;font-weight:500;margin:14px 0 8px}
+.kk p{margin:0 0 14px;opacity:.8}
+.kk a{font-family:var(--sans);font-size:14px;color:inherit}
+
+.zl{list-style:none;padding:0 0 0 34px;margin:0;position:relative;max-width:640px}
+.zl::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:rgba(0,0,0,.12)}
+.zl::after{content:"";position:absolute;left:11px;top:6px;width:2px;height:calc((100% - 12px) * var(--p));background:var(--gold)}
+.zl li{position:relative;padding:0 0 30px;opacity:.35;transition:opacity .5s}
+.zl li.an{opacity:1}
+.zl b{position:absolute;left:-34px;top:2px;width:24px;height:24px;border-radius:50%;background:var(--paper);border:2px solid var(--gold);display:grid;place-items:center;font-family:var(--sans);font-size:11px;z-index:1}
+.zl li.an b{background:var(--gold)}
+.zl h3{margin:0 0 4px;font-size:22px;font-weight:500}
+.zl p{margin:0;opacity:.75}
+
+.zitatband{overflow:hidden;padding:34px 0;border-block:1px solid rgba(0,0,0,.12)}
+.zb{display:flex;gap:48px;width:max-content;animation:band 40s linear infinite}
+.zb span{font-size:clamp(28px,4vw,52px);font-style:italic;white-space:nowrap}
+@keyframes band{to{transform:translateX(-50%)}}
+
+.buchseite{position:relative;width:min(100%,520px);aspect-ratio:3/4;perspective:1600px;cursor:pointer;margin:0 auto}
+.blatt{position:absolute;inset:0;border-radius:6px 16px 16px 6px;padding:clamp(24px,5vw,48px);backface-visibility:hidden;transition:transform .9s cubic-bezier(.2,.7,.2,1);transform-origin:left center;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.vorne{background:#1a1a1a;color:#F2DFA8;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.vorne .lpk{font-size:clamp(28px,4vw,40px);margin:0}.vorne .lpt{font-style:italic;opacity:.8}.vorne .lpx{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-top:30px}
+.hinten{background:#fffdf7;transform:rotateY(180deg);font-size:clamp(17px,2vw,20px);line-height:1.7}
+.hinten a{font-family:var(--sans);font-size:14px;color:inherit}
+.buchseite.um .vorne{transform:rotateY(-180deg)}.buchseite.um .hinten{transform:rotateY(0)}
+
+.faq details{border-bottom:1px solid rgba(0,0,0,.14);padding:18px 0;max-width:760px}
+.faq summary{cursor:pointer;font-size:clamp(20px,2.2vw,26px);list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::after{content:"+";font-family:var(--sans);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:12px 0 0;opacity:.8;max-width:62ch}
+
+.kbin{border-radius:28px;padding:clamp(36px,6vw,72px);text-align:center;background:rgba(242,223,168,.45);border:1px solid var(--gold)}
+.kbin h2{margin:0 auto 12px;max-width:none}
+.kbknopf{margin-top:14px;font-family:var(--sans);font-size:15px;font-weight:600;padding:.9rem 1.7rem;border-radius:999px;border:0;background:#000;color:#F5F3EE;cursor:pointer}
+.kbknopf:hover{background:var(--gold);color:#000}
+
+.fussneu{padding:56px var(--gutter) 80px;border-top:1px solid rgba(0,0,0,.14);font-family:var(--sans);font-size:14px}
+.fspalten{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.fspalten h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin:0 0 10px;font-weight:500}
+.fspalten a{display:block;color:inherit;text-decoration:none;padding:3px 0;opacity:.85}
+.fspalten a:hover{opacity:1;text-decoration:underline}
+.fm{font-family:var(--serif);font-size:20px;margin:0 0 6px}
+.fcopy{margin-top:36px;opacity:.6}
+
+@media (max-width:860px){.kgitter{grid-template-columns:1fr}.fspalten{grid-template-columns:1fr 1fr}}
+
+/* Modell B: Schwarz-Weiss wie ein Magazin */
+.m-b{--gold:#000;--gold-deep:#000;--gold-light:#e9e9e9;background:#fff}
+.m-b::before{opacity:.0}.m-b::after{background:#fff}
+.m-b .portrait .rahmen{border-radius:0;background:#e6e6e6}
+.m-b .portrait .rahmen img{filter:grayscale(1) contrast(1.05)}
+.m-b .portrait .ring{border-radius:0;border-color:#000}
+.m-b h1,.m-b h2{letter-spacing:-.02em}
+.m-b .zahl,.m-b .kk,.m-b .texte .buch{border-radius:0;background:#fff;border-color:#000}
+.m-b .kbin,.m-b .pflegebruecke .band2{border-radius:0;background:#f2f2f2;border-color:#000}
+.m-b .zahl::before{background:#000}
+.m-b .zitatband{background:#000;color:#fff}
+.m-b .sunglow,.m-b .glow{display:none}
+
+/* Modell C: Anthrazit und Gold */
+.m-c{--paper:#141414;--paper-2:#1c1c1c;--ink:#F3EDE0;--ink-70:rgba(243,237,224,.75);--ink-45:rgba(243,237,224,.5);background:#141414;color:#F3EDE0}
+.m-c::before{filter:invert(1);opacity:.18}.m-c::after{background:rgba(20,20,20,.72)}
+.m-c a{color:inherit}
+.m-c .top{color:#F3EDE0}
+.m-c .top.solid,.m-c .top[style]{background:rgba(20,20,20,.86)!important}
+.m-c .burger span{background:#F3EDE0}
+.m-c .menue{background:#141414}
+.m-c .portrait .rahmen{background:radial-gradient(120% 80% at 50% 18%,#3a3226 0%,#1d1a15 60%,#0f0e0c 100%)}
+.m-c .zahl,.m-c .kk,.m-c .texte .buch{background:rgba(255,255,255,.04);border-color:rgba(199,161,90,.35);color:#F3EDE0}
+.m-c .zahl strong{color:#F2DFA8}.m-c .zahl span{color:rgba(243,237,224,.75)}
+.m-c .kbin,.m-c .pflegebruecke .band2{background:rgba(199,161,90,.12);color:#F3EDE0}
+.m-c .kbknopf,.m-c .pflegebruecke .band2 .k1{background:#C7A15A;color:#000}
+.m-c .heldlinks a{border-color:#F3EDE0}.m-c .heldlinks a.voll{background:#C7A15A;color:#000;border-color:#C7A15A}
+.m-c .sprachen a{background:#1c1c1c;border-color:rgba(243,237,224,.25)}
+.m-c .zl b{background:#141414}.m-c .zl::before{background:rgba(255,255,255,.15)}
+.m-c .faq details,.m-c .fussneu,.m-c .zitatband{border-color:rgba(255,255,255,.15)}
+.m-c .hinten{background:#f5efe2;color:#000}
+.m-c .stein .fl{stroke:#C7A15A}
+.m-c .place,.m-c .item{color:#F3EDE0}
+.m-c .top{background:rgba(20,20,20,.86)!important;box-shadow:none!important}
+.m-b .heldlinks a.voll{background:#000;border-color:#000}
+
+/* Leiste unter dem Hero (nur sichtbar in D) */
+.leiste{display:none}
+
+/* Modell D: Sand und Gold, unqc gemischt */
+.m-d{--paper:#EDE6DA;--paper-2:#E3D9C9;--ink:#1d1a16;--ink-70:rgba(29,26,22,.75);--ink-45:rgba(29,26,22,.5);--gold:#B8893F;--gold-deep:#7A5A26;--gold-light:#EBD3A0;background:#EDE6DA;color:#1d1a16}
+.m-d::before{opacity:.28}.m-d::after{background:rgba(237,230,218,.7)}
+.m-d .top{background:rgba(237,230,218,.94)!important;color:#1d1a16;box-shadow:0 1px 0 rgba(0,0,0,.08)!important}
+.m-d .hero{background:linear-gradient(90deg,#4A4037 30%,#6B5D4F 100%);color:#F6F1E8}
+.m-d .hero .lead,.m-d .hero .kicker,.m-d .wechsel{color:#F6F1E8}
+.m-d .hero .hint{color:#F6F1E8}.m-d .hero .hint i{background:#F6F1E8}
+.m-d .wechsel b{color:#EBD3A0;border-color:#EBD3A0}
+.m-d .heldlinks a{border-color:#F6F1E8;color:#F6F1E8}.m-d .heldlinks a.voll{background:#B8893F;border-color:#B8893F;color:#1d1a16}
+.m-d .portrait .rahmen{background:radial-gradient(120% 80% at 50% 18%,#8a7660 0%,#5b4d40 60%,#3e352d 100%)}
+.m-d .portrait .ring{border-color:#EBD3A0}
+.m-d .sunglow{opacity:.5}
+.m-d .leiste{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;padding:22px var(--gutter);background:#4A4037;color:#EBD3A0;font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;position:relative;z-index:1}
+.m-d .leiste span::before{content:"◆";margin-right:12px;color:#B8893F;font-size:9px;vertical-align:2px}
+.m-d .zahl,.m-d .kk,.m-d .texte .buch,.m-d .station{background:#fff!important;color:#1d1a16!important;border:1px solid rgba(29,26,22,.12)!important;box-shadow:0 18px 40px -28px rgba(74,64,55,.45)}
+.m-d .station *{color:#1d1a16!important}
+.m-d .station .n{background:#4A4037!important;color:#EBD3A0!important}
+.m-d .zahl strong{color:#7A5A26}
+.m-d .karten,.m-d .faq{background:#F6F1E8}
+.m-d .zitatband{background:#4A4037;color:#F6F1E8;border:0}
+.m-d .kbin{background:#4A4037;color:#F6F1E8;border:0}
+.m-d .kbknopf{background:#B8893F;color:#1d1a16}
+.m-d .pflegebruecke .band2{background:#fff;border-color:rgba(29,26,22,.15)}
+.m-d .fussneu{background:#3a322b;color:#EDE6DA;border:0}
+.m-d .fspalten h4{color:#EBD3A0;opacity:1}
+.m-d .zl b{background:#EDE6DA}
+.m-d .stance,.m-d .places{background:transparent}
+.m-d .place{background:#fff;border-radius:18px;padding:22px}
+.m-c .station{background:#211f1c!important;border-color:rgba(199,161,90,.35)!important}.m-c .station *{color:#F3EDE0!important}
+
+/* Modell E */
+.m-e .hero .portrait{display:none!important}
+.m-e .hero .stage{grid-template-columns:1fr!important}
+.kbaender{display:none}
+.m-e .kbaender{display:block;position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.m-e .kbaender::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(74,64,55,.95) 28%,rgba(74,64,55,.35) 100%)}
+.kbaender .rot{position:absolute;left:-20%;right:-20%;top:50%;transform:translateY(-50%) rotate(-5deg);display:flex;flex-direction:column;gap:16px}
+.kbaender .reihe{display:flex;gap:16px;width:max-content;animation:lauf 70s linear infinite}
+.kbaender .reihe.r2{animation-direction:reverse;animation-duration:85s}
+.kbaender .reihe span{width:240px;height:120px;border-radius:14px;display:grid;place-items:center;font-size:22px;font-style:italic;color:#fff}
+.kbaender .reihe span:nth-child(4n+1){background:linear-gradient(135deg,#8a7660,#5b4d40)}
+.kbaender .reihe span:nth-child(4n+2){background:linear-gradient(135deg,#B8893F,#7A5A26)}
+.kbaender .reihe span:nth-child(4n+3){background:linear-gradient(135deg,#6B5D4F,#3e352d)}
+.kbaender .reihe span:nth-child(4n){background:linear-gradient(135deg,#a89276,#6B5D4F)}
+@keyframes lauf{to{transform:translateX(-50%)}}
+.m-e .hero .text{position:relative;z-index:2}
+.m-e .videoabschnitt{background:#F6F1E8}
+.video{position:relative;aspect-ratio:16/9;max-width:900px;border-radius:22px;overflow:hidden;background:radial-gradient(120% 90% at 30% 20%,#8a7660,#3e352d)}
+.video .play{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px;border-radius:50%;background:rgba(246,241,232,.92);display:grid;place-items:center;animation:atme 2.6s ease-in-out infinite}
+.video .play::after{content:"";border-left:24px solid #4A4037;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+@keyframes atme{50%{transform:scale(1.08)}}
+.video p{position:absolute;left:24px;bottom:16px;margin:0;color:#F6F1E8;font-family:var(--sans);font-size:14px}
+.karte{background:#4A4037;border-radius:22px;padding:18px;margin:0 0 26px}
+.karte svg{width:100%;height:auto;display:block}
+.bogen{fill:none;stroke:#EBD3A0;stroke-width:1.6;stroke-dasharray:6 6;animation:strich 3s linear infinite}
+@keyframes strich{to{stroke-dashoffset:-48}}
+.punkt{fill:#B8893F}.puls{fill:none;stroke:#EBD3A0;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{r:4;opacity:1}to{r:18;opacity:0}}
+.satz{background:#4A4037;color:#F6F1E8;border-radius:22px;padding:44px;text-align:center}
+.satz q{font-size:clamp(24px,3vw,38px);font-style:italic;quotes:"„" "“"}
+.satz small{display:block;margin-top:14px;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#EBD3A0}
+.kbfoto{width:132px;height:132px;border-radius:50%;object-fit:cover;object-position:50% 12%;background:#8a7660;border:3px solid #B8893F;margin:0 auto 18px;display:block}
+@media (max-width:860px){.m-e .hero .stage{align-content:center!important;padding-top:64px!important}.m-e .kbaender::after{background:linear-gradient(180deg,rgba(74,64,55,.55),rgba(74,64,55,.92) 45%,rgba(74,64,55,.6))}}
