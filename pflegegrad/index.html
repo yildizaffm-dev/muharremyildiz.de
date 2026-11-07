@@ -70,16 +70,17 @@ section{padding:96px 0;position:relative}
 .reihe{position:absolute;left:38%;top:-8%;width:110%;display:flex;gap:28px;transform:rotateX(16deg) rotateY(-24deg) rotateZ(6deg);transform-origin:left center;animation:gleiten 46s linear infinite}
 .reihe.b{top:44%;left:30%;animation-duration:58s;animation-direction:reverse}
 .reihe img{width:360px;aspect-ratio:16/9;object-fit:cover;flex:none;border-radius:16px;border:1px solid var(--line2);box-shadow:0 30px 60px rgba(0,0,0,.55);animation:atmen 9s ease-in-out infinite alternate}
-.baender{position:absolute;left:-30%;right:-30%;top:50%;transform:translateY(-50%) rotate(-7deg);display:flex;flex-direction:column;gap:24px}
-.band{height:400px;background-repeat:repeat-x;background-size:2940px 400px;will-change:background-position}
-.b1{background-image:url(img/band1.webp);animation:bandA 130s linear infinite}
-.b2{background-image:url(img/band2.webp);animation:bandB 150s linear infinite}
-.b3{background-image:url(img/band3.webp);animation:bandA 170s linear infinite}
-@keyframes bandA{from{background-position:0 50%}to{background-position:-2940px 50%}}
-@keyframes bandB{from{background-position:-2940px 50%}to{background-position:0 50%}}
-@media(max-width:700px){.band{height:274px;background-size:2016px 274px}.baender{gap:16px}
- @keyframes bandA{from{background-position:0 50%}to{background-position:-2016px 50%}}
- @keyframes bandB{from{background-position:-2016px 50%}to{background-position:0 50%}}}
+.baender{position:absolute;left:-20%;right:-20%;top:50%;transform:translateY(-50%) rotate(-4deg);display:flex;flex-direction:column;gap:18px}
+.band{height:300px;background-repeat:repeat-x;background-size:2755px 300px;will-change:background-position}
+.b1{background-image:url(img/band1.webp);animation:bandA 110s linear infinite}
+.b2{background-image:url(img/band2.webp);animation:bandB 125s linear infinite}
+.b3{background-image:url(img/band3.webp);animation:bandA 140s linear infinite}
+.b4{background-image:url(img/band4.webp);animation:bandB 120s linear infinite}
+@keyframes bandA{from{background-position:0 50%}to{background-position:-2755px 50%}}
+@keyframes bandB{from{background-position:-2755px 50%}to{background-position:0 50%}}
+@media(max-width:700px){.band{height:180px;background-size:1653px 180px}.baender{gap:12px;left:-30%;right:-30%}
+ @keyframes bandA{from{background-position:0 50%}to{background-position:-1653px 50%}}
+ @keyframes bandB{from{background-position:-1653px 50%}to{background-position:0 50%}}}
 @keyframes gleiten{to{transform:rotateX(16deg) rotateY(-24deg) rotateZ(6deg) translateX(-50%)}}
 @keyframes atmen{to{filter:brightness(1.15)}}
 .held::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b1222 34%,rgba(11,18,34,.38) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 22%);pointer-events:none}
@@ -248,7 +249,7 @@ footer .unten{margin-top:36px;padding-top:20px;border-top:1px solid var(--line);
 
 <main id="top">
 <section class="held">
-  <div class="buehne" aria-hidden="true"><div class="baender"><div class="band b1"></div><div class="band b2"></div><div class="band b3"></div></div></div>
+  <div class="buehne" aria-hidden="true"><div class="baender"><div class="band b1"></div><div class="band b2"></div><div class="band b3"></div><div class="band b4"></div></div></div>
   <div class="in">
     <p class="eyebrow fx">Pflegesachverständiger in Frankfurt</p>
     <h1 class="fx">Pflegegrad, der zu Ihrem <span class="g">Alltag</span> passt.</h1>
