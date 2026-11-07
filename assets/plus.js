@@ -17,3 +17,5 @@ if(m&&b){function auf(a){m.classList.toggle("offen",a);m.setAttribute("aria-hidd
 b.onclick=function(){auf(true)};document.getElementById("zu").onclick=function(){auf(false)};m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){auf(false)})});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")auf(false)})}
 })();
+/* Zusaetze im Kopf blenden beim Scrollen mit aus */
+(function(){var els=document.querySelectorAll(".hero .wechsel,.hero .heldlinks");if(!els.length)return;function f(){var o=Math.max(0,1-scrollY/(innerHeight*.25));els.forEach(function(e){e.style.opacity=o;e.style.visibility=o<.02?"hidden":"visible"})}addEventListener("scroll",f,{passive:true});f()})();
