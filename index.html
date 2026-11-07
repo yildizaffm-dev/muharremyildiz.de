@@ -15,6 +15,7 @@
 <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="img/portrait.webp" as="image">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/plus.css">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -27,8 +28,15 @@
     <a href="#weg">Mein Weg</a>
     <a href="#haltung">Haltung</a>
     <a href="#orte">Drei Orte</a>
+    <a href="#texte">Texte</a>
+    <a href="/pflegegrad/">Pflegeberatung</a>
   </nav>
+  <button class="burger" id="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menue"><span></span><span></span><span></span></button>
 </header>
+<div class="menue" id="menue" aria-hidden="true">
+  <button type="button" id="zu" aria-label="Menü schließen">×</button>
+  <a href="#weg">Mein Weg</a><a href="#haltung">Haltung</a><a href="#orte">Drei Orte</a><a href="#texte">Texte</a><a href="/pflegegrad/">Pflegeberatung</a>
+</div>
 
 <main id="top">
   <div class="hero-wrap">
@@ -43,9 +51,13 @@
             <span class="l"><span>hier ist <em>Muharrem.</em></span></span>
           </h1>
           <p class="lead">Schön, dass du hier bist. Frankfurter, Unternehmer, Pflegesachverständiger – und einer, der lieber gut fragt als schnell antwortet.</p>
+          <p class="wechsel">Gerade beschäftigt mich: <b id="wechselwort" data-woerter='["Pflege","Führung","Psychologie","Schreiben","Glaube","Technik"]'>Pflege</b></p>
+          <div class="heldlinks"><a class="voll" href="#weg">Mein Weg</a><a href="#texte">Was ich schreibe</a></div>
         </div>
         <figure class="portrait">
-          <img src="img/portrait.webp" width="847" height="930" alt="Muharrem Yıldız, im dunklen Anzug, lächelt in die Kamera" fetchpriority="high">
+          <span class="ring" aria-hidden="true"></span>
+          <div class="rahmen"><img src="img/portrait.webp" width="847" height="930" alt="Muharrem Yıldız, im dunklen Anzug, lächelt in die Kamera" fetchpriority="high"></div>
+          <span class="stempel" aria-hidden="true"><i></i>Seit 2012 in der Pflege</span>
         </figure>
       </div>
       <div class="frage" aria-hidden="true">
@@ -69,6 +81,15 @@
         <p>Aus Haltung wurde Verantwortung.</p>
         <p>Aus Verantwortung wurde Wirkung.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="zahlen" aria-label="In Zahlen">
+    <div class="gitter">
+      <div class="zahl glanz einblenden"><strong data-zaehl="2012" data-von="1990">2012</strong><span>Seit diesem Jahr arbeite ich in der Pflege.</span></div>
+      <div class="zahl glanz einblenden"><strong data-zaehl="500" data-nach="+">500+</strong><span>Pflegebegutachtungen fachlich begleitet.</span></div>
+      <div class="zahl glanz einblenden"><strong data-zaehl="7">7</strong><span>Stationen auf meinem Weg, eine Richtung.</span></div>
+      <div class="zahl glanz einblenden"><strong data-zaehl="5">5</strong><span>Sprachen, in denen mein Essay gelesen werden kann.</span></div>
     </div>
   </section>
 
@@ -150,12 +171,12 @@
     <h2 id="haltung-h">Woran ich mich halte, wenn's unbequem wird.</h2>
     <p class="measure">Überzeugungen kosten nichts, solange alles leicht ist. Im Konflikt zeigt sich, was trägt. In der Mitte steht der Mensch. Alles andere dreht sich darum – und muss sich daran messen lassen.</p>
     <div class="list">
-      <div class="item"><h3>Systeme sollen Menschen dienen.</h3><p>Nicht umgekehrt. Jede Struktur muss zeigen, ob sie entlastet oder nur verwaltet.</p></div>
-      <div class="item"><h3>Führung braucht Klarheit und Verantwortung.</h3><p>Wer führt, schuldet anderen Orientierung. Auch wenn die Antwort unbequem ist.</p></div>
-      <div class="item"><h3>Würde darf nicht der Effizienz geopfert werden.</h3><p>Was bleibt von Effizienz, wenn der Mensch darin keinen Platz mehr findet?</p></div>
-      <div class="item"><h3>Lernen ist kein Lebensabschnitt, sondern eine Haltung.</h3><p>Jede Rolle hat mir etwas beigebracht. Die wichtigste Lektion: Man ist nie fertig.</p></div>
-      <div class="item"><h3>Technik ist dann gut, wenn sie Raum für Menschlichkeit schafft.</h3><p>Nicht Technik um der Technik willen, sondern Technik im Dienst des Menschen.</p></div>
-      <div class="item"><h3>Glaube gibt Richtung, Verantwortung zeigt sich im Handeln.</h3><p>Überzeugungen sind erst glaubwürdig, wenn man sie im Alltag wiedererkennt.</p></div>
+      <div class="item glanz"><h3>Systeme sollen Menschen dienen.</h3><p>Nicht umgekehrt. Jede Struktur muss zeigen, ob sie entlastet oder nur verwaltet.</p></div>
+      <div class="item glanz"><h3>Führung braucht Klarheit und Verantwortung.</h3><p>Wer führt, schuldet anderen Orientierung. Auch wenn die Antwort unbequem ist.</p></div>
+      <div class="item glanz"><h3>Würde darf nicht der Effizienz geopfert werden.</h3><p>Was bleibt von Effizienz, wenn der Mensch darin keinen Platz mehr findet?</p></div>
+      <div class="item glanz"><h3>Lernen ist kein Lebensabschnitt, sondern eine Haltung.</h3><p>Jede Rolle hat mir etwas beigebracht. Die wichtigste Lektion: Man ist nie fertig.</p></div>
+      <div class="item glanz"><h3>Technik ist dann gut, wenn sie Raum für Menschlichkeit schafft.</h3><p>Nicht Technik um der Technik willen, sondern Technik im Dienst des Menschen.</p></div>
+      <div class="item glanz"><h3>Glaube gibt Richtung, Verantwortung zeigt sich im Handeln.</h3><p>Überzeugungen sind erst glaubwürdig, wenn man sie im Alltag wiedererkennt.</p></div>
     </div>
   </section>
 
@@ -164,21 +185,21 @@
     <h2 id="orte-h">Frankfurt. Istanbul. Doha.</h2>
     <p class="measure">Drei Orte, drei Blickwinkel. Keine Geschäftsadressen – Perspektiven, die mich prägen. Und gerade jetzt, während du liest, leben sie in drei verschiedenen Stunden.</p>
     <div class="grid">
-      <article class="place" data-tz="Europe/Berlin">
+      <article class="place glanz" data-tz="Europe/Berlin">
         <div class="sky" aria-hidden="true"><i></i></div>
         <h3>Frankfurt</h3>
         <p class="meta"><span>50.11° N · 8.68° O</span><time></time></p>
         <p>Hier lebe und arbeite ich. Frankfurt steht für das, was Verlässlichkeit braucht: Ordnung, Verbindlichkeit und den Mut, Verantwortung zu übernehmen.</p>
         <p class="gr">Guten Tag.</p>
       </article>
-      <article class="place" data-tz="Europe/Istanbul">
+      <article class="place glanz" data-tz="Europe/Istanbul">
         <div class="sky" aria-hidden="true"><i></i></div>
         <h3>Istanbul</h3>
         <p class="meta"><span>41.01° N · 28.98° O</span><time></time></p>
         <p>Eine Stadt zwischen zwei Kontinenten. Sie erinnert daran, dass Brücken nicht zufällig entstehen. Istanbul steht für Herkunft, Tempo und die Fähigkeit, Welten zu verbinden.</p>
         <p class="gr">İyi günler.</p>
       </article>
-      <article class="place" data-tz="Asia/Qatar">
+      <article class="place glanz" data-tz="Asia/Qatar">
         <div class="sky" aria-hidden="true"><i></i></div>
         <h3>Doha</h3>
         <p class="meta"><span>25.29° N · 51.53° O</span><time></time></p>
@@ -189,13 +210,43 @@
   </section>
 
 
+  <section class="sec texte" id="texte" aria-labelledby="texte-h">
+    <p class="kicker">Was ich schreibe</p>
+    <h2 id="texte-h"><span class="unterstrich">Ein Bild, elf Schritte.</span></h2>
+    <article class="buch glanz einblenden">
+      <div>
+        <span class="neu">Neu: mit Leseanleitung und Fazit</span>
+        <h3>Der Diamant im Sumpf</h3>
+        <p class="unter">Ein philosophischer Versuch über Wert, Gegenwart und Rückkehr</p>
+        <p>Was ist ein Mensch wert, wenn er gerade nichts bewirkt, und wie kommt er wieder ins Licht? Ein einziges Bild, elfmal gedreht, und jedes Mal den Quellen, der Philosophie und der Psychologie vorgelegt.</p>
+        <p>Am Anfang steht eine Leseanleitung, vor jedem Kapitel eine kurze Überleitung, am Ende ein Fazit. Man kann es auf dem Handy lesen oder sich vorlesen lassen.</p>
+        <div class="sprachen" aria-label="Sprache wählen">
+          <a href="/diamant/" lang="de"><svg viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg>Deutsch</a>
+          <a href="/pirlanta/" lang="tr"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#E30A17"/><circle cx="10.6" cy="10" r="5" fill="#fff"/><circle cx="11.9" cy="10" r="4" fill="#E30A17"/><polygon fill="#fff" points="16.6,10 21.3,8.47 18.4,12.47 18.4,7.53 21.3,11.53"/></svg>Türkçe</a>
+          <a href="/diamond/" lang="en"><svg viewBox="0 0 60 30" aria-hidden="true"><clipPath id="uk"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="ukt"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#uk)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ukt)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>English</a>
+          <a href="/almas/" lang="fa"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#239F40"/><rect y="13.33" width="30" height="6.67" fill="#DA0000"/><text x="15" y="12.6" font-size="6.4" text-anchor="middle" fill="#DA0000">☫</text></svg>فارسی</a>
+          <a href="/darija/" lang="ar-MA"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#C1272D"/><path d="M15,6.2 L17.2,13 L11.4,8.8 H18.6 L12.8,13 Z" fill="none" stroke="#006233" stroke-width=".8" stroke-linejoin="round"/></svg>الدارجة</a>
+        </div>
+      </div>
+      <div class="stein" aria-hidden="true">
+        <svg viewBox="0 0 320 300">
+          <g class="dreh"><circle cx="160" cy="150" r="128" fill="none" stroke="#C7A15A" stroke-opacity=".35" stroke-dasharray="2 7"/></g>
+          <path class="fl" d="M90,110 L130,70 H190 L230,110 L160,220 Z"/>
+          <path class="fl" d="M90,110 H230 M130,70 L145,110 L160,220 L175,110 L190,70 M145,110 L160,70 L175,110"/>
+          <path d="M40,250 C90,232 130,262 170,246 C210,232 250,256 290,244" fill="none" stroke="#765A26" stroke-opacity=".45" stroke-width="1.2"/>
+          <g class="gl"><path d="M160,128 l4,-12 l4,12 l12,4 l-12,4 l-4,12 l-4,-12 l-12,-4 z" fill="#C7A15A"/></g>
+        </svg>
+      </div>
+    </article>
+  </section>
+
   <section class="sec pflegebruecke" aria-labelledby="pflege-h">
-   <div style="display:flex;flex-direction:column;align-items:center;gap:.9rem;text-align:center;max-width:40rem;margin:0 auto">
+   <div class="band2 einblenden"><div style="display:flex;flex-direction:column;align-items:center;gap:.9rem;text-align:center;max-width:40rem;margin:0 auto">
     <p class="kicker" style="margin:0">Pflegeberatung</p>
     <h2 id="pflege-h" style="margin:0;max-width:none">Sind Sie wegen eines Pflegefalls hier?</h2>
     <p class="measure" style="margin:0">Hier geht es zur kostenfreien Ersteinschätzung und zum Pflegegrad&#8209;Check.</p>
-    <a href="/pflegegrad/" style="display:inline-block;margin-top:.4rem;padding:.85rem 1.6rem;border-radius:999px;background:#1b2a47;color:#f5f3ee;text-decoration:none;font-weight:600;letter-spacing:.01em">Zur Pflegeberatung</a>
-   </div>
+    <div class="knopfreihe"><a class="k1" href="/pflegegrad/">Zur Pflegeberatung</a><a class="k2" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2gqJxW3qSMt9TN8Qo8YpPsYMsQ3vn6XP1Gwu-eyHl6Z3mVQLrJ1vuw8SwwFzD1KHqLhM_xfMYg" target="_blank" rel="noopener">Termin online buchen</a></div>
+   </div></div>
   </section>
 
   <section class="sec end" aria-labelledby="ende-h">
@@ -214,6 +265,7 @@
 <script src="assets/ScrollTrigger.min.js"></script>
 <script src="assets/lenis.min.js"></script>
 <script src="assets/site.js"></script>
+<script src="assets/plus.js"></script>
 <script>
 (function(){var G={"Europe/Berlin":["Gute Nacht.","Guten Morgen.","Guten Tag.","Guten Abend."],"Europe/Istanbul":["İyi geceler.","Günaydın.","İyi günler.","İyi akşamlar."],"Asia/Qatar":["تصبح على خير.","صباح الخير.","أهلًا وسهلًا.","مساء الخير."]};
 function upd(){document.querySelectorAll(".place[data-tz]").forEach(function(p){var g=G[p.dataset.tz],el=p.querySelector(".gr");if(!g||!el)return;var h=+new Intl.DateTimeFormat("de-DE",{hour:"numeric",hourCycle:"h23",timeZone:p.dataset.tz}).format(new Date());el.textContent=h<5||h>=22?g[0]:h<11?g[1]:h<18?g[2]:g[3];});}
